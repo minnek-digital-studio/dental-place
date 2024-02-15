@@ -1,0 +1,44 @@
+name: Back End Check
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  lint-php:
+    name: Parallel lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the git repository
+        uses: actions/checkout@v2
+
+      - name: PHP Setup
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.4
+
+      - name: Install composer packages
+        run: composer install --no-progress
+
+      - name: Check for PHP Errors
+        run: composer lint:php
+
+  phpcs_check:
+    name: PHPCS Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the git repository
+        uses: actions/checkout@v2
+
+      - name: PHP Setup
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.4
+
+      - name: Install composer packages
+        run: composer install --no-progress
+
+      - name: Check WP Coding Standards
+        run: composer lint:wpcs
