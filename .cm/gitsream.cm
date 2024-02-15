@@ -1,0 +1,79 @@
+# -*- mode: yaml -*-
+
+manifest:
+  version: 1.0
+
+automations:
+  no_tests:
+    if:
+      - {{ files | match(regex=r/(test|spec|cy)/) | nope }}
+    run:
+      - action: add-label@v1
+        args:
+          label: 'missing-tests'
+          color: '#E94637'
+      - action : add-comment@v1
+        args:
+          comment: |
+            Please add the corresponding tests to the functionality (if applicable).
+
+  estimated_time_to_review:
+    if:
+      - true
+    run:
+      - action: add-label@v1
+        args:
+          label: "{{ calc.etr }} min review"
+          color: {{ 'E94637' if (calc.etr >= 20) else ('FBBD10' if (calc.etr >= 5) else '36A853') }}
+
+  safe_changes:
+    if:
+      - {{ is.formatting or is.docs or is.tests }}
+    run:
+      - action: add-label@v1
+        args:
+          label: 'safe-changes'
+      - action: approve@v1
+
+  approve_tiny_fix:
+    if:
+      - {{ is.one_file and is.one_line }}
+    run:
+      - action: add-label@v1
+        args:
+          label: 'tiny-fix'
+      - action: approve@v1
+
+  jira_ticket:
+    if:
+      - {{ not (jira.ticket_in_title or jira.ticket_in_desc) }}
+    run:
+      - action: add-label@v1
+        args:
+          label: "missing-jira"
+          color: '#F6443B'
+
+  large_review:
+    if:
+      - {{ files | length >= 10 }}
+      - {{ branch | estimatedReviewTime >= 30 }}
+    run:
+      - action: set-required-approvals@v1
+        args:
+          approvals: 2
+      - action: add-comment@v1
+        args:
+          comment: |
+            This PR may require a significant amount of effort to review. Please consider dividing your PR up into multiple smaller contributions.
+
+calc:
+  etr: {{ branch | estimatedReviewTime }}
+is:
+  formatting: {{ source.diff.files | isFormattingChange }}
+  docs: {{ files | allDocs }}
+  tests: {{ files | allTests }}
+  one_file: {{ files | length == 1 }}
+  one_line: {{ branch.diff.size <= 2 }}
+jira:
+  ticket_in_title: {{ pr.title | includes(regex=r/^\[?\w{3,4}-\d{1,6}\]?(\s|-|_).{1,}$/) }}
+  ticket_in_desc: {{ pr.description | includes(regex=r/atlassian.net\/browse\/\w{1,}-\d{3,4}/) }}
