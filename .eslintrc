@@ -1,8 +1,14 @@
 {
     "extends": [
-        "plugin:@wordpress/eslint-plugin/recommended"
+        "plugin:@wordpress/eslint-plugin/esnext"
     ],
     "env": {
         "browser": true
+    },
+    "globals": {
+        "jQuery": true
+    },
+    "rules": {
+        "indent": "off"
     }
 }

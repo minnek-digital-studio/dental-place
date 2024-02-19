@@ -5,8 +5,22 @@
     "plugins": [
         "stylelint-scss"
     ],
+    "ignoreFiles": [
+        "themes/minnek-theme/assets/scss/generic/_normalize.scss"
+    ],
     "rules": {
-        "number-leading-zero": null,
-        "indentation": 4
+        "indentation": 4,
+        "no-descending-specificity": null,
+        "custom-property-empty-line-before": [
+            "always", {
+                "except": ["first-nested"]
+            }
+        ],
+        "rule-empty-line-before": [
+            "always", {
+                "except": ["first-nested"],
+                "ignore": ["after-comment"]
+            }
+        ]
     }
 }

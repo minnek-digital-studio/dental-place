@@ -1,11 +1,13 @@
 {
-  "name": "dental-place",
+  "name": "@minnek/dental-place",
   "version": "0.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "watch": "node-sass ./themes/minnek-theme/assets/scss/ -o ./themes/minnek-theme/assets/css/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "sass": "node-sass ./themes/minnek-theme/assets/scss/ -o ./themes/minnek-theme/assets/css/ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "start": "yarn docker:up; yarn sass:prod",
+    "start:dev": "yarn docker:up; open http://localhost:8080; yarn watch;",
+    "watch": "node-sass ./themes/minnek-theme/assets/scss/ -o ./themes/minnek-theme/assets/css/ --source-map true --output-style expanded --indent-type space  --indent-width 2 -w; yarn lint:scss",
+    "sass:prod": "node-sass ./themes/minnek-theme/assets/scss/ -o ./themes/minnek-theme/assets/css/ --output-style compressed",
     "lint:scss": "wp-scripts lint-style 'themes/minnek-theme/assets/scss/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'themes/minnek-theme/assets/js/**/*.js'",
     "cy:open": "cypress open",
