@@ -4,7 +4,7 @@
     "authors": [
         {
             "name": "Contributors",
-            "homepage": "https://github.com/minnek-digital-studio/wordpress-template/graphs/contributors"
+            "homepage": "https://github.com/minnek-digital-studio/dental-place-wordpress/graphs/contributors"
         }
     ],
     "require": {
@@ -17,9 +17,9 @@
         "wp-cli/i18n-command": "^2.4"
     },
     "scripts": {
-        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --colors",
-        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-        "make-pot": "wp i18n make-pot . languages/_s.pot"
+        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs ./themes/minnek-theme --colors",
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ./themes/minnek-theme",
+        "make-pot": "wp i18n make-pot ./themes/minnek-theme ./themes/minnek-theme/languages/mnk.pot"
     },
     "config": {
         "allow-plugins": {

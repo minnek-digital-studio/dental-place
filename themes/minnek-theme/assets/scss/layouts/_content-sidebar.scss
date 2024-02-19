@@ -1,25 +1,21 @@
-.site {
-    display: grid;
-    grid-template-columns: auto ($size__site-sidebar);
-    grid-template-areas:
-        "header header"
-        "main sidebar"
-        "footer footer";
-}
-
-.site-header {
-    grid-area: header;
+.site-content {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .site-main {
-    grid-area: main;
     overflow: hidden; /* Resolves issue with <pre> elements forcing full width */
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        width: 70%;
+    }
 }
 
 .widget-area {
-    grid-area: sidebar;
-}
+    width: 100%;
 
-.site-footer {
-    grid-area: footer;
+    @media (min-width: 1024px) {
+        width: 30%;
+    }
 }
