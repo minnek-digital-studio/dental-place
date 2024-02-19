@@ -6,6 +6,7 @@
  *
  * @package mnk
  */
+
 ?>
 
 <section class="no-results not-found">

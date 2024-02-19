@@ -8,6 +8,7 @@
  *
  * @package mnk
  */
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -21,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-    <?php wp_body_open(); ?>
+    <?php mnk_wp_body_open(); ?>
 
     <div id="wrapper" class="site">
         <a class="skip-link screen-reader-text" href="#content">
@@ -67,12 +68,14 @@
                 </button>
 
                 <?php
-                // Display the navigation menu
-                wp_nav_menu(array(
-                    'theme_location' => 'menu-1',
-                    'menu_id'        => 'primary-menu',
-                    'container'      => 'ul',
-                ));
+                // Display the navigation menu.
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu-1',
+                        'menu_id'        => 'primary-menu',
+                        'container'      => 'ul',
+                    )
+                );
                 ?>
             </nav>
         </header>

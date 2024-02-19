@@ -6,8 +6,20 @@ on:
 
 jobs:
   lint-css:
-    name: Lint JS
+    name: Lint SCSS
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the git repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+
+      - name: npm install
+        run: npm install
+
+      - name: Lint JS
+        run: npm run lint:scss
 
   lint-js:
     name: Lint JS

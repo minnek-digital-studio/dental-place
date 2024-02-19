@@ -8,6 +8,7 @@
  *
  * @package mnk
  */
+
 ?>
             </div><!-- .content-wrap -->
         </div><!-- #content -->
@@ -24,12 +25,13 @@
                 <span class="sep"> | </span>
 
                 <?php
-                    printf( esc_html__( 'Theme Development by %1$s.', 'mnk' ), '<a href="https://minnekdigital.com/">Minnek</a>' );
+                    /* translators: Theme Development by %s. Is a placeholder for the link. */
+                    printf( esc_html__( 'Theme Development by %s.', 'mnk' ), '<a href="https://minnekdigital.com/">Minnek</a>' );
                 ?>
             </div><!-- .site-info -->
 
             <div id="copyrights">
-                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+                <p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
             </div>
         </footer>
     </div><!-- #wrapper -->
