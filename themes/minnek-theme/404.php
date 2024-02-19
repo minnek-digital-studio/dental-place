@@ -24,7 +24,7 @@ get_header();
                 </p>
 
                 <?php
-                getmnkearch_form();
+                get_search_form();
 
                 the_widget( 'WP_Widget_Recent_Posts' );
                 ?>
@@ -48,7 +48,7 @@ get_header();
 
                 <?php
                 /* translators: %1$s: smiley */
-                $mnk_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'mnk' ), convertmnkmilies( ':)' ) ) . '</p>';
+                $mnk_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'mnk' ), convert_smilies( ':)' ) ) . '</p>';
 
                 the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$mnk_archive_content" );
                 ?>

@@ -7,7 +7,6 @@
  * @package mnk
  */
 
-
 if ( ! defined( 'MNK_VERSION' ) ) {
     define( 'MNK_VERSION', '1.0.0' );
 }
