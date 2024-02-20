@@ -2,9 +2,27 @@
     "extends": [
         "@wordpress/stylelint-config/scss"
     ],
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "ignoreFiles": [
+        "themes/minnek-theme/assets/scss/generic/_normalize.scss"
+    ],
     "rules": {
-        "font-family-no-missing-generic-family-keyword": null,
+        "indentation": 4,
         "no-descending-specificity": null,
+        "custom-property-empty-line-before": [
+            "always", {
+                "except": ["first-nested"]
+            }
+        ],
+        "rule-empty-line-before": [
+            "always", {
+                "except": ["first-nested"],
+                "ignore": ["after-comment"]
+            }
+        ],
+        "font-family-no-missing-generic-family-keyword": null,
         "block-no-empty": null,
         "no-duplicate-selectors": null,
         "font-family-no-duplicate-names": null,

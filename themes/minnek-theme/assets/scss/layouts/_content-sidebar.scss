@@ -1,0 +1,21 @@
+.site-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-main {
+    overflow: hidden; /* Resolves issue with <pre> elements forcing full width */
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        width: 70%;
+    }
+}
+
+.widget-area {
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        width: 30%;
+    }
+}

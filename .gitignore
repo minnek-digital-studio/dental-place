@@ -4,12 +4,15 @@
 /plugins/*
 /vendor/
 /cypress/screenshots/
+/cypress/downloads/
 /cypress/videos/
 yarn.lock
-package.lock
+package-json.lock
 composer.lock
 .env
 *.log
+*.css.map
+*.js.map
 ~*
 *.sql
 *.sqlite

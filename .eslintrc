@@ -1,8 +1,18 @@
 {
     "extends": [
-        "plugin:@wordpress/eslint-plugin/esnext"
+        "plugin:@wordpress/eslint-plugin/esnext",
+        "plugin:cypress/recommended"
+    ],
+    "plugins": [
+        "cypress"
     ],
     "env": {
         "browser": true
+    },
+    "globals": {
+        "jQuery": true
+    },
+    "rules": {
+        "indent": "off"
     }
 }
