@@ -1,15 +1,15 @@
 # WordPress Template
 
-# Install
+## Install
 
 Install the project dependencies:
 
 ```bash
 composer install
-npm install
+yarn install
 ```
 
-# Docker
+## Docker
 
 Before start the docker command be sure to create the `.env`, just rename the `.env.example` with the corresponding information.
 
@@ -22,7 +22,7 @@ docker compose --env-file=./.env up -d
 or
 
 ```bash
-npm run docker:up
+yarn docker:up
 ```
 
 Down the containers:
@@ -34,22 +34,28 @@ docker compose --env-file=./.env down
 or
 
 ```bash
-npm run docker:down
+yarn docker:down
 ```
 
-# Themes
+## Themes
 
-To work with a custom theme create the theme in the directory `themes` and add this line to he `.gitignore` file:
+To work with a custom theme create the theme in the directory `themes` and add this line to the `.gitignore` file:
 
 ```
 !/themes/mytheme
 ```
 
-# Plugins
+## Plugins
 
-To work with a custom plugins, or a 3rd party required for the development, create the plugin in the directory `plugins` and add this line to he `.gitignore` file:
+To work with a custom plugins, or a 3rd party required for the development, create the plugin in the directory `plugins` and add this line to the `.gitignore` file:
 
 ```
 !/plugins/myplugin
 !/plugins/3rdparty-plugin
 ```
+
+## Stack
+
+- Docker
+- Node.js 18+
+- Composer

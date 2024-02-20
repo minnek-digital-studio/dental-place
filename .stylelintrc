@@ -21,6 +21,11 @@
                 "except": ["first-nested"],
                 "ignore": ["after-comment"]
             }
-        ]
+        ],
+        "font-family-no-missing-generic-family-keyword": null,
+        "block-no-empty": null,
+        "no-duplicate-selectors": null,
+        "font-family-no-duplicate-names": null,
+        "selector-class-pattern": null
     }
 }
