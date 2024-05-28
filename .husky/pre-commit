@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn lint:scss
-yarn lint:js
+pnpm lint:scss --filter=cms
+pnpm lint:js --filter=cms
