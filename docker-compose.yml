@@ -14,9 +14,9 @@ services:
       WORDPRESS_DEBUG: ${WORDPRESS_DEBUG}
       WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
     volumes:
-      - ./wp-data:/var/www/html
-      - ./themes:/var/www/html/wp-content/themes
-      - ./plugins:/var/www/html/wp-content/plugins
+      - ./apps/cms/wp-data:/var/www/html
+      - ./apps/cms/themes:/var/www/html/wp-content/themes
+      - ./apps/cms/plugins:/var/www/html/wp-content/plugins
 
   mysql:
     image: mysql:8.0
@@ -29,7 +29,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
     volumes:
-      - ./db-data:/var/lib/mysql
+      - ./apps/cms/db-data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin
