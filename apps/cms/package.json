@@ -1,0 +1,30 @@
+{
+  "name": "@dental-place/cms",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "author": "Minnek",
+  "license": "ISC",
+  "scripts": {
+    "start": "pnpm sass:prod",
+    "dev": "open http://localhost:8080; pnpm watch;",
+    "watch": "node-sass ./themes/minnek-theme/assets/scss/ -o ./themes/minnek-theme/assets/css/ --source-map true --output-style expanded --indent-type space  --indent-width 2 -w; pnpm lint:scss",
+    "sass:prod": "node-sass ./themes/minnek-theme/assets/scss/ -o ./themes/minnek-theme/assets/css/ --output-style compressed",
+    "lint:scss": "wp-scripts lint-style 'themes/minnek-theme/assets/scss/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'themes/minnek-theme/assets/js/**/*.js'",
+    "cy:open": "cypress open",
+    "cy:run": "export \"$(grep -vE \"^(#.*|/s*)$\" .env)\"; npx cypress run --headless --record --key $CYPRESS_KEY --browser chrome",
+    "release": "release-it",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^17.8.0",
+    "@wordpress/scripts": "^27.2.0",
+    "@wordpress/stylelint-config": "^21.34.0",
+    "cypress": "^13.6.4",
+    "eslint-plugin-cypress": "^2.15.1"
+  }
+}
