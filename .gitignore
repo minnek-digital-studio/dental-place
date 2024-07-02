@@ -1,8 +1,8 @@
-/wp-data
-/db-data
-/themes/*
-/plugins/*
-/vendor/
+wp-data/
+db-data/
+themes/*
+plugins/*
+vendor/
 /cypress/screenshots/
 /cypress/downloads/
 /cypress/videos/
@@ -24,3 +24,4 @@ ehthumbs.db
 Thumbs.db
 !/plugins/minnek-plugin
 !/themes/minnek-theme
+.turbo
