@@ -14,4 +14,5 @@ module.exports = {
   images: {
     domains: [process.env.WORDPRESS_DOMAIN, "secure.gravatar.com"],
   },
+  transpilePackages: ["@minnek/ui"],
 };
