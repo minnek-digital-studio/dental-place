@@ -22,17 +22,34 @@ const config = {
     extend: {
       colors: {
         border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        link: "var(--link)",
+        input: "var(--input)",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        dark: {
+            DEFAULT: "var(--dark)",
+            foreground: "var(--dark-foreground)",
+        },
+        light: {
+          DEFAULT: "var(--light)",
+          foreground: "var(--light-foreground)",
+        },
+        info: {
+            DEFAULT: "var(--info)",
+            foreground: "var(--info-foreground)",
+        },
+        "dark-info": {
+            DEFAULT: "var(--dark-info))",
+            foreground: "var(--dark-info-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
