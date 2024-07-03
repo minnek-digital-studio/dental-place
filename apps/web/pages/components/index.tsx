@@ -8,7 +8,7 @@ export default function Components() {
             <div>
                 <h1>Inputs</h1>
                 <Input type="text" placeholder="Input" />
-                <Button >Button</Button>
+                <Button>Button</Button>
             </div>
         </main>
     );
