@@ -35,6 +35,9 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    --muted: #F5F5F5;
+    --muted-foreground: #7A7A89;
+
     --border: 214.3 31.8% 91.4%;
     --input: #EFEFEF;
     --ring: 222.2 84% 4.9%;
