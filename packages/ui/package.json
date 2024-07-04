@@ -8,6 +8,8 @@
     "ui:add": "pnpm dlx shadcn-ui@latest add"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -18,11 +20,11 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
     "@minnek/typescript-config": "workspace:*",
+    "@types/react": "^18.3.3",
+    "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "postcss-load-config": "^6.0.1",
-    "autoprefixer": "^10.4.19",
     "typescript": "^5.4.5"
   },
   "exports": {
