@@ -1,11 +1,11 @@
-import { type LucideProps, icons } from 'lucide-react';
-import { CleanTooth } from './cleanTooth';
-import { ServiceTooth } from './serviceTooth';
-import { CarieTooth } from './carieTooth';
+import { type LucideProps, icons } from "lucide-react";
+import { CleanTooth } from "./cleanTooth";
+import { ServiceTooth } from "./serviceTooth";
+import { CarieTooth } from "./carieTooth";
 
-export * from './cleanTooth';
-export * from './serviceTooth';
-export * from './carieTooth';
+export * from "./cleanTooth";
+export * from "./serviceTooth";
+export * from "./carieTooth";
 
 const customIcons = {
     CleanTooth,
@@ -15,12 +15,11 @@ const customIcons = {
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
 
-interface IconByNameProps extends Omit<LucideProps, 'ref'> {
+interface IconByNameProps extends Omit<LucideProps, "ref"> {
     name?: IconsName;
 }
 
-export const IconByName = ({ name = 'X', size, ...props }: IconByNameProps) => {
-
+export const IconByName = ({ name = "X", size, ...props }: IconByNameProps) => {
     if (name in customIcons) {
         const Icon = customIcons[name as keyof typeof customIcons];
         const IconElement = <Icon size={size} {...props} />;
@@ -34,5 +33,4 @@ export const IconByName = ({ name = 'X', size, ...props }: IconByNameProps) => {
     return IconElement;
 };
 
-export * from 'lucide-react';
-
+export * from "lucide-react";
