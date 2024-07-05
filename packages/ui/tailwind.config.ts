@@ -27,6 +27,7 @@ const config = {
         foreground: "var(--foreground)",
         link: "var(--link)",
         input: "var(--input)",
+        "dark-primary": "var(--dark-primary)",
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
@@ -90,6 +91,9 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+      },
+      fontFamily: {
+        "noto-sans": "var(--font-noto-sans)",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
