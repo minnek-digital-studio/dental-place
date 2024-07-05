@@ -37,7 +37,7 @@ export default function Components() {
                         <Button variant="link" size="link" asChild>
                             <a href="#">Learn More</a>
                         </Button>
-                        <Button variant="outline">Agendar</Button>
+                        <Button disabled variant="dark">Agendar</Button>
                     </div>
                 </div>
             </section>
