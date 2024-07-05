@@ -48,8 +48,12 @@ const config = {
             foreground: "var(--info-foreground)",
         },
         "dark-info": {
-            DEFAULT: "var(--dark-info))",
-            foreground: "var(--dark-info-foreground))",
+            DEFAULT: "var(--dark-info)",
+            foreground: "var(--dark-info-foreground)",
+        },
+        "light-info": {
+            DEFAULT: "var(--light-info)",
+            foreground: "var(--light-info-foreground)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
