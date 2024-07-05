@@ -1,4 +1,3 @@
-
 import { Input } from "@minnek/ui/components/input";
 import { Textarea } from "@minnek/ui/components/textarea";
 import { Label } from "@minnek/ui/components/label";
@@ -12,6 +11,14 @@ import {
     SelectValue,
 } from "@minnek/ui/components/select";
 import { Button } from "@minnek/ui/components/button";
+import {
+    CleanTooth,
+    CarieTooth,
+    ServiceTooth,
+    MoveRight,
+    Check,
+    IconByName,
+} from "@minnek/ui/icons";
 import { Typography } from "@minnek/ui/components/typography";
 
 export default function Components() {
@@ -19,15 +26,28 @@ export default function Components() {
         <main className="w-full flex flex-col justify-center items-center gap-4">
             <section className="min-h-screen flex flex-col items-center justify-center gap-6">
                 <div>
+                    <h1>Icons</h1>
+                    <div className="flex gap-6">
+                        <CleanTooth size={60} className="text-link" />
+                        <MoveRight size={60} />
+                        <CarieTooth size={60} />
+                        <ServiceTooth size={60} />
+                        <Check size={60} className="text-lime-600" />
+                        <IconByName
+                            name="CarieTooth"
+                            size={60}
+                            className="text-link"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section className="min-h-screen flex flex-col items-center justify-center gap-6">
+                <div>
                     <h1>Typography</h1>
                     <div className="flex gap-6">
-                        <Typography as="h1">
-                            h1
-                        </Typography>
+                        <Typography as="h1">h1</Typography>
 
-                        <Typography as="h2">
-                            h2
-                        </Typography>
+                        <Typography as="h2">h2</Typography>
 
                         <Typography as="h3" className="font-bold">
                             h3
@@ -37,9 +57,7 @@ export default function Components() {
                             h4
                         </Typography>
 
-                        <Typography as="p">
-                            p
-                        </Typography>
+                        <Typography as="p">p</Typography>
                     </div>
                 </div>
             </section>
@@ -48,8 +66,12 @@ export default function Components() {
                     <h1>Buttons</h1>
                     <div className="flex gap-6">
                         <Button variant="secondary">View More</Button>
-                        <Button variant="secondary" size="sm">📞 (809) 581-8686</Button>
-                        <Button variant="secondary" size="icon">📞</Button>
+                        <Button variant="secondary" size="sm">
+                            📞 (809) 581-8686
+                        </Button>
+                        <Button variant="secondary" size="icon">
+                            📞
+                        </Button>
                         <Button variant="dark">Enviar</Button>
                         <Button variant="outline">Agendar</Button>
                     </div>
@@ -64,7 +86,9 @@ export default function Components() {
                         <Button variant="link" size="link" asChild>
                             <a href="#">Learn More</a>
                         </Button>
-                        <Button disabled variant="dark">Agendar</Button>
+                        <Button disabled variant="dark">
+                            Agendar
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -77,7 +101,12 @@ export default function Components() {
                     </Label>
                     <Label>
                         <span>Name</span>
-                        <Input type="text" variant="info" sizes="lg" placeholder="Input" />
+                        <Input
+                            type="text"
+                            variant="info"
+                            sizes="lg"
+                            placeholder="Input"
+                        />
                     </Label>
                 </section>
 
@@ -93,10 +122,18 @@ export default function Components() {
                                 <SelectGroup>
                                     <SelectLabel>Fruits</SelectLabel>
                                     <SelectItem value="apple">Apple</SelectItem>
-                                    <SelectItem value="banana">Banana</SelectItem>
-                                    <SelectItem value="blueberry">Blueberry</SelectItem>
-                                    <SelectItem value="grapes">Grapes</SelectItem>
-                                    <SelectItem value="pineapple">Pineapple</SelectItem>
+                                    <SelectItem value="banana">
+                                        Banana
+                                    </SelectItem>
+                                    <SelectItem value="blueberry">
+                                        Blueberry
+                                    </SelectItem>
+                                    <SelectItem value="grapes">
+                                        Grapes
+                                    </SelectItem>
+                                    <SelectItem value="pineapple">
+                                        Pineapple
+                                    </SelectItem>
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
@@ -104,17 +141,25 @@ export default function Components() {
                     <Label>
                         <span>Fruits</span>
                         <Select>
-                            <SelectTrigger >
+                            <SelectTrigger>
                                 <SelectValue placeholder="Select a fruit" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
                                     <SelectLabel>Fruits</SelectLabel>
                                     <SelectItem value="apple">Apple</SelectItem>
-                                    <SelectItem value="banana">Banana</SelectItem>
-                                    <SelectItem value="blueberry">Blueberry</SelectItem>
-                                    <SelectItem value="grapes">Grapes</SelectItem>
-                                    <SelectItem value="pineapple">Pineapple</SelectItem>
+                                    <SelectItem value="banana">
+                                        Banana
+                                    </SelectItem>
+                                    <SelectItem value="blueberry">
+                                        Blueberry
+                                    </SelectItem>
+                                    <SelectItem value="grapes">
+                                        Grapes
+                                    </SelectItem>
+                                    <SelectItem value="pineapple">
+                                        Pineapple
+                                    </SelectItem>
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
@@ -129,7 +174,11 @@ export default function Components() {
                     </Label>
                     <Label>
                         <span>Message</span>
-                        <Textarea variant="info" sizes="lg" placeholder="Message" />
+                        <Textarea
+                            variant="info"
+                            sizes="lg"
+                            placeholder="Message"
+                        />
                     </Label>
                 </section>
             </div>
