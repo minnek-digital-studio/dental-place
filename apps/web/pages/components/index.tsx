@@ -12,10 +12,37 @@ import {
     SelectValue,
 } from "@minnek/ui/components/select";
 import { Button } from "@minnek/ui/components/button";
+import { Typography } from "@minnek/ui/components/typography";
 
 export default function Components() {
     return (
         <main className="w-full flex flex-col justify-center items-center gap-4">
+            <section className="min-h-screen flex flex-col items-center justify-center gap-6">
+                <div>
+                    <h1>Typography</h1>
+                    <div className="flex gap-6">
+                        <Typography as="h1">
+                            h1
+                        </Typography>
+
+                        <Typography as="h2">
+                            h2
+                        </Typography>
+
+                        <Typography as="h3" className="font-bold">
+                            h3
+                        </Typography>
+
+                        <Typography as="h4" color="link">
+                            h4
+                        </Typography>
+
+                        <Typography as="p">
+                            p
+                        </Typography>
+                    </div>
+                </div>
+            </section>
             <section className="min-h-screen flex flex-col items-center justify-center gap-6">
                 <div>
                     <h1>Buttons</h1>

@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @layer base {
   :root {
     --background: #FFFFFF;
@@ -16,6 +18,8 @@
 
     --primary: #CEC1EF;
     --primary-foreground: #000000;
+
+    --dark-primary: #4D27AF;
 
     --secondary: #AFFACA;
     --secondary-foreground: #000000;
