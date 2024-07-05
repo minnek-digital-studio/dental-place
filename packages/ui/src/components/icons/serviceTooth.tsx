@@ -3,6 +3,8 @@ import type { LucideProps } from "lucide-react";
 export const ServiceTooth = ({
     size = "24",
     color = "currentColor",
+    fill,
+    stroke,
     ...props
 }: LucideProps) => {
     return (
@@ -11,9 +13,9 @@ export const ServiceTooth = ({
             width={size}
             height={size}
             viewBox="10 0 58 72"
-            fill={color}
+            fill={fill || color}
             color={color}
-            stroke={color}
+            stroke={stroke || color}
             className="lucide"
             {...props}
         >

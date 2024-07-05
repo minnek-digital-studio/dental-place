@@ -3,6 +3,8 @@ import type { LucideProps } from "lucide-react";
 export const CarieTooth = ({
     size = "24",
     color = "currentColor",
+    fill,
+    stroke,
     ...props
 }: LucideProps) => {
     return (
@@ -11,9 +13,9 @@ export const CarieTooth = ({
             width={size}
             height={size}
             viewBox="0 0 64 64"
-            fill={color}
+            fill={fill || color}
             color={color}
-            stroke={color}
+            stroke={stroke || color}
             className="lucide"
             {...props}
         >
