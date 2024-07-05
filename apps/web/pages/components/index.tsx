@@ -12,10 +12,24 @@ import {
     SelectValue,
 } from "@minnek/ui/components/select";
 import { Button } from "@minnek/ui/components/button";
+import { CleanTooth, CarieTooth, ServiceTooth, MoveRight, Check, IconByName } from "@minnek/ui/icons";
 
 export default function Components() {
     return (
         <main className="w-full flex flex-col justify-center items-center gap-4">
+            <section className="min-h-screen flex flex-col items-center justify-center gap-6">
+                <div>
+                    <h1>Icons</h1>
+                    <div className="flex gap-6">
+                        <CleanTooth size={60} className="text-link" />
+                        <MoveRight size={60} />
+                        <CarieTooth size={60} />
+                        <ServiceTooth size={60} />
+                        <Check size={60} className="text-lime-600" />
+                        <IconByName name="CarieTooth" size={60} className="text-link" />
+                    </div>
+                </div>
+            </section>
             <section className="min-h-screen flex flex-col items-center justify-center gap-6">
                 <div>
                     <h1>Buttons</h1>
