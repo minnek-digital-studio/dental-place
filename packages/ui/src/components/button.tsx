@@ -13,7 +13,7 @@ const buttonVariants = cva(
         dark:
           "bg-dark text-dark-foreground hover:opacity-80",
         outline:
-          "border border-light bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-light bg-background hover:bg-dark hover:text-dark-foreground transition-colors hover:opacity-100",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         info: "bg-dark-info text-dark-info-foreground",
