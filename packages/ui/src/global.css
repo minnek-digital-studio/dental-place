@@ -32,6 +32,9 @@
     --dark-info: #AAC7E8;
     --dark-info-foreground: #000000;
 
+    --light-info: #82CDF5;
+    --light-info-foreground: #000000;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
@@ -39,7 +42,6 @@
     --input: #EFEFEF;
     --ring: 222.2 84% 4.9%;
     --link: #2986B8;
-
     --radius: 0.5rem;
   }
 
