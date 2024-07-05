@@ -93,7 +93,7 @@ const config = {
         },
       },
       fontFamily: {
-        "noto-sans": ["'Noto Sans'", "sans-serif"],
+        "noto-sans": "var(--font-noto-sans)",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

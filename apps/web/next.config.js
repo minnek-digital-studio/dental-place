@@ -1,18 +1,21 @@
 if (!URL.canParse(process.env.WORDPRESS_API_URL)) {
-  throw new Error(`
-    Please provide a valid WordPress instance URL.
-    Add to your environment variables WORDPRESS_API_URL.
-  `);
-}
+    throw new Error(`
+      Please provide a valid WordPress instance URL.
+      Add to your environment variables WORDPRESS_API_URL.
+    `);
+  }
 
-const { protocol, hostname, port, pathname } = new URL(
-  process.env.WORDPRESS_API_URL,
-);
+  const { protocol, hostname, port, pathname } = new URL(
+    process.env.WORDPRESS_API_URL,
+  );
 
-/** @type {import('next').NextConfig} */
-module.exports = {
-  images: {
-    domains: [process.env.WORDPRESS_DOMAIN, "secure.gravatar.com"],
-  },
-  transpilePackages: ["@minnek/ui"],
-};
+  /** @type {import('next').NextConfig} */
+  module.exports = {
+    images: {
+      domains: [process.env.WORDPRESS_DOMAIN, "secure.gravatar.com"],
+    },
+    fontLoaders: [
+        { loader: "next/font/google", options: { subsets: ["latin"] } },
+    ],
+    transpilePackages: ["@minnek/ui"],
+  };
