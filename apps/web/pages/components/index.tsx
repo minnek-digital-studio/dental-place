@@ -18,12 +18,41 @@ import {
     MoveRight,
     Check,
     IconByName,
+    ArrowRight,
 } from "@minnek/ui/icons";
 import { Typography } from "@minnek/ui/components/typography";
+import ServiceCard from "../../components/service-card";
 
 export default function Components() {
     return (
         <main className="w-full flex flex-col justify-center items-center gap-4">
+            <section className="min-h-screen flex flex-col items-center justify-center gap-6">
+                <div>
+                    <h1>Cards</h1>
+                    <div className="flex gap-4">
+                        <ServiceCard
+                            title="Odontología General"
+                            description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
+                            link="Learn More"
+                            icon="CleanTooth"
+                        />
+
+                        <ServiceCard
+                            title="Endodoncia"
+                            description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
+                            link="Learn More"
+                            icon="ServiceTooth"
+                        />
+
+                        <ServiceCard
+                            title="Odontología Estética"
+                            description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
+                            link="Learn More"
+                            icon="CarieTooth"
+                        />
+                    </div>
+                </div>
+            </section>
             <section className="min-h-screen flex flex-col items-center justify-center gap-6">
                 <div>
                     <h1>Icons</h1>

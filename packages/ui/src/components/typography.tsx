@@ -21,7 +21,6 @@ const tagVariants: any = {
     h5: "text-lg lg:text-xl",
     p: "text-base",
     span: "text-base",
-    a: "text-base",
 };
 
 export const colorVariants = {
@@ -31,7 +30,7 @@ export const colorVariants = {
     secondary: "text-secondary",
     info: "text-info",
     "light-info": "text-light-info",
-    link: "text-link ",
+    link: "text-link font-normal underline-offset-4 hover:underline",
 };
 
 const defaultElement = "p";
