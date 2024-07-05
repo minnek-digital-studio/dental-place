@@ -30,7 +30,7 @@ export const colorVariants = {
     secondary: "text-secondary",
     info: "text-info",
     "light-info": "text-light-info",
-    link: "text-link font-normal underline-offset-4 hover:underline",
+    link: "text-link",
 };
 
 const defaultElement = "p";
