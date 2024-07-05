@@ -9,7 +9,7 @@ import {
     CardTitle,
 } from "@minnek/ui/components/card";
 import { IconByName, type IconsName, ArrowRight } from "@minnek/ui/icons";
-
+import { cn } from "@minnek/ui/lib/utils";
 import { Button } from "@minnek/ui/components/button";
 
 type ServiceCardProps = {
@@ -19,6 +19,7 @@ type ServiceCardProps = {
     link: string;
     href?: string;
     iconSize?: number;
+    className?: string;
 };
 
 const serviceCard = ({
@@ -28,9 +29,10 @@ const serviceCard = ({
     link,
     iconSize = 35,
     href = "#",
+    className,
 }: ServiceCardProps) => {
     return (
-        <Card className="bg-info w-72">
+        <Card className={cn("w-72", className)}>
             <CardHeader>
                 {icon && typeof icon === "string" && (
                     <Button variant="info" size="icon" className="p-4">
