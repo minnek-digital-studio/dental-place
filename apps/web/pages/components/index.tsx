@@ -35,6 +35,7 @@ export default function Components() {
                             description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             link="Learn More"
                             icon="CleanTooth"
+                            className="bg-info"
                         />
 
                         <ServiceCard
@@ -42,6 +43,7 @@ export default function Components() {
                             description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             link="Learn More"
                             icon="ServiceTooth"
+                            className="border"
                         />
 
                         <ServiceCard
@@ -49,6 +51,7 @@ export default function Components() {
                             description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             link="Learn More"
                             icon="CarieTooth"
+                            className="bg-info"
                         />
                     </div>
                 </div>
