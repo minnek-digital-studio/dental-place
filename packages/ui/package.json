@@ -1,11 +1,12 @@
 {
   "name": "@minnek/ui",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "author": "Minnek Digital Agency",
   "license": "ISC",
   "scripts": {
-    "ui:add": "pnpm dlx shadcn-ui@latest add"
+    "ui:add": "pnpm dlx shadcn-ui@latest add",
+    "release": "release-it"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.0",
