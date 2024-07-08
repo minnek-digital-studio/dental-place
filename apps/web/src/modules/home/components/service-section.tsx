@@ -35,11 +35,11 @@ const ServiceSection = ({
                 ))}
             </main>
             <footer>
-                <Typography as="a" href={button.link} className="font-bold">
-                    <Button variant="secondary" size="default">
+                <Button variant="secondary" size="default" asChild>
+                    <Typography as="a" href={button.link} className="font-bold">
                         {button.text}
-                    </Button>
-                </Typography>
+                    </Typography>
+                </Button>
             </footer>
         </section>
     );
