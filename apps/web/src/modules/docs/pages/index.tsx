@@ -1,3 +1,5 @@
+import { Typography } from "@minnek/ui/components/typography";
+import ServiceCard from "@/modules/common/components/service-card";
 import { Input } from "@minnek/ui/components/input";
 import { Textarea } from "@minnek/ui/components/textarea";
 import { Label } from "@minnek/ui/components/label";
@@ -18,12 +20,14 @@ import {
     MoveRight,
     Check,
     IconByName,
-    ArrowRight,
 } from "@minnek/ui/icons";
-import { Typography } from "@minnek/ui/components/typography";
-import ServiceCard from "../../components/service-card";
+import { Metadata } from "next";
 
-export default function Components() {
+export const metadata: Metadata = {
+    title: "Docs",
+};
+
+export async function Docs() {
     return (
         <main className="w-full flex flex-col justify-center items-center gap-4">
             <section className="min-h-screen flex flex-col items-center justify-center gap-6">
