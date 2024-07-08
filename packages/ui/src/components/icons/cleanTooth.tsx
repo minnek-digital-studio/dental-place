@@ -4,7 +4,7 @@ export const CleanTooth = ({
     size = "24",
     color = "currentColor",
     fill,
-    stroke,
+    stroke = "1",
     ...props
 }: LucideProps) => {
     return (
@@ -15,7 +15,7 @@ export const CleanTooth = ({
             viewBox="0 0 64 64"
             fill={fill || color}
             color={color}
-            stroke={stroke || color}
+            stroke={stroke}
             className="lucide"
             {...props}
         >

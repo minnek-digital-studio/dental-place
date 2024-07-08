@@ -4,7 +4,7 @@ export const CarieTooth = ({
     size = "24",
     color = "currentColor",
     fill,
-    stroke,
+    stroke = "1",
     ...props
 }: LucideProps) => {
     return (
@@ -12,10 +12,10 @@ export const CarieTooth = ({
             xmlns="http://www.w3.org/2000/svg"
             width={size}
             height={size}
-            viewBox="0 0 64 64"
+            viewBox="0 0 50 64"
             fill={fill || color}
             color={color}
-            stroke={stroke || color}
+            stroke={stroke}
             className="lucide"
             {...props}
         >

@@ -4,7 +4,7 @@ export const ServiceTooth = ({
     size = "24",
     color = "currentColor",
     fill,
-    stroke,
+    stroke = "1",
     ...props
 }: LucideProps) => {
     return (
@@ -12,10 +12,10 @@ export const ServiceTooth = ({
             xmlns="http://www.w3.org/2000/svg"
             width={size}
             height={size}
-            viewBox="10 0 58 72"
+            viewBox="12 0 58 72"
             fill={fill || color}
             color={color}
-            stroke={stroke || color}
+            stroke={stroke}
             className="lucide"
             {...props}
         >
