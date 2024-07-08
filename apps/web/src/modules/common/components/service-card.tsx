@@ -43,9 +43,7 @@ const serviceCard = ({
                         <IconByName name={icon} size={iconSize} />
                     </Button>
                 )}
-                <CardTitle>
-                    <Typography as="h4">{title}</Typography>
-                </CardTitle>
+                <Typography as="h4">{title}</Typography>
             </CardHeader>
             <CardContent>
                 <Typography as="p" className="line-clamp-5">
