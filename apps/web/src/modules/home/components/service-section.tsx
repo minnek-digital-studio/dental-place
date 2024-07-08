@@ -2,7 +2,7 @@ import React from "react";
 import ServiceCard, {
     ServiceCardProps,
 } from "@/modules/common/components/service-card";
-import { Button } from "@minnek/ui/components/button";
+import { Button, type ButtonVariants } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
 
 export type ServiceSectionProps = {
@@ -12,9 +12,11 @@ export type ServiceSectionProps = {
     button: buttonProps;
 };
 
-type buttonProps = {
+export type buttonProps = {
     text: string;
     link: string;
+    variant: ButtonVariants["variant"];
+    size: ButtonVariants["size"];
 };
 
 const ServiceSection = ({
@@ -35,7 +37,7 @@ const ServiceSection = ({
                 ))}
             </main>
             <footer>
-                <Button variant="secondary" size="default" asChild>
+                <Button variant={button.variant} size={button.size} asChild>
                     <Typography as="a" href={button.link} className="font-bold">
                         {button.text}
                     </Typography>
