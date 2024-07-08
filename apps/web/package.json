@@ -1,10 +1,12 @@
 {
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "release": "release-it"
   },
   "dependencies": {
     "@minnek/typescript-config": "workspace:*",
