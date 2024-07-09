@@ -8,7 +8,7 @@ import { getAllPostsForHome } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import ServiceSection, {
     ServiceSectionProps,
-} from "../components/service-section";
+} from "../components/services-section";
 import Services from "../data/services.json";
 
 export const metadata: Metadata = {
