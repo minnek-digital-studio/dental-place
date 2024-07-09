@@ -14,34 +14,24 @@ import AboutSection, {
 } from "../components/about-section";
 import Services from "../data/services.json";
 import AboutInfo from "../data/about.json";
+import WhyUsInfo from "../data/whyus.json";
+import WhyUsSection, {
+    type WhyUsSectionProps,
+} from "../components/whyus-section";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
 export async function HomePage({ preview = false }) {
-    const { edges } = await getAllPostsForHome(preview);
-    const heroPost = edges[0]?.node;
-    const morePosts = edges.slice(1);
-
     return (
         <Layout preview={preview}>
             <Container>
-                <Intro />
-                {heroPost && (
-                    <HeroPost
-                        title={heroPost.title}
-                        coverImage={heroPost.featuredImage}
-                        date={heroPost.date}
-                        author={heroPost.author}
-                        slug={heroPost.slug}
-                        excerpt={heroPost.excerpt}
-                    />
-                )}
-                {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-
-                <ServiceSection {...(Services as ServiceSectionProps)} />
-                <AboutSection {...(AboutInfo as AboutSectionProps)} />
+                <div className="flex flex-col gap-10">
+                    <ServiceSection {...(Services as ServiceSectionProps)} />
+                    <AboutSection {...(AboutInfo as AboutSectionProps)} />
+                    <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+                </div>
             </Container>
         </Layout>
     );
