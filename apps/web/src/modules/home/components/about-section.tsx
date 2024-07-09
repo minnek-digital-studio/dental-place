@@ -23,7 +23,7 @@ const AboutSection = ({
     return (
         <section
             className={cn(
-                "flex flex-col md:flex-row bg-primary/40 md:h-[34rem]",
+                "flex flex-col md:flex-row bg-primary/40 lg:h-[34rem]",
                 className,
             )}
         >
