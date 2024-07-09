@@ -12,8 +12,12 @@ import ServiceSection, {
 import AboutSection, {
     type AboutSectionProps,
 } from "../components/about-section";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "../components/lethelp-section";
 import Services from "../data/services.json";
 import AboutInfo from "../data/about.json";
+import LetHelpInfo from "../data/let-us-help.json";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -40,8 +44,13 @@ export async function HomePage({ preview = false }) {
                 )}
                 {morePosts.length > 0 && <MoreStories posts={morePosts} />}
 
-                <ServiceSection {...(Services as ServiceSectionProps)} />
-                <AboutSection {...(AboutInfo as AboutSectionProps)} />
+                <div className="flex flex-col gap-10">
+                    <ServiceSection {...(Services as ServiceSectionProps)} />
+                    <AboutSection {...(AboutInfo as AboutSectionProps)} />
+                    <LetUsHelpSection
+                        {...(LetHelpInfo as LetUsHelpSectionProps)}
+                    />
+                </div>
             </Container>
         </Layout>
     );
