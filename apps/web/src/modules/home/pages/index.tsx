@@ -9,7 +9,11 @@ import { CMS_NAME } from "@/lib/constants";
 import ServiceSection, {
     ServiceSectionProps,
 } from "../components/service-section";
+import AboutSection, {
+    type AboutSectionProps,
+} from "../components/about-section";
 import Services from "../data/services.json";
+import AboutInfo from "../data/about.json";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -37,6 +41,7 @@ export async function HomePage({ preview = false }) {
                 {morePosts.length > 0 && <MoreStories posts={morePosts} />}
 
                 <ServiceSection {...(Services as ServiceSectionProps)} />
+                <AboutSection {...(AboutInfo as AboutSectionProps)} />
             </Container>
         </Layout>
     );
