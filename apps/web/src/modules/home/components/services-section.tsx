@@ -31,7 +31,7 @@ const ServiceSection = ({
                 <Typography as="h2">{title}</Typography>
                 <Typography as="p">{description}</Typography>
             </header>
-            <main className="flex w-full flex-col md:flex-row justify-center items-center gap-2">
+            <main className="flex w-full flex-col md:flex-row justify-center items-center gap-2 md:flex-wrap">
                 {items.map((item) => (
                     <ServiceCard key={crypto.randomUUID()} {...item} />
                 ))}
