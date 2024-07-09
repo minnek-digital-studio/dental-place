@@ -44,10 +44,7 @@ const LetUsHelpSection = ({
                 </Typography>
             </header>
             <main className="w-full overflow-visible md:relative flex justify-end">
-                <Image
-                    {...img}
-                    className="md:absolute md:bottom-0 md:w-100% md:max-w-[45rem] md:h-auto"
-                />
+                <Image {...img} />
             </main>
         </section>
     );
