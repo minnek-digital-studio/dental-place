@@ -1,0 +1,44 @@
+{
+  "title": "Why Dental Place?",
+  "items": [
+    {
+      "title": "Quality",
+      "description": "We are committed to providing the highest quality dental care to our patients. Our team of professionals is dedicated to ensuring that you receive the best possible care.",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-lime-600 mt-1"
+      }
+    },
+    {
+      "title": "Experience",
+      "description": "Our team of experienced professionals has been providing dental care to patients for many years. We have the knowledge and expertise to provide you with the best possible care.",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-lime-600 mt-1"
+      }
+    },
+    {
+      "title": "Convenience",
+      "description": "We understand that your time is valuable. That's why we offer convenient hours and locations to make it easy for you to get the care you need.",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-lime-600 mt-1"
+      }
+    }
+  ],
+  "img": {
+    "src": "/images/why-us.webp",
+    "alt": "About Us",
+    "className": "rounded-xl "
+  },
+  "button": {
+    "text": "Descubrir",
+    "link": "#",
+    "variant": "info",
+    "size": "lg"
+  },
+  "className": "bg-info rounded-xl"
+}
