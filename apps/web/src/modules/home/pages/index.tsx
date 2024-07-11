@@ -16,28 +16,9 @@ export const metadata: Metadata = {
 };
 
 export async function HomePage({ preview = false }) {
-    const { edges } = await getAllPostsForHome(preview);
-    const heroPost = edges[0]?.node;
-    const morePosts = edges.slice(1);
-
     return (
-        <Layout preview={preview}>
-            <Container>
-                <Intro />
-                {heroPost && (
-                    <HeroPost
-                        title={heroPost.title}
-                        coverImage={heroPost.featuredImage}
-                        date={heroPost.date}
-                        author={heroPost.author}
-                        slug={heroPost.slug}
-                        excerpt={heroPost.excerpt}
-                    />
-                )}
-                {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-
-                <ServiceSection {...(Services as ServiceSectionProps)} />
-            </Container>
-        </Layout>
+        <Container>
+            <ServiceSection {...(Services as ServiceSectionProps)} />
+        </Container>
     );
 }

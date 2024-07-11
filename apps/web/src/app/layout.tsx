@@ -1,5 +1,6 @@
 import "@minnek/ui/global.css";
 import { Metadata } from "next";
+import Footer from "@/modules/common/components/footer";
 
 export const metadata: Metadata = {
     title: "Home",
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={notoSans.variable}>{children}</body>
+            <body className={notoSans.variable}>
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }
