@@ -70,7 +70,7 @@ export const FooterColumn = (column: FooterColumnType) => {
                                 )}
                                 <Typography
                                     as="span"
-                                    className="text-sm flex h-full items-center"
+                                    className="text-sm flex h-full items-center hover:underline"
                                 >
                                     {title}
                                 </Typography>
