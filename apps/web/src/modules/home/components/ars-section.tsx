@@ -18,7 +18,7 @@ const ArsSection = ({
     return (
         <section
             className={cn(
-                "flex gap-8 w-full container items-center justify-center md:flex-row flex-col md:text-left text-center",
+                "flex gap-8 w-full items-center justify-center md:flex-row flex-col md:text-left text-center",
                 className,
             )}
             {...props}
