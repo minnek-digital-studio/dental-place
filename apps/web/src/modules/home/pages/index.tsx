@@ -26,20 +26,32 @@ import LetHelpInfo from "../data/let-us-help.json";
 import ArsSection, { ArsSectionProps } from "../components/ars-section";
 import ArsInfo from "../data/ars.json";
 
+import PresentationSection, {
+    type PresentationSectionProps,
+} from "../components/presentation-section";
+import PresentationInfo from "../data/presentation.json";
+
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
 export async function HomePage({ preview = false }) {
     return (
-        <Container>
-            <div className="flex flex-col gap-10">
-                <ServiceSection {...(Services as ServiceSectionProps)} />
-                <AboutSection {...(AboutInfo as AboutSectionProps)} />
-                <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
-                <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
-                <ArsSection {...(ArsInfo as ArsSectionProps)} />
-            </div>
-        </Container>
+        <div className="flex flex-col w-full gap-10">
+            <PresentationSection
+                {...(PresentationInfo as PresentationSectionProps)}
+            />
+            <Container>
+                <div className="flex flex-col gap-10">
+                    <ServiceSection {...(Services as ServiceSectionProps)} />
+                    <AboutSection {...(AboutInfo as AboutSectionProps)} />
+                    <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+                    <LetUsHelpSection
+                        {...(LetHelpInfo as LetUsHelpSectionProps)}
+                    />
+                    <ArsSection {...(ArsInfo as ArsSectionProps)} />
+                </div>
+            </Container>
+        </div>
     );
 }
