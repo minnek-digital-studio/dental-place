@@ -1,30 +1,101 @@
-import Container from "./container";
-import { EXAMPLE_PATH } from "@/lib/constants";
+import FooterData from "../data/footer.json";
+import { Icon } from "../types";
+import { Button } from "@minnek/ui/components/button";
+import { IconByName } from "@minnek/ui/icons";
+import { Typography } from "@minnek/ui/components/typography";
+import Link from "next/link";
+import { LucideMapPin } from "@minnek/ui/icons";
 
+type FooterColumnType = {
+    title: string;
+    description?: string;
+    socialLinks?: LinkType[];
+    links?: LinkType[];
+};
+
+type LinkType = {
+    title: string;
+    href: string;
+    icon?: Icon;
+    className?: string;
+};
+
+interface FooterProps {
+    columns: FooterColumnType[];
+    copyRight: string;
+}
+
+const { columns, copyRight } = FooterData as FooterProps;
 export default function Footer() {
     return (
-        <footer className="bg-accent-1 border-t border-accent-2">
-            <Container>
-                <div className="py-28 flex flex-col lg:flex-row items-center">
-                    <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-                        Statically Generated with Next.js.
-                    </h3>
-                    <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-                        <a
-                            href="https://nextjs.org/docs/basic-features/pages"
-                            className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-                        >
-                            Read Documentation
-                        </a>
-                        <a
-                            href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                            className="mx-3 font-bold hover:underline"
-                        >
-                            View on GitHub
-                        </a>
-                    </div>
-                </div>
-            </Container>
+        <footer className="container border-t flex flex-col font-noto-sans pt-10 pb-2 gap-8 text-black">
+            <section className="grid grid-cols-1 md:grid-cols-4 w-full gap-8 lg:gap-16">
+                {columns.map((column) => (
+                    <FooterColumn key={column.title} {...column} />
+                ))}
+            </section>
+            <section className="text-center md:text-left">
+                <Typography as="span" className="text-sm ">
+                    {copyRight}
+                </Typography>
+            </section>
         </footer>
     );
 }
+
+export const FooterColumn = (column: FooterColumnType) => {
+    return (
+        <div className="flex flex-col gap-2">
+            <Typography as="h5" className="font-bold md:min-h-7">
+                {column.title}
+            </Typography>
+            {column.description && (
+                <Typography as="span" className="text-sm leading-7 -mt-1">
+                    {column.description}
+                </Typography>
+            )}
+            {column.links && (
+                <ul className="flex flex-col gap-2">
+                    {column.links.map(({ title, icon, href, ...props }) => (
+                        <li key={title} className="flex w-full">
+                            <Link
+                                href={href}
+                                {...props}
+                                className="flex gap-2 items-start h-full"
+                            >
+                                {icon && (
+                                    <Button variant="default" size="icon">
+                                        <IconByName {...icon} />
+                                    </Button>
+                                )}
+                                <Typography
+                                    as="span"
+                                    className="text-sm flex h-full items-center"
+                                >
+                                    {title}
+                                </Typography>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
+            {column.socialLinks && (
+                <ul className="flex gap-2">
+                    {column.socialLinks.map(
+                        ({ title, icon, href, ...props }) => (
+                            <li key={title}>
+                                <Link href={href} {...props}>
+                                    {icon && (
+                                        <Button variant="default" size="icon">
+                                            <IconByName {...icon} />
+                                        </Button>
+                                    )}
+                                </Link>
+                            </li>
+                        ),
+                    )}
+                </ul>
+            )}
+        </div>
+    );
+};
