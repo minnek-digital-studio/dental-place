@@ -7,6 +7,7 @@ export type ButtonType = {
     variant: ButtonVariants["variant"];
     size: ButtonVariants["size"];
     className?: string;
+    icon?: Icon;
 };
 
 export type ImageType = {

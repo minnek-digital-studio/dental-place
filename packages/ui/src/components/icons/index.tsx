@@ -4,12 +4,14 @@ import { ServiceTooth } from "./serviceTooth";
 import { CarieTooth } from "./carieTooth";
 import { SpainFlag } from "./spainFlag";
 import { UsaFlag } from "./usaFlag";
+import { WhatsApp } from "./whatsApp";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
 export * from "./carieTooth";
 export * from "./spainFlag";
 export * from "./usaFlag";
+export * from "./whatsApp";
 
 const customIcons = {
     CleanTooth,
@@ -17,6 +19,7 @@ const customIcons = {
     CarieTooth,
     SpainFlag,
     UsaFlag,
+    WhatsApp,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
