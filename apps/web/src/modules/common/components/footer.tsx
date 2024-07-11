@@ -28,8 +28,8 @@ interface FooterProps {
 const { columns, copyRight } = FooterData as FooterProps;
 export default function Footer() {
     return (
-        <footer className="container border-t flex flex-col font-noto-sans pt-10 pb-2 gap-8 text-black">
-            <section className="grid grid-cols-1 md:grid-cols-4 w-full gap-8 lg:gap-16">
+        <footer className="container flex flex-col font-noto-sans pb-2 gap-8 text-black">
+            <section className="grid grid-cols-1 md:grid-cols-4 w-full gap-8 lg:gap-16 border-t pt-10">
                 {columns.map((column) => (
                     <FooterColumn key={column.title} {...column} />
                 ))}
