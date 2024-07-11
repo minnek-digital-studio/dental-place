@@ -195,144 +195,146 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
 export function NavBar() {
     return (
         <>
-            <header className="flex bg-primary w-full items-center py-6 px-4 lg:px-10 justify-between">
-                <div className="flex items-center gap-4 lg:gap-6">
-                    <Link href="/">
-                        <img
-                            src="/images/dental-logo.webp"
-                            alt="Dental Place Logo"
-                            className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
-                        />
-                    </Link>
-                    <NavigationMenu className="hidden md:flex">
-                        <NavigationMenuList>
-                            {navItems.map((item) => (
-                                <NavbarItem key={item.title} {...item} />
-                            ))}
-                        </NavigationMenuList>
-                    </NavigationMenu>
-                </div>
-                <div className="flex gap-2 lg:gap-4 items-center">
-                    <Button
-                        variant="secondary"
-                        size="icon"
-                        className="lg:h-9 lg:px-5"
-                    >
-                        <Typography
-                            as="a"
-                            href="tel:+18095818686"
-                            className="gap-2 flex items-center justify-center font-bold"
+            <header className="bg-primary w-full py-6 px-4 lg:px-10  ">
+                <main className="flex w-full items-center justify-between container">
+                    <div className="flex items-center gap-4 lg:gap-6">
+                        <Link href="/">
+                            <img
+                                src="/images/dental-logo.webp"
+                                alt="Dental Place Logo"
+                                className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
+                            />
+                        </Link>
+                        <NavigationMenu className="hidden md:flex">
+                            <NavigationMenuList>
+                                {navItems.map((item) => (
+                                    <NavbarItem key={item.title} {...item} />
+                                ))}
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
+                    <div className="flex gap-2 lg:gap-4 items-center">
+                        <Button
+                            variant="secondary"
+                            size="icon"
+                            className="lg:h-9 lg:px-5"
                         >
-                            <Phone size={15} fill="black" stroke="0" />
-                            <span className="hidden lg:flex">
-                                (809) 581-8686
-                            </span>
-                        </Typography>
-                    </Button>
+                            <Typography
+                                as="a"
+                                href="tel:+18095818686"
+                                className="gap-2 flex items-center justify-center font-bold"
+                            >
+                                <Phone size={15} fill="black" stroke="0" />
+                                <span className="hidden lg:flex">
+                                    (809) 581-8686
+                                </span>
+                            </Typography>
+                        </Button>
 
-                    <Button
-                        variant="secondary"
-                        size="icon"
-                        className="hidden md:flex"
-                    >
-                        <Typography as="a" href="#">
-                            <Facebook size={20} fill="black" stroke="0" />
-                        </Typography>
-                    </Button>
+                        <Button
+                            variant="secondary"
+                            size="icon"
+                            className="hidden md:flex"
+                        >
+                            <Typography as="a" href="#">
+                                <Facebook size={20} fill="black" stroke="0" />
+                            </Typography>
+                        </Button>
 
-                    <Button
-                        variant="secondary"
-                        size="icon"
-                        className="hidden md:flex"
-                    >
-                        <Typography as="a" href="#">
-                            <Instagram size={18} />
-                        </Typography>
-                    </Button>
+                        <Button
+                            variant="secondary"
+                            size="icon"
+                            className="hidden md:flex"
+                        >
+                            <Typography as="a" href="#">
+                                <Instagram size={18} />
+                            </Typography>
+                        </Button>
 
-                    <Dropdown
-                        defaultOption={langs[0] as DropdownOption}
-                        options={langs}
-                        label="Idioma"
-                        className="hidden md:flex"
-                        radioGroup
-                    />
+                        <Dropdown
+                            defaultOption={langs[0] as DropdownOption}
+                            options={langs}
+                            label="Idioma"
+                            className="hidden md:flex"
+                            radioGroup
+                        />
 
-                    <Dropdown
-                        defaultOption={hours[0] as DropdownOption}
-                        options={hours}
-                        label="Horario"
-                        className="hidden md:flex"
-                        icon={{
-                            name: "Clock",
-                            size: 24,
-                        }}
-                    />
+                        <Dropdown
+                            defaultOption={hours[0] as DropdownOption}
+                            options={hours}
+                            label="Horario"
+                            className="hidden md:flex"
+                            icon={{
+                                name: "Clock",
+                                size: 24,
+                            }}
+                        />
 
-                    <Sheet>
-                        <SheetTrigger className="flex md:hidden" asChild>
-                            <Button variant="transparent" size="icon">
-                                <Menu
-                                    size={35}
-                                    className="text-primary-foreground"
-                                />
-                            </Button>
-                        </SheetTrigger>
-                        <SheetContent>
-                            <SheetHeader>
-                                <SheetTitle>Menú</SheetTitle>
-                                <SheetDescription>
-                                    Navega a través de las opciones
-                                </SheetDescription>
-                            </SheetHeader>
+                        <Sheet>
+                            <SheetTrigger className="flex md:hidden" asChild>
+                                <Button variant="transparent" size="icon">
+                                    <Menu
+                                        size={35}
+                                        className="text-primary-foreground"
+                                    />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent>
+                                <SheetHeader>
+                                    <SheetTitle>Menú</SheetTitle>
+                                    <SheetDescription>
+                                        Navega a través de las opciones
+                                    </SheetDescription>
+                                </SheetHeader>
 
-                            <NavigationMenu className="bg-white max-h-max items-start w-full justify-start flex-1">
-                                <NavigationMenuListColumn>
-                                    {navItems.map((item) => (
-                                        <NavbarItem
-                                            key={item.title}
-                                            column
-                                            {...item}
-                                        />
-                                    ))}
-                                </NavigationMenuListColumn>
-                            </NavigationMenu>
+                                <NavigationMenu className="bg-white max-h-max items-start w-full justify-start flex-1">
+                                    <NavigationMenuListColumn>
+                                        {navItems.map((item) => (
+                                            <NavbarItem
+                                                key={item.title}
+                                                column
+                                                {...item}
+                                            />
+                                        ))}
+                                    </NavigationMenuListColumn>
+                                </NavigationMenu>
 
-                            <SheetFooter>
-                                <div className="flex w-full justify-between">
-                                    <Dropdown
-                                        defaultOption={
-                                            langs[0] as DropdownOption
-                                        }
-                                        options={langs}
-                                        label="Idioma"
-                                        radioGroup
-                                    >
-                                        <Typography as="span">
-                                            Idioma
-                                        </Typography>
-                                    </Dropdown>
+                                <SheetFooter>
+                                    <div className="flex w-full justify-between">
+                                        <Dropdown
+                                            defaultOption={
+                                                langs[0] as DropdownOption
+                                            }
+                                            options={langs}
+                                            label="Idioma"
+                                            radioGroup
+                                        >
+                                            <Typography as="span">
+                                                Idioma
+                                            </Typography>
+                                        </Dropdown>
 
-                                    <Dropdown
-                                        defaultOption={
-                                            hours[0] as DropdownOption
-                                        }
-                                        options={hours}
-                                        label="Horario"
-                                        icon={{
-                                            name: "Clock",
-                                            size: 24,
-                                        }}
-                                    >
-                                        <Typography as="span">
-                                            Horario
-                                        </Typography>
-                                    </Dropdown>
-                                </div>
-                            </SheetFooter>
-                        </SheetContent>
-                    </Sheet>
-                </div>
+                                        <Dropdown
+                                            defaultOption={
+                                                hours[0] as DropdownOption
+                                            }
+                                            options={hours}
+                                            label="Horario"
+                                            icon={{
+                                                name: "Clock",
+                                                size: 24,
+                                            }}
+                                        >
+                                            <Typography as="span">
+                                                Horario
+                                            </Typography>
+                                        </Dropdown>
+                                    </div>
+                                </SheetFooter>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                </main>
             </header>
         </>
     );
