@@ -10,9 +10,10 @@ export type ButtonType = {
 };
 
 export type ImageType = {
-    src: string;
-    alt: string;
+    src?: string;
+    alt?: string;
     className?: string;
+    href?: string;
 };
 
 export type Icon = {
