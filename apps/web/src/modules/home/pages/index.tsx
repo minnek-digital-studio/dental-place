@@ -23,6 +23,8 @@ import WhyUsSection, {
     type WhyUsSectionProps,
 } from "../components/whyus-section";
 import LetHelpInfo from "../data/let-us-help.json";
+import ArsSection, { ArsSectionProps } from "../components/ars-section";
+import ArsInfo from "../data/ars.json";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -36,6 +38,7 @@ export async function HomePage({ preview = false }) {
                 <AboutSection {...(AboutInfo as AboutSectionProps)} />
                 <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
                 <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+                <ArsSection {...(ArsInfo as ArsSectionProps)} />
             </div>
         </Container>
     );
