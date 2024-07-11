@@ -30,17 +30,13 @@ export const metadata: Metadata = {
 
 export async function HomePage({ preview = false }) {
     return (
-        <Layout preview={preview}>
-            <Container>
-                <div className="flex flex-col gap-10">
-                    <ServiceSection {...(Services as ServiceSectionProps)} />
-                    <AboutSection {...(AboutInfo as AboutSectionProps)} />
-                    <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
-                    <LetUsHelpSection
-                        {...(LetHelpInfo as LetUsHelpSectionProps)}
-                    />
-                </div>
-            </Container>
-        </Layout>
+        <Container>
+            <div className="flex flex-col gap-10">
+                <ServiceSection {...(Services as ServiceSectionProps)} />
+                <AboutSection {...(AboutInfo as AboutSectionProps)} />
+                <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+                <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+            </div>
+        </Container>
     );
 }
