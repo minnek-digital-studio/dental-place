@@ -13,12 +13,16 @@ import ServiceSection, {
 import AboutSection, {
     type AboutSectionProps,
 } from "../components/about-section";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "../components/lethelp-section";
 import Services from "../data/services.json";
 import AboutInfo from "../data/about.json";
 import WhyUsInfo from "../data/whyus.json";
 import WhyUsSection, {
     type WhyUsSectionProps,
 } from "../components/whyus-section";
+import LetHelpInfo from "../data/let-us-help.json";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -32,6 +36,9 @@ export async function HomePage({ preview = false }) {
                     <ServiceSection {...(Services as ServiceSectionProps)} />
                     <AboutSection {...(AboutInfo as AboutSectionProps)} />
                     <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+                    <LetUsHelpSection
+                        {...(LetHelpInfo as LetUsHelpSectionProps)}
+                    />
                 </div>
             </Container>
         </Layout>
