@@ -14,7 +14,7 @@ export type PolymorphicProps<
     );
 
 const tagVariants: any = {
-    h1: "text-3xl lg:text-6xl uppercase",
+    h1: "text-3xl md:text-4xl xl:text-6xl font-bold",
     h2: "text-3xl lg:text-4xl font-bold tracking-tight",
     h3: "text-2xl lg:text-3xl",
     h4: "text-xl font-extrabold",
