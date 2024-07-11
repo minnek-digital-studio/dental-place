@@ -11,16 +11,24 @@ import ServiceSection, {
 } from "../components/services-section";
 import Services from "../data/services.json";
 
+import PresentationSection, {
+    type PresentationSectionProps,
+} from "../components/presentation-section";
+import PresentationInfo from "../data/presentation.json";
+
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
 export async function HomePage({ preview = false }) {
     return (
-        <Layout preview={preview}>
+        <div className="flex flex-col w-full gap-6">
+            <PresentationSection
+                {...(PresentationInfo as PresentationSectionProps)}
+            />
             <Container>
                 <ServiceSection {...(Services as ServiceSectionProps)} />
             </Container>
-        </Layout>
+        </div>
     );
 }
