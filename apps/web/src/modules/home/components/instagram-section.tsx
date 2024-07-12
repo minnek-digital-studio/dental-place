@@ -22,7 +22,7 @@ const instagramSection = ({
     return (
         <section
             className={cn(
-                "flex w-full items-center justify-center gap-2",
+                "flex w-full items-center justify-center gap-2 flex-col md:flex-row text-center",
                 className,
             )}
             {...props}
