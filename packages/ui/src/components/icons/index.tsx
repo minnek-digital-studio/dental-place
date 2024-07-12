@@ -2,15 +2,18 @@ import { type LucideProps, icons } from "lucide-react";
 import { CleanTooth } from "./cleanTooth";
 import { ServiceTooth } from "./serviceTooth";
 import { CarieTooth } from "./carieTooth";
+import { InstagramColored } from "./instagramColored";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
 export * from "./carieTooth";
+export * from "./instagramColored";
 
 const customIcons = {
     CleanTooth,
     ServiceTooth,
     CarieTooth,
+    InstagramColored,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
