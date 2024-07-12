@@ -29,7 +29,7 @@ const config = {
         input: "var(--input)",
         "dark-primary": "var(--dark-primary)",
         primary: {
-          DEFAULT: "var(--primary)",
+          DEFAULT: "hsl(var(--primary))",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
