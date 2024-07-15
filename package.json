@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "build": "turbo run build",
     "docker:up": "docker compose --env-file=./.env.local up -d",
     "docker:down": "docker compose --env-file=./.env down"
   },
@@ -21,7 +22,7 @@
     "release-it": "16.2.1",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@8.15.7",
   "workspaces": [
     "packages/*",
     "apps/*"
