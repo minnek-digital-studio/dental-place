@@ -25,3 +25,4 @@ Thumbs.db
 !/plugins/minnek-plugin
 !/themes/minnek-theme
 .turbo
+.vercel
