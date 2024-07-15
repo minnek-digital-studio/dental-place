@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
-export async function HomePage({ preview = false }) {
+export default async function HomePage() {
     return (
         <div className="flex flex-col w-full gap-10">
             <PresentationSection
