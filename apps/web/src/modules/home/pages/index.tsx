@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
-export async function HomePage({ preview = false }) {
+export default async function HomePage() {
     return (
-        <Layout preview={preview}>
+        <Layout preview>
             <Container>
                 <ServiceSection {...(Services as ServiceSectionProps)} />
                 <InstagramPosts
