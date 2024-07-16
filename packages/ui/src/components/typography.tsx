@@ -15,9 +15,9 @@ export type PolymorphicProps<
 
 const tagVariants: any = {
     h1: "text-3xl lg:text-6xl uppercase",
-    h2: "text-3xl lg:text-4xl",
+    h2: "text-3xl lg:text-4xl font-bold tracking-tight",
     h3: "text-2xl lg:text-3xl",
-    h4: "text-xl lg:text-2xl",
+    h4: "text-xl font-extrabold",
     h5: "text-lg lg:text-xl",
     p: "text-base",
     span: "text-base",
@@ -31,6 +31,7 @@ export const colorVariants = {
     info: "text-info",
     "light-info": "text-light-info",
     link: "text-link",
+    "dark-grey": "text-dark-grey",
 };
 
 const defaultElement = "p";

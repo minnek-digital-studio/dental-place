@@ -1,0 +1,48 @@
+{
+  "title": "Services",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim.",
+  "items": [
+    {
+      "title": "Odontología General",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+      "button": {
+        "text": "Learn More",
+        "link": "#",
+        "variant": "link",
+        "size": "link"
+      },
+      "icon": "CleanTooth",
+      "className": "bg-info"
+    },
+    {
+      "title": "Odontología General",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+      "button": {
+        "text": "Learn More",
+        "link": "#",
+        "variant": "link",
+        "size": "link"
+      },
+      "icon": "ServiceTooth",
+      "className": "bg-info"
+    },
+    {
+      "title": "Odontología General",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+      "button": {
+        "text": "Learn More",
+        "link": "#",
+        "variant": "link",
+        "size": "link"
+      },
+      "icon": "CarieTooth",
+      "className": "bg-info"
+    }
+  ],
+  "button": {
+    "text": "View More",
+    "link": "#",
+    "variant": "secondary",
+    "size": "xl"
+  }
+}
