@@ -5,30 +5,31 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    Autoplay,
+    AutoScroll,
+    type AutoScrollOptionsType,
 } from "@minnek/ui/components/carousel";
 import { useRef } from "react";
-import { cn } from "@minnek/ui/lib/utils";
 
 export interface InstagramPostProps {
     images: ImageType[];
+    autoScrollOptions?: AutoScrollOptionsType;
 }
 
-const InstagramPosts = ({ images }: InstagramPostProps) => {
-    const autoplay = useRef(
-        Autoplay({
-            playOnInit: true,
-        }),
-    );
+const InstagramPosts = ({ images, autoScrollOptions }: InstagramPostProps) => {
+    const autoplay = useRef(AutoScroll(autoScrollOptions));
     return (
         <Carousel
+            plugins={[autoplay.current]}
             opts={{
                 loop: true,
             }}
         >
             <CarouselContent>
                 {images.map(({ className, ...image }, index) => (
-                    <CarouselItem key={index} className=" basis-1/4">
+                    <CarouselItem
+                        key={index}
+                        className="h-52 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
+                    >
                         <Image {...image} />
                     </CarouselItem>
                 ))}
