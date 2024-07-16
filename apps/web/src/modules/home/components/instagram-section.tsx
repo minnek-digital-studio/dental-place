@@ -32,7 +32,7 @@ const instagramSection = ({
                 <Typography
                     as="a"
                     href={button.link}
-                    className="flex gap-2 font-bold text-light-info"
+                    className="flex gap-2 font-bold text-xl text-light-info"
                 >
                     <IconByName {...icon} />
                     {button.text}
