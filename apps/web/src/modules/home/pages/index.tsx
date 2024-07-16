@@ -55,13 +55,13 @@ export default async function HomePage() {
                     <LetUsHelpSection
                         {...(LetHelpInfo as LetUsHelpSectionProps)}
                     />
-                    <ArsSection {...(ArsInfo as ArsSectionProps)} />
                     <InstagramSection
                         {...(InstagramInfo as InstagramSectionProps)}
                     />
                     <InstagramPosts
                         {...(InstagramPostsInfo as InstagramPostProps)}
                     />
+                    <ArsSection {...(ArsInfo as ArsSectionProps)} />
                 </div>
             </Container>
         </div>
