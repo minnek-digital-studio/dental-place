@@ -8,7 +8,7 @@ import { getAllPostsForHome } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import ServiceSection, {
     ServiceSectionProps,
-} from "../components/service-section";
+} from "../components/services-section";
 import AboutSection, {
     type AboutSectionProps,
 } from "../components/about-section";
@@ -19,27 +19,11 @@ export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
-export async function HomePage({ preview = false }) {
-    const { edges } = await getAllPostsForHome(preview);
-    const heroPost = edges[0]?.node;
-    const morePosts = edges.slice(1);
-
+export default async function HomePage() {
     return (
-        <Layout preview={preview}>
+        <Layout preview>
             <Container>
                 <Intro />
-                {heroPost && (
-                    <HeroPost
-                        title={heroPost.title}
-                        coverImage={heroPost.featuredImage}
-                        date={heroPost.date}
-                        author={heroPost.author}
-                        slug={heroPost.slug}
-                        excerpt={heroPost.excerpt}
-                    />
-                )}
-                {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-
                 <ServiceSection {...(Services as ServiceSectionProps)} />
                 <AboutSection {...(AboutInfo as AboutSectionProps)} />
             </Container>

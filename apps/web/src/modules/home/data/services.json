@@ -42,7 +42,7 @@
   "button": {
     "text": "View More",
     "link": "#",
-    "variant": "link",
-    "size": "link"
+    "variant": "secondary",
+    "size": "xl"
   }
 }

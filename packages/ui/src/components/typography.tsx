@@ -31,6 +31,7 @@ export const colorVariants = {
     info: "text-info",
     "light-info": "text-light-info",
     link: "text-link",
+    "dark-grey": "text-dark-grey",
 };
 
 const defaultElement = "p";
