@@ -32,6 +32,11 @@ import InstagramSection, {
 } from "../components/instagram-section";
 import InstagramInfo from "../data/instagram.json";
 
+import InstagramPosts, {
+    type InstagramPostProps,
+} from "../components/instagram-posts-section";
+import InstagramPostsInfo from "../data/instagram-post.json";
+
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
@@ -53,6 +58,9 @@ export default async function HomePage() {
                     <ArsSection {...(ArsInfo as ArsSectionProps)} />
                     <InstagramSection
                         {...(InstagramInfo as InstagramSectionProps)}
+                    />
+                    <InstagramPosts
+                        {...(InstagramPostsInfo as InstagramPostProps)}
                     />
                 </div>
             </Container>
