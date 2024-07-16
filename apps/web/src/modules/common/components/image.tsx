@@ -11,6 +11,7 @@ export const Image = ({ className, href, ...props }: ImageProps) => {
             <Link className={cn("w-full h-full", className)} href={href}>
                 <img
                     className={cn("w-full h-full object-cover", className)}
+                    loading="lazy"
                     {...props}
                 />
             </Link>
@@ -19,6 +20,7 @@ export const Image = ({ className, href, ...props }: ImageProps) => {
 
     return (
         <img
+            loading="lazy"
             className={cn("w-full h-full object-cover", className)}
             {...props}
         />
