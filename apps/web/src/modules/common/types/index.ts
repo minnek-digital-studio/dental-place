@@ -8,7 +8,6 @@ export type ButtonType = {
     className?: string;
 };
 
-
 export type ImageType = {
     src: string;
     alt: string;
