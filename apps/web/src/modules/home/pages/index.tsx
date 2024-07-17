@@ -11,6 +11,11 @@ import ServiceSection, {
 } from "../components/services-section";
 import Services from "../data/services.json";
 
+import ReviewsSection, {
+    type ReviewsSectionProps,
+} from "@/modules/home/components/reviews-section";
+import ReviewsInfo from "@/modules/home/data/reviews.json";
+
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
@@ -21,6 +26,7 @@ export default async function HomePage() {
             <Container>
                 <Intro />
                 <ServiceSection {...(Services as ServiceSectionProps)} />
+                <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
             </Container>
         </Layout>
     );
