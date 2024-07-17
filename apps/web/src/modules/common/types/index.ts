@@ -22,3 +22,8 @@ export type Icon = {
     size: number;
     className?: string;
 };
+
+export type Author = {
+    name: string;
+    img: ImageType;
+}

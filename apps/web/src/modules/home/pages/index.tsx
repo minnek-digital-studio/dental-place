@@ -37,6 +37,11 @@ import InstagramPosts, {
 } from "../components/instagram-posts-section";
 import InstagramPostsInfo from "../data/instagram-post.json";
 
+import ReviewsSection, {
+    type ReviewsSectionProps,
+} from "@/modules/home/components/reviews-section";
+import ReviewsInfo from "@/modules/home/data/reviews.json";
+
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
@@ -52,6 +57,7 @@ export default async function HomePage() {
                     <ServiceSection {...(Services as ServiceSectionProps)} />
                     <AboutSection {...(AboutInfo as AboutSectionProps)} />
                     <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+                    <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
                     <LetUsHelpSection
                         {...(LetHelpInfo as LetUsHelpSectionProps)}
                     />

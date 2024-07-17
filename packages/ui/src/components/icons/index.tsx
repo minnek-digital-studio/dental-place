@@ -6,6 +6,7 @@ import { SpainFlag } from "./spainFlag";
 import { UsaFlag } from "./usaFlag";
 import { WhatsApp } from "./whatsApp";
 import { InstagramColored } from "./instagramColored";
+import { Comma } from "./comma";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
@@ -14,6 +15,7 @@ export * from "./spainFlag";
 export * from "./usaFlag";
 export * from "./whatsApp";
 export * from "./instagramColored";
+export * from "./comma";
 
 const customIcons = {
     CleanTooth,
@@ -23,6 +25,7 @@ const customIcons = {
     UsaFlag,
     WhatsApp,
     InstagramColored,
+    Comma,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
