@@ -31,12 +31,6 @@ import InstagramSection, {
     type InstagramSectionProps,
 } from "../components/instagram-section";
 import InstagramInfo from "../data/instagram.json";
-
-import InstagramPosts, {
-    type InstagramPostProps,
-} from "../components/instagram-posts-section";
-import InstagramPostsInfo from "../data/instagram-post.json";
-
 import ReviewsSection, {
     type ReviewsSectionProps,
 } from "@/modules/home/components/reviews-section";
@@ -63,9 +57,6 @@ export default async function HomePage() {
                     />
                     <InstagramSection
                         {...(InstagramInfo as InstagramSectionProps)}
-                    />
-                    <InstagramPosts
-                        {...(InstagramPostsInfo as InstagramPostProps)}
                     />
                     <ArsSection {...(ArsInfo as ArsSectionProps)} />
                 </div>
