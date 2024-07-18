@@ -37,7 +37,9 @@ const ReviewsSection = ({
     return (
         <section className="flex flex-col gap-9 items-center py-6">
             <header className="flex flex-col gap-4 items-center">
-                <Typography as="h2">{title}</Typography>
+                <Typography as="h2" className="text-center">
+                    {title}
+                </Typography>
                 <Typography
                     as="p"
                     className="text-dark-grey max-w-[25rem] text-center "
@@ -49,7 +51,7 @@ const ReviewsSection = ({
                 opts={{
                     align: "start",
                 }}
-                className="flex flex-col gap-12 w-full items-center max-w-[30rem] md:max-w-[46rem] lg:max-w-[61rem]"
+                className="flex flex-col gap-12 w-full items-center max-w-[30rem] md:max-w-[46rem] lg:max-w-full"
             >
                 <CarouselContent>
                     {items.map((item, index) => (
