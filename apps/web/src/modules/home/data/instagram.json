@@ -1,0 +1,14 @@
+{
+  "title": "Siguenos en nuestro Instagram",
+  "button": {
+    "text": "@dentalplace",
+    "link": "https://www.instagram.com/dentalplace/",
+    "variant": "link",
+    "size": "link"
+  },
+  "icon": {
+    "name": "InstagramColored",
+    "size": 25,
+    "className": ""
+  }
+}

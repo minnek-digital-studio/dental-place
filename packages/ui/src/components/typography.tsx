@@ -27,6 +27,7 @@ export const colorVariants = {
     primary: "text-primary",
     "dark-primary": "text-dark-primary",
     dark: "text-dark",
+    black: "text-black",
     secondary: "text-secondary",
     info: "text-info",
     "light-info": "text-light-info",
@@ -52,7 +53,7 @@ export const Typography = <As extends ElementType = typeof defaultElement>({
 }: TypographyProps<As>) => {
     const classes = cn(
         "font-noto-sans",
-        colorVariants[color || "dark"],
+        colorVariants[color || "black"],
         tagVariants[as],
         className,
     );
