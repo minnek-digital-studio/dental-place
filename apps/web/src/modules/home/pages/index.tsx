@@ -9,7 +9,9 @@ import { CMS_NAME } from "@/lib/constants";
 import ServiceSection, {
     ServiceSectionProps,
 } from "../components/services-section";
+import ArsSection, { ArsSectionProps } from "../components/ars-section";
 import Services from "../data/services.json";
+import ArsInfo from "../data/ars.json";
 
 import ReviewsSection, {
     type ReviewsSectionProps,
@@ -24,9 +26,9 @@ export default async function HomePage() {
     return (
         <Layout preview>
             <Container>
-                <Intro />
                 <ServiceSection {...(Services as ServiceSectionProps)} />
                 <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
+                <ArsSection {...(ArsInfo as ArsSectionProps)} />
             </Container>
         </Layout>
     );
