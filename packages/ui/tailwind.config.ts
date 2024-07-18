@@ -30,7 +30,7 @@ const config = {
         "dark-primary": "var(--dark-primary)",
         "dark-grey": "var(--dark-grey)",
         primary: {
-          DEFAULT: "var(--primary)",
+          DEFAULT: "hsl(var(--primary))",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
