@@ -29,14 +29,14 @@ const ReviewCard = ({
     ...props
 }: ReviewCardProps) => {
     return (
-        <Card className={cn("max-w-[14.5rem] w-full bg-[#F9F7FF]", className)}>
+        <Card className={cn("w-full bg-[#F9F7FF] py-1", className)}>
             <CardHeader className="px-4 mb-2">
                 <StarRating rating={rating} />
             </CardHeader>
             <CardContent className="px-4">
                 <Typography
                     as="p"
-                    className="line-clamp-[8] text-sm text-black"
+                    className="line-clamp-[8] text-sm text-black leading-6"
                 >
                     {comment}
                 </Typography>
