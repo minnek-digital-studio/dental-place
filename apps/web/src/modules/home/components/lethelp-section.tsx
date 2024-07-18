@@ -23,7 +23,7 @@ const LetUsHelpSection = ({
     return (
         <section
             className={cn(
-                "flex flex-col rounded-[2rem] md:flex-row bg-primary/40 md:h-[24rem] mt-6",
+                "flex flex-col rounded-[2rem] md:flex-row bg-primary/40 md:h-[24rem] mt-6 container",
                 className,
             )}
         >
