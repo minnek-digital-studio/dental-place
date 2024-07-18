@@ -46,21 +46,13 @@ export default async function HomePage() {
             <PresentationSection
                 {...(PresentationInfo as PresentationSectionProps)}
             />
-            <Container>
-                <div className="flex flex-col gap-10">
-                    <ServiceSection {...(Services as ServiceSectionProps)} />
-                    <AboutSection {...(AboutInfo as AboutSectionProps)} />
-                    <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
-                    <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
-                    <LetUsHelpSection
-                        {...(LetHelpInfo as LetUsHelpSectionProps)}
-                    />
-                    <InstagramSection
-                        {...(InstagramInfo as InstagramSectionProps)}
-                    />
-                    <ArsSection {...(ArsInfo as ArsSectionProps)} />
-                </div>
-            </Container>
+            <ServiceSection {...(Services as ServiceSectionProps)} />
+            <AboutSection {...(AboutInfo as AboutSectionProps)} />
+            <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+            <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
+            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+            <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
+            <ArsSection {...(ArsInfo as ArsSectionProps)} />
         </div>
     );
 }

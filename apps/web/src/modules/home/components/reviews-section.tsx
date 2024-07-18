@@ -35,7 +35,7 @@ const ReviewsSection = ({
     button,
 }: ReviewsSectionProps) => {
     return (
-        <section className="flex flex-col gap-9 items-center py-6">
+        <section className="flex flex-col gap-9 items-center py-6 container">
             <header className="flex flex-col gap-4 items-center">
                 <Typography as="h2" className="text-center">
                     {title}
