@@ -23,29 +23,31 @@ const AboutSection = ({
     return (
         <section
             className={cn(
-                "flex flex-col md:flex-row bg-primary/40 lg:h-[34rem]",
+                "bg-primary/40 lg:h-[31rem] container p-0",
                 className,
             )}
         >
-            <header className="flex flex-col gap-6 w-full md:w-[47%] p-8 md:p-20 md:pr-10">
-                <Typography as="h3">{title}</Typography>
-                <Typography as="p" className="flex-1">
-                    {description}
-                </Typography>
-                <Typography as="a" href={button.link} className="font-bold">
-                    <Button
-                        variant={button.variant}
-                        className="gap-2"
-                        size={button.size}
-                    >
-                        <span>{button.text}</span>
-                        <MoveRight size={25} />
-                    </Button>
-                </Typography>
-            </header>
-            <main className="md:w-[53%] w-full overflow-hidden">
-                <Image {...img} />
-            </main>
+            <div className="flex flex-col md:flex-row h-full">
+                <header className="flex flex-col gap-6 w-full md:w-[47%] p-8 md:p-20 md:pr-10">
+                    <Typography as="h3">{title}</Typography>
+                    <Typography as="p" className="leading-8 text-dark">
+                        {description}
+                    </Typography>
+                    <Typography as="a" href={button.link} className="font-bold">
+                        <Button
+                            variant={button.variant}
+                            className="gap-2"
+                            size={button.size}
+                        >
+                            <span>{button.text}</span>
+                            <MoveRight size={25} />
+                        </Button>
+                    </Typography>
+                </header>
+                <main className="md:w-[53%] w-full overflow-hidden">
+                    <Image {...img} />
+                </main>
+            </div>
         </section>
     );
 };
