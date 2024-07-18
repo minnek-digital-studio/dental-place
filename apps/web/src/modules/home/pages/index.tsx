@@ -6,11 +6,6 @@ import ServiceSection, {
     ServiceSectionProps,
 } from "../components/services-section";
 import Services from "../data/services.json";
-
-import InstagramPosts, {
-    type InstagramPostProps,
-} from "../components/instagram-posts-section";
-import InstagramPostsInfo from "../data/instagram-post.json";
 import InstagramSection, {
     type InstagramSectionProps,
 } from "../components/instagram-section";
@@ -25,9 +20,6 @@ export default async function HomePage() {
         <Layout preview>
             <Container>
                 <ServiceSection {...(Services as ServiceSectionProps)} />
-                <InstagramPosts
-                    {...(InstagramPostsInfo as InstagramPostProps)}
-                />
                 <InstagramSection
                     {...(InstagramInfo as InstagramSectionProps)}
                 />
