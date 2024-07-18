@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@minnek/ui/components/button";
@@ -81,7 +79,7 @@ const navItems: NavBarItem[] = [
         href: "/",
     },
     {
-        title: "Acerca de",
+        title: "Acerca",
         href: "/about",
     },
     {
@@ -195,7 +193,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
 export function NavBar() {
     return (
         <>
-            <header className="bg-primary w-full py-6 px-4 lg:px-10 flex justify-center items-center">
+            <header className="bg-primary w-full py-6 px-4 lg:px-10 flex justify-center items-center text-black">
                 <main className="flex w-full items-center justify-between container p-0">
                     <div className="flex items-center gap-4 lg:gap-6">
                         <Link href="/">
@@ -218,6 +216,7 @@ export function NavBar() {
                             variant="secondary"
                             size="icon"
                             className="lg:h-9 lg:px-5"
+                            asChild
                         >
                             <Typography
                                 as="a"
@@ -235,8 +234,9 @@ export function NavBar() {
                             variant="secondary"
                             size="icon"
                             className="hidden md:flex"
+                            asChild
                         >
-                            <Typography as="a" href="#">
+                            <Typography as="a" href="#" aria-label="Facebook">
                                 <Facebook size={20} fill="black" stroke="0" />
                             </Typography>
                         </Button>
@@ -245,8 +245,9 @@ export function NavBar() {
                             variant="secondary"
                             size="icon"
                             className="hidden md:flex"
+                            asChild
                         >
-                            <Typography as="a" href="#">
+                            <Typography as="a" href="#" aria-label="Instagram">
                                 <Instagram size={18} />
                             </Typography>
                         </Button>
@@ -272,14 +273,15 @@ export function NavBar() {
 
                         <Sheet>
                             <SheetTrigger className="flex md:hidden" asChild>
-                                <Button variant="transparent" size="icon">
-                                    <Menu
-                                        size={35}
-                                        className="text-primary-foreground"
-                                    />
+                                <Button
+                                    variant="transparent"
+                                    size="icon"
+                                    aria-label="Menu"
+                                >
+                                    <Menu className="text-primary-foreground size-7" />
                                 </Button>
                             </SheetTrigger>
-                            <SheetContent>
+                            <SheetContent className="text-black">
                                 <SheetHeader>
                                     <SheetTitle>Menú</SheetTitle>
                                     <SheetDescription>
