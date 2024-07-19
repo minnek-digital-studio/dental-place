@@ -23,7 +23,7 @@ const PresentationCard = ({
     return (
         <Card
             className={cn(
-                "w-full max-w-[25rem] md:h-[7.5rem] md:max-w-[46rem] justify-center items-center shadow-xl",
+                "w-full max-w-[25rem] md:h-[7.5rem] md:max-w-[46rem] justify-center items-center shadow-card",
                 className,
             )}
             {...props}
@@ -32,7 +32,7 @@ const PresentationCard = ({
                 <Typography as="p" className="font-bold md:w-1/2">
                     {title}
                 </Typography>
-                <div className="flex items-center justify-center flex-wrap md:flex-nowrap gap-4 ">
+                <div className="flex items-center justify-center flex-wrap md:flex-nowrap gap-4">
                     {buttons.map(
                         ({ icon, link, text, className, ...buttonProps }) => (
                             <Button
@@ -44,7 +44,7 @@ const PresentationCard = ({
                                 <Link
                                     href={link}
                                     aria-label={text}
-                                    className="font-bold w-[calc(50%-1rem]"
+                                    className="font-bold flex-1 w-full max-w-40"
                                 >
                                     {icon?.position === "left" && (
                                         <IconByName {...icon} />
