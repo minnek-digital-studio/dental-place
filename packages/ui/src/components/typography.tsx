@@ -20,7 +20,6 @@ const tagVariants: any = {
     h4: "text-xl font-extrabold",
     h5: "text-lg lg:text-xl",
     p: "text-base",
-    span: "text-base",
 };
 
 export const colorVariants = {
