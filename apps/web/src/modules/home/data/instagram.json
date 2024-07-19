@@ -1,0 +1,94 @@
+{
+  "title": "Siguenos en nuestro Instagram",
+  "button": {
+    "text": "@dentalplace",
+    "link": "https://www.instagram.com/dentalplace/",
+    "variant": "link",
+    "size": "link"
+  },
+  "icon": {
+    "name": "InstagramColored",
+    "size": 25,
+    "className": ""
+  },
+  "carouselPost": {
+    "images": [
+      {
+        "src": "/images/instagram/post-1.webp",
+        "alt": "Post 1",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-2.webp",
+        "alt": "Post 2",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-3.webp",
+        "alt": "Post 3",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-4.webp",
+        "alt": "Post 4",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-5.webp",
+        "alt": "Post 5",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-6.webp",
+        "alt": "Post 6",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-1.webp",
+        "alt": "Post 1",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-2.webp",
+        "alt": "Post 2",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-3.webp",
+        "alt": "Post 3",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-4.webp",
+        "alt": "Post 4",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-5.webp",
+        "alt": "Post 5",
+        "href": "#",
+        "className": "object-cover"
+      },
+      {
+        "src": "/images/instagram/post-6.webp",
+        "alt": "Post 6",
+        "href": "#",
+        "className": "object-cover"
+      }
+    ],
+    "autoScrollOptions": {
+      "playOnInit": true,
+      "speed": 0.5
+    }
+  }
+}
