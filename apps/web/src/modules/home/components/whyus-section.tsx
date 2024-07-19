@@ -4,6 +4,7 @@ import { Button } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
 import type { ButtonType, ImageType, Icon } from "@/modules/common/types";
 import { MoveRight, type IconsName, IconByName } from "@minnek/ui/icons";
+import Link from "next/link";
 
 export type WhyUsSectionProps = {
     title: string;
@@ -27,46 +28,55 @@ const WhyUsSection = ({
     className,
 }: WhyUsSectionProps) => {
     return (
-        <section className="mx-5">
+        <section className="container">
             <div
                 className={cn(
                     "flex flex-col md:flex-row container pl-0 pr-0",
                     className,
                 )}
             >
-                <header className="flex flex-col gap-6 w-full md:w-[60%] p-10 md:py-14 md:pr-10">
-                    <Typography as="h3">{title}</Typography>
+                <main className="flex flex-col gap-6 w-full md:w-[60%] p-10 md:py-14 md:pr-10">
+                    <Typography
+                        as="h2"
+                        className="text-2xl lg:text-3xl font-extrabold"
+                    >
+                        {title}
+                    </Typography>
                     <ul className="flex flex-col gap-6">
                         {items.map((item, index) => (
                             <li key={index} className="flex gap-4">
                                 <div>
                                     <IconByName {...item.icon} />
                                 </div>
-                                <div className="flex flex-col">
-                                    <Typography as="h4">
+                                <div className="flex flex-col gap-1">
+                                    <Typography
+                                        as="h3"
+                                        className="text-xl lg:text-xl font-extrabold tracking-normal"
+                                    >
                                         {item.title}
                                     </Typography>
-                                    <Typography as="p">
+                                    <Typography as="p" className="leading-6">
                                         {item.description}
                                     </Typography>
                                 </div>
                             </li>
                         ))}
                     </ul>
-                    <Typography as="a" href={button.link} className="font-bold">
-                        <Button
-                            variant={button.variant}
-                            className="gap-2"
-                            size={button.size}
-                        >
+                    <Button
+                        variant={button.variant}
+                        className="gap-2 w-min"
+                        size={button.size}
+                        asChild
+                    >
+                        <Link href={button.link} className="font-bold">
                             <span>{button.text}</span>
                             <MoveRight size={25} />
-                        </Button>
-                    </Typography>
-                </header>
-                <main className="md:w-[40%] w-full overflow-hidden p-10 py-14">
-                    <Image {...img} />
+                        </Link>
+                    </Button>
                 </main>
+                <picture className="md:w-[40%] w-full overflow-hidden p-10 py-14">
+                    <Image {...img} />
+                </picture>
             </div>
         </section>
     );
