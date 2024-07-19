@@ -4,6 +4,7 @@ import { Button } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
 import type { ButtonType, ImageType } from "@/modules/common/types";
 import { MoveRight } from "@minnek/ui/icons";
+import Link from "next/link";
 
 export type LetUsHelpSectionProps = {
     title: string;
@@ -33,16 +34,21 @@ const LetUsHelpSection = ({
                     <Typography as="p" className="flex-1">
                         {description}
                     </Typography>
-                    <Typography as="a" href={button.link} className="font-bold">
-                        <Button
-                            variant={button.variant}
-                            className="gap-2"
-                            size={button.size}
+                    <Button
+                        variant={button.variant}
+                        className="gap-2"
+                        size={button.size}
+                        asChild
+                    >
+                        <Link
+                            href={button.link}
+                            className="font-bold w-min"
+                            aria-label={button.text}
                         >
                             <span>{button.text}</span>
                             <MoveRight size={25} />
-                        </Button>
-                    </Typography>
+                        </Link>
+                    </Button>
                 </header>
                 <main className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[115%] px-8 xmd:px-0">
                     <Image
