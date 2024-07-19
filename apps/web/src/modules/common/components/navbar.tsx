@@ -153,6 +153,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                                         {subItems.map(({ title, href }) => (
                                             <Link
                                                 href={href}
+                                                key={title}
                                                 legacyBehavior
                                                 passHref
                                             >
@@ -193,8 +194,8 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
 export function NavBar() {
     return (
         <>
-            <header className="bg-primary w-full py-6 px-4 lg:px-10 flex justify-center items-center text-black">
-                <main className="flex w-full items-center justify-between container p-0">
+            <header className="bg-primary w-full py-6 flex justify-center items-center text-black">
+                <main className="flex w-full items-center justify-between container">
                     <div className="flex items-center gap-4 lg:gap-6">
                         <Link href="/">
                             <img
