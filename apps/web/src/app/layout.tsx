@@ -1,10 +1,13 @@
 import "@minnek/ui/global.css";
 import { Metadata } from "next";
+import Footer from "@/modules/common/components/footer";
 
 export const metadata: Metadata = {
     title: "Home",
     description: "Welcome to Next.js",
 };
+
+import { NavBar } from "@/modules/common/components/navbar";
 
 import { Noto_Sans } from "next/font/google";
 
@@ -22,7 +25,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={notoSans.variable}>{children}</body>
+            <body className={notoSans.variable}>
+                <NavBar />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }
