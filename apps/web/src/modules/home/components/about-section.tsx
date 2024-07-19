@@ -21,13 +21,8 @@ const AboutSection = ({
     className,
 }: AboutSectionProps) => {
     return (
-        <section
-            className={cn(
-                "bg-primary/40 lg:h-[31rem] container p-0",
-                className,
-            )}
-        >
-            <div className="flex flex-col md:flex-row h-full">
+        <section className="lg:h-[31rem] container max-xl:pl-0 max-xl:pr-0">
+            <div className={cn("flex flex-col md:flex-row h-full", className)}>
                 <header className="flex flex-col gap-6 w-full md:w-[47%] p-8 md:p-20 md:pr-10">
                     <Typography as="h3">{title}</Typography>
                     <Typography as="p" className="leading-8 text-dark">
