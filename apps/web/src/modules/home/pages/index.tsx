@@ -32,13 +32,13 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
     return (
-        <>
+        <div className="flex flex-col w-full gap-10">
             <ServiceSection {...(Services as ServiceSectionProps)} />
             <AboutSection {...(AboutInfo as AboutSectionProps)} />
             <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
-        </>
+        </div>
     );
 }
