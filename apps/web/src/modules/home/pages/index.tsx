@@ -24,15 +24,11 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
     return (
-        <Layout preview>
-            <Container>
-                <ServiceSection {...(Services as ServiceSectionProps)} />
-                <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
-                <InstagramSection
-                    {...(InstagramInfo as InstagramSectionProps)}
-                />
-                <ArsSection {...(ArsInfo as ArsSectionProps)} />
-            </Container>
-        </Layout>
+        <Container>
+            <ServiceSection {...(Services as ServiceSectionProps)} />
+            <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
+            <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
+            <ArsSection {...(ArsInfo as ArsSectionProps)} />
+        </Container>
     );
 }
