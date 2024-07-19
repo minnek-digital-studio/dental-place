@@ -46,7 +46,10 @@ const ReviewCard = ({
                     <AvatarImage {...author.img} />
                     <AvatarFallback>{author.name[0]}</AvatarFallback>
                 </Avatar>
-                <Typography as="h4" className="text-base">
+                <Typography
+                    as="h3"
+                    className="text-base lg:text-base font-extrabold"
+                >
                     {author.name}
                 </Typography>
                 <div className="flex flex-1 justify-end -space-x-2 -mx-2">
