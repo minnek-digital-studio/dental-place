@@ -18,11 +18,13 @@ const buttonVariants = cva(
                 info: "bg-dark-info text-dark-info-foreground",
                 "light-info": "bg-light-info text-light-info-foreground",
                 link: "text-link text-base font-normal underline-offset-4 hover:underline ",
+                transparent: "bg-transparent text-primary-foreground",
             },
             size: {
                 default: "h-10 px-9 py-2",
                 sm: "h-9 px-5 font-medium",
                 lg: "h-11 px-8",
+                xl: "h-10 px-11 py-6",
                 icon: "size-max min-h-8 min-w-8",
                 link: "h-min w-min px-0 py-0",
             },
