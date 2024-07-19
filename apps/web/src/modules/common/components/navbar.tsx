@@ -153,6 +153,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                                         {subItems.map(({ title, href }) => (
                                             <Link
                                                 href={href}
+                                                key={title}
                                                 legacyBehavior
                                                 passHref
                                             >
