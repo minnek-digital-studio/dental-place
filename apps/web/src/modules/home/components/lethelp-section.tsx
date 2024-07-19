@@ -29,8 +29,13 @@ const LetUsHelpSection = ({
                     className,
                 )}
             >
-                <header className="flex flex-col gap-6 w-full xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
-                    <Typography as="h3">{title}</Typography>
+                <main className="flex flex-col gap-6 w-full xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
+                    <Typography
+                        as="h2"
+                        className="text-2xl lg:text-3xl font-extrabold tracking-tight"
+                    >
+                        {title}
+                    </Typography>
                     <Typography as="p" className="flex-1">
                         {description}
                     </Typography>
@@ -49,8 +54,8 @@ const LetUsHelpSection = ({
                             <MoveRight size={25} />
                         </Link>
                     </Button>
-                </header>
-                <main className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[115%] px-8 xmd:px-0">
+                </main>
+                <picture className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[115%] px-8 xmd:px-0">
                     <Image
                         {...img}
                         className={cn(
@@ -58,7 +63,7 @@ const LetUsHelpSection = ({
                             img.className,
                         )}
                     />
-                </main>
+                </picture>
             </div>
         </section>
     );
