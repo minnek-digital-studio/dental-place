@@ -18,6 +18,7 @@ const buttonVariants = cva(
                 info: "bg-dark-info text-dark-info-foreground",
                 "light-info": "bg-light-info text-light-info-foreground",
                 link: "text-link text-base font-normal underline-offset-4 hover:underline ",
+                transparent: "bg-transparent text-primary-foreground",
             },
             size: {
                 default: "h-10 px-9 py-2",
