@@ -1,5 +1,8 @@
 "use client";
-
+import Autoplay from "embla-carousel-autoplay";
+import AutoScroll, {
+    type AutoScrollOptionsType,
+} from "embla-carousel-auto-scroll";
 import * as React from "react";
 import useEmblaCarousel, {
     type UseEmblaCarouselType,
@@ -270,4 +273,7 @@ export {
     CarouselItem,
     CarouselPrevious,
     CarouselNext,
+    Autoplay,
+    AutoScroll,
+    AutoScrollOptionsType,
 };
