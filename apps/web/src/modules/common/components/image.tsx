@@ -1,9 +1,26 @@
 import { cn } from "@minnek/ui/lib/utils";
-export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
+import { ImageType } from "../types";
+import Link from "next/link";
+export interface ImageProps
+    extends React.ImgHTMLAttributes<HTMLImageElement>,
+        ImageType {}
 
-export const Image = ({ className, ...props }: ImageProps) => {
+export const Image = ({ className, href, ...props }: ImageProps) => {
+    if (href) {
+        return (
+            <Link className={cn("w-full h-full", className)} href={href}>
+                <img
+                    className={cn("w-full h-full object-cover", className)}
+                    loading="lazy"
+                    {...props}
+                />
+            </Link>
+        );
+    }
+
     return (
         <img
+            loading="lazy"
             className={cn("w-full h-full object-cover", className)}
             {...props}
         />
