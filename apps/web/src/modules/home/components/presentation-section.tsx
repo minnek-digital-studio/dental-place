@@ -55,7 +55,7 @@ const PresentationSection = ({
                 </div>
             </section>
 
-            <section className="flex md:hidden w-full justify-center items-center">
+            <section className="flex md:hidden w-full justify-center items-center container">
                 <PresentationCard {...card} />
             </section>
         </>
