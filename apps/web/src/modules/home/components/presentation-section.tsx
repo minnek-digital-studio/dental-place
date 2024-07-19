@@ -49,7 +49,7 @@ const PresentationSection = ({
                             <Image {...img} />
                         </picture>
                     </div>
-                    <div className="hidden w-[calc(100%-4rem)] md:flex justify-center items-center md:absolute top-[calc(100%-3.5rem)]">
+                    <div className="hidden w-[calc(100%-4rem)] md:flex justify-center items-center md:absolute top-[calc(100%-3.75rem)]">
                         <PresentationCard {...card} />
                     </div>
                 </div>

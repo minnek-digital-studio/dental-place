@@ -23,7 +23,7 @@ const PresentationCard = ({
     return (
         <Card
             className={cn(
-                "w-full max-w-[25rem] md:h-28 md:max-w-[46rem] justify-center items-center shadow-md",
+                "w-full max-w-[25rem] md:h-[7.5rem] md:max-w-[46rem] justify-center items-center shadow-xl",
                 className,
             )}
             {...props}
@@ -41,9 +41,23 @@ const PresentationCard = ({
                                 key={crypto.randomUUID()}
                                 asChild
                             >
-                                <Link href={link} aria-label={text}>
-                                    {text}
-                                    <IconByName {...icon} />
+                                <Link
+                                    href={link}
+                                    aria-label={text}
+                                    className="font-bold w-[calc(50%-1rem]"
+                                >
+                                    {icon?.position === "left" && (
+                                        <IconByName {...icon} />
+                                    )}
+                                    <Typography
+                                        as="span"
+                                        className="text-inherit"
+                                    >
+                                        {text}
+                                    </Typography>
+                                    {icon?.position !== "left" && (
+                                        <IconByName {...icon} />
+                                    )}
                                 </Link>
                             </Button>
                         ),
