@@ -2,23 +2,29 @@ import { type LucideProps, icons } from "lucide-react";
 import { CleanTooth } from "./cleanTooth";
 import { ServiceTooth } from "./serviceTooth";
 import { CarieTooth } from "./carieTooth";
+import { SpainFlag } from "./spainFlag";
+import { UsaFlag } from "./usaFlag";
 import { Comma } from "./comma";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
 export * from "./carieTooth";
+export * from "./spainFlag";
+export * from "./usaFlag";
 export * from "./comma";
 
 const customIcons = {
     CleanTooth,
     ServiceTooth,
     CarieTooth,
+    SpainFlag,
+    UsaFlag,
     Comma,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
 
-interface IconByNameProps extends Omit<LucideProps, "ref"> {
+export interface IconByNameProps extends Omit<LucideProps, "ref"> {
     name?: IconsName;
 }
 
