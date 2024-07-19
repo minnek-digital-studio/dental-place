@@ -44,7 +44,7 @@ const LetUsHelpSection = ({
                         </Button>
                     </Typography>
                 </header>
-                <main className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[111%] px-8 xmd:px-0">
+                <main className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[115%] px-8 xmd:px-0">
                     <Image
                         {...img}
                         className={cn(
