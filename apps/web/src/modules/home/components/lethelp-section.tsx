@@ -36,7 +36,7 @@ const LetUsHelpSection = ({
                     >
                         {title}
                     </Typography>
-                    <Typography as="p" className="flex-1">
+                    <Typography as="p" className="flex-1 leading-7">
                         {description}
                     </Typography>
                     <Button
