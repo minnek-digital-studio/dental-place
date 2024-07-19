@@ -14,7 +14,7 @@
         "text": "Descubrir",
         "link": "#",
         "variant": "dark",
-        "size": "default",
+        "size": "lg",
         "icon": {
           "name": "MoveRight",
           "className": "",
@@ -25,9 +25,10 @@
         "text": "Agendar",
         "link": "#",
         "variant": "outline",
-        "size": "default",
+        "size": "lg",
         "icon": {
           "name": "WhatsApp",
+          "position": "left",
           "size": 20
         },
         "className": "flex-row-reverse"
