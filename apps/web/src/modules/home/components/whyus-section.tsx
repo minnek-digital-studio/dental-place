@@ -36,12 +36,7 @@ const WhyUsSection = ({
                 )}
             >
                 <main className="flex flex-col gap-6 w-full md:w-[60%] p-10 md:py-14 md:pr-10">
-                    <Typography
-                        as="h2"
-                        className="text-2xl lg:text-3xl font-extrabold"
-                    >
-                        {title}
-                    </Typography>
+                    <Typography as="h2">{title}</Typography>
                     <ul className="flex flex-col gap-6">
                         {items.map((item, index) => (
                             <li key={index} className="flex gap-4">
@@ -64,13 +59,16 @@ const WhyUsSection = ({
                     </ul>
                     <Button
                         variant={button.variant}
-                        className="gap-2 w-min"
+                        className="gap-2"
                         size={button.size}
-                        aria-label={button.text}
                         asChild
                     >
-                        <Link href={button.link} className="font-bold">
-                            <span>{button.text}</span>
+                        <Link
+                            href={button.link}
+                            className="font-bold w-max"
+                            aria-label={button.text}
+                        >
+                            <Typography as="span">{button.text}</Typography>
                             <MoveRight size={25} />
                         </Link>
                     </Button>
