@@ -7,7 +7,7 @@ export type ButtonType = {
     variant: ButtonVariants["variant"];
     size: ButtonVariants["size"];
     className?: string;
-    icon: Icon;
+    icon?: Icon;
 };
 
 export type ImageType = {
@@ -22,3 +22,8 @@ export type Icon = {
     size: number;
     className?: string;
 };
+
+export type Author = {
+    name: string;
+    img: ImageType;
+}
