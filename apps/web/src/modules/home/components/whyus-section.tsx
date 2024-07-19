@@ -27,7 +27,7 @@ const WhyUsSection = ({
     className,
 }: WhyUsSectionProps) => {
     return (
-        <section className="mx-5">
+        <section className="container">
             <div
                 className={cn(
                     "flex flex-col md:flex-row container pl-0 pr-0",
