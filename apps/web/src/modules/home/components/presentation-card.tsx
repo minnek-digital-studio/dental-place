@@ -35,15 +35,17 @@ const PresentationCard = ({
                 <div className="flex items-center justify-center flex-wrap md:flex-nowrap gap-4 ">
                     {buttons.map(
                         ({ icon, link, text, className, ...buttonProps }) => (
-                            <Link key={crypto.randomUUID()} href={link}>
-                                <Button
-                                    {...buttonProps}
-                                    className={cn("", className)}
-                                >
+                            <Button
+                                {...buttonProps}
+                                className={cn("", className)}
+                                key={crypto.randomUUID()}
+                                asChild
+                            >
+                                <Link href={link} aria-label={text}>
                                     {text}
                                     <IconByName {...icon} />
-                                </Button>
-                            </Link>
+                                </Link>
+                            </Button>
                         ),
                     )}
                 </div>
