@@ -48,11 +48,14 @@ const WhyUsSection = ({
                                 <div>
                                     <IconByName {...item.icon} />
                                 </div>
-                                <div className="flex flex-col">
-                                    <Typography as="h4">
+                                <div className="flex flex-col gap-1">
+                                    <Typography
+                                        as="h3"
+                                        className="text-xl lg:text-xl font-extrabold tracking-normal"
+                                    >
                                         {item.title}
                                     </Typography>
-                                    <Typography as="p">
+                                    <Typography as="p" className="leading-6">
                                         {item.description}
                                     </Typography>
                                 </div>
