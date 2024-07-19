@@ -14,7 +14,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.25rem",
       screens: {
         "2xl": "1400px",
       },
@@ -28,6 +28,7 @@ const config = {
         link: "var(--link)",
         input: "var(--input)",
         "dark-primary": "var(--dark-primary)",
+        "dark-grey": "var(--dark-grey)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "var(--primary-foreground)",

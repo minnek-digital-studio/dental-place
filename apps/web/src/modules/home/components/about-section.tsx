@@ -21,31 +21,33 @@ const AboutSection = ({
     className,
 }: AboutSectionProps) => {
     return (
-        <section
-            className={cn(
-                "flex flex-col md:flex-row bg-primary/40 md:h-[34rem]",
-                className,
-            )}
-        >
-            <header className="flex flex-col gap-6 w-full md:w-[47%] p-8 md:p-20 md:pr-10">
-                <Typography as="h3">{title}</Typography>
-                <Typography as="p" className="flex-1">
-                    {description}
-                </Typography>
-                <Typography as="a" href={button.link} className="font-bold">
-                    <Button
-                        variant={button.variant}
-                        className="gap-2"
-                        size={button.size}
-                    >
-                        <span>{button.text}</span>
-                        <MoveRight size={25} />
-                    </Button>
-                </Typography>
-            </header>
-            <main className="md:w-[53%] w-full overflow-hidden">
-                <Image {...img} />
-            </main>
+        <section className="lg:h-[31rem] container max-xl:pl-0 max-xl:pr-0">
+            <div
+                className={cn(
+                    "flex flex-col md:flex-row h-full bg-primary/40",
+                    className,
+                )}
+            >
+                <header className="flex flex-col gap-6 w-full md:w-[47%] p-8 md:p-20 md:pr-10">
+                    <Typography as="h3">{title}</Typography>
+                    <Typography as="p" className="leading-8 text-dark">
+                        {description}
+                    </Typography>
+                    <Typography as="a" href={button.link} className="font-bold">
+                        <Button
+                            variant={button.variant}
+                            className="gap-2"
+                            size={button.size}
+                        >
+                            <span>{button.text}</span>
+                            <MoveRight size={25} />
+                        </Button>
+                    </Typography>
+                </header>
+                <main className="md:w-[53%] w-full overflow-hidden">
+                    <Image {...img} />
+                </main>
+            </div>
         </section>
     );
 };

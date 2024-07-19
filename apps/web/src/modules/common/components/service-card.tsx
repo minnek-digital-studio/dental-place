@@ -36,14 +36,18 @@ const serviceCard = ({
     className,
 }: ServiceCardProps) => {
     return (
-        <Card className={cn("w-72", className)}>
+        <Card className={cn("max-w-[19rem] w-full ", className)}>
             <CardHeader>
                 {icon && typeof icon === "string" && (
-                    <Button variant="info" size="icon" className="p-4">
-                        <IconByName name={icon} size={iconSize} />
+                    <Button variant="info" size="icon" className="p-4" asChild>
+                        <div aria-hidden>
+                            <IconByName name={icon} size={iconSize} />
+                        </div>
                     </Button>
                 )}
-                <Typography as="h4">{title}</Typography>
+                <Typography as="h3" className="text-xl lg:text-xl">
+                    {title}
+                </Typography>
             </CardHeader>
             <CardContent>
                 <Typography as="p" className="line-clamp-5">
