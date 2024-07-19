@@ -2,6 +2,7 @@ import { type LucideProps, icons } from "lucide-react";
 import { CleanTooth } from "./cleanTooth";
 import { ServiceTooth } from "./serviceTooth";
 import { CarieTooth } from "./carieTooth";
+import { Youtube } from "./youtube";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
@@ -11,6 +12,7 @@ const customIcons = {
     CleanTooth,
     ServiceTooth,
     CarieTooth,
+    Youtube,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
