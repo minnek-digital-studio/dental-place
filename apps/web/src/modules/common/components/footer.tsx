@@ -37,7 +37,7 @@ export default function Footer() {
             </section>
             <section className="text-center md:text-left">
                 <Typography as="span" className="text-sm">
-                    @{new Date().getFullYear()}
+                    © {new Date().getFullYear()}
                     {copyRight}
                 </Typography>
             </section>
