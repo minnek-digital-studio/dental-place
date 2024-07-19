@@ -12,6 +12,10 @@ import InstagramSection, {
 } from "../components/instagram-section";
 import InstagramInfo from "../data/instagram.json";
 import ArsInfo from "../data/ars.json";
+import AboutSection, {
+    type AboutSectionProps,
+} from "../components/about-section";
+import AboutInfo from "../data/about.json";
 
 import ReviewsSection, {
     type ReviewsSectionProps,
@@ -24,11 +28,12 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
     return (
-        <Container>
+        <>
             <ServiceSection {...(Services as ServiceSectionProps)} />
+            <AboutSection {...(AboutInfo as AboutSectionProps)} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
-        </Container>
+        </>
     );
 }
