@@ -66,6 +66,7 @@ const WhyUsSection = ({
                         variant={button.variant}
                         className="gap-2 w-min"
                         size={button.size}
+                        aria-label={button.text}
                         asChild
                     >
                         <Link href={button.link} className="font-bold">
