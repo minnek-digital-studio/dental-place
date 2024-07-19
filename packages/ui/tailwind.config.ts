@@ -20,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "xmd": "977px",
+      },
       colors: {
         border: "hsl(var(--border))",
         ring: "hsl(var(--ring))",
