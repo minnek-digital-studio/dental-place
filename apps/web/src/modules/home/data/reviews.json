@@ -1,0 +1,72 @@
+{
+  "title": "What People are Saying about us?",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum",
+  "items": [
+    {
+      "comment": "Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.",
+      "author": {
+        "name": "Johnan Mike",
+        "img": {
+          "src": "https://avatar.iran.liara.run/public",
+          "alt": "John Doe"
+        }
+      },
+      "rating": 5
+    },
+    {
+      "comment": "Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.",
+      "author": {
+        "name": "John Doe",
+        "img": {
+          "src": "https://avatar.iran.liara.run/public",
+          "alt": "John Doe"
+        }
+      },
+      "rating": 4
+    },
+    {
+      "comment": "Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.",
+      "author": {
+        "name": "John Doe",
+        "img": {
+          "src": "https://avatar.iran.liara.run/public",
+          "alt": "John Doe"
+        }
+      },
+      "rating": 5
+    },
+    {
+      "comment": "Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.",
+      "author": {
+        "name": "John Doe",
+        "img": {
+          "src": "https://avatar.iran.liara.run/public",
+          "alt": "John Doe"
+        }
+      },
+      "rating": 4
+    },
+    {
+      "comment": "Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.",
+      "author": {
+        "name": "John Doe",
+        "img": {
+          "src": "https://avatar.iran.liara.run/public",
+          "alt": "John Doe"
+        }
+      },
+      "rating": 5
+    },
+    {
+      "comment": "Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.",
+      "author": {
+        "name": "John Doe",
+        "img": {
+          "src": "https://avatar.iran.liara.run/public",
+          "alt": "John Doe"
+        }
+      },
+      "rating": 5
+    }
+  ]
+}
