@@ -21,14 +21,14 @@ const LetUsHelpSection = ({
     className,
 }: LetUsHelpSectionProps) => {
     return (
-        <section className="mx-5">
+        <section className="container">
             <div
                 className={cn(
-                    "flex flex-col rounded-[2rem] md:flex-row bg-primary/40 md:h-[24rem] mt-6 container",
+                    "flex flex-col rounded-[2rem] xmd:flex-row bg-primary/40 mt-6 relative",
                     className,
                 )}
             >
-                <header className="flex flex-col gap-6 w-full md:w-[60%] p-8 md:p-20 md:pr-10">
+                <header className="flex flex-col gap-6 w-full xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
                     <Typography as="h3">{title}</Typography>
                     <Typography as="p" className="flex-1">
                         {description}
@@ -44,11 +44,11 @@ const LetUsHelpSection = ({
                         </Button>
                     </Typography>
                 </header>
-                <main className="w-full overflow-visible md:relative flex justify-end">
+                <main className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[111%] px-8 xmd:px-0">
                     <Image
                         {...img}
                         className={cn(
-                            "md:absolute md:bottom-0 md:w-100% md:max-w-[45rem] md:h-auto",
+                            "xmd:w-auto max-w-96 xmd:max-w-none",
                             img.className,
                         )}
                     />
