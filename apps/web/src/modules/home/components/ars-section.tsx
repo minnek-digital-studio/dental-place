@@ -23,7 +23,9 @@ const ArsSection = ({
             )}
             {...props}
         >
-            <Typography as="h4">{title}</Typography>
+            <Typography as="h3" className="text-xl lg:text-xl font-extrabold">
+                {title}
+            </Typography>
             <div className="flex gap-4 items-start justify-center flex-wrap md:flex-nowrap">
                 {images.map(({ className, ...image }) => (
                     <picture
