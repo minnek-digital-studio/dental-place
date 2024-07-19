@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     description: "Welcome to Next.js",
 };
 
+import { NavBar } from "@/modules/common/components/navbar";
+
 import { Noto_Sans } from "next/font/google";
 
 const notoSans = Noto_Sans({
@@ -24,6 +26,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={notoSans.variable}>
+                <NavBar />
                 {children}
                 <Footer />
             </body>
