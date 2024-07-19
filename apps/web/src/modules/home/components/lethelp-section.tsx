@@ -29,14 +29,9 @@ const LetUsHelpSection = ({
                     className,
                 )}
             >
-                <main className="flex flex-col gap-6 w-full xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
-                    <Typography
-                        as="h2"
-                        className="text-2xl lg:text-3xl font-extrabold tracking-tight"
-                    >
-                        {title}
-                    </Typography>
-                    <Typography as="p" className="flex-1 leading-7">
+                <main className="flex flex-col gap-4 w-full mt-1 xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
+                    <Typography as="h2">{title}</Typography>
+                    <Typography as="p" className="flex-1 leading-8 text-dark">
                         {description}
                     </Typography>
                     <Button
@@ -47,10 +42,15 @@ const LetUsHelpSection = ({
                     >
                         <Link
                             href={button.link}
-                            className="font-bold w-min"
+                            className="font-bold w-max"
                             aria-label={button.text}
                         >
-                            <span>{button.text}</span>
+                            <Typography
+                                as="span"
+                                className="text-dark-foreground"
+                            >
+                                {button.text}
+                            </Typography>
                             <MoveRight size={25} />
                         </Link>
                     </Button>
