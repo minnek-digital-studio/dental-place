@@ -186,3 +186,7 @@
 .wp-block-media-text {
     @apply grid grid-cols-2 gap-4;
 }
+
+.break-all {
+    word-break: break-all;
+}
