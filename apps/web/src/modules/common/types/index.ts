@@ -21,6 +21,7 @@ export type Icon = {
     name: IconsName;
     size: number;
     className?: string;
+    position?: "left" | "right";
 };
 
 export type Author = {

@@ -6,6 +6,7 @@ import { Youtube } from "./youtube";
 import { InstagramColored } from "./instagramColored";
 import { SpainFlag } from "./spainFlag";
 import { UsaFlag } from "./usaFlag";
+import { WhatsApp } from "./whatsApp";
 import { Comma } from "./comma";
 
 export * from "./cleanTooth";
@@ -14,6 +15,7 @@ export * from "./carieTooth";
 export * from "./instagramColored";
 export * from "./spainFlag";
 export * from "./usaFlag";
+export * from "./whatsApp";
 export * from "./comma";
 
 const customIcons = {
@@ -24,6 +26,7 @@ const customIcons = {
     InstagramColored,
     SpainFlag,
     UsaFlag,
+    WhatsApp,
     Comma,
 };
 

@@ -6,7 +6,7 @@ import type { ButtonType, ImageType } from "@/modules/common/types";
 import { MoveRight } from "@minnek/ui/icons";
 import Link from "next/link";
 
-export type AboutSectionProps = {
+export type LetUsHelpSectionProps = {
     title: string;
     description: string;
     button: ButtonType;
@@ -14,24 +14,24 @@ export type AboutSectionProps = {
     className?: string;
 };
 
-const AboutSection = ({
+const LetUsHelpSection = ({
     title,
     description,
     img,
     button,
     className,
-}: AboutSectionProps) => {
+}: LetUsHelpSectionProps) => {
     return (
-        <section className="lg:h-[31rem] container max-xl:pl-0 max-xl:pr-0">
+        <section className="container">
             <div
                 className={cn(
-                    "flex flex-col md:flex-row h-full bg-primary/40",
+                    "flex flex-col rounded-[2rem] xmd:flex-row bg-primary/40 mt-6 relative",
                     className,
                 )}
             >
-                <header className="flex flex-col gap-6 w-full md:w-[47%] p-8 md:p-20 md:pr-10">
+                <main className="flex flex-col gap-4 w-full mt-1 xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
                     <Typography as="h2">{title}</Typography>
-                    <Typography as="p" className="leading-8 text-dark">
+                    <Typography as="p" className="flex-1 leading-8 text-dark">
                         {description}
                     </Typography>
                     <Button
@@ -45,19 +45,28 @@ const AboutSection = ({
                             className="font-bold w-max"
                             aria-label={button.text}
                         >
-                            <Typography as="span" className="text-inherit">
+                            <Typography
+                                as="span"
+                                className="text-dark-foreground"
+                            >
                                 {button.text}
                             </Typography>
                             <MoveRight size={25} />
                         </Link>
                     </Button>
-                </header>
-                <main className="md:w-[53%] w-full overflow-hidden">
-                    <Image {...img} />
                 </main>
+                <picture className="size-full xmd:w-[55%] overflow-visible flex justify-center items-center overflow-x-hidden xmd:absolute xmd:bottom-0 xmd:right-0 xmd:h-[115%] px-8 xmd:px-0">
+                    <Image
+                        {...img}
+                        className={cn(
+                            "xmd:w-auto max-w-96 xmd:max-w-none",
+                            img.className,
+                        )}
+                    />
+                </picture>
             </div>
         </section>
     );
 };
 
-export default AboutSection;
+export default LetUsHelpSection;
