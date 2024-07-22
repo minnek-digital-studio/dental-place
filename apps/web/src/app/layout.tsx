@@ -25,11 +25,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={notoSans.variable}>
-                <NavBar />
-                {children}
-                <Footer />
-            </body>
+            <body className={notoSans.variable}>{children}</body>
         </html>
     );
 }
