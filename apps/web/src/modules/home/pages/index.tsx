@@ -19,6 +19,10 @@ import LetUsHelpSection, {
     LetUsHelpSectionProps,
 } from "../components/lethelp-section";
 import AboutInfo from "../data/about.json";
+import WhyUsInfo from "../data/whyus.json";
+import WhyUsSection, {
+    type WhyUsSectionProps,
+} from "../components/whyus-section";
 import LetHelpInfo from "../data/let-us-help.json";
 
 import ReviewsSection, {
@@ -43,6 +47,7 @@ export default async function HomePage() {
             />
             <ServiceSection {...(Services as ServiceSectionProps)} />
             <AboutSection {...(AboutInfo as AboutSectionProps)} />
+            <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
             <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
