@@ -73,7 +73,7 @@ export const FooterColumn = (column: FooterColumnType) => {
                                     <Link
                                         href={href}
                                         {...props}
-                                        className="flex gap-2 items-start h-full"
+                                        className="flex gap-2 items-start h-full hover:underline"
                                         aria-label={title}
                                     >
                                         {icon && (

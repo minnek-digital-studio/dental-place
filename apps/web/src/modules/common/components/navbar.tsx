@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@minnek/ui/components/button";
-import { cn } from "@minnek/ui/lib/utils";
+import { cva, type VariantProps, cn } from "@minnek/ui/lib/utils";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -109,6 +109,31 @@ const navItems: NavBarItem[] = [
     },
 ];
 
+const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
+    variants: {
+        variant: {
+            default: "bg-primary text-primary-foreground",
+            info: "bg-info text-info-foreground",
+            secondary: "bg-secondary text-secondary-foreground",
+        },
+    },
+    defaultVariants: {
+        variant: "default",
+    },
+});
+
+const variants = {
+    default: {
+        button: "secondary",
+    },
+    info: {
+        button: "light",
+    },
+    secondary: {
+        button: "light",
+    },
+};
+
 export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
     return (
         <NavigationMenuItem direction={column ? "column" : "row"}>
@@ -191,10 +216,23 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
     );
 }
 
-export function NavBar() {
+export type NavbarVariants = VariantProps<typeof NavBarVariants>;
+
+interface NavbarProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        NavbarVariants {}
+
+export function NavBar({ className, variant, ...props }: NavbarProps) {
     return (
         <>
-            <header className="bg-primary w-full py-6 flex justify-center items-center text-black">
+            <header
+                className={cn(
+                    NavBarVariants({
+                        variant,
+                        className,
+                    }),
+                )}
+            >
                 <main className="flex w-full items-center justify-between container">
                     <div className="flex items-center gap-4 lg:gap-6">
                         <Link href="/">
@@ -214,7 +252,9 @@ export function NavBar() {
                     </div>
                     <div className="flex gap-2 lg:gap-4 items-center">
                         <Button
-                            variant="secondary"
+                            variant={
+                                variants[variant || "default"].button as any
+                            }
                             size="icon"
                             className="lg:h-9 lg:px-5"
                             asChild
@@ -232,7 +272,9 @@ export function NavBar() {
                         </Button>
 
                         <Button
-                            variant="secondary"
+                            variant={
+                                variants[variant || "default"].button as any
+                            }
                             size="icon"
                             className="hidden md:flex"
                             asChild
@@ -243,7 +285,9 @@ export function NavBar() {
                         </Button>
 
                         <Button
-                            variant="secondary"
+                            variant={
+                                variants[variant || "default"].button as any
+                            }
                             size="icon"
                             className="hidden md:flex"
                             asChild
