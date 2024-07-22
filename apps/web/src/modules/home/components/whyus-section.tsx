@@ -29,12 +29,7 @@ const WhyUsSection = ({
 }: WhyUsSectionProps) => {
     return (
         <section className="container">
-            <div
-                className={cn(
-                    "flex flex-col md:flex-row container pl-0 pr-0",
-                    className,
-                )}
-            >
+            <div className={cn("flex flex-col md:flex-row", className)}>
                 <main className="flex flex-col gap-6 w-full md:w-[60%] pt-10 px-10 md:py-14 md:pr-10">
                     <Typography as="h2">{title}</Typography>
                     <ul className="flex flex-col gap-6">
@@ -73,7 +68,7 @@ const WhyUsSection = ({
                         </Link>
                     </Button>
                 </main>
-                <picture className="md:w-[40%] w-full overflow-hidden p-10 py-14">
+                <picture className="md:w-[40%] w-full overflow-hidden p-10 md:py-14">
                     <Image {...img} />
                 </picture>
             </div>
