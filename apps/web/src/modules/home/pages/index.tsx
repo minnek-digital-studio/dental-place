@@ -1,39 +1,37 @@
-import { Metadata } from "next";
-import Container from "@/modules/common/components/container";
-import Layout from "@/modules/common/components/layout";
 import { CMS_NAME } from "@/lib/constants";
-import ServiceSection, {
-    ServiceSectionProps,
-} from "../components/services-section";
-import ArsSection, { ArsSectionProps } from "../components/ars-section";
-import Services from "../data/services.json";
-import InstagramSection, {
-    type InstagramSectionProps,
-} from "../components/instagram-section";
-import InstagramInfo from "../data/instagram.json";
-import ArsInfo from "../data/ars.json";
 import AboutSection, {
     type AboutSectionProps,
-} from "../components/about-section";
+} from "@/modules/home/components/about-section";
+import ArsSection, {
+    type ArsSectionProps,
+} from "@/modules/home/components/ars-section";
+import InstagramSection, {
+    type InstagramSectionProps,
+} from "@/modules/home/components/instagram-section";
 import LetUsHelpSection, {
     LetUsHelpSectionProps,
-} from "../components/lethelp-section";
-import AboutInfo from "../data/about.json";
-import WhyUsInfo from "../data/whyus.json";
-import WhyUsSection, {
-    type WhyUsSectionProps,
-} from "../components/whyus-section";
-import LetHelpInfo from "../data/let-us-help.json";
-
+} from "@/modules/home/components/lethelp-section";
+import PresentationSection, {
+    type PresentationSectionProps,
+} from "@/modules/home/components/presentation-section";
 import ReviewsSection, {
     type ReviewsSectionProps,
 } from "@/modules/home/components/reviews-section";
+import ServiceSection, {
+    ServiceSectionProps,
+} from "@/modules/home/components/services-section";
+import WhyUsSection, {
+    type WhyUsSectionProps,
+} from "@/modules/home/components/whyus-section";
+import AboutInfo from "@/modules/home/data/about.json";
+import ArsInfo from "@/modules/home/data/ars.json";
+import InstagramInfo from "@/modules/home/data/instagram.json";
+import LetHelpInfo from "@/modules/home/data/let-us-help.json";
+import PresentationInfo from "@/modules/home/data/presentation.json";
 import ReviewsInfo from "@/modules/home/data/reviews.json";
-
-import PresentationSection, {
-    type PresentationSectionProps,
-} from "../components/presentation-section";
-import PresentationInfo from "../data/presentation.json";
+import Services from "@/modules/home/data/services.json";
+import WhyUsInfo from "@/modules/home/data/whyus.json";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -48,8 +46,8 @@ export default async function HomePage() {
             <ServiceSection {...(Services as ServiceSectionProps)} />
             <AboutSection {...(AboutInfo as AboutSectionProps)} />
             <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
-            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
+            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
         </div>
