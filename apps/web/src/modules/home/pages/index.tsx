@@ -26,6 +26,11 @@ import ReviewsSection, {
 } from "@/modules/home/components/reviews-section";
 import ReviewsInfo from "@/modules/home/data/reviews.json";
 
+import PresentationSection, {
+    type PresentationSectionProps,
+} from "../components/presentation-section";
+import PresentationInfo from "../data/presentation.json";
+
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
@@ -33,6 +38,9 @@ export const metadata: Metadata = {
 export default async function HomePage() {
     return (
         <div className="flex flex-col w-full gap-10">
+            <PresentationSection
+                {...(PresentationInfo as PresentationSectionProps)}
+            />
             <ServiceSection {...(Services as ServiceSectionProps)} />
             <AboutSection {...(AboutInfo as AboutSectionProps)} />
             <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />

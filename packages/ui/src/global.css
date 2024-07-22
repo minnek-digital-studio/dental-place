@@ -187,6 +187,9 @@
     @apply grid grid-cols-2 gap-4;
 }
 
+.shadow-card {
+    @apply shadow-[0px_4px_100px_0px_#00000026];
+}
 .break-all {
     word-break: break-all;
 }
