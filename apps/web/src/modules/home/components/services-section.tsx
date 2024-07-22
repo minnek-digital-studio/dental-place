@@ -4,6 +4,7 @@ import ServiceCard, {
 } from "@/modules/common/components/service-card";
 import { Button, type ButtonVariants } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
+import Link from "next/link";
 
 export type ServiceSectionProps = {
     title: string;
@@ -39,10 +40,21 @@ const ServiceSection = ({
                 ))}
             </main>
             <footer>
-                <Button variant={button.variant} size={button.size} asChild>
-                    <Typography as="a" href={button.link} className="font-bold">
-                        {button.text}
-                    </Typography>
+                <Button
+                    variant={button.variant}
+                    className="gap-2"
+                    size={button.size}
+                    asChild
+                >
+                    <Link
+                        href={button.link}
+                        className="font-bold w-max"
+                        aria-label={button.text}
+                    >
+                        <Typography as="span" className="text-inherit">
+                            {button.text}
+                        </Typography>
+                    </Link>
                 </Button>
             </footer>
         </section>

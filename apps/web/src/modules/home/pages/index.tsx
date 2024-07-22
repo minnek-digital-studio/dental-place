@@ -12,6 +12,14 @@ import InstagramSection, {
 } from "../components/instagram-section";
 import InstagramInfo from "../data/instagram.json";
 import ArsInfo from "../data/ars.json";
+import AboutSection, {
+    type AboutSectionProps,
+} from "../components/about-section";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "../components/lethelp-section";
+import AboutInfo from "../data/about.json";
+import LetHelpInfo from "../data/let-us-help.json";
 
 import ReviewsSection, {
     type ReviewsSectionProps,
@@ -29,11 +37,13 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
     return (
-        <div className="flex flex-col w-full gap-6">
+        <div className="flex flex-col w-full gap-10">
             <PresentationSection
                 {...(PresentationInfo as PresentationSectionProps)}
             />
             <ServiceSection {...(Services as ServiceSectionProps)} />
+            <AboutSection {...(AboutInfo as AboutSectionProps)} />
+            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
