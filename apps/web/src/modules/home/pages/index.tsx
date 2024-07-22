@@ -15,16 +15,25 @@ import ArsInfo from "../data/ars.json";
 import AboutSection, {
     type AboutSectionProps,
 } from "../components/about-section";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "../components/lethelp-section";
 import AboutInfo from "../data/about.json";
 import WhyUsInfo from "../data/whyus.json";
 import WhyUsSection, {
     type WhyUsSectionProps,
 } from "../components/whyus-section";
+import LetHelpInfo from "../data/let-us-help.json";
 
 import ReviewsSection, {
     type ReviewsSectionProps,
 } from "@/modules/home/components/reviews-section";
 import ReviewsInfo from "@/modules/home/data/reviews.json";
+
+import PresentationSection, {
+    type PresentationSectionProps,
+} from "../components/presentation-section";
+import PresentationInfo from "../data/presentation.json";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -33,9 +42,13 @@ export const metadata: Metadata = {
 export default async function HomePage() {
     return (
         <div className="flex flex-col w-full gap-10">
+            <PresentationSection
+                {...(PresentationInfo as PresentationSectionProps)}
+            />
             <ServiceSection {...(Services as ServiceSectionProps)} />
             <AboutSection {...(AboutInfo as AboutSectionProps)} />
             <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
