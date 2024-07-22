@@ -10,7 +10,7 @@ import InstagramSection, {
 } from "@/modules/home/components/instagram-section";
 import LetUsHelpSection, {
     LetUsHelpSectionProps,
-} from "@/modules/home/components/lethelp-section";
+} from "@/modules/common/components/lethelp-section";
 import PresentationSection, {
     type PresentationSectionProps,
 } from "@/modules/home/components/presentation-section";
@@ -32,6 +32,7 @@ import ReviewsInfo from "@/modules/home/data/reviews.json";
 import Services from "@/modules/home/data/services.json";
 import WhyUsInfo from "@/modules/home/data/whyus.json";
 import { Metadata } from "next";
+import Layout from "@/modules/common/layouts/layout";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
     return (
-        <div className="flex flex-col w-full gap-10">
+        <Layout>
             <PresentationSection
                 {...(PresentationInfo as PresentationSectionProps)}
             />
@@ -50,6 +51,6 @@ export default async function HomePage() {
             <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
-        </div>
+        </Layout>
     );
 }
