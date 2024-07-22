@@ -2,6 +2,7 @@ import { type LucideProps, icons } from "lucide-react";
 import { CleanTooth } from "./cleanTooth";
 import { ServiceTooth } from "./serviceTooth";
 import { CarieTooth } from "./carieTooth";
+import { Youtube } from "./youtube";
 import { InstagramColored } from "./instagramColored";
 import { SpainFlag } from "./spainFlag";
 import { UsaFlag } from "./usaFlag";
@@ -21,6 +22,7 @@ const customIcons = {
     CleanTooth,
     ServiceTooth,
     CarieTooth,
+    Youtube,
     InstagramColored,
     SpainFlag,
     UsaFlag,
