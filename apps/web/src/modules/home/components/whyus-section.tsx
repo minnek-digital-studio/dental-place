@@ -35,7 +35,7 @@ const WhyUsSection = ({
                     className,
                 )}
             >
-                <main className="flex flex-col gap-6 w-full md:w-[60%] p-10 md:py-14 md:pr-10">
+                <main className="flex flex-col gap-6 w-full md:w-[60%] pt-10 px-10 md:py-14 md:pr-10">
                     <Typography as="h2">{title}</Typography>
                     <ul className="flex flex-col gap-6">
                         {items.map((item, index) => (
@@ -59,7 +59,7 @@ const WhyUsSection = ({
                     </ul>
                     <Button
                         variant={button.variant}
-                        className="gap-2"
+                        className="gap-2 h-12"
                         size={button.size}
                         asChild
                     >
