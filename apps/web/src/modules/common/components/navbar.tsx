@@ -19,7 +19,13 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@minnek/ui/components/accordion";
-import { Phone, Facebook, Instagram, Menu } from "@minnek/ui/icons";
+import {
+    Phone,
+    Facebook,
+    Instagram,
+    Menu,
+    ChevronDown,
+} from "@minnek/ui/icons";
 import { Typography } from "@minnek/ui/components/typography";
 
 import {
@@ -172,6 +178,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                             >
                                 <AccordionTrigger className="inline-flex h-10 w-max px-2 py-2 text-sm font-normal border-b-2 border-transparent transition-colors hover:border-primary-foreground hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:border-primary-foreground">
                                     {title}
+                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="grid px-4 py-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
