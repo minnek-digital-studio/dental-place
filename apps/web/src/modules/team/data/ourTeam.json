@@ -1,0 +1,323 @@
+{
+  "title": "Our Team",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. ",
+  "items": [
+    {
+      "id": "1",
+      "name": "Dra. Minerva Felipe Gonzaléz",
+      "specialty": "Especialista en Ortodoncia y Ortopedia Maxilar",
+      "img": {
+        "src": "/images/team/doctor-1.webp",
+        "alt": "Dra. Minerva Felipe Gonzaléz"
+      },
+      "button": {
+        "text": "View Details",
+        "variant": "link",
+        "size": "link"
+      },
+      "socialLinks": [
+        {
+          "text": "Facebook",
+          "icon": {
+            "name": "Facebook",
+            "size": 18,
+            "fill": "#000000",
+            "stroke": "0"
+          },
+          "link": "https://www.facebook.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Youtube",
+          "icon": {
+            "name": "Youtube",
+            "fill": "#000000",
+            "color": "#eaeaea",
+            "stroke": "0",
+            "size": 18
+          },
+          "link": "https://www.youtube.com",
+          "size": "icon",
+          "variant": "grey"
+        },
+        {
+          "text": "Instagram",
+          "icon": {
+            "name": "Instagram",
+            "size": 18
+          },
+          "link": "https://www.instagram.com",
+          "size": "icon",
+          "variant": "grey"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Dra. Sarah Felipe González",
+      "specialty": "Especialista en Odontología Estética y Restauradora. Especialista en Endodoncia y Microcirugía Periapical",
+      "img": {
+        "src": "/images/team/doctor-2.webp",
+        "alt": "Dra. Sarah Felipe González"
+      },
+      "button": {
+        "text": "View Details",
+        "variant": "link",
+        "size": "link"
+      },
+      "socialLinks": [
+        {
+          "text": "Facebook",
+          "icon": {
+            "name": "Facebook",
+            "size": 18,
+            "fill": "#000000",
+            "stroke": "0"
+          },
+          "link": "https://www.facebook.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Youtube",
+          "icon": {
+            "name": "Youtube",
+            "fill": "#000000",
+            "color": "#eaeaea",
+            "stroke": "0",
+            "size": 18
+          },
+          "link": "https://www.youtube.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Instagram",
+          "icon": {
+            "name": "Instagram",
+            "size": 18
+          },
+          "link": "https://www.instagram.com",
+          "size": "icon",
+          "variant": "grey"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Dra. Jaileni Alejo Fermín",
+      "specialty": "Especialista en Periodoncia e Implantes Dentales",
+      "img": {
+        "src": "/images/team/doctor-3.webp",
+        "alt": "Dra. Jaileni Alejo Fermín"
+      },
+      "button": {
+        "text": "View Details",
+        "variant": "link",
+        "size": "link"
+      },
+      "socialLinks": [
+        {
+          "text": "Facebook",
+          "icon": {
+            "name": "Facebook",
+            "size": 18,
+            "fill": "#000000",
+            "stroke": "0"
+          },
+          "link": "https://www.facebook.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Youtube",
+          "icon": {
+            "name": "Youtube",
+            "fill": "#000000",
+            "color": "#eaeaea",
+            "stroke": "0",
+            "size": 18
+          },
+          "link": "https://www.youtube.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Instagram",
+          "icon": {
+            "name": "Instagram",
+            "size": 18
+          },
+          "link": "https://www.instagram.com",
+          "size": "icon",
+          "variant": "grey"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Dra. Liza Domínguez Almánzar",
+      "specialty": "Odontología General",
+      "img": {
+        "src": "/images/team/doctor-4.webp",
+        "alt": "Dra. Liza Domínguez Almánzar"
+      },
+      "button": {
+        "text": "View Details",
+        "variant": "link",
+        "size": "link"
+      },
+      "socialLinks": [
+        {
+          "text": "Facebook",
+          "icon": {
+            "name": "Facebook",
+            "size": 18,
+            "fill": "#000000",
+            "stroke": "0"
+          },
+          "link": "https://www.facebook.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Youtube",
+          "icon": {
+            "name": "Youtube",
+            "fill": "#000000",
+            "color": "#eaeaea",
+            "stroke": "0",
+            "size": 18
+          },
+          "link": "https://www.youtube.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Instagram",
+          "icon": {
+            "name": "Instagram",
+            "size": 18
+          },
+          "link": "https://www.instagram.com",
+          "size": "icon",
+          "variant": "grey"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Dra. Rosa Rodríguez",
+      "specialty": "Odontología General",
+      "img": {
+        "src": "/images/team/doctor-5.webp",
+        "alt": "Dra. Rosa Rodríguez"
+      },
+      "button": {
+        "text": "View Details",
+        "variant": "link",
+        "size": "link"
+      },
+      "socialLinks": [
+        {
+          "text": "Facebook",
+          "icon": {
+            "name": "Facebook",
+            "size": 18,
+            "fill": "#000000",
+            "stroke": "0"
+          },
+          "link": "https://www.facebook.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Youtube",
+          "icon": {
+            "name": "Youtube",
+            "fill": "#000000",
+            "color": "#eaeaea",
+            "stroke": "0",
+            "size": 18
+          },
+          "link": "https://www.youtube.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Instagram",
+          "icon": {
+            "name": "Instagram",
+            "size": 18
+          },
+          "link": "https://www.instagram.com",
+          "size": "icon",
+          "variant": "grey"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Dra. Lilianny García",
+      "specialty": "Odontología General",
+      "img": {
+        "src": "/images/team/doctor-6.webp",
+        "alt": "Dra. Lilianny García"
+      },
+      "button": {
+        "text": "View Details",
+        "variant": "link",
+        "size": "link"
+      },
+      "socialLinks": [
+        {
+          "text": "Facebook",
+          "icon": {
+            "name": "Facebook",
+            "size": 18,
+            "fill": "#000000",
+            "stroke": "0"
+          },
+          "link": "https://www.facebook.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Youtube",
+          "icon": {
+            "name": "Youtube",
+            "fill": "#000000",
+            "color": "#eaeaea",
+            "stroke": "0",
+            "size": 18
+          },
+          "link": "https://www.youtube.com",
+          "size": "icon",
+
+          "variant": "grey"
+        },
+        {
+          "text": "Instagram",
+          "icon": {
+            "name": "Instagram",
+            "size": 18
+          },
+          "link": "https://www.instagram.com",
+          "size": "icon",
+          "variant": "grey"
+        }
+      ]
+    }
+  ]
+}
