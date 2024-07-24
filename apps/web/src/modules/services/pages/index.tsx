@@ -10,6 +10,12 @@ import ClinicSection, {
 } from "@/modules/services/components/clinic-section";
 import ClinicInfo from "@/modules/services/data/clinic.json";
 
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "@/modules/common/components/lethelp-section";
+
+import LetHelpInfo from "@/modules/services/data/let-us-help.json";
+
 const ServicesPage = () => {
     return (
         <Layout
@@ -19,6 +25,7 @@ const ServicesPage = () => {
         >
             <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
             <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
+            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
         </Layout>
     );
 };
