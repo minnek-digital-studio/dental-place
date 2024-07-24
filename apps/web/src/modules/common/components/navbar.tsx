@@ -323,6 +323,9 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                             icon={{
                                 name: "Clock",
                                 size: 24,
+                                color: variant === "transparent"
+                                    ? "white"
+                                    : "black",
                             }}
                         />
 
