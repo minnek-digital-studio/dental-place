@@ -29,7 +29,7 @@ const HeroSection = ({
                     className,
                 )}
             >
-                <header className="flex flex-col justify-center gap-6 w-full md:w-[70%] p-8 md:p-20 md:pr-0 md:mb-16">
+                <main className="flex flex-col justify-center gap-6 w-full md:w-[70%] p-8 md:p-20 md:pr-0 md:mb-16">
                     <Typography as="h2">{title}</Typography>
                     {description && (
                         <Typography as="p" className="leading-8 text-dark">
@@ -53,7 +53,7 @@ const HeroSection = ({
                             <MoveRight size={25} />
                         </Link>
                     </Button>
-                </header>
+                </main>
                 <picture className="overflow-hidden md:w-[50%] flex justify-end items-end">
                     <Image {...img} className="h-auto" />
                 </picture>
