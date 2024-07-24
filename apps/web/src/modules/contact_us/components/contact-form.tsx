@@ -19,7 +19,7 @@ const ContactForm = () => {
                 <Label className="w-full">
                     <span className="text-2xl font-bold">Tu Email</span>
                     <Input
-                        type="text"
+                        type="email"
                         variant="info"
                         sizes="lg"
                         placeholder="Tu Email"
@@ -29,7 +29,7 @@ const ContactForm = () => {
             <Label className="w-full">
                 <span className="text-2xl font-bold">Número de teléfono</span>
                 <Input
-                    type="text"
+                    type="tel"
                     variant="info"
                     sizes="lg"
                     placeholder="Número de teléfono"

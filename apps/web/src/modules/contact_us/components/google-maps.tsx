@@ -1,4 +1,5 @@
 import { cn } from "@minnek/ui/lib/utils";
+
 export interface GoogleMapsProps {
     className?: string;
     src: string;
