@@ -1,5 +1,9 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import ServiceSection, {
+    type ServiceSectionProps,
+} from "@/modules/services/components/services-section";
+import ServicesInfo from "@/modules/services/data/services.json";
 
 import ClinicSection, {
     type ClinicSectionProps,
@@ -13,7 +17,7 @@ const ServicesPage = () => {
                 variant: "info",
             }}
         >
-            <h1>Services</h1>
+            <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
             <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
         </Layout>
     );
