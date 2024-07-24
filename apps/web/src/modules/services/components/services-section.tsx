@@ -32,7 +32,7 @@ const ServiceSection = ({
 }: ServiceSectionProps) => {
     return (
         <section {...props}>
-            <div className="flex flex-col gap-9 items-center py-6 container">
+            <div className="flex flex-col gap-9 items-center py-6 container pb-10">
                 <header className="max-w-[30rem] flex flex-col gap-6 text-center">
                     <Typography as="h2">{title}</Typography>
                     <Typography as="p" className="text-dark-grey">
