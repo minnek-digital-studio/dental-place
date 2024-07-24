@@ -1,0 +1,56 @@
+import { Label } from "@minnek/ui/components/label";
+import { Input } from "@minnek/ui/components/input";
+import { Textarea } from "@minnek/ui/components/textarea";
+import { Button } from "@minnek/ui/components/button";
+
+const ContactForm = () => {
+    return (
+        <form className="flex flex-col w-full h-full md:h-[745px] gap-11">
+            <div className="flex gap-6 flex-col md:flex-row">
+                <Label className="w-full">
+                    <span className="text-2xl font-bold">Tu nombre</span>
+                    <Input
+                        type="text"
+                        variant="info"
+                        sizes="lg"
+                        placeholder="Tu nombre"
+                    />
+                </Label>
+                <Label className="w-full">
+                    <span className="text-2xl font-bold">Tu Email</span>
+                    <Input
+                        type="text"
+                        variant="info"
+                        sizes="lg"
+                        placeholder="Tu Email"
+                    />
+                </Label>
+            </div>
+            <Label className="w-full">
+                <span className="text-2xl font-bold">Número de teléfono</span>
+                <Input
+                    type="text"
+                    variant="info"
+                    sizes="lg"
+                    placeholder="Número de teléfono"
+                />
+            </Label>
+            <Label>
+                <span className="text-2xl font-bold">Escribenos aquí...</span>
+                <Textarea
+                    className="rounded-3xl h-[314px] resize-none"
+                    variant="info"
+                    sizes="lg"
+                    placeholder="Escribenos aquí..."
+                />
+            </Label>
+            <div className="w-full flex justify-end">
+                <Button variant="dark" className="w-fit py-6 px-14">
+                    Enviar
+                </Button>
+            </div>
+        </form>
+    );
+};
+
+export default ContactForm;
