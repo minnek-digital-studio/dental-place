@@ -19,7 +19,7 @@
 
         --dark-primary: #4D27AF;
 
-        --secondary: #AFFACA;
+        --secondary: 142 88% 83%;
         --secondary-foreground: #000000;
 
         --dark: #332B3B;
@@ -48,7 +48,7 @@
         --ring: 222.2 84% 4.9%;
         --link: #2986B8;
         --radius: 0.5rem;
-        --dark-grey: #2F2E2E;
+        --dark-grey: 0 1% 18%;
     }
 
     .dark {
@@ -189,6 +189,10 @@
 
 .shadow-card {
     @apply shadow-[0px_4px_100px_0px_#00000026];
+}
+
+.shadow-team-card {
+    @apply shadow-[0px_0px_100px_0px_#0000001A];
 }
 .break-all {
     word-break: break-all;

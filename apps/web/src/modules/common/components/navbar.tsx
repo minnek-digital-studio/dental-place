@@ -120,7 +120,7 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
         variant: {
             default: "bg-primary text-primary-foreground",
             info: "bg-info text-info-foreground",
-            secondary: "bg-secondary text-secondary-foreground",
+            secondary: "bg-secondary/40 text-secondary-foreground",
         },
     },
     defaultVariants: {
