@@ -58,6 +58,8 @@ const MemberCard = ({
                             <Button
                                 asChild
                                 {...props}
+                                key={id}
+                                aria-label={text}
                                 className={cn("size-10", className)}
                             >
                                 <Link key={text} href={link}>
