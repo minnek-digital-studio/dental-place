@@ -35,7 +35,7 @@ const ServicesPage = () => {
                             <Typography
                                 as="a"
                                 className="line-clamp-5 underline"
-                                href="mailto:info@dentalplacerd.com"
+                                href={`mailto:${ContactUsData.email}`}
                                 target="_blank"
                                 rel="noreferrer"
                             >
