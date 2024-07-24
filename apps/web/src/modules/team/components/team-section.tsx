@@ -20,7 +20,7 @@ const OurTeamSection = ({
     return (
         <section
             className={cn(
-                "bg-gradient-to-b from-secondary/40 from-[37%] to-0% flex flex-col gap-12 mb-20 pt-6",
+                "bg-gradient-to-b from-secondary/40 from-[15%] md:from-[27%] lg:from-[37%] to-0% flex flex-col gap-12 mb-5 pt-6",
                 className,
             )}
             {...props}
