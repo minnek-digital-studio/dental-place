@@ -22,6 +22,7 @@ const ServicesPage = () => {
             navbarVariant={{
                 variant: "info",
             }}
+            className="mb-10"
         >
             <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
             <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
