@@ -3,7 +3,11 @@ import Layout from "@/modules/common/layouts/layout";
 import HeroSection, {
     type HeroSectionProps,
 } from "@/modules/team/components/hero-section";
-import AskInfo from "@/modules/team/data/hero.json";
+import HeroInfo from "@/modules/team/data/hero.json";
+import AskSection, {
+    type AskSectionProps,
+} from "@/modules/team/components/ask-section";
+import AskInfo from "@/modules/team/data/asks.json";
 
 const TeamPage = () => {
     return (
@@ -12,7 +16,8 @@ const TeamPage = () => {
                 variant: "secondary",
             }}
         >
-            <HeroSection {...(AskInfo as HeroSectionProps)} />
+            <HeroSection {...(HeroInfo as HeroSectionProps)} />
+            <AskSection {...(AskInfo as AskSectionProps)} />
         </Layout>
     );
 };
