@@ -19,7 +19,13 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@minnek/ui/components/accordion";
-import { Phone, Facebook, Instagram, Menu } from "@minnek/ui/icons";
+import {
+    Phone,
+    Facebook,
+    Instagram,
+    Menu,
+    ChevronDown,
+} from "@minnek/ui/icons";
 import { Typography } from "@minnek/ui/components/typography";
 
 import {
@@ -114,7 +120,7 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
         variant: {
             default: "bg-primary text-primary-foreground",
             info: "bg-info text-info-foreground",
-            secondary: "bg-secondary text-secondary-foreground",
+            secondary: "bg-secondary/40 text-secondary-foreground",
             transparent: "bg-transparent text-white",
         },
     },
@@ -126,15 +132,19 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
 const variants = {
     default: {
         button: "secondary",
+        logo: "/images/logo/dental-logo.webp",
     },
     info: {
         button: "light",
+        logo: "/images/logo/dental-logo.webp",
     },
     secondary: {
         button: "light",
+        logo: "/images/logo/dental-logo.webp",
     },
     transparent: {
-        button: "transparent",
+        button: "light",
+        logo: "/images/logo/dental-logo-white.webp",
     },
 };
 
@@ -176,6 +186,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                             >
                                 <AccordionTrigger className="inline-flex h-10 w-max px-2 py-2 text-sm font-normal border-b-2 border-transparent transition-colors hover:border-primary-foreground hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:border-primary-foreground">
                                     {title}
+                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="grid px-4 py-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -227,6 +238,7 @@ interface NavbarProps
     NavbarVariants { }
 
 export function NavBar({ className, variant, ...props }: NavbarProps) {
+    const { logo, button } = variants[variant || "default"];
     return (
         <>
             <header
@@ -241,7 +253,7 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                     <div className="flex items-center gap-4 lg:gap-6">
                         <Link href="/">
                             <img
-                                src="/images/dental-logo.webp"
+                                src={logo}
                                 alt="Dental Place Logo"
                                 className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
                             />
@@ -256,9 +268,7 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                     </div>
                     <div className="flex gap-2 lg:gap-4 items-center">
                         <Button
-                            variant={
-                                variants[variant || "default"].button as any
-                            }
+                            variant={button as any}
                             size="icon"
                             className="lg:h-9 lg:px-5"
                             asChild
@@ -276,9 +286,7 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                         </Button>
 
                         <Button
-                            variant={
-                                variants[variant || "default"].button as any
-                            }
+                            variant={button as any}
                             size="icon"
                             className="hidden md:flex"
                             asChild
@@ -289,9 +297,7 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                         </Button>
 
                         <Button
-                            variant={
-                                variants[variant || "default"].button as any
-                            }
+                            variant={button as any}
                             size="icon"
                             className="hidden md:flex"
                             asChild
