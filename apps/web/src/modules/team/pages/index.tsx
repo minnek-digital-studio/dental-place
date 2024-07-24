@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: "Meet the team that makes Dental Place possible",
 };
 
-const ServicesPage = () => {
+const TeamPage = () => {
     return (
         <Layout
             navbarVariant={{
@@ -23,4 +23,4 @@ const ServicesPage = () => {
     );
 };
 
-export default ServicesPage;
+export default TeamPage;
