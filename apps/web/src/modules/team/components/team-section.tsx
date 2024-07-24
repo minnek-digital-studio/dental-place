@@ -32,7 +32,7 @@ const OurTeamSection = ({
                 </Typography>
             </header>
             <main className="container flex flex-col items-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 w-full max-w-max auto-rows-fr px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 w-full max-w-max auto-rows-fr">
                     {items.map((item) => (
                         <MemberCard key={item.id} {...item} />
                     ))}
