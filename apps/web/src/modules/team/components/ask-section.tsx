@@ -37,7 +37,9 @@ const AskSection = ({
             )}
             {...props}
         >
-            <Typography as="h2">{title}</Typography>
+            <Typography as="h2" className="text-center">
+                {title}
+            </Typography>
             {description && <Typography as="p">{description}</Typography>}
             <Accordion type="single" collapsible className="w-full max-w-xl">
                 {questions.map(({ question, answer, id }, index) => (
