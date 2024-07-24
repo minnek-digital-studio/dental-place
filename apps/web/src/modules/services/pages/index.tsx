@@ -5,6 +5,11 @@ import ServiceSection, {
 } from "@/modules/services/components/services-section";
 import ServicesInfo from "@/modules/services/data/services.json";
 
+import ClinicSection, {
+    type ClinicSectionProps,
+} from "@/modules/services/components/clinic-section";
+import ClinicInfo from "@/modules/services/data/clinic.json";
+
 const ServicesPage = () => {
     return (
         <Layout
@@ -13,6 +18,7 @@ const ServicesPage = () => {
             }}
         >
             <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
+            <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
         </Layout>
     );
 };
