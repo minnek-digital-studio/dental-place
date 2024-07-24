@@ -115,6 +115,7 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
             default: "bg-primary text-primary-foreground",
             info: "bg-info text-info-foreground",
             secondary: "bg-secondary text-secondary-foreground",
+            transparent: "bg-transparent text-white",
         },
     },
     defaultVariants: {
@@ -131,6 +132,9 @@ const variants = {
     },
     secondary: {
         button: "light",
+    },
+    transparent: {
+        button: "transparent",
     },
 };
 
@@ -220,7 +224,7 @@ export type NavbarVariants = VariantProps<typeof NavBarVariants>;
 
 interface NavbarProps
     extends React.HTMLAttributes<HTMLDivElement>,
-        NavbarVariants {}
+    NavbarVariants { }
 
 export function NavBar({ className, variant, ...props }: NavbarProps) {
     return (
