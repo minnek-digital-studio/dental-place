@@ -38,7 +38,10 @@ const MemberCard = ({
     return (
         <Card
             {...props}
-            className={cn("max-w-80 w-full shadow-team-card h-full", className)}
+            className={cn(
+                "max-w-80 w-full shadow-team-card h-full gap-4",
+                className,
+            )}
         >
             <CardHeader className="flex items-center w-full px-6">
                 <picture className="bg-secondary/25 rounded-full max-w-40">
@@ -52,7 +55,7 @@ const MemberCard = ({
                 <Typography as="p" className="text-dark-grey px-1">
                     {specialty}
                 </Typography>
-                <div className="flex gap-5 w-full justify-center mt-1">
+                <div className="flex gap-3 w-full justify-center mt-1">
                     {socialLinks.map(
                         ({ link, icon, text, className, ...props }) => (
                             <Button
@@ -60,7 +63,7 @@ const MemberCard = ({
                                 {...props}
                                 key={id}
                                 aria-label={text}
-                                className={cn("size-10", className)}
+                                className={cn("size-[2.8rem]", className)}
                             >
                                 <Link key={text} href={link}>
                                     <IconByName {...icon} />
