@@ -2,6 +2,7 @@ import React from "react";
 import MemberCard, { type TeamMemberCard } from "../components/member-card";
 import { Typography } from "@minnek/ui/components/typography";
 import { cn } from "@minnek/ui/lib/utils";
+import MemberModal from "./member-modal";
 
 export interface OurTeamSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
@@ -38,6 +39,7 @@ const OurTeamSection = ({
                     ))}
                 </div>
             </main>
+            <MemberModal />
         </section>
     );
 };
