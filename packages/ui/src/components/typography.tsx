@@ -1,6 +1,7 @@
 import type { ElementType, ComponentProps, ForwardedRef } from "react";
 
 import { cn } from "@ui/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
 
 export type PolymorphicProps<
     OwnProps,
@@ -41,6 +42,7 @@ type OwnProps = {};
 type TypographyProps<As extends ElementType = typeof defaultElement> =
     PolymorphicProps<OwnProps, As, typeof defaultElement> & {
         color?: keyof typeof colorVariants;
+        asChild?: boolean;
     };
 
 export const Typography = <As extends ElementType = typeof defaultElement>({
@@ -48,6 +50,7 @@ export const Typography = <As extends ElementType = typeof defaultElement>({
     as,
     className,
     children,
+    asChild,
     ...props
 }: TypographyProps<As>) => {
     const classes = cn(
@@ -57,7 +60,7 @@ export const Typography = <As extends ElementType = typeof defaultElement>({
         className,
     );
 
-    const Component = as || defaultElement;
+    const Component = asChild ? Slot : as || defaultElement;
 
     return (
         <Component className={classes} {...props}>
