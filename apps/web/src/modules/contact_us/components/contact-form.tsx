@@ -5,8 +5,8 @@ import { Button } from "@minnek/ui/components/button";
 
 const ContactForm = () => {
     return (
-        <form className="flex flex-col w-full h-full md:h-[745px] gap-11">
-            <div className="flex gap-6 flex-col md:flex-row">
+        <form className="flex flex-col w-full h-full md:h-[745px]">
+            <div className="flex gap-6 flex-col md:flex-row mb-11">
                 <Label className="w-full">
                     <span className="text-2xl font-bold">Tu nombre</span>
                     <Input
@@ -28,7 +28,7 @@ const ContactForm = () => {
                     />
                 </Label>
             </div>
-            <Label className="w-full">
+            <Label className="w-full mb-11">
                 <span className="text-2xl font-bold">Número de teléfono</span>
                 <Input
                     type="tel"
@@ -38,7 +38,7 @@ const ContactForm = () => {
                     className="border-0 border-none h-14"
                 />
             </Label>
-            <Label>
+            <Label className=" mb-8">
                 <span className="text-2xl font-bold">Escribenos aquí...</span>
                 <Textarea
                     className="rounded-3xl h-[314px] resize-none border-0 border-none"
@@ -50,7 +50,7 @@ const ContactForm = () => {
             <div className="w-full flex justify-end">
                 <Button
                     variant="dark"
-                    className="w-fit py-6 px-14 text-2xl font-bold"
+                    className="w-fit py-7 px-14 text-xl font-bold"
                 >
                     Enviar
                 </Button>
