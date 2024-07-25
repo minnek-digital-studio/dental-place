@@ -14,6 +14,7 @@ const ContactForm = () => {
                         variant="info"
                         sizes="lg"
                         placeholder="Tu nombre"
+                        className="border-0 border-none h-14"
                     />
                 </Label>
                 <Label className="w-full">
@@ -23,6 +24,7 @@ const ContactForm = () => {
                         variant="info"
                         sizes="lg"
                         placeholder="Tu Email"
+                        className="border-0 border-none h-14"
                     />
                 </Label>
             </div>
@@ -33,19 +35,23 @@ const ContactForm = () => {
                     variant="info"
                     sizes="lg"
                     placeholder="Número de teléfono"
+                    className="border-0 border-none h-14"
                 />
             </Label>
             <Label>
                 <span className="text-2xl font-bold">Escribenos aquí...</span>
                 <Textarea
-                    className="rounded-3xl h-[314px] resize-none"
+                    className="rounded-3xl h-[314px] resize-none border-0 border-none"
                     variant="info"
                     sizes="lg"
                     placeholder="Escribenos aquí..."
                 />
             </Label>
             <div className="w-full flex justify-end">
-                <Button variant="dark" className="w-fit py-6 px-14">
+                <Button
+                    variant="dark"
+                    className="w-fit py-6 px-14 text-2xl font-bold"
+                >
                     Enviar
                 </Button>
             </div>
