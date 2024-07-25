@@ -28,7 +28,7 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
         name,
         button,
         education,
-        educationTitle,
+        educationtitle,
         id,
         img,
         specialty,
@@ -46,15 +46,21 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                 }
             }}
         >
-            <DialogContent className="container max-w-screen-lg gap-10 py-20 px-12 max-h-full overflow-y-auto">
+            <DialogContent
+                aria-describedby={`Details Team Member`}
+                className="container max-w-screen-lg gap-10 py-20 px-12 max-h-full overflow-y-auto"
+                {...props}
+            >
                 <DialogHeader className="md:flex-row gap-6 items-center">
                     <picture className="bg-black rounded-full max-w-40">
                         <Image {...img} />
                     </picture>
                     <div className="flex flex-col gap-1 max-md:items-center text-center md:text-left">
-                        <Typography as="h2" className="text-lg lg:text-lg">
-                            {name}
-                        </Typography>
+                        <DialogTitle asChild>
+                            <Typography as="h2" className="text-lg lg:text-lg">
+                                {name}
+                            </Typography>
+                        </DialogTitle>
                         <Typography as="p" className="text-dark-grey">
                             {specialty}
                         </Typography>
@@ -87,13 +93,13 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                         </Typography>
                     )}
 
-                    <div className="flex flex-col gap-3">
-                        {educationTitle && (
+                    <div className="flex flex-col gap-3 md:gap-7">
+                        {educationtitle && (
                             <Typography as="h3" className="mt-6">
-                                {educationTitle}
+                                {educationtitle}
                             </Typography>
                         )}
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-3 md:gap-7">
                             {education &&
                                 education.map((item) => (
                                     <article
@@ -104,7 +110,7 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                                             {...item.button}
                                             aria-hidden
                                             className={cn(
-                                                "p-3",
+                                                "p-4",
                                                 button.className,
                                             )}
                                         >
@@ -113,7 +119,7 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                                         <div>
                                             <Typography
                                                 as="h4"
-                                                className="text-lg lg:text-lg"
+                                                className="text-md lg:text-md"
                                             >
                                                 {item.title}
                                             </Typography>

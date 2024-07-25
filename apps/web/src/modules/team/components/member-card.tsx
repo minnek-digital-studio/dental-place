@@ -23,7 +23,7 @@ export interface TeamMemberCard extends React.HTMLAttributes<HTMLDivElement> {
     button: ButtonType;
     education?: Education[];
     description?: string;
-    educationTitle?: string;
+    educationtitle?: string;
     socialLinks: ButtonType[];
 }
 
