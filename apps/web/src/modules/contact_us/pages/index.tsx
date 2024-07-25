@@ -15,19 +15,22 @@ const ServicesPage = () => {
                 <section className="container max-w-[1430px] mb-20">
                     <div
                         className={cn(
-                            "flex flex-col md:flex-row h-full bg-white px-10 py-8 gap-14 shadow-lg rounded-3xl",
+                            "flex flex-col md:flex-row h-full bg-white px-10 py-8 gap-14 shadow-sm shadow-card rounded-3xl",
                         )}
                     >
-                        <header className="w-full h-[216px] md:w-[380px] md:h-[648px]">
+                        <header className="w-full h-[216px] md:w-[380px] md:h-[656px]">
                             <GoogleMaps src={ContactUsData.embedMapUrl} />
                         </header>
                         <ContactForm />
                     </div>
                 </section>
                 <section className="container max-w-[1430px] mb-20">
-                    <div className="flex flex-row flex-wrap gap-10 lg:gap-6 justify-between">
+                    <div className="flex flex-row flex-wrap gap-10 lg:gap-6 justify-between mx-10">
                         <ContactCard title="Headquaters" iconName="MapPin">
-                            <Typography as="p" className="line-clamp-5">
+                            <Typography
+                                as="p"
+                                className="line-clamp-5 leading-[1.8rem]"
+                            >
                                 {ContactUsData.headquarters}
                             </Typography>
                         </ContactCard>

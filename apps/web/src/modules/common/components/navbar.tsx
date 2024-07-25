@@ -235,7 +235,7 @@ export type NavbarVariants = VariantProps<typeof NavBarVariants>;
 
 interface NavbarProps
     extends React.HTMLAttributes<HTMLDivElement>,
-    NavbarVariants { }
+        NavbarVariants {}
 
 export function NavBar({ className, variant, ...props }: NavbarProps) {
     const { logo, button } = variants[variant || "default"];
@@ -323,9 +323,10 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                             icon={{
                                 name: "Clock",
                                 size: 24,
-                                color: variant === "transparent"
-                                    ? "white"
-                                    : "black",
+                                color:
+                                    variant === "transparent"
+                                        ? "white"
+                                        : "black",
                             }}
                         />
 
@@ -336,7 +337,13 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                     size="icon"
                                     aria-label="Menu"
                                 >
-                                    <Menu className="text-primary-foreground size-7" />
+                                    <Menu
+                                        className={cn(
+                                            "text-primary-foreground size-7",
+                                            variant === "transparent" &&
+                                                "stroke-white",
+                                        )}
+                                    />
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="text-black">
