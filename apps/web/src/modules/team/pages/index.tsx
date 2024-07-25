@@ -10,8 +10,8 @@ import AskInfo from "@/modules/team/data/asks.json";
 import { Metadata } from "next";
 import OurTeamSection, {
     type OurTeamSectionProps,
-} from "../components/team-section";
-import TeamInfo from "../data/ourTeam.json";
+} from "@/modules/team/components/team-section";
+import TeamInfo from "@/modules/team/data/ourTeam.json";
 
 export const metadata: Metadata = {
     title: "Our Team",
