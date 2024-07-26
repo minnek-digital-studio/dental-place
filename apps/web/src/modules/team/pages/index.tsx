@@ -1,4 +1,8 @@
 import Layout from "@/modules/common/layouts/layout";
+import HeroSection, {
+    type HeroSectionProps,
+} from "@/modules/team/components/hero-section";
+import HeroInfo from "@/modules/team/data/hero.json";
 import AskSection, {
     type AskSectionProps,
 } from "@/modules/team/components/ask-section";
@@ -22,6 +26,7 @@ const TeamPage = () => {
             }}
         >
             <OurTeamSection {...(TeamInfo as OurTeamSectionProps)} />
+            <HeroSection {...(HeroInfo as HeroSectionProps)} />
             <AskSection {...(AskInfo as AskSectionProps)} />
         </Layout>
     );
