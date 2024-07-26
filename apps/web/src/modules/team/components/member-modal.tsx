@@ -119,7 +119,7 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                                         <div>
                                             <Typography
                                                 as="h4"
-                                                className="text-base lg:text-base"
+                                                className="text-md lg:text-md"
                                             >
                                                 {item.title}
                                             </Typography>
