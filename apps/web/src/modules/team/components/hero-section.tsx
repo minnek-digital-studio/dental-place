@@ -30,7 +30,12 @@ const HeroSection = ({
                 )}
             >
                 <main className="flex flex-col justify-center gap-6 w-full md:w-[70%] p-8 md:p-20 md:pr-0 md:mb-16">
-                    <Typography as="h2">{title}</Typography>
+                    <Typography
+                        as="h2"
+                        className="leading-[3rem] lg:leading-[3rem]"
+                    >
+                        {title}
+                    </Typography>
                     {description && (
                         <Typography as="p" className="leading-8 text-dark">
                             {description}
