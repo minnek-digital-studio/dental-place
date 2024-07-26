@@ -56,13 +56,11 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                         <Image {...img} />
                     </picture>
                     <div className="flex flex-col gap-1 max-md:items-center text-center md:text-left">
-                        <Typography
-                            as="h2"
-                            className="text-lg lg:text-lg"
-                            asChild
-                        >
-                            <DialogTitle>{name}</DialogTitle>
-                        </Typography>
+                        <DialogTitle asChild>
+                            <Typography as="h2" className="text-lg lg:text-lg">
+                                {name}
+                            </Typography>
+                        </DialogTitle>
                         <Typography as="p" className="text-dark-grey">
                             {specialty}
                         </Typography>
