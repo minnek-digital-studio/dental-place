@@ -53,7 +53,7 @@ const MemberCard = (member: TeamMemberCard) => {
             )}
         >
             <CardHeader className="flex items-center w-full px-6">
-                <picture className="bg-secondary/25 rounded-full max-w-40">
+                <picture className="bg-secondary/25 rounded-full size-40">
                     <Image {...img} />
                 </picture>
             </CardHeader>
