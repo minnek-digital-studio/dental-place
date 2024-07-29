@@ -1,0 +1,48 @@
+{
+  "title": "Why Express Braces?",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. ",
+  "items": [
+    {
+      "title": "This will be heading Point 1",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-white",
+        "stroke-width": "3"
+      }
+    },
+    {
+      "title": "This will be heading Point 2",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-white",
+        "stroke-width": "3"
+      }
+    },
+    {
+      "title": "This will be heading Point 3",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-white",
+        "stroke-width": "3"
+      }
+    },
+    {
+      "title": "This will be heading Point 4",
+      "icon": {
+        "name": "Check",
+        "size": 20,
+        "className": "text-white",
+        "stroke-width": "3"
+      }
+    }
+  ],
+  "img": {
+    "src": "/images/braces/why-braces.webp",
+    "alt": "About Us",
+    "className": "rounded-xl shadow-image"
+  },
+  "className": "bg-secondary/40 rounded-xl"
+}
