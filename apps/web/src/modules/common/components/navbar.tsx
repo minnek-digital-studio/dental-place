@@ -121,6 +121,8 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
             default: "bg-primary text-primary-foreground",
             info: "bg-info text-info-foreground",
             secondary: "bg-secondary/40 text-secondary-foreground",
+            transparent: "bg-transparent text-white",
+            "light-primary": "bg-primary/40 text-primary-foreground",
         },
     },
     defaultVariants: {
@@ -144,6 +146,10 @@ const variants = {
     transparent: {
         button: "light",
         logo: "/images/logo/dental-logo-white.webp",
+    },
+    "light-primary": {
+        button: "light",
+        logo: "/images/logo/dental-logo.webp",
     },
 };
 
@@ -322,6 +328,10 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                             icon={{
                                 name: "Clock",
                                 size: 24,
+                                color:
+                                    variant === "transparent"
+                                        ? "white"
+                                        : "black",
                             }}
                         />
 
@@ -332,7 +342,13 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                     size="icon"
                                     aria-label="Menu"
                                 >
-                                    <Menu className="text-primary-foreground size-7" />
+                                    <Menu
+                                        className={cn(
+                                            "text-primary-foreground size-7",
+                                            variant === "transparent" &&
+                                                "stroke-white",
+                                        )}
+                                    />
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="text-black">
