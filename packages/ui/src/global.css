@@ -198,6 +198,7 @@
 .shadow-image {
     @apply shadow-[0px_30px_100px_0px_#00000026];
 }
+
 .break-all {
     word-break: break-all;
 }
