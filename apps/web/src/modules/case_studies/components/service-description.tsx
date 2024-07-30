@@ -7,15 +7,15 @@ export interface ServiceDescriptionSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     description?: string;
-    subDescription: string
-    beforeImg: ImageTitle,
-    afterImg: ImageTitle,
+    subDescription: string;
+    beforeImg: ImageTitle;
+    afterImg: ImageTitle;
 }
 
-interface ImageTitle {
+export type ImageTitle = {
     title: string;
     img: ImageType;
-}
+};
 
 const ServiceDescriptionSection = ({
     title,
@@ -33,10 +33,7 @@ const ServiceDescriptionSection = ({
 
     return (
         <section
-            className={cn(
-                "bg-white py-10 px-5 md:px-10 lg:px-20",
-                className,
-            )}
+            className={cn("bg-white py-10 px-5 md:px-10 lg:px-20", className)}
             {...props}
         >
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
@@ -47,28 +44,40 @@ const ServiceDescriptionSection = ({
                     {title}
                 </Typography>
                 {description && (
-                    <Typography 
-                        as="p" 
+                    <Typography
+                        as="p"
                         className="text-dark-grey text-justify leading-[1.6rem]"
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
                 )}
                 <div className="flex grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[4rem]">
                     <picture className="max-w-2xl max-h-56 md:max-w-3xl">
-                        <Image {...beforeImg.img} className="rounded-2xl mb-2 md:mb-5" />
-                        <Typography as="b" className="text-dark-grey text-center">
+                        <Image
+                            {...beforeImg.img}
+                            className="rounded-2xl mb-2 md:mb-5"
+                        />
+                        <Typography
+                            as="b"
+                            className="text-dark-grey text-center"
+                        >
                             {beforeImg.title}
                         </Typography>
                     </picture>
                     <picture className="max-w-2xl max-h-56 md:max-w-3xl">
-                        <Image {...afterImg.img} className="rounded-2xl mb-2 md:mb-5" />
-                        <Typography as="b" className="text-dark-grey text-center">
+                        <Image
+                            {...afterImg.img}
+                            className="rounded-2xl mb-2 md:mb-5"
+                        />
+                        <Typography
+                            as="b"
+                            className="text-dark-grey text-center"
+                        >
                             {afterImg.title}
                         </Typography>
                     </picture>
                 </div>
-                <Typography 
-                    as="p" 
+                <Typography
+                    as="p"
                     className="text-dark-grey text-justify leading-[1.6rem]"
                     dangerouslySetInnerHTML={subDescriptionHTML}
                 />
