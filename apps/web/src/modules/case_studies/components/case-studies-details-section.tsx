@@ -25,7 +25,7 @@ const CaseStudiesDetailsSection = ({
             )}
             {...props}
         >
-            <header className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-5 text-center container">
+            <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-5 text-center container">
                 <Typography
                     as="h2"
                     className="leading-[3rem] lg:leading-[3rem]"
@@ -40,7 +40,7 @@ const CaseStudiesDetailsSection = ({
                         <Image {...img} className="rounded-2xl" />
                     </picture>
                 </div>
-            </header>
+            </main>
         </section>
     );
 };
