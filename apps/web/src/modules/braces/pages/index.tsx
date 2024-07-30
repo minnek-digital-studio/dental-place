@@ -13,6 +13,10 @@ import AboutBracesSection, {
 } from "@/modules/braces/components/about-braces";
 import AboutBracesInfo from "@/modules/braces/data/about-braces.json";
 
+import HeroSection, {
+    type HeroSectionProps,
+} from "@/modules/braces/components/hero-section";
+import HeroInfo from "@/modules/braces/data/hero.json";
 const ExpressBracesPage = async () => {
     return (
         <Layout
@@ -20,6 +24,7 @@ const ExpressBracesPage = async () => {
                 variant: "light-primary",
             }}
         >
+            <HeroSection {...(HeroInfo as HeroSectionProps)} />
             <AboutBracesSection
                 {...(AboutBracesInfo as AboutBracesSectionProps)}
             />
