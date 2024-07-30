@@ -58,9 +58,14 @@ const WhyBracesSection = ({
                                     >
                                         {item.title}
                                     </Typography>
-                                    <Typography as="p" className="leading-6">
-                                        {item.description}
-                                    </Typography>
+                                    {item.description && (
+                                        <Typography
+                                            as="p"
+                                            className="leading-6"
+                                        >
+                                            {item.description}
+                                        </Typography>
+                                    )}
                                 </div>
                             </li>
                         ))}
