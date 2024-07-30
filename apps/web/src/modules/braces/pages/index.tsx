@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import type { Metadata } from "next";
 import BracesPhotosSection, {
     type BracesPhotosSectionProps,
 } from "@/modules/braces/components/braces-photos-section";
@@ -12,11 +13,16 @@ import AboutBracesSection, {
     type AboutBracesSectionProps,
 } from "@/modules/braces/components/about-braces";
 import AboutBracesInfo from "@/modules/braces/data/about-braces.json";
-
 import HeroSection, {
     type HeroSectionProps,
 } from "@/modules/braces/components/hero-section";
 import HeroInfo from "@/modules/braces/data/hero.json";
+
+export const metadata: Metadata = {
+    title: "Express Braces",
+    description: "Express Braces",
+};
+
 const ExpressBracesPage = async () => {
     return (
         <Layout
