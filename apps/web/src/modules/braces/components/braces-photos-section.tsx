@@ -48,7 +48,7 @@ const BracesPhotosSection = ({
                 <CarouselContent>
                     {items.map((item, index) => (
                         <CarouselItem
-                            className="flex justify-center items-center basis-1/2 md:basis-1/4 lg:basis-1/5"
+                            className="flex justify-center items-center basis-1/2 md:basis-1/4"
                             key={index}
                         >
                             <picture className="size-full rounded-xl overflow-hidden">
