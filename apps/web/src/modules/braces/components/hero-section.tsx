@@ -27,13 +27,13 @@ const HeroSection = ({
     };
 
     return (
-        <section className={cn("py-14", className)} {...props}>
+        <section className={cn("pt-14 md:py-14", className)} {...props}>
             <div className="container grid grid-cols-1 md:grid-cols-2 px-14 gap-10">
-                <main className="flex flex-col gap-6 mb-16">
+                <main className="flex flex-col gap-6 md:mb-16 mb-10">
                     <Typography
                         as="h1"
                         dangerouslySetInnerHTML={titleHTML}
-                        className="flex flex-col gap-4 tracking-tight"
+                        className="flex flex-col md:gap-4 tracking-tight text-[2.4rem] xl:text-5xl"
                     />
                     <Typography as="p" className="text-lg">
                         {description}
