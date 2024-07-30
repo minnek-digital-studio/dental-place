@@ -1,5 +1,11 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Express Braces",
+    description: "Express Braces",
+};
 
 const ExpressBracesPage = async () => {
     return (
