@@ -20,15 +20,15 @@ const CaseStudiesDetailsSection = ({
     return (
         <section
             className={cn(
-                "bg-gradient-to-b from-primary/40 from-[70%] md:from-[48%] to-0% pt-10 ",
+                "bg-gradient-to-b from-primary/40 from-[65%] md:from-[40%] to-0% pt-10 ",
                 className,
             )}
             {...props}
         >
-            <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-5 text-center container">
+            <main className="max-w-[55rem] md:max-w-[65rem] flex flex-col gap-5 text-center container mb-10">
                 <Typography
-                    as="h2"
-                    className="leading-[3rem] lg:leading-[3rem]"
+                    as="h1"
+                    className="leading-[3rem] lg:leading-[3rem] xl:text-4xl"
                 >
                     {title}
                 </Typography>
@@ -36,7 +36,7 @@ const CaseStudiesDetailsSection = ({
                     {description}
                 </Typography>
                 <div className="w-full flex items-center justify-center mt-5">
-                    <picture className="max-w-2xl md:max-w-xl">
+                    <picture className="max-w-2xl md:max-w-3xl">
                         <Image {...img} className="rounded-2xl" />
                     </picture>
                 </div>
