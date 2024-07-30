@@ -33,16 +33,16 @@ const AboutBracesSection = ({
     if (description) descriptionHTML = { __html: description };
 
     return (
-        <section className={cn("", className)}>
+        <section className={cn("md:py-14", className)}>
             <div
                 className={cn(
-                    "grid grid-cols-1 md:grid-cols-2 gap-16 container py-10 md:py-14",
+                    "grid grid-cols-1 md:grid-cols-2 gap-16 container",
                 )}
             >
                 <picture className="max-md:max-w-sm max-md:m-auto md:w-auto h-full max-h-[33rem] max-md:order-2">
                     <Image {...img} />
                 </picture>
-                <main className="flex flex-col gap-6 w-full pt-10 md:py-14">
+                <main className="flex flex-col gap-6 w-full md:pt-10 md:py-14">
                     <Typography as="h2" className="font-extrabold">
                         {title}
                     </Typography>
