@@ -1,0 +1,70 @@
+{
+    "items": [
+        {
+            "slug": "how-jeena-williams-got-braces",
+            "title": "Service Description",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.",
+            "subDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.",
+            "beforeImg": {
+                "title": "Before",
+                "img": {
+                    "src": "/images/case-studies/before.webp",
+                    "alt": "Before",
+                    "className": ""
+                }
+            },
+            "afterImg": {
+                "title": "After",
+                "img": {
+                    "src": "/images/case-studies/after.webp",
+                    "alt": "After",
+                    "className": ""
+                }
+            }
+        },
+        {
+            "slug": "alex-surgery-removal-of-wisdom-tooth",
+            "title": "Service Description",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.",
+            "subDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.",
+            "before": {
+                "title": "Before",
+                "img": {
+                    "src": "/images/case-studies/case-2.webp",
+                    "alt": "Dental Place",
+                    "className": ""
+                }
+            },
+            "after": {
+                "title": "After",
+                "img": {
+                    "src": "/images/case-studies/case-2.webp",
+                    "alt": "Dental Place",
+                    "className": ""
+                }
+            }
+        },
+        {
+            "slug": "pain-in-the-julie-braces-how-we-did-the-treatment",
+            "title": "Service Description",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.",
+            "subDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo.",
+            "before": {
+                "title": "Before",
+                "img": {
+                    "src": "/images/case-studies/case-2.webp",
+                    "alt": "Dental Place",
+                    "className": ""
+                }
+            },
+            "after": {
+                "title": "After",
+                "img": {
+                    "src": "/images/case-studies/case-2.webp",
+                    "alt": "Dental Place",
+                    "className": ""
+                }
+            }
+        }
+    ]
+}
