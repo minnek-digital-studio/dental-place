@@ -122,6 +122,7 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
             info: "bg-info text-info-foreground",
             secondary: "bg-secondary/40 text-secondary-foreground",
             transparent: "bg-transparent text-white",
+            "light-primary": "bg-primary/40 text-primary-foreground"
         },
     },
     defaultVariants: {
@@ -145,6 +146,10 @@ const variants = {
     transparent: {
         button: "light",
         logo: "/images/logo/dental-logo-white.webp",
+    },
+    "light-primary": {
+        button: "light",
+        logo: "/images/logo/dental-logo.webp",
     },
 };
 
