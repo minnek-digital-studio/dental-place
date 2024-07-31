@@ -22,7 +22,7 @@ const LetUsHelpSection = ({
     className,
 }: LetUsHelpSectionProps) => {
     return (
-        <section className="container">
+        <section className="container mb-10">
             <div
                 className={cn(
                     "flex flex-col rounded-[2rem] xmd:flex-row bg-primary/40 mt-6 relative",
