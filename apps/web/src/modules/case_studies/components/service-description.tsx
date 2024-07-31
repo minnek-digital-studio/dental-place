@@ -32,10 +32,7 @@ const ServiceDescriptionSection = ({
     if (subDescription) subDescriptionHTML = { __html: subDescription };
 
     return (
-        <section
-            className={cn("bg-white py-10 px-5 md:px-10 lg:px-20", className)}
-            {...props}
-        >
+        <section className={cn("bg-white", className)} {...props}>
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
                 <Typography
                     as="h2"
