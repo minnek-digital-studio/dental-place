@@ -1,5 +1,9 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import AboutBracesSection, {
+    type AboutBracesSectionProps,
+} from "@/modules/braces/components/about-braces";
+import AboutBracesInfo from "@/modules/braces/data/about-braces.json";
 import BracesPhotosSection, {
     type BracesPhotosSectionProps,
 } from "@/modules/braces/components/braces-photos-section";
@@ -18,6 +22,9 @@ const ExpressBracesPage = async () => {
                 variant: "light-primary",
             }}
         >
+            <AboutBracesSection
+                {...(AboutBracesInfo as AboutBracesSectionProps)}
+            />
             <BracesPhotosSection
                 {...(BracesInfo as BracesPhotosSectionProps)}
             />
