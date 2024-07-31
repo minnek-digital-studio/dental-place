@@ -28,13 +28,7 @@ const BeenDoneSection = ({
     if (description) descriptionHTML = { __html: description };
 
     return (
-        <section
-            className={cn(
-                "bg-white py-10 px-5 md:px-10 lg:px-20",
-                className,
-            )}
-            {...props}
-        >
+        <section className={cn("bg-white", className)} {...props}>
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
                 <Typography
                     as="h2"
@@ -43,8 +37,8 @@ const BeenDoneSection = ({
                     {title}
                 </Typography>
                 {description && (
-                    <Typography 
-                        as="p" 
+                    <Typography
+                        as="p"
                         className="text-dark-grey text-justify leading-[1.6rem]"
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
@@ -63,10 +57,7 @@ const BeenDoneSection = ({
                                     {item.title}
                                 </Typography>
                                 {item.description && (
-                                    <Typography
-                                        as="p"
-                                        className="leading-6"
-                                    >
+                                    <Typography as="p" className="leading-6">
                                         {item.description}
                                     </Typography>
                                 )}
