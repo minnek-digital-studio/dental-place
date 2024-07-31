@@ -17,6 +17,10 @@ import HeroSection, {
     type HeroSectionProps,
 } from "@/modules/braces/components/hero-section";
 import HeroInfo from "@/modules/braces/data/hero.json";
+import HelpFormSection, {
+    type HelpFormSectionProps,
+} from "../components/help-form-section";
+import HelpFormInfo from "../data/helpform.json";
 
 export const metadata: Metadata = {
     title: "Express Braces",
@@ -38,6 +42,7 @@ const ExpressBracesPage = async () => {
             <BracesPhotosSection
                 {...(BracesInfo as BracesPhotosSectionProps)}
             />
+            <HelpFormSection {...(HelpFormInfo as HelpFormSectionProps)} />
         </Layout>
     );
 };
