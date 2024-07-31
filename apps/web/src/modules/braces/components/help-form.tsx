@@ -87,7 +87,12 @@ const HelpForm = ({
                         name={fieldForm.name as FormTypeKeys}
                         key={`form-field-${index}`}
                         render={({ field }) => (
-                            <FormItem className={fieldForm.input.className}>
+                            <FormItem
+                                className={cn(
+                                    "max-md:col-span-2",
+                                    fieldForm.input.className,
+                                )}
+                            >
                                 <FormLabel className="font-bold text-[#2F2E2E]">
                                     {fieldForm.label}
                                 </FormLabel>
