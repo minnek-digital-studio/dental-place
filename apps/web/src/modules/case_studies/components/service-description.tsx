@@ -50,31 +50,35 @@ const ServiceDescriptionSection = ({
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
                 )}
-                <div className="flex grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[4rem]">
-                    <picture className="max-w-2xl max-h-56 md:max-w-3xl">
-                        <Image
-                            {...beforeImg.img}
-                            className="rounded-2xl mb-2 md:mb-5"
-                        />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[4rem]">
+                    <figure className="max-w-2xl max-h-56 md:max-w-3xl">
+                        <picture>
+                            <Image
+                                {...beforeImg.img}
+                                className="rounded-2xl mb-2 md:mb-5"
+                            />
+                        </picture>
                         <Typography
                             as="b"
                             className="text-dark-grey text-center"
                         >
                             {beforeImg.title}
                         </Typography>
-                    </picture>
-                    <picture className="max-w-2xl max-h-56 md:max-w-3xl">
-                        <Image
-                            {...afterImg.img}
-                            className="rounded-2xl mb-2 md:mb-5"
-                        />
+                    </figure>
+                    <figure className="max-w-2xl max-h-56 md:max-w-3xl">
+                        <picture>
+                            <Image
+                                {...afterImg.img}
+                                className="rounded-2xl mb-2 md:mb-5"
+                            />
+                        </picture>
                         <Typography
                             as="b"
                             className="text-dark-grey text-center"
                         >
                             {afterImg.title}
                         </Typography>
-                    </picture>
+                    </figure>
                 </div>
                 <Typography
                     as="p"
