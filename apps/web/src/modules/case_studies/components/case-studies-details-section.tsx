@@ -36,7 +36,7 @@ const CaseStudiesDetailsSection = ({
                     {description}
                 </Typography>
                 <div className="w-full flex items-center justify-center mt-5">
-                    <picture className="max-w-2xl md:max-w-3xl">
+                    <picture className="max-w-2xl md:max-w-[52rem]">
                         <Image {...img} className="rounded-2xl" />
                     </picture>
                 </div>
