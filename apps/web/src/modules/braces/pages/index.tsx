@@ -1,5 +1,9 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import WhyBracesSection, {
+    type WhyBracesSectionProps,
+} from "@/modules/braces/components/why-braces-section";
+import WhyBracesInfo from "@/modules/braces/data/why-braces.json";
 import AboutBracesSection, {
     type AboutBracesSectionProps,
 } from "@/modules/braces/components/about-braces";
@@ -25,6 +29,7 @@ const ExpressBracesPage = async () => {
             <AboutBracesSection
                 {...(AboutBracesInfo as AboutBracesSectionProps)}
             />
+            <WhyBracesSection {...(WhyBracesInfo as WhyBracesSectionProps)} />
             <BracesPhotosSection
                 {...(BracesInfo as BracesPhotosSectionProps)}
             />
