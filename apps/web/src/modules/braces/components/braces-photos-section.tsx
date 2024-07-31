@@ -43,7 +43,7 @@ const BracesPhotosSection = ({
                     align: "center",
                     loop: true,
                 }}
-                className="flex flex-col gap-14 w-full items-center container max-lg:pl-0 max-lg:pr-0 "
+                className="flex flex-col gap-14 w-full items-center container max-2xl:pl-0 max-2xl:pr-0 "
             >
                 <CarouselContent>
                     {items.map((item, index) => (
