@@ -1,5 +1,9 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import BracesPhotosSection, {
+    type BracesPhotosSectionProps,
+} from "@/modules/braces/components/braces-photos-section";
+import BracesInfo from "@/modules/braces/data/braces-photos.json";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +18,9 @@ const ExpressBracesPage = async () => {
                 variant: "light-primary",
             }}
         >
-            <h1>Hola</h1>
+            <BracesPhotosSection
+                {...(BracesInfo as BracesPhotosSectionProps)}
+            />
         </Layout>
     );
 };
