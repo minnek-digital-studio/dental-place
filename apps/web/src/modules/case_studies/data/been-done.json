@@ -1,0 +1,47 @@
+{
+    "items": [
+        {
+            "slug": "how-jeena-williams-got-braces",
+            "title": "What Has Been Done",
+            "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.  Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+            "itemsIcons": [
+                {
+                    "title": "This will be heading Point 1",
+                    "icon": {
+                      "name": "Check",
+                      "size": 20,
+                      "className": "text-white",
+                      "strokeWidth": "3"
+                    }
+                  },
+                  {
+                    "title": "This will be heading Point 1",
+                    "icon": {
+                      "name": "Check",
+                      "size": 20,
+                      "className": "text-white",
+                      "strokeWidth": "3"
+                    }
+                  },
+                  {
+                    "title": "This will be heading Point 2",
+                    "icon": {
+                      "name": "Check",
+                      "size": 20,
+                      "className": "text-white",
+                      "strokeWidth": "3"
+                    }
+                  },
+                  {
+                    "title": "This will be heading Point 2",
+                    "icon": {
+                      "name": "Check",
+                      "size": 20,
+                      "className": "text-white",
+                      "strokeWidth": "3"
+                    }
+                  }
+            ]
+        }
+    ]
+}

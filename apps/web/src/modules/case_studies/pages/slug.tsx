@@ -7,6 +7,8 @@ import ServiceDescriptionSection, {
     ServiceDescriptionSectionProps,
 } from "../components/service-description";
 import ServiceDescriptionInfo from "@/modules/case_studies/data/services-description.json";
+import BeenDoneSection, { BeenDoneSectionProps } from "../components/been-done";
+import BeenDoneInfo from "@/modules/case_studies/data/been-done.json";
 
 export const metadata: Metadata = {
     title: "Case Studies",
@@ -18,7 +20,11 @@ const CaseStudiesPage = ({ params }) => {
         (item) => item.slug === params.slug,
     );
 
-    if (!servicesDescription) {
+    const beenDone = BeenDoneInfo.items.find(
+        (item) => item.slug === params.slug,
+    );
+
+    if (!beenDone || !servicesDescription) {
         return "Case study not found";
     }
 
@@ -31,6 +37,7 @@ const CaseStudiesPage = ({ params }) => {
             <ServiceDescriptionSection
                 {...(servicesDescription as ServiceDescriptionSectionProps)}
             />
+            <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
         </Layout>
     );
 };
