@@ -1,0 +1,65 @@
+{
+  "title": "Lets Us Help you",
+  "description": "Lörem ipsum suprahåt diss teteda trina. Väliga beröde för sars.",
+  "form": {
+    "fields": [
+      {
+        "name": "name",
+        "label": "Tu nombre",
+        "description": "Tu nombre completo",
+        "input": {
+          "name": "name",
+          "placeholder": "Tu nombre",
+          "sizes": "lg",
+          "variant": "light",
+          "className": "w-full max-md:col-span-2"
+        }
+      },
+      {
+        "name": "email",
+        "label": "Tu Email",
+        "description": "Tu Email",
+        "input": {
+          "name": "email",
+          "placeholder": "Tu Email",
+          "sizes": "lg",
+          "variant": "light",
+          "className": "w-full max-md:col-span-2"
+        }
+      },
+      {
+        "name": "phone",
+        "label": "Numero de telefono",
+        "description": "Tu número de teléfono",
+        "input": {
+          "name": "phone",
+          "placeholder": "Numero de telefono",
+          "sizes": "lg",
+          "variant": "light",
+          "className": "col-span-2"
+        }
+      },
+      {
+        "name": "message",
+        "label": "Escribenos aqui...",
+        "textarea": true,
+        "description": "Escribenos aqui...",
+        "input": {
+          "name": "message",
+          "variant": "light",
+          "sizes": "lg",
+          "placeholder": "Escribenos aqui...",
+          "className": "col-span-2"
+        }
+      }
+    ],
+    "button": {
+      "type": "submit",
+      "variant": "dark",
+      "size": "xl",
+      "className": "col-span-2 w-max ml-auto",
+      "text": "Enviar",
+      "link": ""
+    }
+  }
+}
