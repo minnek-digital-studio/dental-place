@@ -25,7 +25,7 @@ const CaseStudiesDetailsSection = ({
             )}
             {...props}
         >
-            <main className="max-w-[55rem] md:max-w-[65rem] flex flex-col gap-5 text-center container mb-10">
+            <main className="max-w-[55rem] md:max-w-[65rem] flex flex-col gap-5 text-center container">
                 <Typography
                     as="h1"
                     className="leading-[3rem] lg:leading-[3rem] xl:text-4xl"
