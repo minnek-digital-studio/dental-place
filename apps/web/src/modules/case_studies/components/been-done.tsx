@@ -28,7 +28,7 @@ const BeenDoneSection = ({
     if (description) descriptionHTML = { __html: description };
 
     return (
-        <section className={cn("bg-white", className)} {...props}>
+        <section className={cn("bg-white mb-16", className)} {...props}>
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
                 <Typography
                     as="h2"

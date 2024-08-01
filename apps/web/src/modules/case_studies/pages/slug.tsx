@@ -13,6 +13,11 @@ import CaseStudiesDetailsSection, {
     CaseStudiesDetailsSectionProps,
 } from "../components/case-studies-details-section";
 import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "@/modules/common/components/lethelp-section";
+import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Case Studies",
@@ -32,8 +37,12 @@ const CaseStudiesPage = ({ params }) => {
         (item) => item.slug === params.slug,
     );
 
-    if (!beenDone || !servicesDescription || !caseStudies) {
-        return "Case study not found";
+    const letUsHelp = LetHelpInfo.items.find(
+        (item) => item.slug === params.slug,
+    );
+
+    if (!beenDone || !servicesDescription || !caseStudies || !letUsHelp) {
+        return notFound();
     }
 
     return (
@@ -49,6 +58,7 @@ const CaseStudiesPage = ({ params }) => {
                 {...(servicesDescription as ServiceDescriptionSectionProps)}
             />
             <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
+            <LetUsHelpSection {...(letUsHelp as LetUsHelpSectionProps)} />
         </Layout>
     );
 };
