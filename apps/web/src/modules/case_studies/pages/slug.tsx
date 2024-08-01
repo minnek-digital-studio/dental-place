@@ -7,6 +7,11 @@ import ServiceDescriptionSection, {
     ServiceDescriptionSectionProps,
 } from "../components/service-description";
 import ServiceDescriptionInfo from "@/modules/case_studies/data/services-description.json";
+import CaseStudiesDetailsSection, {
+    CaseStudiesDetailsSectionProps,
+} from "../components/case-studies-details-section";
+import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Case Studies",
@@ -18,8 +23,12 @@ const CaseStudiesPage = ({ params }) => {
         (item) => item.slug === params.slug,
     );
 
-    if (!servicesDescription) {
-        return "Case study not found";
+    const caseStudies = CaseStudiesDetailsInfo.items.find(
+        (item) => item.slug === params.slug,
+    );
+
+    if (!caseStudies || !servicesDescription) {
+        notFound();
     }
 
     return (
@@ -28,6 +37,9 @@ const CaseStudiesPage = ({ params }) => {
                 variant: "light-primary",
             }}
         >
+            <CaseStudiesDetailsSection
+                {...(caseStudies as CaseStudiesDetailsSectionProps)}
+            />
             <ServiceDescriptionSection
                 {...(servicesDescription as ServiceDescriptionSectionProps)}
             />
