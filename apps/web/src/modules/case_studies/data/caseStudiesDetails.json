@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "title": "How Jeena Williams Got Braces",
+      "slug": "how-jeena-williams-got-braces",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.  Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+      "img": {
+        "src": "/images/case-studies/case-1.webp",
+        "alt": "Dental Place",
+        "className": ""
+      }
+    },
+    {
+      "title": "Alex Surgery - Removal of wisdom Tooth",
+      "slug": "alex-surgery-removal-of-wisdom-tooth",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.  Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+      "img": {
+        "src": "/images/case-studies/case-2.webp",
+        "alt": "Dental Place",
+        "className": ""
+      }
+    },
+    {
+      "title": "Pain in the Julie Braces - How we did the treatment?",
+      "slug": "pain-in-the-julie-braces-how-we-did-the-treatment",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.  Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
+      "img": {
+        "src": "/images/case-studies/case-3.webp",
+        "alt": "Dental Place",
+        "className": ""
+      }
+    }
+  ]
+}
