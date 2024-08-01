@@ -3,10 +3,13 @@ import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
 import Footer from "@/modules/common/components/footer";
 import { Metadata } from "next";
-import BeenDoneSection, {
-    BeenDoneSectionProps,
-} from "../components/been-done";
+import BeenDoneSection, { BeenDoneSectionProps } from "../components/been-done";
 import BeenDoneInfo from "@/modules/case_studies/data/been-done.json";
+import CaseStudiesDetailsSection, {
+    CaseStudiesDetailsSectionProps,
+} from "../components/case-studies-details-section";
+import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Case Studies",
@@ -18,8 +21,12 @@ const CaseStudiesPage = ({ params }) => {
         (item) => item.slug === params.slug,
     );
 
-    if (!beenDone) {
-        return "Case study not found";
+    const caseStudies = CaseStudiesDetailsInfo.items.find(
+        (item) => item.slug === params.slug,
+    );
+
+    if (!caseStudies || !beenDone) {
+        notFound();
     }
 
     return (
@@ -28,8 +35,9 @@ const CaseStudiesPage = ({ params }) => {
                 variant: "light-primary",
             }}
         >
-            <BeenDoneSection
-                {...(beenDone as BeenDoneSectionProps)}
+            <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
+            <CaseStudiesDetailsSection
+                {...(caseStudies as CaseStudiesDetailsSectionProps)}
             />
         </Layout>
     );
