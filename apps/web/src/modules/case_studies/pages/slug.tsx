@@ -35,10 +35,10 @@ const CaseStudiesPage = ({ params }) => {
                 variant: "light-primary",
             }}
         >
-            <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
             <CaseStudiesDetailsSection
                 {...(caseStudies as CaseStudiesDetailsSectionProps)}
             />
+            <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
         </Layout>
     );
 };
