@@ -36,14 +36,14 @@ const ServiceDescriptionSection = ({
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
                 <Typography
                     as="h2"
-                    className="leading-[3rem] lg:leading-[3rem] text-left text-xl lg:text-2xl"
+                    className="text-left text-2xl leading-[3.8rem] lg:text-[1.7rem]"
                 >
                     {title}
                 </Typography>
                 {description && (
                     <Typography
                         as="p"
-                        className="text-dark-grey text-justify leading-[1.6rem]"
+                        className="text-dark-grey text-start leading-[1.6rem]"
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
                 )}
@@ -79,7 +79,7 @@ const ServiceDescriptionSection = ({
                 </div>
                 <Typography
                     as="p"
-                    className="text-dark-grey text-justify leading-[1.6rem]"
+                    className="text-dark-grey text-start leading-[1.6rem]"
                     dangerouslySetInnerHTML={subDescriptionHTML}
                 />
             </main>
