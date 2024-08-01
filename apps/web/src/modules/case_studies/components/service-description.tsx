@@ -56,8 +56,8 @@ const ServiceDescriptionSection = ({
                             />
                         </picture>
                         <Typography
-                            as="b"
-                            className="text-dark-grey text-center"
+                            as="figcaption"
+                            className="text-dark-grey text-center font-bold"
                         >
                             {beforeImg.title}
                         </Typography>
@@ -70,8 +70,8 @@ const ServiceDescriptionSection = ({
                             />
                         </picture>
                         <Typography
-                            as="b"
-                            className="text-dark-grey text-center"
+                            as="figcaption"
+                            className="text-dark-grey text-center font-bold"
                         >
                             {afterImg.title}
                         </Typography>
