@@ -11,6 +11,8 @@ import ServiceDescriptionSection, {
     ServiceDescriptionSectionProps,
 } from "../components/service-description";
 import ServiceDescriptionInfo from "@/modules/case_studies/data/services-description.json";
+import BeenDoneSection, { BeenDoneSectionProps } from "../components/been-done";
+import BeenDoneInfo from "@/modules/case_studies/data/been-done.json";
 import CaseStudiesDetailsSection, {
     CaseStudiesDetailsSectionProps,
 } from "../components/case-studies-details-section";
@@ -31,11 +33,15 @@ const CaseStudiesPage = ({ params }) => {
         (item) => item.slug === params.slug,
     );
 
+    const beenDone = BeenDoneInfo.items.find(
+        (item) => item.slug === params.slug,
+    );
+
     const caseStudies = CaseStudiesDetailsInfo.items.find(
         (item) => item.slug === params.slug,
     );
 
-    if (!caseStudies || !servicesDescription || !letUsHelp) {
+    if (!caseStudies || !servicesDescription || !letUsHelp || !beenDone) {
         notFound();
     }
 
@@ -51,6 +57,7 @@ const CaseStudiesPage = ({ params }) => {
             <ServiceDescriptionSection
                 {...(servicesDescription as ServiceDescriptionSectionProps)}
             />
+            <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
             <LetUsHelpSection {...(letUsHelp as LetUsHelpSectionProps)} />
         </Layout>
     );
