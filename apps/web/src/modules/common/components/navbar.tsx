@@ -122,7 +122,7 @@ const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
             info: "bg-info text-info-foreground",
             secondary: "bg-secondary/40 text-secondary-foreground",
             transparent: "bg-transparent text-white",
-            "light-primary": "bg-primary/40 text-primary-foreground"
+            "light-primary": "bg-primary/40 text-primary-foreground",
         },
     },
     defaultVariants: {
@@ -150,7 +150,7 @@ const variants = {
     "light-primary": {
         button: "light",
         logo: "/images/logo/dental-logo.webp",
-    }
+    },
 };
 
 export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
