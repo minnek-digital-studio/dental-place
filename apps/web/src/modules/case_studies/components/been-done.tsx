@@ -32,18 +32,18 @@ const BeenDoneSection = ({
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
                 <Typography
                     as="h2"
-                    className="leading-[3rem] lg:leading-[3rem] text-left text-xl lg:text-2xl"
+                    className="lg:leading-[3.8rem] text-left text-2xl md:text-[1.7rem] lg:text-[1.7rem] leading-[1.75rem] md:leading-[3.8rem]"
                 >
                     {title}
                 </Typography>
                 {description && (
                     <Typography
                         as="p"
-                        className="text-dark-grey text-justify leading-[1.6rem]"
+                        className="text-dark-grey text-start leading-[1.6rem]"
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
                 )}
-                <ul className="flex flex-col gap-4 grid md:grid-cols-2 mt-3">
+                <ul className="flex flex-col gap-4 md:gap-6 grid md:grid-cols-2 mt-3">
                     {itemsIcons.map((item, index) => (
                         <li key={index} className="flex gap-4 items-center">
                             <div className="bg-[#28AF77] rounded-full size-5 md:size-6 flex items-center justify-center">
@@ -52,7 +52,7 @@ const BeenDoneSection = ({
                             <div className="flex flex-col gap-1">
                                 <Typography
                                     as="h3"
-                                    className="text-xl lg:text-xl font-extrabold tracking-normal"
+                                    className="text-base font-extrabold tracking-normal"
                                 >
                                     {item.title}
                                 </Typography>
