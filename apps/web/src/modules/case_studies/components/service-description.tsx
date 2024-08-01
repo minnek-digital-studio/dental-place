@@ -47,7 +47,7 @@ const ServiceDescriptionSection = ({
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
                 )}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[4rem]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[5rem]">
                     <figure className="max-w-2xl max-h-56 md:max-w-3xl">
                         <picture>
                             <Image
