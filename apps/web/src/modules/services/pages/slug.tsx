@@ -1,9 +1,9 @@
 import React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
-import { GetStaticPaths } from "next";
 import { getServices, getServiceBySlug } from "../actions/services.action";
 import Layout from "@/modules/common/layouts/layout";
 import ServiceSection from "../components/service-section";
+import { notFound } from "next/navigation";
 
 type Props = {
     params: { slug: string };
@@ -28,6 +28,10 @@ const ServicePage = async ({ params }) => {
     const { slug } = params;
     const service = await getServiceBySlug(slug);
 
+    if (!service) {
+        return notFound();
+    }
+
     return (
         <Layout
             navbarVariant={{
@@ -39,14 +43,12 @@ const ServicePage = async ({ params }) => {
     );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export async function generateStaticParams() {
     const services = await getServices();
 
-    const paths = services.map((service) => ({
-        params: { slug: service.slug },
+    return services.map((service) => ({
+        slug: service.slug,
     }));
-
-    return { paths, fallback: false };
-};
+}
 
 export default ServicePage;
