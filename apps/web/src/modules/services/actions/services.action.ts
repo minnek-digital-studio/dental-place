@@ -56,24 +56,24 @@ export const getServicesPage = async (uri = "/services/") => {
                     className
                     }
                     letsHelp {
-                    title
-                    description
-                    className
-                    img {
-                        node {
-                        altText
-                        uri
-                        sourceUrl(size: LARGE)
+                        title
+                        description
+                        className
+                        img {
+                            node {
+                                altText
+                                uri
+                                sourceUrl(size: LARGE)
+                            }
                         }
-                    }
-                    button {
-                        text
-                        variant
-                        link {
-                        url
+                        button {
+                            text
+                            variant
+                            link {
+                                url
+                            }
+                            size
                         }
-                        size
-                    }
                     }
                 }
                 }
@@ -137,6 +137,26 @@ export const getServiceBySlug = async (slug: string) => {
             serviceBy(slug: $slug) {
                 title
                 slug
+                letsHelp {
+                        title
+                        description
+                        className
+                        img {
+                            node {
+                                altText
+                                uri
+                                sourceUrl(size: LARGE)
+                            }
+                        }
+                        button {
+                            text
+                            variant
+                            link {
+                                url
+                            }
+                            size
+                        }
+                    }
                 servicePage {
                 description
                 button {

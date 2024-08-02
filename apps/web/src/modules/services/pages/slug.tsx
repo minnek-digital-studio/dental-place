@@ -3,6 +3,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import { getServices, getServiceBySlug } from "../actions/services.action";
 import Layout from "@/modules/common/layouts/layout";
 import ServiceSection from "../components/service-section";
+import LetUsHelpSection from "@/modules/common/components/lethelp-section";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -26,12 +27,13 @@ export async function generateMetadata(
 
 const ServicePage = async ({ params }) => {
     const { slug } = params;
-    const service = await getServiceBySlug(slug);
+    const data = await getServiceBySlug(slug);
 
-    if (!service) {
+    if (!data) {
         return notFound();
     }
 
+    const { letsHelp, ...service } = data;
     return (
         <Layout
             navbarVariant={{
@@ -39,6 +41,7 @@ const ServicePage = async ({ params }) => {
             }}
         >
             <ServiceSection {...service} />
+            <LetUsHelpSection {...letsHelp} />
         </Layout>
     );
 };
