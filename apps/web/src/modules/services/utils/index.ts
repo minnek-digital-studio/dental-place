@@ -38,6 +38,8 @@ export const mapServicesPage = (page: any, services: any) => {
 };
 
 export const mapServicePage = (page: any) => {
+    if (!page) return null;
+
     const mappedPage = {
         title: page.title,
         description: page.servicePage.description,
