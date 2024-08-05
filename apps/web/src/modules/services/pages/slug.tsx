@@ -4,6 +4,10 @@ import { getServices, getServiceBySlug } from "../actions/services.action";
 import Layout from "@/modules/common/layouts/layout";
 import ServiceSection from "../components/service-section";
 import { notFound } from "next/navigation";
+import CaseStudiesInfo from "../data/case-studies.json";
+import CaseStudiesSection, {
+    type CaseStudiesSectionProps,
+} from "../components/case-studies-section";
 
 type Props = {
     params: { slug: string };
@@ -39,6 +43,10 @@ const ServicePage = async ({ params }) => {
             }}
         >
             <ServiceSection {...service} />
+
+            <CaseStudiesSection
+                {...(CaseStudiesInfo as CaseStudiesSectionProps)}
+            />
         </Layout>
     );
 };
