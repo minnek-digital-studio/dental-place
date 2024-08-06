@@ -1,0 +1,10 @@
+query GetServices {
+    services {
+        edges {
+            node {
+                title
+                slug
+            }
+        }
+    }
+}

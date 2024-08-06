@@ -22,6 +22,7 @@ import {
     IconByName,
 } from "@minnek/ui/icons";
 import { Metadata } from "next";
+import ClientQueryTest from "../components/clients-query-test";
 
 export const metadata: Metadata = {
     title: "Docs",
@@ -31,6 +32,7 @@ export default async function Docs() {
     return (
         <main className="w-full flex flex-col justify-center items-center gap-4">
             <section className="min-h-screen flex flex-col items-center justify-center gap-6">
+                <ClientQueryTest />
                 <div>
                     <h1>Cards</h1>
                     <div className="flex gap-4">
