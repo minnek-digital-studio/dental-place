@@ -13,6 +13,8 @@ const notoSans = Noto_Sans({
     subsets: ["latin"],
 });
 
+import { ApolloWrapper } from "@/modules/common/lib/apollo/apollo-wrapper";
+
 export default function RootLayout({
     // Layouts must accept a children prop.
     // This will be populated with nested layouts or pages
@@ -22,7 +24,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={notoSans.variable}>{children}</body>
+            <body className={notoSans.variable}>
+                <ApolloWrapper>{children}</ApolloWrapper>
+            </body>
         </html>
     );
 }
