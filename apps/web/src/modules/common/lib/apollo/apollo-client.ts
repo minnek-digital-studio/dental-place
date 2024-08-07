@@ -1,4 +1,4 @@
-import { config } from "../config";
+import { config } from "@/config/constants";
 import { HttpLink } from "@apollo/client";
 import {
   registerApolloClient,

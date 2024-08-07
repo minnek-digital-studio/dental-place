@@ -32897,6 +32897,12 @@
             "deprecationReason": null
           },
           {
+            "name": "FLAMINGO_SPAM",
+            "description": "Objects with the flamingo-spam status",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "FUTURE",
             "description": "Objects with the future status",
             "isDeprecated": false,
