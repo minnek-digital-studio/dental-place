@@ -5251,6 +5251,8 @@ export enum PostStatusEnum {
   AutoDraft = 'AUTO_DRAFT',
   /** Objects with the draft status */
   Draft = 'DRAFT',
+  /** Objects with the flamingo-spam status */
+  FlamingoSpam = 'FLAMINGO_SPAM',
   /** Objects with the future status */
   Future = 'FUTURE',
   /** Objects with the inherit status */
