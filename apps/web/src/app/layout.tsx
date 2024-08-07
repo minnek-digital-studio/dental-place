@@ -5,6 +5,9 @@ import Footer from "@/modules/common/components/footer";
 export const metadata: Metadata = {
     title: "Home",
     description: "Welcome to Next.js",
+    icons: {
+        icon: "/favicon/dental-icon.webp",
+    },
 };
 
 import { NavBar } from "@/modules/common/components/navbar";
