@@ -23,7 +23,7 @@ const ClinicSection = ({ title, description, items }: ClinicSectionProps) => {
     return (
         <section className="flex flex-col gap-12 items-center py-6 ">
             <header className="flex flex-col gap-4 items-center container">
-                <Typography as="h2" className="text-center">
+                <Typography as="h2" className="text-center max-md:hidden">
                     {title}
                 </Typography>
                 {description && (
