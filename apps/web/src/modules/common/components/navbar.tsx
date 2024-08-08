@@ -86,30 +86,51 @@ const navItems: NavBarItem[] = [
     },
     {
         title: "Acerca",
-        href: "/about",
+        href: "/team",
     },
     {
         title: "Contacto",
-        href: "/contact",
+        href: "/contact_us",
     },
     {
         title: "Servicios",
         href: "/services",
         subItems: [
             {
-                title: "Servicio 1",
-                href: "/services/service-1",
-                description: "Descripción del servicio 1",
+                title: "Odontología General",
+                href: "/services/odontologia-general",
             },
             {
-                title: "Servicio 2",
-                href: "/services/service-2",
-                description: "Descripción del servicio 2",
+                title: "Ortodoncia",
+                href: "/services/orthodontics",
             },
             {
-                title: "Servicio 3",
-                href: "/services/service-3",
-                description: "Descripción del servicio 3",
+                title: "Endodoncia",
+                href: "/services/endodontics",
+            },
+            {
+                title: "Periodoncia",
+                href: "/services/periodontics",
+            },
+            {
+                title: "Odontología Estética",
+                href: "/services/aesthetic-dentistry",
+            },
+            {
+                title: "Cirugía Oral y Maxilofacial",
+                href: "/services/oral-and-maxillofacial-surgery",
+            },
+            {
+                title: "Implantología Dental",
+                href: "/services/dental-implants",
+            },
+            {
+                title: "Odontopediatria",
+                href: "/services/pediatric-dentistry",
+            },
+            {
+                title: "Rehabilitación Bucal",
+                href: "/services/oral-rehabilitation",
             },
         ],
     },
@@ -172,9 +193,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                                             key={subItem.title}
                                             title={subItem.title}
                                             href={subItem.href}
-                                        >
-                                            {subItem.description}
-                                        </ListItem>
+                                        />
                                     ))}
                                 </ul>
                             </NavigationMenuContent>
@@ -424,7 +443,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                     <a
                         ref={ref}
                         className={cn(
-                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                             className,
                         )}
                         {...props}
@@ -432,9 +451,12 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                         <div className="text-sm font-medium leading-none">
                             {title}
                         </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            {children}
-                        </p>
+
+                        {children && (
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                {children}
+                            </p>
+                        )}
                     </a>
                 </NavigationMenuLink>
             </li>
