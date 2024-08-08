@@ -23,7 +23,10 @@ const ArsSection = ({
             )}
             {...props}
         >
-            <Typography as="h3" className="text-xl lg:text-xl font-extrabold">
+            <Typography
+                as="h3"
+                className="text-xl lg:text-xl font-extrabold max-md:hidden"
+            >
                 {title}
             </Typography>
             <div className="flex gap-4 items-start justify-center flex-wrap md:flex-nowrap">
