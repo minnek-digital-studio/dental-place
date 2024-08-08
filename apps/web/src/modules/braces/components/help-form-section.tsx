@@ -22,7 +22,7 @@ const HelpFormSection = ({
         <section className="container">
             <div
                 className={cn(
-                    "bg-primary/40 flex md:flex-row flex-col px-16 py-8 rounded-3xl md:justify-center md:items-center  md:gap-16 lg:gap-20",
+                    "bg-primary/40 flex md:flex-row flex-col px-16 py-8 max-md:px-8 max-md:pt-12 rounded-3xl md:justify-center md:items-center  md:gap-16 lg:gap-20",
                     className,
                 )}
                 {...props}
