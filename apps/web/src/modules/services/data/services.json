@@ -111,15 +111,5 @@
       "className": "max-w-full"
     }
   ],
-  "button": {
-    "text": "Descubre",
-    "link": "#",
-    "variant": "dark",
-    "size": "lg",
-    "icon": {
-      "name": "MoveRight",
-      "size": 25
-    }
-  },
   "className": "bg-info"
 }
