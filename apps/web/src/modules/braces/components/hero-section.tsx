@@ -28,7 +28,7 @@ const HeroSection = ({
 
     return (
         <section className={cn("pt-14 md:py-14", className)} {...props}>
-            <div className="container grid grid-cols-1 md:grid-cols-2 px-14 gap-10">
+            <div className="container grid grid-cols-1 md:grid-cols-2 sm:px-14 gap-10">
                 <main className="flex flex-col gap-6 md:mb-16 mb-10">
                     <Typography
                         as="h1"
