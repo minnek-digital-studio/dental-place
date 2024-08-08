@@ -1,6 +1,7 @@
 {
   "title": "Lets Us Help you",
   "description": "Lörem ipsum suprahåt diss teteda trina. Väliga beröde för sars.",
+  "id": "helpform",
   "form": {
     "fields": [
       {
