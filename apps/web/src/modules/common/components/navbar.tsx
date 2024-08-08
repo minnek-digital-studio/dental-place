@@ -315,7 +315,7 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                         <Dropdown
                             defaultOption={langs[0] as DropdownOption}
                             options={langs}
-                            label="Idioma"
+                            label="Idiomas"
                             className="hidden md:flex"
                             radioGroup
                         />
@@ -378,11 +378,11 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                                 langs[0] as DropdownOption
                                             }
                                             options={langs}
-                                            label="Idioma"
+                                            label="Idiomas"
                                             radioGroup
                                         >
                                             <Typography as="span">
-                                                Idioma
+                                                Idiomas
                                             </Typography>
                                         </Dropdown>
 
