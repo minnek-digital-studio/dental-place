@@ -194,6 +194,11 @@
 .shadow-team-card {
     @apply shadow-[0px_0px_100px_0px_#0000001A];
 }
+
+.shadow-image {
+    @apply shadow-[0px_30px_100px_0px_#00000026];
+}
+
 .break-all {
     word-break: break-all;
 }
