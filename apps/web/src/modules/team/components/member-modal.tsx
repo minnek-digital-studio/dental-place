@@ -48,7 +48,7 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
         >
             <DialogContent
                 aria-describedby={`Details Team Member`}
-                className="container max-w-screen-lg gap-10 py-20 px-12 max-h-full overflow-y-auto"
+                className="container max-w-screen-lg gap-10 py-20 px-12 max-h-full md:max-h-[90dvh] overflow-y-auto"
                 {...props}
             >
                 <DialogHeader className="md:flex-row gap-6 items-center">
@@ -93,24 +93,24 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                         </Typography>
                     )}
 
-                    <div className="flex flex-col gap-3 md:gap-7">
+                    <div className="flex flex-col gap-3 md:gap-7 max-md:text-center ">
                         {educationtitle && (
                             <Typography as="h3" className="mt-6">
                                 {educationtitle}
                             </Typography>
                         )}
-                        <div className="flex flex-col gap-3 md:gap-7">
+                        <div className="flex flex-col gap-3 md:gap-7 max-md:items-center max-md:justify-center">
                             {education &&
                                 education.map((item) => (
                                     <article
-                                        className="flex flex-col md:flex-row gap-5 md:items-center"
+                                        className="flex flex-col md:flex-row gap-5 md:items-center max-md:items-center max-md:justify-center"
                                         key={`${id}-${item.title}`}
                                     >
                                         <Button
                                             {...item.button}
                                             aria-hidden
                                             className={cn(
-                                                "p-4",
+                                                "p-4 cursor-default",
                                                 button.className,
                                             )}
                                         >
