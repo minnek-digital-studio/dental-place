@@ -71,7 +71,7 @@ const langs: DropdownOption[] = [
 const hours: DropdownOption[] = [
     {
         value: "am",
-        label: "Lunes - V 8:00 AM - 12:00 PM",
+        label: "Lun. - Vier. 8:00 AM - 12:00 PM",
     },
     {
         value: "pm",
