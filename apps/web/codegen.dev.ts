@@ -2,7 +2,7 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: "https://dentalplace.minnekdigital.com/graphql",
+  schema: "http:localhost:8080/graphql",
   documents: "src/**/*.{gql,graphql}",
   generates: {
     "src/graphql/generated/": {
