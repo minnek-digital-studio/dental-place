@@ -1,178 +1,255 @@
 <?php
-/**
- * Functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package mnk
- */
-
-if ( ! defined( 'MNK_VERSION' ) ) {
+if (!defined('MNK_VERSION')) {
     define( 'MNK_VERSION', '1.0.0' );
 }
 
-require get_template_directory() . '/includes/custom-header.php';
-require get_template_directory() . '/includes/template-tags.php';
-require get_template_directory() . '/includes/template-functions.php';
-require get_template_directory() . '/includes/customizer.php';
-
-add_action( 'after_setup_theme', 'mnk_theme_setup' );
-add_action( 'after_setup_theme', 'mnk_content_width', 0 );
-add_action( 'after_setup_theme', 'mnk_custom_header_setup' );
-add_action( 'widgets_init', 'mnk_widgets_init' );
-add_action( 'wp_enqueue_scripts', 'mnk_theme_scripts' );
-add_action( 'customize_register', 'mnk_customize_register' );
-add_action( 'customize_preview_init', 'mnk_customize_preview_js' );
-add_action( 'wp_head', 'mnk_pingback_header' );
-
-add_filter( 'body_class', 'mnk_body_classes' );
-
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function mnk_theme_setup() {
-    /**
-     * Make theme available for translation.
-     * Translations can be filed in the /languages/ directory.
-     */
-    load_theme_textdomain( 'mnk', get_template_directory() . '/languages' );
-
-    // Add default posts and comments RSS feed links to head.
-    add_theme_support( 'automatic-feed-links' );
-
-    /**
-     * Let WordPress manage the document title.
-     * By adding theme support, we declare that this theme does not use a
-     * hard-coded <title> tag in the document head, and expect WordPress to
-     * provide it for us.
-     */
-    add_theme_support( 'title-tag' );
-
-    /**
-     * Enable support for Post Thumbnails on posts and pages.
-     *
-     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-     */
-    add_theme_support( 'post-thumbnails' );
-
-    // This theme uses wp_nav_menu() in one location.
-    register_nav_menus(
-        array(
-            'menu-1' => esc_html__( 'Primar Menu', 'mnk' ),
-        )
-    );
-
-    /**
-     * Switch default core markup for search form, comment form, and comments
-     * to output valid HTML5.
-     */
-    add_theme_support(
-        'html5',
-        array(
-            'search-form',
-            'comment-form',
-            'comment-list',
-            'gallery',
-            'caption',
-            'style',
-            'script',
-        )
-    );
-
-    // Set up the WordPress core custom background feature.
-    add_theme_support(
-        'custom-background',
-        apply_filters(
-            'mnk_custom_background_args',
-            array(
-                'default-color' => 'ffffff',
-                'default-image' => '',
-            )
-        )
-    );
-
-    // Add theme support for selective refresh for widgets.
-    add_theme_support( 'customize-selective-refresh-widgets' );
-
-    /**
-     * Add support for core custom logo.
-     *
-     * @link https://codex.wordpress.org/Theme_Logo
-     */
-    add_theme_support(
-        'custom-logo',
-        array(
-            'height'      => 250,
-            'width'       => 250,
-            'flex-width'  => true,
-            'flex-height' => true,
-        )
-    );
+if (!defined('REDIRECT_URL')) {
+    define( 'REDIRECT_URL', 'https://www.minnekdigital.com' );
 }
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function mnk_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'mnk_content_width', 640 );
-}
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function mnk_widgets_init() {
-    register_sidebar(
-        array(
-            'name'          => esc_html__( 'Sidebar', 'mnk' ),
-            'id'            => 'sidebar-1',
-            'description'   => esc_html__( 'Add widgets here.', 'mnk' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
-        )
-    );
-}
-
-/**
- * Enqueue scripts and styles.
- */
-function mnk_theme_scripts() {
-    wp_enqueue_style(
-        'theme-styles',
-        get_template_directory_uri() . '/assets/css/theme.css',
-        array(),
-        MNK_VERSION,
-        false
-    );
-
-    wp_enqueue_script(
-        'theme-scripts',
-        get_template_directory_uri() . '/assets/js/main.js',
-        array(),
-        MNK_VERSION,
-        true
-    );
-
-    wp_enqueue_script(
-        'theme-navigation',
-        get_template_directory_uri() . '/assets/js/navigation.js',
-        array(),
-        MNK_VERSION,
-        true
-    );
-
-    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-        wp_enqueue_script( 'comment-reply' );
+if (!function_exists('a_custom_redirect') ) {
+    function a_custom_redirect() {
+        header("Location: ", REDIRECT_URL);
+        die();
     }
 }
+
+if (!function_exists('a_theme_setup') ) {
+    function a_theme_setup() {
+        add_theme_support( 'post-thumbnails' );
+    }
+    add_action( 'after_setup_theme', 'a_theme_setup' );
+}
+
+// esto viene de un plugin de pago
+if(class_exists('ACF')) {
+    if (function_exists('acf_add_options_page')) {
+        $page = acf_add_options_page(array(
+            'page_title'    => 'Website Settings',
+            'menu_title'    => 'Website Settings',
+            'menu_slug'     => 'website-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => true
+        ));
+
+        $sub_page = acf_add_options_sub_page(array(
+            'page_title'    => 'General Settings',
+            'menu_title'    => 'General',
+            'parent_slug'   => 'website-settings',
+        ));
+
+        acf_add_options_page(array(
+            'page_title'    => 'Blocks',
+            'menu_title'    => 'Blocks',
+            'menu_slug'     => 'blocks',
+            'capability'    => 'edit_posts',
+            'redirect'      => true
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'   => 'Header',
+            'menu_title'   => 'Header',
+            'parent_slug'  => 'blocks',
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'   => 'Footer',
+            'menu_title'   => 'Footer',
+            'parent_slug'  => 'blocks',
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'   => 'Cookies',
+            'menu_title'   => 'Cookies',
+            'parent_slug'  => 'blocks',
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title'   => 'About',
+            'menu_title'   => 'About',
+            'parent_slug'  => 'blocks',
+        ));
+
+    }
+}
+
+if(!function_exists('a_mime_types')) {
+    function a_mime_types($mimes) {
+        $mimes['svg'] = 'image/svg+xml';
+        return $mimes;
+    }
+    add_filter('upload_mimes', 'a_mime_types');
+}
+
+if (!function_exists('a_add_image_size')) {
+    function a_add_image_size() {
+        add_image_size('custom-medium', 300, 9999);
+        add_image_size('custom-tablet', 600, 9999);
+        add_image_size('custom-large', 1200, 9999);
+        add_image_size('custom-large-crop', 1200, 1200, true);
+        add_image_size('custom-desktop', 1600, 9999);
+        add_image_size('custom-full', 2560, 9999);
+    }
+    add_action('after_setup_theme', 'a_add_image_size');
+}
+
+if (!function_exists('a_custom_image_size_names')) {
+    function a_custom_image_size_names($sizes) {
+        return array_merge($sizes, array(
+            'custom-medium' => __('Custom Medium', 'mnk'),
+            'custom-tablet' => __('Custom Tablet', 'mnk'),
+            'custom-large' => __('Custom Large', 'mnk'),
+            'custom-large-crop' => __('Custom Large Crop', 'mnk'),
+            'custom-desktop' => __('Custom Desktop', 'mnk'),
+            'custom-full' => __('Custom Full', 'mnk')
+        ));
+    }
+    add_filter('image_size_names_choose', 'a_custom_image_size_names');
+}
+
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_block_editor_for_post_type', '__return_false', 10);
+
+if (!function_exists('a_custom_navigation_menus')) {
+    function a_custom_navigation_menus() {
+        $locations = array(
+            'header_menu' => __('Header Menu', 'mnk'),
+            'footer_menu' => __('Footer Menu', 'mnk'),
+        );
+        register_nav_menus($locations);
+    }
+    add_action('init', 'a_custom_navigation_menus');
+}
+
+// if (!function_exists('a_register_custom_post_types')) {
+//     function a_register_custom_post_types() {
+//         $singular_name = __('Project', 'mnk');
+//         $plural_name = __('Projects', 'mnk');
+//         $slug_name = 'mnk-projects';
+//
+//         register_post_type($slug_name, array(
+//             'label' => $singular_name,
+//             'public' => true,
+//             'capability_type' => 'post',
+//             'map_meta_cap' => true,
+//             'has_archive' => false,
+//             'query_var' => $slug_name,
+//             'supports' => array('title', 'revisions', 'thumbnail'),
+//             'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+//             'menu_icon' => 'dashicons-images-alt2',
+//             'show_in_rest' => true,
+//             'show_in_graphql' => true,
+//             'publicly_queryable' => true,
+//             'graphql_single_name' => $singular_name,
+//             'graphql_plural_name' => $plural_name,
+//         ));
+//     }
+//     add_action('init', 'a_register_custom_post_types');
+// }
+
+
+if (!function_exists('a_register_services_custom_post_types')) {
+    function a_register_services_custom_post_types() {
+        $singular_name = __('Service', 'dental');
+        $plural_name = __('Services', 'dental');
+        $slug_name = 'dental-services';
+
+        register_post_type($slug_name, array(
+            'label' => $singular_name,
+            'public' => true,
+            'capability_type' => 'post',
+            'map_meta_cap' => true,
+            'has_archive' => false,
+            'query_var' => $slug_name,
+            'supports' => array('title', 'revisions', 'thumbnail'),
+            'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+            'menu_icon' => 'dashicons-images-alt2',
+            'show_in_rest' => true,
+            'show_in_graphql' => true,
+            'publicly_queryable' => true,
+            'graphql_single_name' => $singular_name,
+            'graphql_plural_name' => $plural_name,
+            'hierarchical' => true,
+        ));
+    }
+    add_action('init', 'a_register_services_custom_post_types');
+}
+
+if (!function_exists('a_register_case_studies_custom_post_types')) {
+    function a_register_case_studies_custom_post_types() {
+        $singular_name = __('Case Study', 'dental');
+        $plural_name = __('Case Studies', 'dental');
+        $slug_name = 'dental-case-studies';
+
+        register_post_type($slug_name, array(
+            'label' => $singular_name,
+            'public' => true,
+            'capability_type' => 'post',
+            'map_meta_cap' => true,
+            'has_archive' => false,
+            'query_var' => $slug_name,
+            'supports' => array('title', 'revisions', 'thumbnail'),
+            'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+            'menu_icon' => 'dashicons-images-alt2',
+            'show_in_rest' => true,
+            'show_in_graphql' => true,
+            'publicly_queryable' => true,
+            'graphql_single_name' => 'caseStudy',
+            'graphql_plural_name' => 'caseStudies',
+            'hierarchical' => true,
+        ));
+    }
+    add_action('init', 'a_register_case_studies_custom_post_types');
+}
+
+
+if (!function_exists('a_register_team_custom_post_types')) {
+    function a_register_team_custom_post_types() {
+        $singular_name = __('Team', 'dental');
+        $plural_name = __('Teams', 'dental');
+        $slug_name = 'dental-team';
+
+        register_post_type($slug_name, array(
+            'label' => $singular_name,
+            'public' => true,
+            'capability_type' => 'post',
+            'map_meta_cap' => true,
+            'has_archive' => false,
+            'query_var' => $slug_name,
+            'supports' => array('title', 'revisions', 'thumbnail'),
+            'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+            'menu_icon' => 'dashicons-images-alt2',
+            'show_in_rest' => true,
+            'show_in_graphql' => true,
+            'publicly_queryable' => true,
+            'graphql_single_name' => $singular_name,
+            'graphql_plural_name' => $plural_name,
+            'hierarchical' => true,
+        ));
+    }
+    add_action('init', 'a_register_team_custom_post_types');
+}
+
+if (!function_exists('a_get_custom_post_type_labels')) {
+    function a_get_custom_post_type_labels($singular_name, $plural_name) {
+        $labels = array(
+            'name' => $plural_name,
+            'singular_name' => $singular_name,
+            'add_new' => sprintf( __('Add %s', 'mnk'), $singular_name),
+            'add_new_item' => sprintf( __('Add New %s', 'mnk'), $singular_name),
+            'edit' => sprintf( __('Edit %s', 'mnk'), $singular_name),
+            'edit_item' => sprintf( __('Edit %s', 'mnk'), $singular_name),
+            'new_item' => sprintf( __('New %s', 'mnk'), $singular_name),
+            'view' => sprintf( __('View %s', 'mnk'), $singular_name),
+            'view_item' => sprintf( __('View %s', 'mnk'), $singular_name),
+            'search_items' => sprintf( __('Search %s', 'mnk'), $plural_name),
+            'not_found' => sprintf( __('No %s found', 'mnk'), $plural_name),
+            'not_found_in_trash' => sprintf( __('No %s found in trash', 'mnk'), $plural_name),
+            'parent' => sprintf( __('Parent %s', 'mnk'), $singular_name),
+            'menu_name' => $plural_name
+        );
+        return $labels;
+    }
+}
+
+?>
