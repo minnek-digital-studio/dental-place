@@ -106,16 +106,12 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                                         className="flex flex-col md:flex-row gap-5 md:items-center max-md:items-center max-md:justify-center"
                                         key={`${id}-${item.title}`}
                                     >
-                                        <Button
-                                            {...item.button}
+                                        <div
                                             aria-hidden
-                                            className={cn(
-                                                "p-4 cursor-default",
-                                                button.className,
-                                            )}
+                                            className="items-center justify-center rounded-full text-sm ring-offset-background flex gap-2 bg-primary size-max min-h-8 min-w-8 p-4"
                                         >
                                             <IconByName {...item.button.icon} />
-                                        </Button>
+                                        </div>
                                         <div>
                                             <Typography
                                                 as="h4"
