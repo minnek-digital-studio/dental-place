@@ -398,6 +398,7 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                         <img
                                             src={logo}
                                             alt="Dental Place Logo"
+                                            loading="lazy"
                                             className="w-auto max-h-8"
                                         />
                                     </Link>
