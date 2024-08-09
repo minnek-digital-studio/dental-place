@@ -374,8 +374,8 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="text-black">
-                                <SheetHeader className="flex flex-row justify-start ">
-                                    <Link href="/" className="w-max px-2">
+                                <SheetHeader className="flex flex-row justify-center px-2">
+                                    <Link href="/" className="w-max">
                                         <img
                                             src={logo}
                                             alt="Dental Place Logo"
