@@ -33,7 +33,7 @@ const ArsSection = ({
                 {images.map(({ className, ...image }) => (
                     <picture
                         className={cn(
-                            "h-20 max-w-40  md:h-28 md:max-w-52",
+                            "h-20 max-w-40 md:h-28 md:max-w-52",
                             className,
                         )}
                     >
