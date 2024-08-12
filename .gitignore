@@ -1,6 +1,5 @@
 wp-data/
 db-data/
-vendor/
 /cypress/screenshots/
 /cypress/downloads/
 /cypress/videos/
