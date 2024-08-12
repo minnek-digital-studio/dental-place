@@ -45,7 +45,10 @@ const WhyUsSection = ({
                                     >
                                         {item.title}
                                     </Typography>
-                                    <Typography as="p" className="leading-6">
+                                    <Typography
+                                        as="p"
+                                        className="leading-6 max-md:line-clamp-3"
+                                    >
                                         {item.description}
                                     </Typography>
                                 </div>

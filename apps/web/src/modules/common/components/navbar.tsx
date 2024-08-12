@@ -71,11 +71,11 @@ const langs: DropdownOption[] = [
 const hours: DropdownOption[] = [
     {
         value: "am",
-        label: "8:00 AM - 12:00 PM",
+        label: "L-V: 8:00 AM - 12:00 PM",
     },
     {
         value: "pm",
-        label: "2:00 PM - 6:00 PM",
+        label: "S: 2:00 PM - 6:00 PM",
     },
 ];
 
@@ -135,6 +135,15 @@ const navItems: NavBarItem[] = [
         ],
     },
 ];
+
+const horarioNavItems: NavBarItem = {
+    title: "Horarios",
+    href: "#",
+    subItems: hours.map((hour) => ({
+        title: hour.label,
+        href: "#",
+    })),
+};
 
 const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
     variants: {
@@ -291,69 +300,82 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                         </NavigationMenu>
                     </div>
                     <div className="flex gap-2 lg:gap-4 items-center">
-                        <Button
-                            variant={button as any}
-                            size="icon"
-                            className="lg:h-9 lg:px-5"
-                            asChild
-                        >
-                            <Typography
-                                as="a"
-                                href="tel:+18095818686"
-                                className="gap-2 flex items-center justify-center font-bold"
+                        <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
+                            <Button
+                                variant={button as any}
+                                size="icon"
+                                className="lg:h-9 lg:px-5"
+                                asChild
                             >
-                                <Phone size={15} fill="black" stroke="0" />
-                                <span className="hidden lg:flex">
-                                    (809) 581-8686
-                                </span>
-                            </Typography>
-                        </Button>
+                                <Typography
+                                    as="a"
+                                    href="tel:+18095818686"
+                                    className="gap-2 flex items-center justify-center font-bold"
+                                >
+                                    <Phone size={15} fill="black" stroke="0" />
+                                    <span className="hidden lg:flex">
+                                        (809) 581-8686
+                                    </span>
+                                </Typography>
+                            </Button>
 
-                        <Button
-                            variant={button as any}
-                            size="icon"
-                            className="hidden md:flex"
-                            asChild
-                        >
-                            <Typography as="a" href="#" aria-label="Facebook">
-                                <Facebook size={20} fill="black" stroke="0" />
-                            </Typography>
-                        </Button>
+                            <Button
+                                variant={button as any}
+                                size="icon"
+                                className="hidden md:flex"
+                                asChild
+                            >
+                                <Typography
+                                    as="a"
+                                    href="#"
+                                    aria-label="Facebook"
+                                >
+                                    <Facebook
+                                        size={20}
+                                        fill="black"
+                                        stroke="0"
+                                    />
+                                </Typography>
+                            </Button>
 
-                        <Button
-                            variant={button as any}
-                            size="icon"
-                            className="hidden md:flex"
-                            asChild
-                        >
-                            <Typography as="a" href="#" aria-label="Instagram">
-                                <Instagram size={18} />
-                            </Typography>
-                        </Button>
+                            <Button
+                                variant={button as any}
+                                size="icon"
+                                className="hidden md:flex"
+                                asChild
+                            >
+                                <Typography
+                                    as="a"
+                                    href="#"
+                                    aria-label="Instagram"
+                                >
+                                    <Instagram size={18} />
+                                </Typography>
+                            </Button>
 
-                        <Dropdown
-                            defaultOption={langs[0] as DropdownOption}
-                            options={langs}
-                            label="Idioma"
-                            className="hidden md:flex"
-                            radioGroup
-                        />
+                            <Dropdown
+                                defaultOption={langs[0] as DropdownOption}
+                                options={langs}
+                                label="Idioma"
+                                className="flex"
+                                radioGroup
+                            />
 
-                        <Dropdown
-                            defaultOption={hours[0] as DropdownOption}
-                            options={hours}
-                            label="Horario"
-                            className="hidden md:flex"
-                            icon={{
-                                name: "Clock",
-                                size: 24,
-                                color:
-                                    variant === "transparent"
-                                        ? "white"
-                                        : "black",
-                            }}
-                        />
-
+                            <Dropdown
+                                defaultOption={hours[0] as DropdownOption}
+                                options={hours}
+                                label="Horario"
+                                className="hidden md:flex"
+                                icon={{
+                                    name: "Clock",
+                                    size: 24,
+                                    color:
+                                        variant === "transparent"
+                                            ? "white"
+                                            : "black",
+                                }}
+                            />
+                        </div>
                         <Sheet>
                             <SheetTrigger className="flex md:hidden" asChild>
                                 <Button
@@ -371,11 +393,15 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="text-black">
-                                <SheetHeader>
-                                    <SheetTitle>Menú</SheetTitle>
-                                    <SheetDescription>
-                                        Navega a través de las opciones
-                                    </SheetDescription>
+                                <SheetHeader className="flex flex-row justify-center px-2">
+                                    <Link href="/" className="w-max">
+                                        <img
+                                            src={logo}
+                                            alt="Dental Place Logo"
+                                            loading="lazy"
+                                            className="w-auto max-h-8"
+                                        />
+                                    </Link>
                                 </SheetHeader>
 
                                 <NavigationMenu className="bg-white max-h-max items-start w-full justify-start flex-1">
@@ -387,41 +413,13 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                                 {...item}
                                             />
                                         ))}
+
+                                        <NavbarItem
+                                            column
+                                            {...horarioNavItems}
+                                        />
                                     </NavigationMenuListColumn>
                                 </NavigationMenu>
-
-                                <SheetFooter>
-                                    <div className="flex w-full justify-between">
-                                        <Dropdown
-                                            defaultOption={
-                                                langs[0] as DropdownOption
-                                            }
-                                            options={langs}
-                                            label="Idioma"
-                                            radioGroup
-                                        >
-                                            <Typography as="span">
-                                                Idioma
-                                            </Typography>
-                                        </Dropdown>
-
-                                        <Dropdown
-                                            defaultOption={
-                                                hours[0] as DropdownOption
-                                            }
-                                            options={hours}
-                                            label="Horario"
-                                            icon={{
-                                                name: "Clock",
-                                                size: 24,
-                                            }}
-                                        >
-                                            <Typography as="span">
-                                                Horario
-                                            </Typography>
-                                        </Dropdown>
-                                    </div>
-                                </SheetFooter>
                             </SheetContent>
                         </Sheet>
                     </div>

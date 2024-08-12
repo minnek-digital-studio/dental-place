@@ -1,0 +1,29 @@
+{
+  "title": "<span style='color: #4D27AF;'>20% Off</span> <span>Express Braces</span>",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. ",
+  "button": {
+    "variant": "dark",
+    "text": "Descubrir",
+    "size": "lg",
+    "link": "/braces",
+    "className": "w-max",
+    "icon": {
+      "name": "MoveRight",
+      "size": 25,
+      "color": "#ffffff"
+    }
+  },
+  "images": [
+    {
+      "src": "/images/braces/hero/braces-1.webp",
+      "alt": "Braces",
+      "className": "top-0 left-0 z-10 "
+    },
+    {
+      "src": "/images/braces/hero/braces-2.webp",
+      "alt": "Braces",
+      "className": "bottom-0 right-0"
+    }
+  ],
+  "className": "bg-primary/40"
+}
