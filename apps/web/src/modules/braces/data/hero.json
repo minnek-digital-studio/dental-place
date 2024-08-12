@@ -5,7 +5,7 @@
     "variant": "dark",
     "text": "Descubrir",
     "size": "lg",
-    "link": "/braces",
+    "link": "#helpform",
     "className": "w-max",
     "icon": {
       "name": "MoveRight",
