@@ -1,0 +1,65 @@
+{
+  "title": "Some of Our Clinic Photos",
+  "items": [
+    {
+      "src": "/images/clinic/clinic-1.webp",
+      "alt": "Clinic 1",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-2.webp",
+      "alt": "Clinic 2",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-3.webp",
+      "alt": "Clinic 3",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-4.webp",
+      "alt": "Clinic 4",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-1.webp",
+      "alt": "Clinic 5",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-2.webp",
+      "alt": "Clinic 6",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-4.webp",
+      "alt": "Clinic 4",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-1.webp",
+      "alt": "Clinic 5",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-2.webp",
+      "alt": "Clinic 6",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-4.webp",
+      "alt": "Clinic 4",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-1.webp",
+      "alt": "Clinic 5",
+      "className": ""
+    },
+    {
+      "src": "/images/clinic/clinic-2.webp",
+      "alt": "Clinic 6",
+      "className": ""
+    }
+  ]
+}
