@@ -1,5 +1,9 @@
 import React from "react";
 import Layout from "@/modules/common/layouts/layout";
+import HeroSection, {
+    type HeroSectionProps,
+} from "@/modules/braces/components/hero-section";
+import HeroInfo from "@/modules/braces/data/hero.json";
 import WhyBracesSection, {
     type WhyBracesSectionProps,
 } from "@/modules/braces/components/why-braces-section";
@@ -26,6 +30,7 @@ const ExpressBracesPage = async () => {
                 variant: "light-primary",
             }}
         >
+            <HeroSection {...(HeroInfo as HeroSectionProps)} />
             <AboutBracesSection
                 {...(AboutBracesInfo as AboutBracesSectionProps)}
             />

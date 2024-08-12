@@ -32,7 +32,7 @@ const PresentationSection = ({
                 )}
                 {...props}
             >
-                <div className="container relative flex max-md:pt-4">
+                <div className="container relative flex max-md:pt-4 max-md:flex-col gap-5 items-center">
                     <div className="flex flex-wrap justify-center items-center w-full max-md:gap-5">
                         <div className="w-full md:w-[40%] flex flex-col gap-4 md:pb-20">
                             <Typography
@@ -45,18 +45,14 @@ const PresentationSection = ({
                                 {description}
                             </Typography>
                         </div>
-                        <picture className="w-full md:w-[60%]">
+                        <picture className="w-[60%] max-md:hidden">
                             <Image {...img} />
                         </picture>
                     </div>
-                    <div className="hidden w-[calc(100%-4rem)] md:flex justify-center items-center md:absolute top-[calc(100%-3.75rem)]">
+                    <div className="w-[calc(100%-4rem)] max-md:w-full max-md:mb-6 flex justify-center items-center md:absolute top-[calc(100%-3.75rem)]">
                         <PresentationCard {...card} />
                     </div>
                 </div>
-            </section>
-
-            <section className="flex md:hidden w-full justify-center items-center container">
-                <PresentationCard {...card} />
             </section>
         </>
     );
