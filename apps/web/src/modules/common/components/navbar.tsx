@@ -352,15 +352,13 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                     <Instagram size={18} />
                                 </Typography>
                             </Button>
-
                             <Dropdown
                                 defaultOption={langs[0] as DropdownOption}
                                 options={langs}
-                                label="Idioma"
+                                label="Idiomas"
                                 className="flex"
                                 radioGroup
                             />
-
                             <Dropdown
                                 defaultOption={hours[0] as DropdownOption}
                                 options={hours}
