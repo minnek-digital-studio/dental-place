@@ -23,16 +23,16 @@ const PresentationCard = ({
     return (
         <Card
             className={cn(
-                "w-full max-w-[25rem] md:h-[7.5rem] md:max-w-[46rem] justify-center items-center shadow-card",
+                "w-full max-w-[25rem] md:h-[7.5rem] md:max-w-[46rem] justify-center items-center shadow-card max-md:bg-transparent max-md:shadow-none",
                 className,
             )}
             {...props}
         >
-            <CardContent className="flex flex-col md:flex-row gap-4 justify-center items-center py-4 text-center md:text-left ">
-                <Typography as="p" className="font-bold md:w-1/2">
+            <CardContent className="flex flex-col md:flex-row gap-4 justify-center items-center py-4 text-center md:text-left max-md:px-0 max-md:py-2 max-md:w-full">
+                <Typography as="p" className="font-bold md:w-1/2 max-md:hidden">
                     {title}
                 </Typography>
-                <div className="flex items-center justify-center flex-wrap md:flex-nowrap gap-4">
+                <div className="flex items-center justify-center flex-wrap md:flex-nowrap gap-4 max-md:w-full">
                     {buttons.map(
                         ({ icon, link, text, className, ...buttonProps }) => (
                             <Button

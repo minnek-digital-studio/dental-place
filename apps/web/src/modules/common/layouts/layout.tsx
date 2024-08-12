@@ -20,7 +20,7 @@ const Layout = ({
         <>
             <NavBar {...navbarVariant} />
             <div
-                className={cn("flex flex-col w-full gap-10", className)}
+                className={cn("flex flex-col w-full xmd:gap-10", className)}
                 {...props}
             >
                 {children}
