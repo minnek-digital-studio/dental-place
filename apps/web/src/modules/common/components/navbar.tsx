@@ -98,7 +98,7 @@ const navItems: NavBarItem[] = [
         subItems: [
             {
                 title: "Odontología General",
-                href: "/services/odontologia-general",
+                href: "/services/odontology-general",
             },
             {
                 title: "Ortodoncia",
