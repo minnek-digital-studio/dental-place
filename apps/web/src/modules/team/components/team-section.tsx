@@ -26,7 +26,7 @@ const OurTeamSection = ({
             )}
             {...props}
         >
-            <header className="max-w-[35rem] flex flex-col gap-5 text-center container">
+            <header className="max-w-[55rem] flex flex-col gap-5 text-center container">
                 <Typography as="h2">{title}</Typography>
                 <Typography as="p" className="text-dark-grey">
                     {description}
