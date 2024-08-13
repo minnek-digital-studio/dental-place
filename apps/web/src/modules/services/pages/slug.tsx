@@ -2,8 +2,13 @@ import React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 import { getServices, getServiceBySlug } from "../actions/services.action";
 import Layout from "@/modules/common/layouts/layout";
-import ServiceSection from "../components/service-section";
-import LetUsHelpSection from "@/modules/common/components/lethelp-section";
+import ServiceSection, {
+    type ServiceSectionProps,
+} from "../components/service-section";
+import LetUsHelpSection, {
+    type LetUsHelpSectionProps,
+} from "@/modules/common/components/lethelp-section";
+import LetUsHelpInfo from "../data/let-us-help.json";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -27,21 +32,16 @@ export async function generateMetadata(
 
 const ServicePage = async ({ params }) => {
     const { slug } = params;
-    const data = await getServiceBySlug(slug);
+    const service = await getServiceBySlug(slug);
 
-    if (!data) {
-        return notFound();
-    }
-
-    const { letsHelp, ...service } = data;
     return (
         <Layout
             navbarVariant={{
                 variant: "secondary",
             }}
         >
-            <ServiceSection {...service} />
-            <LetUsHelpSection {...letsHelp} />
+            <ServiceSection {...(service as ServiceSectionProps)} />
+            <LetUsHelpSection {...(LetUsHelpInfo as LetUsHelpSectionProps)} />
         </Layout>
     );
 };
