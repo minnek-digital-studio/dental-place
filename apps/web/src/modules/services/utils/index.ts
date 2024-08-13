@@ -18,18 +18,18 @@ export const mapServicesPage = (page: any, services: any) => {
             className: page.servicesPage.className,
         },
         letsHelp: {
-            title: page.letsHelp.title,
-            description: page.letsHelp.description,
-            className: page.letsHelp.className,
+            title: page.letsHelp?.title,
+            description: page.letsHelp?.description,
+            className: page.letsHelp?.className,
             img: {
-                alt: page.letsHelp.img.node.altText,
-                src: page.letsHelp.img.node.sourceUrl,
+                alt: page.letsHelp?.img.node.altText,
+                src: page.letsHelp?.img.node.sourceUrl,
             },
             button: {
-                text: page.letsHelp.button.text,
-                variant: page.letsHelp.button.variant,
-                link: page.letsHelp.button.link.url,
-                size: page.letsHelp.button.size,
+                text: page.letsHelp?.button.text,
+                variant: page.letsHelp?.button.variant,
+                link: page.letsHelp?.button.link.url,
+                size: page.letsHelp?.button.size,
             },
         },
     };
@@ -54,6 +54,21 @@ export const mapServicePage = (page: any) => {
         className: page.servicePage.className,
         slug: page.slug,
         content: page.content,
+        letsHelp: {
+            title: page.letsHelp?.title,
+            description: page.letsHelp?.description,
+            className: page.letsHelp?.className,
+            img: {
+                alt: page.letsHelp?.img?.node?.altText,
+                src: page.letsHelp?.img?.node?.sourceUrl,
+            },
+            button: {
+                text: page.letsHelp?.button?.text,
+                variant: page.letsHelp?.button?.variant,
+                link: page.letsHelp?.button?.link?.url,
+                size: page.letsHelp?.button?.size,
+            },
+        },
     };
 
     return mappedPage;
