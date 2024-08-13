@@ -11,8 +11,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CleanTooth",
-      "className": "max-w-full"
+      "icon": "CleanTooth"
     },
     {
       "title": "Odontología General",
@@ -23,8 +22,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "ServiceTooth",
-      "className": "max-w-full"
+      "icon": "ServiceTooth"
     },
     {
       "title": "Odontología General",
@@ -35,8 +33,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     },
     {
       "title": "Odontología General",
@@ -47,8 +44,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     },
     {
       "title": "Odontología General",
@@ -59,8 +55,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     },
     {
       "title": "Odontología General",
@@ -71,8 +66,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     },
     {
       "title": "Odontología General",
@@ -83,8 +77,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     },
     {
       "title": "Odontología General",
@@ -95,8 +88,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     },
     {
       "title": "Odontología General",
@@ -107,8 +99,7 @@
         "variant": "link",
         "size": "link"
       },
-      "icon": "CarieTooth",
-      "className": "max-w-full"
+      "icon": "CarieTooth"
     }
   ],
   "className": "bg-info"
