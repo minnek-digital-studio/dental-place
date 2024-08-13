@@ -16,7 +16,7 @@ export type ServiceCardProps = {
     description: string;
     icon?: IconsName;
     button: buttonProps;
-    iconSize?: number;
+    iconsize?: number;
     className?: string;
 };
 
@@ -31,7 +31,7 @@ const serviceCard = ({
     title,
     description,
     icon,
-    iconSize = 35,
+    iconsize = 35,
     button,
     className,
 }: ServiceCardProps) => {
@@ -41,7 +41,7 @@ const serviceCard = ({
                 {icon && typeof icon === "string" && (
                     <Button variant="info" size="icon" className="p-4" asChild>
                         <div aria-hidden>
-                            <IconByName name={icon} size={iconSize} />
+                            <IconByName name={icon} size={iconsize} />
                         </div>
                     </Button>
                 )}
