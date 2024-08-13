@@ -17,7 +17,11 @@ const CaseStudiesSection = ({
     ...props
 }: CaseStudiesSectionProps) => {
     return (
-        <section className={cn("bg-info", className)} {...props}>
+        <section
+            className={cn("bg-info", className)}
+            {...props}
+            id="case-studies-section"
+        >
             <div className="container flex flex-col py-10 gap-10">
                 <Typography as="h2">{title}</Typography>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
