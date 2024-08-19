@@ -4,9 +4,11 @@ import { Image } from "@/modules/common/components/image";
 import { Button } from "@minnek/ui/components/button";
 import { IconByName } from "@minnek/ui/components/icons/index";
 import Link from "next/link";
+import { BreadCrumb } from "@/modules/common/components/breadcrumb";
 
 interface ServiceSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
+    slug: string;
     description: string;
     content?: string;
 }
@@ -14,17 +16,35 @@ interface ServiceSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 const ServiceSection = ({
     title,
     description,
+    slug,
     content,
     ...props
 }: ServiceSectionProps) => {
+    const links = [
+        {
+            href: "/",
+            text: "Inicio",
+        },
+        {
+            href: "/services",
+            text: "Servicios",
+        },
+        {
+            href: `/services/${slug}`,
+            text: title,
+            active: true,
+        },
+    ];
+
     return (
         <section
             {...props}
             className="bg-gradient-to-b from-secondary/40 from-[15%] to-[0%]"
         >
             <div className="flex flex-col gap-9 items-center py-6 container pb-10">
-                <header className="max-w-[50rem] flex flex-col gap-6 text-center">
+                <header className="max-w-[50rem] flex flex-col gap-6 text-center items-center">
                     <Typography as="h2">{title}</Typography>
+                    <BreadCrumb links={links} />
                     <Typography as="p" className="text-dark-grey">
                         {description}
                     </Typography>
