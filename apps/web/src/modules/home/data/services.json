@@ -41,7 +41,7 @@
   ],
   "button": {
     "text": "View More",
-    "link": "#",
+    "link": "/services",
     "variant": "secondary",
     "size": "xl"
   }
