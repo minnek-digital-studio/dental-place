@@ -35,7 +35,7 @@ import {
     SheetTrigger,
 } from "@minnek/ui/components/sheet";
 
-import { getNavbarData } from "../actions/navbar-actions";
+import { getNavbarData } from "../actions/layout-actions";
 
 export type NavBarItem = {
     title: string;
