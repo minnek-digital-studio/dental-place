@@ -202,7 +202,6 @@ if (!function_exists('a_register_case_studies_custom_post_types')) {
     add_action('init', 'a_register_case_studies_custom_post_types');
 }
 
-
 if (!function_exists('a_register_call_to_action_custom_post_types')) {
     function a_register_call_to_action_custom_post_types() {
         $singular_name = __('Call to Action', 'dental');
@@ -229,8 +228,6 @@ if (!function_exists('a_register_call_to_action_custom_post_types')) {
     }
     add_action('init', 'a_register_call_to_action_custom_post_types');
 }
-
-
 
 if (!function_exists('a_register_team_custom_post_types')) {
     function a_register_team_custom_post_types() {
