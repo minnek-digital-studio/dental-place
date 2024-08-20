@@ -417,27 +417,22 @@
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsNavbar",
+            "name": "HeaderSettingsNavbarItems",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsNavbarHref",
+            "name": "HeaderSettingsNavbarItemsSubMenuItem",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsPhone",
+            "name": "HeaderSettingsSchedules",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsSchedule",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "HeaderSettingsScheduleSchedule",
+            "name": "HeaderSettingsSchedulesSchedule",
             "ofType": null
           },
           {
@@ -557,27 +552,22 @@
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsNavbar",
+            "name": "HeaderSettingsNavbarItems",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsNavbarHref",
+            "name": "HeaderSettingsNavbarItemsSubMenuItem",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsPhone",
+            "name": "HeaderSettingsSchedules",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsSchedule",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
-            "name": "HeaderSettingsScheduleSchedule",
+            "name": "HeaderSettingsSchedulesSchedule",
             "ofType": null
           },
           {
@@ -19540,7 +19530,7 @@
             "deprecationReason": null
           },
           {
-            "name": "navbar",
+            "name": "navbarItems",
             "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
             "args": [],
             "type": {
@@ -19548,7 +19538,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "HeaderSettingsNavbar",
+                "name": "HeaderSettingsNavbarItems",
                 "ofType": null
               }
             },
@@ -19557,23 +19547,23 @@
           },
           {
             "name": "phone",
-            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "OBJECT",
-              "name": "HeaderSettingsPhone",
+              "name": "AcfLink",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "schedule",
+            "name": "schedules",
             "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "OBJECT",
-              "name": "HeaderSettingsSchedule",
+              "name": "HeaderSettingsSchedules",
               "ofType": null
             },
             "isDeprecated": false,
@@ -19768,7 +19758,7 @@
         "isOneOf": null,
         "fields": [
           {
-            "name": "classname",
+            "name": "className",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsLanguageLangIcon&quot; Field Group",
             "args": [],
             "type": {
@@ -19844,7 +19834,7 @@
         "isOneOf": null,
         "fields": [
           {
-            "name": "classname",
+            "name": "className",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsLanguageLangIcon&quot; Field Group",
             "args": [],
             "type": {
@@ -20062,8 +20052,8 @@
       },
       {
         "kind": "OBJECT",
-        "name": "HeaderSettingsNavbar",
-        "description": "The &quot;HeaderSettingsNavbar&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "name": "HeaderSettingsNavbarItems",
+        "description": "The &quot;HeaderSettingsNavbarItems&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
         "isOneOf": null,
         "fields": [
           {
@@ -20079,29 +20069,29 @@
             "deprecationReason": "Use __typename instead"
           },
           {
-            "name": "href",
-            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group",
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subMenuItem",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group",
             "args": [],
             "type": {
               "kind": "LIST",
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "HeaderSettingsNavbarHref",
+                "name": "HeaderSettingsNavbarItemsSubMenuItem",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "link",
-            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "AcfLink",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -20121,7 +20111,7 @@
           },
           {
             "kind": "INTERFACE",
-            "name": "HeaderSettingsNavbar_Fields",
+            "name": "HeaderSettingsNavbarItems_Fields",
             "ofType": null
           }
         ],
@@ -20130,13 +20120,13 @@
       },
       {
         "kind": "OBJECT",
-        "name": "HeaderSettingsNavbarHref",
-        "description": "The &quot;HeaderSettingsNavbarHref&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "name": "HeaderSettingsNavbarItemsSubMenuItem",
+        "description": "The &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
         "isOneOf": null,
         "fields": [
           {
             "name": "description",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20160,7 +20150,7 @@
           },
           {
             "name": "link",
-            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -20185,7 +20175,7 @@
           },
           {
             "kind": "INTERFACE",
-            "name": "HeaderSettingsNavbarHref_Fields",
+            "name": "HeaderSettingsNavbarItemsSubMenuItem_Fields",
             "ofType": null
           }
         ],
@@ -20194,13 +20184,13 @@
       },
       {
         "kind": "INTERFACE",
-        "name": "HeaderSettingsNavbarHref_Fields",
-        "description": "Interface representing fields of the ACF &quot;HeaderSettingsNavbarHref&quot; Field Group",
+        "name": "HeaderSettingsNavbarItemsSubMenuItem_Fields",
+        "description": "Interface representing fields of the ACF &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group",
         "isOneOf": null,
         "fields": [
           {
             "name": "description",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20224,7 +20214,7 @@
           },
           {
             "name": "link",
-            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -20252,15 +20242,15 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsNavbarHref",
+            "name": "HeaderSettingsNavbarItemsSubMenuItem",
             "ofType": null
           }
         ]
       },
       {
         "kind": "INTERFACE",
-        "name": "HeaderSettingsNavbar_Fields",
-        "description": "Interface representing fields of the ACF &quot;HeaderSettingsNavbar&quot; Field Group",
+        "name": "HeaderSettingsNavbarItems_Fields",
+        "description": "Interface representing fields of the ACF &quot;HeaderSettingsNavbarItems&quot; Field Group",
         "isOneOf": null,
         "fields": [
           {
@@ -20276,32 +20266,32 @@
             "deprecationReason": "Use __typename instead"
           },
           {
-            "name": "href",
-            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group",
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subMenuItem",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group",
             "args": [],
             "type": {
               "kind": "LIST",
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "HeaderSettingsNavbarHref",
+                "name": "HeaderSettingsNavbarItemsSubMenuItem",
                 "ofType": null
               }
             },
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "link",
-            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "AcfLink",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -20321,144 +20311,15 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsNavbar",
+            "name": "HeaderSettingsNavbarItems",
             "ofType": null
           }
         ]
       },
       {
         "kind": "OBJECT",
-        "name": "HeaderSettingsPhone",
-        "description": "The &quot;HeaderSettingsPhone&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
-        "isOneOf": null,
-        "fields": [
-          {
-            "name": "fieldGroupName",
-            "description": "The name of the field group",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": true,
-            "deprecationReason": "Use __typename instead"
-          },
-          {
-            "name": "number",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "title",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "AcfFieldGroup",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "AcfFieldGroupFields",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "HeaderSettingsPhone_Fields",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INTERFACE",
-        "name": "HeaderSettingsPhone_Fields",
-        "description": "Interface representing fields of the ACF &quot;HeaderSettingsPhone&quot; Field Group",
-        "isOneOf": null,
-        "fields": [
-          {
-            "name": "fieldGroupName",
-            "description": "The name of the field group",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": true,
-            "deprecationReason": "Use __typename instead"
-          },
-          {
-            "name": "number",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "title",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "AcfFieldGroup",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "AcfFieldGroupFields",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": [
-          {
-            "kind": "OBJECT",
-            "name": "HeaderSettingsPhone",
-            "ofType": null
-          }
-        ]
-      },
-      {
-        "kind": "OBJECT",
-        "name": "HeaderSettingsSchedule",
-        "description": "The &quot;HeaderSettingsSchedule&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "name": "HeaderSettingsSchedules",
+        "description": "The &quot;HeaderSettingsSchedules&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
         "isOneOf": null,
         "fields": [
           {
@@ -20475,14 +20336,14 @@
           },
           {
             "name": "schedule",
-            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group",
             "args": [],
             "type": {
               "kind": "LIST",
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "HeaderSettingsScheduleSchedule",
+                "name": "HeaderSettingsSchedulesSchedule",
                 "ofType": null
               }
             },
@@ -20491,7 +20352,7 @@
           },
           {
             "name": "title",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20516,7 +20377,7 @@
           },
           {
             "kind": "INTERFACE",
-            "name": "HeaderSettingsSchedule_Fields",
+            "name": "HeaderSettingsSchedules_Fields",
             "ofType": null
           }
         ],
@@ -20525,8 +20386,8 @@
       },
       {
         "kind": "OBJECT",
-        "name": "HeaderSettingsScheduleSchedule",
-        "description": "The &quot;HeaderSettingsScheduleSchedule&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "name": "HeaderSettingsSchedulesSchedule",
+        "description": "The &quot;HeaderSettingsSchedulesSchedule&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
         "isOneOf": null,
         "fields": [
           {
@@ -20543,7 +20404,7 @@
           },
           {
             "name": "name",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20555,7 +20416,7 @@
           },
           {
             "name": "value",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20580,7 +20441,7 @@
           },
           {
             "kind": "INTERFACE",
-            "name": "HeaderSettingsScheduleSchedule_Fields",
+            "name": "HeaderSettingsSchedulesSchedule_Fields",
             "ofType": null
           }
         ],
@@ -20589,8 +20450,8 @@
       },
       {
         "kind": "INTERFACE",
-        "name": "HeaderSettingsScheduleSchedule_Fields",
-        "description": "Interface representing fields of the ACF &quot;HeaderSettingsScheduleSchedule&quot; Field Group",
+        "name": "HeaderSettingsSchedulesSchedule_Fields",
+        "description": "Interface representing fields of the ACF &quot;HeaderSettingsSchedulesSchedule&quot; Field Group",
         "isOneOf": null,
         "fields": [
           {
@@ -20607,7 +20468,7 @@
           },
           {
             "name": "name",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20619,7 +20480,7 @@
           },
           {
             "name": "value",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20647,15 +20508,15 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsScheduleSchedule",
+            "name": "HeaderSettingsSchedulesSchedule",
             "ofType": null
           }
         ]
       },
       {
         "kind": "INTERFACE",
-        "name": "HeaderSettingsSchedule_Fields",
-        "description": "Interface representing fields of the ACF &quot;HeaderSettingsSchedule&quot; Field Group",
+        "name": "HeaderSettingsSchedules_Fields",
+        "description": "Interface representing fields of the ACF &quot;HeaderSettingsSchedules&quot; Field Group",
         "isOneOf": null,
         "fields": [
           {
@@ -20672,14 +20533,14 @@
           },
           {
             "name": "schedule",
-            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group",
             "args": [],
             "type": {
               "kind": "LIST",
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "HeaderSettingsScheduleSchedule",
+                "name": "HeaderSettingsSchedulesSchedule",
                 "ofType": null
               }
             },
@@ -20688,7 +20549,7 @@
           },
           {
             "name": "title",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20716,7 +20577,7 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "HeaderSettingsSchedule",
+            "name": "HeaderSettingsSchedules",
             "ofType": null
           }
         ]
@@ -20804,6 +20665,18 @@
             "deprecationReason": "Use __typename instead"
           },
           {
+            "name": "fill",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "name",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
             "args": [],
@@ -20817,6 +20690,18 @@
           },
           {
             "name": "size",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
             "args": [],
             "type": {
@@ -20868,6 +20753,18 @@
             "deprecationReason": "Use __typename instead"
           },
           {
+            "name": "fill",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "name",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
             "args": [],
@@ -20881,6 +20778,18 @@
           },
           {
             "name": "size",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group",
             "args": [],
             "type": {
@@ -21010,7 +20919,7 @@
             "deprecationReason": null
           },
           {
-            "name": "navbar",
+            "name": "navbarItems",
             "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
             "args": [],
             "type": {
@@ -21018,7 +20927,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "HeaderSettingsNavbar",
+                "name": "HeaderSettingsNavbarItems",
                 "ofType": null
               }
             },
@@ -21027,23 +20936,23 @@
           },
           {
             "name": "phone",
-            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "OBJECT",
-              "name": "HeaderSettingsPhone",
+              "name": "AcfLink",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "schedule",
+            "name": "schedules",
             "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "OBJECT",
-              "name": "HeaderSettingsSchedule",
+              "name": "HeaderSettingsSchedules",
               "ofType": null
             },
             "isDeprecated": false,
