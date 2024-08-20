@@ -1,4 +1,4 @@
-query getLayoutInfo {
+query getNavbarInfo {
     header {
         headerSettings {
             sociallinks {
@@ -53,6 +53,50 @@ query getLayoutInfo {
                     description
                 }
             }
+        }
+    }
+}
+
+query getFooterInfo {
+    footer {
+        footerConfig {
+            columns {
+                description
+                title
+                links {
+                    link {
+                        title
+                        url
+                        target
+                    }
+                    icon {
+                        name
+                        position
+                        size
+                        color
+                        fill
+                        stroke
+                    }
+                    className
+                }
+                socialLinks {
+                    icon {
+                        name
+                        position
+                        size
+                        color
+                        fill
+                        stroke
+                    }
+                    link {
+                        target
+                        title
+                        url
+                    }
+                }
+                title
+            }
+            copyRight
         }
     }
 }

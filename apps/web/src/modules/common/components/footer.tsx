@@ -6,6 +6,7 @@ import { Typography } from "@minnek/ui/components/typography";
 import Link from "next/link";
 import { LucideMapPin } from "@minnek/ui/icons";
 import { cn } from "@minnek/ui/lib/utils";
+import { getFooterData } from "../actions/layout-actions";
 
 type FooterColumnType = {
     title: string;
@@ -26,8 +27,8 @@ interface FooterProps {
     copyRight: string;
 }
 
-const { columns, copyRight } = FooterData as FooterProps;
-export default function Footer() {
+export default async function Footer() {
+    const { columns, copyRight } = (await getFooterData()) as FooterProps;
     return (
         <footer className="container mt-10 flex flex-col font-noto-sans mb-8 gap-8 text-black">
             <section className="grid grid-cols-1 md:grid-cols-4 w-full gap-8 lg:gap-16 border-t pt-10">
@@ -38,7 +39,7 @@ export default function Footer() {
             <section className="text-center md:text-left">
                 <Typography as="span" className="text-sm">
                     © {new Date().getFullYear()}
-                    {copyRight}
+                    {" " + copyRight}
                 </Typography>
             </section>
         </footer>

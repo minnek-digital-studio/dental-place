@@ -1,9 +1,12 @@
-import { type GetLayoutInfoQuery } from "@/graphql/generated/graphql";
+import {
+    type GetNavbarInfoQuery,
+    type GetFooterInfoQuery,
+} from "@/graphql/generated/graphql";
 import { type DropdownOption } from "@/modules/common/components/dropdown";
 import { type NavBarItem } from "@/modules/common/components/navbar";
 
-export const mapNavbarData = (data: GetLayoutInfoQuery) => {
-    const headerSettings = data?.header?.headerSettings;
+export const mapNavbarData = (data: GetNavbarInfoQuery["header"]) => {
+    const headerSettings = data?.headerSettings;
 
     const navItems = headerSettings?.navbarItems?.map((item) => ({
         title: item?.link?.title,
@@ -45,5 +48,32 @@ export const mapNavbarData = (data: GetLayoutInfoQuery) => {
         LangConfig,
         PhoneConfig,
         SocialLinksConfig,
+    };
+};
+
+export const mapFooterData = (data: GetFooterInfoQuery["footer"]) => {
+    const columns = data?.footerConfig?.columns?.map((column) => {
+        return {
+            title: column?.title as string,
+            description: column?.description as string,
+            socialLinks: column?.socialLinks?.map((social) => ({
+                title: social?.link?.title as string,
+                href: social?.link?.url as string,
+                icon: social?.icon,
+            })),
+            links: column?.links?.map((link) => ({
+                title: link?.link?.title as string,
+                href: link?.link?.url as string,
+                icon: link?.icon?.name ? link?.icon : null,
+                className: link?.className as string,
+            })),
+        };
+    });
+
+    const copyRight = data?.footerConfig?.copyRight as string;
+
+    return {
+        columns,
+        copyRight,
     };
 };

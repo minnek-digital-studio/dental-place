@@ -84,240 +84,6 @@
         "possibleTypes": null
       },
       {
-        "kind": "OBJECT",
-        "name": "AcfContentNodeConnection",
-        "description": "Connection between the FooterConfig_Fields type and the ContentNode type",
-        "isOneOf": null,
-        "fields": [
-          {
-            "name": "edges",
-            "description": "Edges for the AcfContentNodeConnection connection",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "OBJECT",
-                    "name": "AcfContentNodeConnectionEdge",
-                    "ofType": null
-                  }
-                }
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "nodes",
-            "description": "The nodes of the connection, without the edges",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "INTERFACE",
-                    "name": "ContentNode",
-                    "ofType": null
-                  }
-                }
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pageInfo",
-            "description": "Information about pagination in a connection.",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "AcfContentNodeConnectionPageInfo",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "Connection",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "ContentNodeConnection",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "AcfContentNodeConnectionEdge",
-        "description": "An edge in a connection",
-        "isOneOf": null,
-        "fields": [
-          {
-            "name": "cursor",
-            "description": "A cursor for use in pagination",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "node",
-            "description": "The item at the end of the edge",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ContentNode",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "ContentNodeConnectionEdge",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "Edge",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "AcfContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;AcfContentNodeConnection&quot;",
-        "isOneOf": null,
-        "fields": [
-          {
-            "name": "endCursor",
-            "description": "When paginating forwards, the cursor to continue.",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "hasNextPage",
-            "description": "When paginating forwards, are there more items?",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "hasPreviousPage",
-            "description": "When paginating backwards, are there more items?",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "seo",
-            "description": "Raw schema for page",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "SEOPostTypePageInfo",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "startCursor",
-            "description": "When paginating backwards, the cursor to continue.",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [
-          {
-            "kind": "INTERFACE",
-            "name": "ContentNodeConnectionPageInfo",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "PageInfo",
-            "ofType": null
-          },
-          {
-            "kind": "INTERFACE",
-            "name": "WPPageInfo",
-            "ofType": null
-          }
-        ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
         "kind": "INTERFACE",
         "name": "AcfFieldGroup",
         "description": "A Field Group managed by ACF",
@@ -9356,11 +9122,6 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "AcfContentNodeConnection",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
             "name": "CaseStudyToRevisionConnection",
             "ofType": null
           },
@@ -10313,11 +10074,6 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "AcfContentNodeConnection",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
             "name": "CategoryToContentNodeConnection",
             "ofType": null
           },
@@ -10408,11 +10164,6 @@
         ],
         "enumValues": null,
         "possibleTypes": [
-          {
-            "kind": "OBJECT",
-            "name": "AcfContentNodeConnectionEdge",
-            "ofType": null
-          },
           {
             "kind": "OBJECT",
             "name": "CategoryToContentNodeConnectionEdge",
@@ -10565,11 +10316,6 @@
         ],
         "enumValues": null,
         "possibleTypes": [
-          {
-            "kind": "OBJECT",
-            "name": "AcfContentNodeConnectionPageInfo",
-            "ofType": null
-          },
           {
             "kind": "OBJECT",
             "name": "CategoryToContentNodeConnectionPageInfo",
@@ -16522,11 +16268,6 @@
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "AcfContentNodeConnectionEdge",
-            "ofType": null
-          },
-          {
-            "kind": "OBJECT",
             "name": "AcfMediaItemConnectionEdge",
             "ofType": null
           },
@@ -18242,67 +17983,6 @@
             "deprecationReason": null
           },
           {
-            "name": "cta",
-            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;FooterConfig&quot; Field Group",
-            "args": [
-              {
-                "name": "after",
-                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "before",
-                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "first",
-                "description": "The number of items to return after the referenced \"after\" cursor",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "last",
-                "description": "The number of items to return before the referenced \"before\" cursor",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "AcfContentNodeConnection",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "fieldGroupName",
             "description": "The name of the field group",
             "args": [],
@@ -18439,7 +18119,7 @@
         "isOneOf": null,
         "fields": [
           {
-            "name": "classname",
+            "name": "className",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinks&quot; Field Group",
             "args": [],
             "type": {
@@ -18515,6 +18195,18 @@
         "isOneOf": null,
         "fields": [
           {
+            "name": "color",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "fieldGroupName",
             "description": "The name of the field group",
             "args": [],
@@ -18525,6 +18217,18 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fill",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "name",
@@ -18561,6 +18265,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -18595,6 +18311,18 @@
         "isOneOf": null,
         "fields": [
           {
+            "name": "color",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "fieldGroupName",
             "description": "The name of the field group",
             "args": [],
@@ -18605,6 +18333,18 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fill",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "name",
@@ -18641,6 +18381,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -18676,7 +18428,7 @@
         "isOneOf": null,
         "fields": [
           {
-            "name": "classname",
+            "name": "className",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinks&quot; Field Group",
             "args": [],
             "type": {
@@ -18829,6 +18581,18 @@
         "isOneOf": null,
         "fields": [
           {
+            "name": "color",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "fieldGroupName",
             "description": "The name of the field group",
             "args": [],
@@ -18839,6 +18603,18 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fill",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "name",
@@ -18875,6 +18651,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -18909,6 +18697,18 @@
         "isOneOf": null,
         "fields": [
           {
+            "name": "color",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "fieldGroupName",
             "description": "The name of the field group",
             "args": [],
@@ -18919,6 +18719,18 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fill",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "name",
@@ -18955,6 +18767,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -19186,67 +19010,6 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "cta",
-            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;FooterConfig&quot; Field Group",
-            "args": [
-              {
-                "name": "after",
-                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "before",
-                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "first",
-                "description": "The number of items to return after the referenced \"after\" cursor",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "last",
-                "description": "The number of items to return before the referenced \"before\" cursor",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "AcfContentNodeConnection",
               "ofType": null
             },
             "isDeprecated": false,
@@ -31455,11 +31218,6 @@
         "interfaces": [],
         "enumValues": null,
         "possibleTypes": [
-          {
-            "kind": "OBJECT",
-            "name": "AcfContentNodeConnectionPageInfo",
-            "ofType": null
-          },
           {
             "kind": "OBJECT",
             "name": "CaseStudyToRevisionConnectionPageInfo",
@@ -76243,11 +76001,6 @@
         ],
         "enumValues": null,
         "possibleTypes": [
-          {
-            "kind": "OBJECT",
-            "name": "AcfContentNodeConnectionPageInfo",
-            "ofType": null
-          },
           {
             "kind": "OBJECT",
             "name": "CaseStudyToRevisionConnectionPageInfo",
