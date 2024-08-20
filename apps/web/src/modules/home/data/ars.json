@@ -1,0 +1,32 @@
+{
+  "title": "Estamos afiliados a las principales ARS del país.",
+  "images": [
+    {
+      "src": "/images/ars-primera.webp",
+      "alt": "ARS Primera",
+      "className": ""
+    },
+    {
+      "src": "/images/ars-asemap.webp",
+      "alt": "ARS Asemap",
+      "className": ""
+    },
+
+    {
+      "src": "/images/ars-renacer.webp",
+      "alt": "ARS Renacer",
+      "className": ""
+    },
+
+    {
+      "src": "/images/ars-simag.webp",
+      "alt": "ARS Simag",
+      "className": ""
+    },
+    {
+      "src": "/images/ars-reservas.webp",
+      "alt": "ARS Reservas",
+      "className": ""
+    }
+  ]
+}
