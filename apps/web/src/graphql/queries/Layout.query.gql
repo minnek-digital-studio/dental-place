@@ -1,0 +1,58 @@
+query getLayoutInfo {
+    header {
+        headerSettings {
+            sociallinks {
+                icon {
+                    name
+                    fill
+                    stroke
+                    size
+                }
+                link {
+                    target
+                    title
+                    url
+                }
+            }
+            schedules {
+                title
+                schedule {
+                    name
+                    value
+                }
+            }
+            phone {
+                url
+                title
+                target
+            }
+            language {
+                title
+                lang {
+                    name
+                    value
+                    icon {
+                        className
+                        name
+                        size
+                    }
+                }
+            }
+            navbarItems {
+                link {
+                    url
+                    target
+                    title
+                }
+                subMenuItem {
+                    link {
+                        url
+                        title
+                        target
+                    }
+                    description
+                }
+            }
+        }
+    }
+}
