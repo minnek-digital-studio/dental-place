@@ -73,9 +73,6 @@ query getFooterInfo {
                         name
                         position
                         size
-                        color
-                        fill
-                        stroke
                     }
                     className
                 }
