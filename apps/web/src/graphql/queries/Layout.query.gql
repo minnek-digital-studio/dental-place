@@ -1,0 +1,99 @@
+query getNavbarInfo {
+    header {
+        headerSettings {
+            sociallinks {
+                icon {
+                    name
+                    fill
+                    stroke
+                    size
+                }
+                link {
+                    target
+                    title
+                    url
+                }
+            }
+            schedules {
+                title
+                schedule {
+                    name
+                    value
+                }
+            }
+            phone {
+                url
+                title
+                target
+            }
+            language {
+                title
+                lang {
+                    name
+                    value
+                    icon {
+                        className
+                        name
+                        size
+                    }
+                }
+            }
+            navbarItems {
+                link {
+                    url
+                    target
+                    title
+                }
+                subMenuItem {
+                    link {
+                        url
+                        title
+                        target
+                    }
+                    description
+                }
+            }
+        }
+    }
+}
+
+query getFooterInfo {
+    footer {
+        footerConfig {
+            columns {
+                description
+                title
+                links {
+                    link {
+                        title
+                        url
+                        target
+                    }
+                    icon {
+                        name
+                        position
+                        size
+                    }
+                    className
+                }
+                socialLinks {
+                    icon {
+                        name
+                        position
+                        size
+                        color
+                        fill
+                        stroke
+                    }
+                    link {
+                        target
+                        title
+                        url
+                    }
+                }
+                title
+            }
+            copyRight
+        }
+    }
+}
