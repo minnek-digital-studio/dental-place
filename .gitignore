@@ -21,3 +21,4 @@ ehthumbs.db
 Thumbs.db
 .turbo
 .vercel
+!/apps/cms/custom/data/dental_dev.sql
