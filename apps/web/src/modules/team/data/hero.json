@@ -1,0 +1,14 @@
+{
+  "title": "\"Beaming Smiles, Sparkling Teeth: The Dental Dream Team Shines Bright!\"",
+  "img": {
+    "src": "/images/hero.webp",
+    "alt": "Hero Message"
+  },
+  "button": {
+    "text": "Descubrir",
+    "link": "#",
+    "variant": "dark",
+    "size": "lg"
+  },
+  "className": "bg-primary/40"
+}

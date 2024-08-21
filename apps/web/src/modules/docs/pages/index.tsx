@@ -46,7 +46,12 @@ export default async function Docs() {
                         <ServiceCard
                             title="Odontología General"
                             description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
-                            link="Learn More"
+                            button={{
+                                text: "Learn More",
+                                link: "#",
+                                variant: "info",
+                                size: "default",
+                            }}
                             icon="CleanTooth"
                             className="bg-info"
                         />
@@ -54,7 +59,12 @@ export default async function Docs() {
                         <ServiceCard
                             title="Endodoncia"
                             description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
-                            link="Learn More"
+                            button={{
+                                text: "Learn More",
+                                link: "#",
+                                variant: "info",
+                                size: "default",
+                            }}
                             icon="ServiceTooth"
                             className="border"
                         />
@@ -62,7 +72,12 @@ export default async function Docs() {
                         <ServiceCard
                             title="Odontología Estética"
                             description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
-                            link="Learn More"
+                            button={{
+                                text: "Learn More",
+                                link: "#",
+                                variant: "info",
+                                size: "default",
+                            }}
                             icon="CarieTooth"
                             className="bg-info"
                         />
