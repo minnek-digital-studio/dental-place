@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   wordpress:
@@ -41,5 +41,5 @@ services:
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
-      - PMA_USER=${MYSQL_USER}}
-      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - PMA_USER=${MYSQL_USER}
+      - PMA_PASSWORD=${MYSQL_PASSWORD}
