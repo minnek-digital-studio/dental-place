@@ -25,41 +25,6 @@ export type About = AcfOptionsPage & Node & {
   parentId?: Maybe<Scalars['String']['output']>;
 };
 
-/** Connection between the FooterConfig_Fields type and the ContentNode type */
-export type AcfContentNodeConnection = Connection & ContentNodeConnection & {
-  __typename?: 'AcfContentNodeConnection';
-  /** Edges for the AcfContentNodeConnection connection */
-  edges: Array<AcfContentNodeConnectionEdge>;
-  /** The nodes of the connection, without the edges */
-  nodes: Array<ContentNode>;
-  /** Information about pagination in a connection. */
-  pageInfo: AcfContentNodeConnectionPageInfo;
-};
-
-/** An edge in a connection */
-export type AcfContentNodeConnectionEdge = ContentNodeConnectionEdge & Edge & {
-  __typename?: 'AcfContentNodeConnectionEdge';
-  /** A cursor for use in pagination */
-  cursor?: Maybe<Scalars['String']['output']>;
-  /** The item at the end of the edge */
-  node: ContentNode;
-};
-
-/** Page Info on the &quot;AcfContentNodeConnection&quot; */
-export type AcfContentNodeConnectionPageInfo = ContentNodeConnectionPageInfo & PageInfo & WpPageInfo & {
-  __typename?: 'AcfContentNodeConnectionPageInfo';
-  /** When paginating forwards, the cursor to continue. */
-  endCursor?: Maybe<Scalars['String']['output']>;
-  /** When paginating forwards, are there more items? */
-  hasNextPage: Scalars['Boolean']['output'];
-  /** When paginating backwards, are there more items? */
-  hasPreviousPage: Scalars['Boolean']['output'];
-  /** Raw schema for page */
-  seo?: Maybe<SeoPostTypePageInfo>;
-  /** When paginating backwards, the cursor to continue. */
-  startCursor?: Maybe<Scalars['String']['output']>;
-};
-
 /** A Field Group managed by ACF */
 export type AcfFieldGroup = {
   /**
@@ -2869,22 +2834,11 @@ export type FooterConfig = AcfFieldGroup & AcfFieldGroupFields & FooterConfig_Fi
   columns?: Maybe<Array<Maybe<FooterConfigColumns>>>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfig&quot; Field Group */
   copyRight?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;FooterConfig&quot; Field Group */
-  cta?: Maybe<AcfContentNodeConnection>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-};
-
-
-/** The &quot;FooterConfig&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type FooterConfigCtaArgs = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Int']['input']>;
-  last?: InputMaybe<Scalars['Int']['input']>;
 };
 
 /** The &quot;FooterConfigColumns&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -2909,7 +2863,7 @@ export type FooterConfigColumns = AcfFieldGroup & AcfFieldGroupFields & FooterCo
 export type FooterConfigColumnsLinks = AcfFieldGroup & AcfFieldGroupFields & FooterConfigColumnsLinks_Fields & {
   __typename?: 'FooterConfigColumnsLinks';
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinks&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -2955,7 +2909,7 @@ export type FooterConfigColumnsLinksIcon_Fields = {
 /** Interface representing fields of the ACF &quot;FooterConfigColumnsLinks&quot; Field Group */
 export type FooterConfigColumnsLinks_Fields = {
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsLinks&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -2986,32 +2940,44 @@ export type FooterConfigColumnsSocialLinks = AcfFieldGroup & AcfFieldGroupFields
 /** The &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type FooterConfigColumnsSocialLinksIcon = AcfFieldGroup & AcfFieldGroupFields & FooterConfigColumnsSocialLinksIcon_Fields & {
   __typename?: 'FooterConfigColumnsSocialLinksIcon';
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
   name?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
   position?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
   /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
   size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
 export type FooterConfigColumnsSocialLinksIcon_Fields = {
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
   name?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
   position?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
   /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
   size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;FooterConfigColumnsSocialLinksIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;FooterConfigColumnsSocialLinks&quot; Field Group */
@@ -3052,22 +3018,11 @@ export type FooterConfig_Fields = {
   columns?: Maybe<Array<Maybe<FooterConfigColumns>>>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;FooterConfig&quot; Field Group */
   copyRight?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;FooterConfig&quot; Field Group */
-  cta?: Maybe<AcfContentNodeConnection>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-};
-
-
-/** Interface representing fields of the ACF &quot;FooterConfig&quot; Field Group */
-export type FooterConfig_FieldsCtaArgs = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Int']['input']>;
-  last?: InputMaybe<Scalars['Int']['input']>;
 };
 
 /** The general setting type */
@@ -3115,11 +3070,11 @@ export type HeaderSettings = AcfFieldGroup & AcfFieldGroupFields & HeaderSetting
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
   language?: Maybe<HeaderSettingsLanguage>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
-  navbar?: Maybe<Array<Maybe<HeaderSettingsNavbar>>>;
+  navbarItems?: Maybe<Array<Maybe<HeaderSettingsNavbarItems>>>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
+  phone?: Maybe<AcfLink>;
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
-  phone?: Maybe<HeaderSettingsPhone>;
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
-  schedule?: Maybe<HeaderSettingsSchedule>;
+  schedules?: Maybe<HeaderSettingsSchedules>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
   sociallinks?: Maybe<Array<Maybe<HeaderSettingsSociallinks>>>;
 };
@@ -3158,7 +3113,7 @@ export type HeaderSettingsLanguageLang = AcfFieldGroup & AcfFieldGroupFields & H
 export type HeaderSettingsLanguageLangIcon = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsLanguageLangIcon_Fields & {
   __typename?: 'HeaderSettingsLanguageLangIcon';
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsLanguageLangIcon&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -3173,7 +3128,7 @@ export type HeaderSettingsLanguageLangIcon = AcfFieldGroup & AcfFieldGroupFields
 /** Interface representing fields of the ACF &quot;HeaderSettingsLanguageLangIcon&quot; Field Group */
 export type HeaderSettingsLanguageLangIcon_Fields = {
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsLanguageLangIcon&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -3213,138 +3168,111 @@ export type HeaderSettingsLanguage_Fields = {
   title?: Maybe<Scalars['String']['output']>;
 };
 
-/** The &quot;HeaderSettingsNavbar&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderSettingsNavbar = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsNavbar_Fields & {
-  __typename?: 'HeaderSettingsNavbar';
+/** The &quot;HeaderSettingsNavbarItems&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HeaderSettingsNavbarItems = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsNavbarItems_Fields & {
+  __typename?: 'HeaderSettingsNavbarItems';
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group */
-  href?: Maybe<Array<Maybe<HeaderSettingsNavbarHref>>>;
-  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group */
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group */
   link?: Maybe<AcfLink>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group */
+  subMenuItem?: Maybe<Array<Maybe<HeaderSettingsNavbarItemsSubMenuItem>>>;
 };
 
-/** The &quot;HeaderSettingsNavbarHref&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderSettingsNavbarHref = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsNavbarHref_Fields & {
-  __typename?: 'HeaderSettingsNavbarHref';
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group */
+/** The &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HeaderSettingsNavbarItemsSubMenuItem = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsNavbarItemsSubMenuItem_Fields & {
+  __typename?: 'HeaderSettingsNavbarItemsSubMenuItem';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group */
   description?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group */
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group */
   link?: Maybe<AcfLink>;
 };
 
-/** Interface representing fields of the ACF &quot;HeaderSettingsNavbarHref&quot; Field Group */
-export type HeaderSettingsNavbarHref_Fields = {
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group */
+/** Interface representing fields of the ACF &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group */
+export type HeaderSettingsNavbarItemsSubMenuItem_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group */
   description?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarHref&quot; Field Group */
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItemsSubMenuItem&quot; Field Group */
   link?: Maybe<AcfLink>;
 };
 
-/** Interface representing fields of the ACF &quot;HeaderSettingsNavbar&quot; Field Group */
-export type HeaderSettingsNavbar_Fields = {
+/** Interface representing fields of the ACF &quot;HeaderSettingsNavbarItems&quot; Field Group */
+export type HeaderSettingsNavbarItems_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group */
-  href?: Maybe<Array<Maybe<HeaderSettingsNavbarHref>>>;
-  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbar&quot; Field Group */
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group */
   link?: Maybe<AcfLink>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsNavbarItems&quot; Field Group */
+  subMenuItem?: Maybe<Array<Maybe<HeaderSettingsNavbarItemsSubMenuItem>>>;
 };
 
-/** The &quot;HeaderSettingsPhone&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderSettingsPhone = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsPhone_Fields & {
-  __typename?: 'HeaderSettingsPhone';
+/** The &quot;HeaderSettingsSchedules&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HeaderSettingsSchedules = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsSchedules_Fields & {
+  __typename?: 'HeaderSettingsSchedules';
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group */
-  number?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group */
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group */
+  schedule?: Maybe<Array<Maybe<HeaderSettingsSchedulesSchedule>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>;
 };
 
-/** Interface representing fields of the ACF &quot;HeaderSettingsPhone&quot; Field Group */
-export type HeaderSettingsPhone_Fields = {
+/** The &quot;HeaderSettingsSchedulesSchedule&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HeaderSettingsSchedulesSchedule = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsSchedulesSchedule_Fields & {
+  __typename?: 'HeaderSettingsSchedulesSchedule';
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group */
-  number?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsPhone&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-/** The &quot;HeaderSettingsSchedule&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderSettingsSchedule = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsSchedule_Fields & {
-  __typename?: 'HeaderSettingsSchedule';
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group */
-  schedule?: Maybe<Array<Maybe<HeaderSettingsScheduleSchedule>>>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group */
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-/** The &quot;HeaderSettingsScheduleSchedule&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
-export type HeaderSettingsScheduleSchedule = AcfFieldGroup & AcfFieldGroupFields & HeaderSettingsScheduleSchedule_Fields & {
-  __typename?: 'HeaderSettingsScheduleSchedule';
-  /**
-   * The name of the field group
-   * @deprecated Use __typename instead
-   */
-  fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group */
   name?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group */
   value?: Maybe<Scalars['String']['output']>;
 };
 
-/** Interface representing fields of the ACF &quot;HeaderSettingsScheduleSchedule&quot; Field Group */
-export type HeaderSettingsScheduleSchedule_Fields = {
+/** Interface representing fields of the ACF &quot;HeaderSettingsSchedulesSchedule&quot; Field Group */
+export type HeaderSettingsSchedulesSchedule_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group */
   name?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsScheduleSchedule&quot; Field Group */
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedulesSchedule&quot; Field Group */
   value?: Maybe<Scalars['String']['output']>;
 };
 
-/** Interface representing fields of the ACF &quot;HeaderSettingsSchedule&quot; Field Group */
-export type HeaderSettingsSchedule_Fields = {
+/** Interface representing fields of the ACF &quot;HeaderSettingsSchedules&quot; Field Group */
+export type HeaderSettingsSchedules_Fields = {
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group */
-  schedule?: Maybe<Array<Maybe<HeaderSettingsScheduleSchedule>>>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedule&quot; Field Group */
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group */
+  schedule?: Maybe<Array<Maybe<HeaderSettingsSchedulesSchedule>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSchedules&quot; Field Group */
   title?: Maybe<Scalars['String']['output']>;
 };
 
@@ -3371,9 +3299,13 @@ export type HeaderSettingsSociallinksIcon = AcfFieldGroup & AcfFieldGroupFields 
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
   name?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
   size?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
@@ -3384,9 +3316,13 @@ export type HeaderSettingsSociallinksIcon_Fields = {
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
   name?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
   size?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HeaderSettingsSociallinksIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
 };
 
 /** Interface representing fields of the ACF &quot;HeaderSettingsSociallinks&quot; Field Group */
@@ -3412,11 +3348,11 @@ export type HeaderSettings_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
   language?: Maybe<HeaderSettingsLanguage>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
-  navbar?: Maybe<Array<Maybe<HeaderSettingsNavbar>>>;
+  navbarItems?: Maybe<Array<Maybe<HeaderSettingsNavbarItems>>>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
+  phone?: Maybe<AcfLink>;
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
-  phone?: Maybe<HeaderSettingsPhone>;
-  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
-  schedule?: Maybe<HeaderSettingsSchedule>;
+  schedules?: Maybe<HeaderSettingsSchedules>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HeaderSettings&quot; Field Group */
   sociallinks?: Maybe<Array<Maybe<HeaderSettingsSociallinks>>>;
 };
@@ -12482,6 +12418,16 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>;
 };
 
+export type GetNavbarInfoQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetNavbarInfoQuery = { __typename?: 'RootQuery', header?: { __typename?: 'Header', headerSettings?: { __typename?: 'HeaderSettings', sociallinks?: Array<{ __typename?: 'HeaderSettingsSociallinks', icon?: { __typename?: 'HeaderSettingsSociallinksIcon', name?: string | null, fill?: string | null, stroke?: string | null, size?: string | null } | null, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null> | null, schedules?: { __typename?: 'HeaderSettingsSchedules', title?: string | null, schedule?: Array<{ __typename?: 'HeaderSettingsSchedulesSchedule', name?: string | null, value?: string | null } | null> | null } | null, phone?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null, language?: { __typename?: 'HeaderSettingsLanguage', title?: string | null, lang?: Array<{ __typename?: 'HeaderSettingsLanguageLang', name?: string | null, value?: string | null, icon?: { __typename?: 'HeaderSettingsLanguageLangIcon', className?: string | null, name?: string | null, size?: number | null } | null } | null> | null } | null, navbarItems?: Array<{ __typename?: 'HeaderSettingsNavbarItems', link?: { __typename?: 'AcfLink', url?: string | null, target?: string | null, title?: string | null } | null, subMenuItem?: Array<{ __typename?: 'HeaderSettingsNavbarItemsSubMenuItem', description?: string | null, link?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null } | null> | null } | null> | null } | null } | null };
+
+export type GetFooterInfoQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetFooterInfoQuery = { __typename?: 'RootQuery', footer?: { __typename?: 'Footer', footerConfig?: { __typename?: 'FooterConfig', copyRight?: string | null, columns?: Array<{ __typename?: 'FooterConfigColumns', description?: string | null, title?: string | null, links?: Array<{ __typename?: 'FooterConfigColumnsLinks', className?: string | null, link?: { __typename?: 'AcfLink', title?: string | null, url?: string | null, target?: string | null } | null, icon?: { __typename?: 'FooterConfigColumnsLinksIcon', name?: string | null, position?: Array<string | null> | null, size?: number | null } | null } | null> | null, socialLinks?: Array<{ __typename?: 'FooterConfigColumnsSocialLinks', icon?: { __typename?: 'FooterConfigColumnsSocialLinksIcon', name?: string | null, position?: Array<string | null> | null, size?: number | null, color?: string | null, fill?: string | null, stroke?: string | null } | null, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null> | null } | null> | null } | null } | null };
+
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -12493,5 +12439,7 @@ export type GetServicesQueryVariables = Exact<{ [key: string]: never; }>;
 export type GetServicesQuery = { __typename?: 'RootQuery', services?: { __typename?: 'RootQueryToServiceConnection', edges: Array<{ __typename?: 'RootQueryToServiceConnectionEdge', node: { __typename?: 'Service', title?: string | null, slug?: string | null } }> } | null };
 
 
+export const GetNavbarInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getNavbarInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"header"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"headerSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sociallinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"phone"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"language"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"lang"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"navbarItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"subMenuItem"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetNavbarInfoQuery, GetNavbarInfoQueryVariables>;
+export const GetFooterInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getFooterInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footerConfig"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"color"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"copyRight"}}]}}]}}]}}]} as unknown as DocumentNode<GetFooterInfoQuery, GetFooterInfoQueryVariables>;
 export const PostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]} as unknown as DocumentNode<PostsQuery, PostsQueryVariables>;
 export const GetServicesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetServices"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetServicesQuery, GetServicesQueryVariables>;
