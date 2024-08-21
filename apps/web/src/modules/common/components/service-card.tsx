@@ -4,46 +4,50 @@ import {
     Card,
     CardHeader,
     CardContent,
-    CardDescription,
     CardFooter,
     CardTitle,
 } from "@minnek/ui/components/card";
 import { IconByName, type IconsName, ArrowRight } from "@minnek/ui/icons";
 import { cn } from "@minnek/ui/lib/utils";
-import { Button } from "@minnek/ui/components/button";
+import { Button, type ButtonVariants } from "@minnek/ui/components/button";
 
-type ServiceCardProps = {
+export type ServiceCardProps = {
     title: string;
     description: string;
     icon?: IconsName;
-    link: string;
-    href?: string;
-    iconSize?: number;
+    button: buttonProps;
+    iconsize?: number;
     className?: string;
+};
+
+export type buttonProps = {
+    text: string;
+    link: string;
+    variant: ButtonVariants["variant"];
+    size: ButtonVariants["size"];
 };
 
 const serviceCard = ({
     title,
     description,
     icon,
-    link,
-    iconSize = 35,
-    href = "#",
+    iconsize = 35,
+    button,
     className,
 }: ServiceCardProps) => {
     return (
-        <Card className={cn("w-72", className)}>
+        <Card className={cn("max-w-[19rem] w-full ", className)}>
             <CardHeader>
                 {icon && typeof icon === "string" && (
-                    <Button variant="info" size="icon" className="p-4">
-                        <IconByName name={icon} size={iconSize} />
+                    <Button variant="info" size="icon" className="p-4" asChild>
+                        <div aria-hidden>
+                            <IconByName name={icon} size={iconsize} />
+                        </div>
                     </Button>
                 )}
-                <CardTitle>
-                    <Typography as="span" className="text-2xl">
-                        {title}
-                    </Typography>
-                </CardTitle>
+                <Typography as="h3" className="text-xl lg:text-xl">
+                    {title}
+                </Typography>
             </CardHeader>
             <CardContent>
                 <Typography as="p" className="line-clamp-5">
@@ -51,9 +55,13 @@ const serviceCard = ({
                 </Typography>
             </CardContent>
             <CardFooter>
-                <Button variant="link" size="link" asChild>
-                    <Typography as="a" href={href} className="flex gap-2">
-                        {link}
+                <Button variant={button.variant} size={button.size} asChild>
+                    <Typography
+                        as="a"
+                        href={button.link}
+                        className="flex gap-2"
+                    >
+                        {button.text}
                         <ArrowRight
                             size={15}
                             className="underline-offset-4 hover:underline"

@@ -1,0 +1,16 @@
+{
+  "title": "About Us",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. ",
+  "img": {
+    "src": "/images/about-us.webp",
+    "alt": "About Us",
+    "className": "object-top"
+  },
+  "button": {
+    "text": "Descubrir",
+    "link": "#",
+    "variant": "dark",
+    "size": "lg"
+  },
+  "className": "bg-primary/40"
+}

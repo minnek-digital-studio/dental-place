@@ -1,0 +1,38 @@
+{
+  "title": "Brindando la mejor atención dental",
+  "className": "bg-primary",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. ",
+  "img": {
+    "src": "/images/people-presentation.webp",
+    "alt": "Dental Place",
+    "className": ""
+  },
+  "card": {
+    "title": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat prede saling prede. supranedusaska, prede. ",
+    "buttons": [
+      {
+        "text": "Descubrir",
+        "link": "#",
+        "variant": "dark",
+        "size": "lg",
+        "icon": {
+          "name": "MoveRight",
+          "className": "",
+          "size": 20
+        }
+      },
+      {
+        "text": "Agendar",
+        "link": "#",
+        "variant": "outline",
+        "size": "lg",
+        "icon": {
+          "name": "WhatsApp",
+          "position": "left",
+          "size": 20
+        },
+        "className": "flex-row-reverse"
+      }
+    ]
+  }
+}
