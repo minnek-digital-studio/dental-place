@@ -6,11 +6,11 @@
             {
                 "key": "field_66c36bd905379",
                 "label": "NavBar Item",
-                "name": "navbar",
+                "name": "navbarItems",
                 "aria-label": "",
                 "type": "repeater",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -25,7 +25,7 @@
                 "button_label": "Add Row",
                 "show_in_graphql": 1,
                 "graphql_description": "",
-                "graphql_field_name": "navbar",
+                "graphql_field_name": "navbarItems",
                 "graphql_non_null": 0,
                 "rows_per_page": 20,
                 "sub_fields": [
@@ -36,7 +36,7 @@
                         "aria-label": "",
                         "type": "link",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
@@ -65,14 +65,13 @@
                             "id": ""
                         },
                         "layout": "block",
-                        "pagination": 0,
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
                         "button_label": "Add Row",
                         "show_in_graphql": 1,
                         "graphql_description": "",
-                        "graphql_field_name": "href",
+                        "graphql_field_name": "subMenuItem",
                         "graphql_non_null": 0,
                         "rows_per_page": 20,
                         "sub_fields": [
@@ -83,7 +82,7 @@
                                 "aria-label": "",
                                 "type": "link",
                                 "instructions": "",
-                                "required": 0,
+                                "required": 1,
                                 "conditional_logic": 0,
                                 "wrapper": {
                                     "width": "",
@@ -132,7 +131,7 @@
                 "label": "Phone",
                 "name": "phone",
                 "aria-label": "",
-                "type": "group",
+                "type": "link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -141,61 +140,11 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "block",
+                "return_format": "array",
                 "show_in_graphql": 1,
                 "graphql_description": "",
                 "graphql_field_name": "phone",
-                "graphql_non_null": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_66c38ae448ea5",
-                        "label": "Number",
-                        "name": "number",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "show_in_graphql": 1,
-                        "graphql_description": "",
-                        "graphql_field_name": "number",
-                        "graphql_non_null": 0
-                    },
-                    {
-                        "key": "field_66c38af548ea6",
-                        "label": "Title",
-                        "name": "title",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "show_in_graphql": 1,
-                        "graphql_description": "",
-                        "graphql_field_name": "title",
-                        "graphql_non_null": 0
-                    }
-                ]
+                "graphql_non_null": 0
             },
             {
                 "key": "field_66c38b746a88f",
@@ -214,7 +163,7 @@
                 "layout": "block",
                 "show_in_graphql": 1,
                 "graphql_description": "",
-                "graphql_field_name": "schedule",
+                "graphql_field_name": "schedules",
                 "graphql_non_null": 0,
                 "sub_fields": [
                     {
@@ -482,7 +431,7 @@
                                         "append": "",
                                         "show_in_graphql": 1,
                                         "graphql_description": "",
-                                        "graphql_field_name": "classname",
+                                        "graphql_field_name": "className",
                                         "graphql_non_null": 0
                                     },
                                     {
@@ -655,6 +604,54 @@
                                 "show_in_graphql": 1,
                                 "graphql_description": "",
                                 "graphql_field_name": "size",
+                                "graphql_non_null": 0
+                            },
+                            {
+                                "key": "field_66c4ae8a5c1ec",
+                                "label": "Fill",
+                                "name": "fill",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "show_in_graphql": 1,
+                                "graphql_description": "",
+                                "graphql_field_name": "fill",
+                                "graphql_non_null": 0
+                            },
+                            {
+                                "key": "field_66c4ae935c1ed",
+                                "label": "Stroke",
+                                "name": "stroke",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "show_in_graphql": 1,
+                                "graphql_description": "",
+                                "graphql_field_name": "stroke",
                                 "graphql_non_null": 0
                             }
                         ],

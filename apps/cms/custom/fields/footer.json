@@ -17,7 +17,7 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "block",
+                "layout": "table",
                 "pagination": 0,
                 "min": 0,
                 "max": 0,
@@ -249,6 +249,72 @@
                                         "graphql_non_null": 0,
                                         "ajax": 0,
                                         "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_66c4e613cf43f",
+                                        "label": "Fill",
+                                        "name": "fill",
+                                        "aria-label": "",
+                                        "type": "color_picker",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "transparent",
+                                        "enable_opacity": 1,
+                                        "return_format": "string",
+                                        "show_in_graphql": 1,
+                                        "graphql_description": "",
+                                        "graphql_field_name": "fill",
+                                        "graphql_non_null": 0
+                                    },
+                                    {
+                                        "key": "field_66c4e63acf440",
+                                        "label": "Stroke",
+                                        "name": "stroke",
+                                        "aria-label": "",
+                                        "type": "color_picker",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "#000000",
+                                        "enable_opacity": 1,
+                                        "return_format": "string",
+                                        "show_in_graphql": 1,
+                                        "graphql_description": "",
+                                        "graphql_field_name": "stroke",
+                                        "graphql_non_null": 0
+                                    },
+                                    {
+                                        "key": "field_66c4e65ccf441",
+                                        "label": "Color",
+                                        "name": "color",
+                                        "aria-label": "",
+                                        "type": "color_picker",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "#000000",
+                                        "enable_opacity": 1,
+                                        "return_format": "string",
+                                        "show_in_graphql": 1,
+                                        "graphql_description": "",
+                                        "graphql_field_name": "color",
+                                        "graphql_non_null": 0
                                     }
                                 ],
                                 "parent_repeater": "field_66bbbb499a8d2"
@@ -323,12 +389,12 @@
                                 "append": "",
                                 "show_in_graphql": 1,
                                 "graphql_description": "",
-                                "graphql_field_name": "classname",
+                                "graphql_field_name": "className",
                                 "graphql_non_null": 0,
                                 "parent_repeater": "field_66bbbed7bce9b"
                             },
                             {
-                                "key": "field_66bbbed7bce9e",
+                                "key": "field_66c4e6a8cf442",
                                 "label": "icon",
                                 "name": "icon",
                                 "aria-label": "",
@@ -348,7 +414,7 @@
                                 "graphql_non_null": 0,
                                 "sub_fields": [
                                     {
-                                        "key": "field_66bbbed7bce9f",
+                                        "key": "field_66c4e6a8cf443",
                                         "label": "Name",
                                         "name": "name",
                                         "aria-label": "",
@@ -372,7 +438,7 @@
                                         "graphql_non_null": 0
                                     },
                                     {
-                                        "key": "field_66bbbed7bcea0",
+                                        "key": "field_66c4e6a8cf444",
                                         "label": "Size",
                                         "name": "size",
                                         "aria-label": "",
@@ -398,7 +464,7 @@
                                         "graphql_non_null": 0
                                     },
                                     {
-                                        "key": "field_66bbbed7bcea1",
+                                        "key": "field_66c4e6a8cf445",
                                         "label": "Position",
                                         "name": "position",
                                         "aria-label": "",
@@ -458,39 +524,6 @@
                 "graphql_description": "",
                 "graphql_field_name": "copyRight",
                 "graphql_non_null": 0
-            },
-            {
-                "key": "field_66bd013ca777a",
-                "label": "Call to Actions",
-                "name": "cta",
-                "aria-label": "",
-                "type": "post_object",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "post_type": [
-                    "page"
-                ],
-                "post_status": [
-                    "publish",
-                    "pending"
-                ],
-                "taxonomy": "",
-                "return_format": "object",
-                "multiple": 1,
-                "allow_null": 0,
-                "bidirectional": 0,
-                "show_in_graphql": 1,
-                "graphql_description": "",
-                "graphql_field_name": "cta",
-                "graphql_connection_type": "one_to_many",
-                "ui": 1,
-                "bidirectional_target": []
             }
         ],
         "location": [
