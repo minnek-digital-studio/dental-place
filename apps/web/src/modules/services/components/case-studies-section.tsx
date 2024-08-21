@@ -23,7 +23,9 @@ const CaseStudiesSection = ({
             id="case-studies-section"
         >
             <div className="container flex flex-col py-10 gap-10">
-                <Typography as="h2">{title}</Typography>
+                <Typography as="h2" className="max-md:text-center">
+                    {title}
+                </Typography>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {items.map((item, index) => (
                         <CaseCard key={index} {...item} />

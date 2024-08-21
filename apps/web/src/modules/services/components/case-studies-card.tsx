@@ -41,7 +41,7 @@ const CaseCard = ({
                 </picture>
             </CardHeader>
             <CardContent className="px-0">
-                <Typography as="h3" className="lg:text-2xl">
+                <Typography as="h3" className="lg:text-2xl mb-2">
                     {title}
                 </Typography>
                 <Typography as="p">{description}</Typography>
