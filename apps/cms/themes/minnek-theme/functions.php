@@ -202,6 +202,32 @@ if (!function_exists('a_register_case_studies_custom_post_types')) {
     add_action('init', 'a_register_case_studies_custom_post_types');
 }
 
+if (!function_exists('a_register_call_to_action_custom_post_types')) {
+    function a_register_call_to_action_custom_post_types() {
+        $singular_name = __('Call to Action', 'dental');
+        $plural_name = __('Call to Actions', 'dental');
+        $slug_name = 'call-to-actions';
+
+        register_post_type($slug_name, array(
+            'label' => $singular_name,
+            'public' => true,
+            'capability_type' => 'post',
+            'map_meta_cap' => true,
+            'has_archive' => false,
+            'query_var' => $slug_name,
+            'supports' => array('title', 'revisions', 'thumbnail'),
+            'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+            'menu_icon' => 'dashicons-images-alt2',
+            'show_in_rest' => true,
+            'show_in_graphql' => true,
+            'publicly_queryable' => true,
+            'graphql_single_name' => 'callToAction',
+            'graphql_plural_name' => 'callToActions',
+            'hierarchical' => true,
+        ));
+    }
+    add_action('init', 'a_register_call_to_action_custom_post_types');
+}
 
 if (!function_exists('a_register_team_custom_post_types')) {
     function a_register_team_custom_post_types() {
