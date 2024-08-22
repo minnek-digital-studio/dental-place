@@ -29,7 +29,7 @@ import InstagramInfo from "@/modules/home/data/instagram.json";
 import LetHelpInfo from "@/modules/home/data/let-us-help.json";
 import PresentationInfo from "@/modules/home/data/presentation.json";
 import ReviewsInfo from "@/modules/home/data/reviews.json";
-import Services from "@/modules/home/data/services.json";
+import { getServices } from "../actions/services.action";
 import WhyUsInfo from "@/modules/home/data/whyus.json";
 import { Metadata } from "next";
 import Layout from "@/modules/common/layouts/layout";
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
+    const Services = await getServices();
     return (
         <Layout>
             <PresentationSection

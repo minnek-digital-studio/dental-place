@@ -10,6 +10,7 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@minnek/ui/components/carousel";
+import { cn } from "@minnek/ui/lib/utils";
 
 export type ServiceSectionProps = {
     title: string;
@@ -46,14 +47,20 @@ const ServiceSection = ({
                     }}
                 >
                     <CarouselContent>
-                        {items.map((item) => (
-                            <CarouselItem
-                                key={crypto.randomUUID()}
-                                className="flex justify-center items-center basis-[38%] md:basis-1/3"
-                            >
-                                <ServiceCard {...item} />
-                            </CarouselItem>
-                        ))}
+                        {items.map(({ className, ...item }, index) => {
+                            if (index > 2) return null;
+                            return (
+                                <CarouselItem
+                                    key={crypto.randomUUID()}
+                                    className="flex justify-center items-center basis-[38%] md:basis-1/3"
+                                >
+                                    <ServiceCard
+                                        {...item}
+                                        className={cn("bg-info", className)}
+                                    />
+                                </CarouselItem>
+                            );
+                        })}
 
                         <CarouselItem className="flex justify-center items-center basis-[43%] md:hidden">
                             <Button
