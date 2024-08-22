@@ -13,7 +13,8 @@ import { Button, type ButtonVariants } from "@minnek/ui/components/button";
 
 export type ServiceCardProps = {
     title: string;
-    description: string;
+    summary: string;
+    slug?: string;
     icon?: IconsName;
     button: buttonProps;
     iconsize?: number;
@@ -29,7 +30,7 @@ export type buttonProps = {
 
 const serviceCard = ({
     title,
-    description,
+    summary,
     icon,
     iconsize = 35,
     button,
@@ -51,7 +52,7 @@ const serviceCard = ({
             </CardHeader>
             <CardContent>
                 <Typography as="p" className="line-clamp-5">
-                    {description}
+                    {summary}
                 </Typography>
             </CardContent>
             <CardFooter>
