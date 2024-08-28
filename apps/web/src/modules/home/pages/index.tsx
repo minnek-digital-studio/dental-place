@@ -33,22 +33,33 @@ import Services from "@/modules/home/data/services.json";
 import WhyUsInfo from "@/modules/home/data/whyus.json";
 import { Metadata } from "next";
 import Layout from "@/modules/common/layouts/layout";
+import { getHomePageInfo } from "../actions/home.action";
+import CallToAction from "@/modules/common/components/CallToAction";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
 };
 
 export default async function HomePage() {
+    const {
+        PresentationInfo,
+        ArsInfo,
+        InstagramInfo,
+        ReviewsInfo,
+        ServicesInfo,
+        callToActions,
+    } = await getHomePageInfo();
+
     return (
         <Layout>
             <PresentationSection
                 {...(PresentationInfo as PresentationSectionProps)}
             />
-            <ServiceSection {...(Services as ServiceSectionProps)} />
-            <AboutSection {...(AboutInfo as AboutSectionProps)} />
-            <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+            <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
+            <CallToAction {...callToActions[0]} />
+            <CallToAction {...callToActions[1]} />
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
-            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+            <CallToAction {...callToActions[2]} />
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
         </Layout>

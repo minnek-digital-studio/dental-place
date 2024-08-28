@@ -25,6 +25,41 @@ export type About = AcfOptionsPage & Node & {
   parentId?: Maybe<Scalars['String']['output']>;
 };
 
+/** Connection between the HomePageSettingsReviewSection_Fields type and the ContentNode type */
+export type AcfContentNodeConnection = Connection & ContentNodeConnection & {
+  __typename?: 'AcfContentNodeConnection';
+  /** Edges for the AcfContentNodeConnection connection */
+  edges: Array<AcfContentNodeConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<ContentNode>;
+  /** Information about pagination in a connection. */
+  pageInfo: AcfContentNodeConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type AcfContentNodeConnectionEdge = ContentNodeConnectionEdge & Edge & {
+  __typename?: 'AcfContentNodeConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: ContentNode;
+};
+
+/** Page Info on the &quot;AcfContentNodeConnection&quot; */
+export type AcfContentNodeConnectionPageInfo = ContentNodeConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'AcfContentNodeConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
 /** A Field Group managed by ACF */
 export type AcfFieldGroup = {
   /**
@@ -54,6 +89,17 @@ export type AcfLink = {
   url?: Maybe<Scalars['String']['output']>;
 };
 
+/** Connection between the HomePageSettingsArsSection_Fields type and the MediaItem type */
+export type AcfMediaItemConnection = Connection & MediaItemConnection & {
+  __typename?: 'AcfMediaItemConnection';
+  /** Edges for the AcfMediaItemConnection connection */
+  edges: Array<AcfMediaItemConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<MediaItem>;
+  /** Information about pagination in a connection. */
+  pageInfo: AcfMediaItemConnectionPageInfo;
+};
+
 /** Connection between the CallToActionSettingsImage_Fields type and the MediaItem type */
 export type AcfMediaItemConnectionEdge = Edge & MediaItemConnectionEdge & OneToOneConnection & {
   __typename?: 'AcfMediaItemConnectionEdge';
@@ -61,6 +107,21 @@ export type AcfMediaItemConnectionEdge = Edge & MediaItemConnectionEdge & OneToO
   cursor?: Maybe<Scalars['String']['output']>;
   /** The node of the connection, without the edges */
   node: MediaItem;
+};
+
+/** Page Info on the &quot;AcfMediaItemConnection&quot; */
+export type AcfMediaItemConnectionPageInfo = MediaItemConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'AcfMediaItemConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
 };
 
 /** Options Page registered by ACF */
@@ -120,13 +181,202 @@ export type Blocks = AcfOptionsPage & Node & {
   parentId?: Maybe<Scalars['String']['output']>;
 };
 
+/** The callToAction type */
+export type CallToAction = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfCallToActionSettings & {
+  __typename?: 'CallToAction';
+  /**
+   * The ancestors of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  ancestors?: Maybe<CallToActionToCallToActionConnection>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  callToActionId: Scalars['Int']['output'];
+  /** Fields of the CallToActionSettings ACF Field Group */
+  callToActionSettings?: Maybe<CallToActionSettings>;
+  /** Connection between the ContentNode type and the ContentType type */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /** The name of the Content Type the node belongs to */
+  contentTypeName: Scalars['String']['output'];
+  /** The unique identifier stored in the database */
+  databaseId: Scalars['Int']['output'];
+  /** Post publishing date. */
+  date?: Maybe<Scalars['String']['output']>;
+  /** The publishing date set in GMT. */
+  dateGmt?: Maybe<Scalars['String']['output']>;
+  /** The desired slug of the post */
+  desiredSlug?: Maybe<Scalars['String']['output']>;
+  /** If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /** The RSS enclosure for the object */
+  enclosure?: Maybe<Scalars['String']['output']>;
+  /** Connection between the ContentNode type and the EnqueuedScript type */
+  enqueuedScripts?: Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /** Connection between the ContentNode type and the EnqueuedStylesheet type */
+  enqueuedStylesheets?: Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /** Connection between the NodeWithFeaturedImage type and the MediaItem type */
+  featuredImage?: Maybe<NodeWithFeaturedImageToMediaItemConnectionEdge>;
+  /** The database identifier for the featured image node assigned to the content node */
+  featuredImageDatabaseId?: Maybe<Scalars['Int']['output']>;
+  /** Globally unique ID of the featured image assigned to the node */
+  featuredImageId?: Maybe<Scalars['ID']['output']>;
+  /** The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table. */
+  guid?: Maybe<Scalars['String']['output']>;
+  /** Whether the call-to-actions object is password protected. */
+  hasPassword?: Maybe<Scalars['Boolean']['output']>;
+  /** The globally unique identifier of the call-to-actions object. */
+  id: Scalars['ID']['output'];
+  /** Whether the node is a Comment */
+  isComment: Scalars['Boolean']['output'];
+  /** Whether the node is a Content Node */
+  isContentNode: Scalars['Boolean']['output'];
+  /** Whether the node represents the front page. */
+  isFrontPage: Scalars['Boolean']['output'];
+  /** Whether  the node represents the blog page. */
+  isPostsPage: Scalars['Boolean']['output'];
+  /** Whether the object is a node in the preview state */
+  isPreview?: Maybe<Scalars['Boolean']['output']>;
+  /** Whether the object is restricted from the current viewer */
+  isRestricted?: Maybe<Scalars['Boolean']['output']>;
+  /** True if the node is a revision of another node */
+  isRevision?: Maybe<Scalars['Boolean']['output']>;
+  /** Whether the node is a Term */
+  isTermNode: Scalars['Boolean']['output'];
+  /** The user that most recently edited the node */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  /** The permalink of the post */
+  link?: Maybe<Scalars['String']['output']>;
+  /** The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time. */
+  modified?: Maybe<Scalars['String']['output']>;
+  /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
+  modifiedGmt?: Maybe<Scalars['String']['output']>;
+  /**
+   * The parent of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  parent?: Maybe<CallToActionToParentConnectionEdge>;
+  /** The password for the call-to-actions object. */
+  password?: Maybe<Scalars['String']['output']>;
+  /** Connection between the CallToAction type and the callToAction type */
+  preview?: Maybe<CallToActionToPreviewConnectionEdge>;
+  /** The database id of the preview node */
+  previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
+  /** Whether the object is a node in the preview state */
+  previewRevisionId?: Maybe<Scalars['ID']['output']>;
+  /** If the current node is a revision, this field exposes the node this is a revision of. Returns null if the node is not a revision of another node. */
+  revisionOf?: Maybe<NodeWithRevisionsToContentNodeConnectionEdge>;
+  /** Connection between the CallToAction type and the callToAction type */
+  revisions?: Maybe<CallToActionToRevisionConnection>;
+  /** The Yoast SEO data of the ContentNode */
+  seo?: Maybe<PostTypeSeo>;
+  /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
+  slug?: Maybe<Scalars['String']['output']>;
+  /** The current status of the object */
+  status?: Maybe<Scalars['String']['output']>;
+  /** The template assigned to the node */
+  template?: Maybe<ContentTemplate>;
+  /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
+  title?: Maybe<Scalars['String']['output']>;
+  /** The unique resource identifier path */
+  uri?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The callToAction type */
+export type CallToActionAncestorsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The callToAction type */
+export type CallToActionEnqueuedScriptsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The callToAction type */
+export type CallToActionEnqueuedStylesheetsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The callToAction type */
+export type CallToActionRevisionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<CallToActionToRevisionConnectionWhereArgs>;
+};
+
+
+/** The callToAction type */
+export type CallToActionTitleArgs = {
+  format?: InputMaybe<PostObjectFieldFormatEnum>;
+};
+
+/** Connection to callToAction Nodes */
+export type CallToActionConnection = {
+  /** A list of edges (relational context) between RootQuery and connected callToAction Nodes */
+  edges: Array<CallToActionConnectionEdge>;
+  /** A list of connected callToAction Nodes */
+  nodes: Array<CallToAction>;
+  /** Information about pagination in a connection. */
+  pageInfo: CallToActionConnectionPageInfo;
+};
+
+/** Edge between a Node and a connected callToAction */
+export type CallToActionConnectionEdge = {
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The connected callToAction Node */
+  node: CallToAction;
+};
+
+/** Page Info on the connected CallToActionConnectionEdge */
+export type CallToActionConnectionPageInfo = {
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** The Type of Identifier used to fetch a single resource. Default is ID. */
+export enum CallToActionIdType {
+  /** Identify a resource by the Database ID. */
+  DatabaseId = 'DATABASE_ID',
+  /** Identify a resource by the (hashed) Global ID. */
+  Id = 'ID',
+  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
+  Slug = 'SLUG',
+  /** Identify a resource by the URI. */
+  Uri = 'URI'
+}
+
 /** The &quot;CallToActionSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CallToActionSettings = AcfFieldGroup & AcfFieldGroupFields & CallToActionSettings_Fields & {
   __typename?: 'CallToActionSettings';
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   button?: Maybe<CallToActionSettingsButton>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   description?: Maybe<Scalars['String']['output']>;
   /**
@@ -138,6 +388,8 @@ export type CallToActionSettings = AcfFieldGroup & AcfFieldGroupFields & CallToA
   image?: Maybe<CallToActionSettingsImage>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   items?: Maybe<Array<Maybe<CallToActionSettingsItems>>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
+  type: Array<Maybe<Scalars['String']['output']>>;
 };
 
 /** The &quot;CallToActionSettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -150,10 +402,10 @@ export type CallToActionSettingsButton = AcfFieldGroup & AcfFieldGroupFields & C
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
   link?: Maybe<AcfLink>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
-  size?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
-  variant?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
 };
 
 /** Interface representing fields of the ACF &quot;CallToActionSettingsButton&quot; Field Group */
@@ -165,17 +417,17 @@ export type CallToActionSettingsButton_Fields = {
   fieldGroupName?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
   link?: Maybe<AcfLink>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
-  size?: Maybe<Scalars['String']['output']>;
-  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
-  variant?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
 };
 
 /** The &quot;CallToActionSettingsImage&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CallToActionSettingsImage = AcfFieldGroup & AcfFieldGroupFields & CallToActionSettingsImage_Fields & {
   __typename?: 'CallToActionSettingsImage';
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsImage&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -188,7 +440,7 @@ export type CallToActionSettingsImage = AcfFieldGroup & AcfFieldGroupFields & Ca
 /** Interface representing fields of the ACF &quot;CallToActionSettingsImage&quot; Field Group */
 export type CallToActionSettingsImage_Fields = {
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsImage&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -218,7 +470,7 @@ export type CallToActionSettingsItems = AcfFieldGroup & AcfFieldGroupFields & Ca
 export type CallToActionSettingsItemsIcon = AcfFieldGroup & AcfFieldGroupFields & CallToActionSettingsItemsIcon_Fields & {
   __typename?: 'CallToActionSettingsItemsIcon';
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsItemsIcon&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -233,7 +485,7 @@ export type CallToActionSettingsItemsIcon = AcfFieldGroup & AcfFieldGroupFields 
 /** Interface representing fields of the ACF &quot;CallToActionSettingsItemsIcon&quot; Field Group */
 export type CallToActionSettingsItemsIcon_Fields = {
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsItemsIcon&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -265,7 +517,7 @@ export type CallToActionSettings_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   button?: Maybe<CallToActionSettingsButton>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
-  classname?: Maybe<Scalars['String']['output']>;
+  className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   description?: Maybe<Scalars['String']['output']>;
   /**
@@ -277,20 +529,158 @@ export type CallToActionSettings_Fields = {
   image?: Maybe<CallToActionSettingsImage>;
   /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   items?: Maybe<Array<Maybe<CallToActionSettingsItems>>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
+  type: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Connection between the CallToAction type and the callToAction type */
+export type CallToActionToCallToActionConnection = CallToActionConnection & Connection & {
+  __typename?: 'CallToActionToCallToActionConnection';
+  /** Edges for the CallToActionToCallToActionConnection connection */
+  edges: Array<CallToActionToCallToActionConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<CallToAction>;
+  /** Information about pagination in a connection. */
+  pageInfo: CallToActionToCallToActionConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type CallToActionToCallToActionConnectionEdge = CallToActionConnectionEdge & Edge & {
+  __typename?: 'CallToActionToCallToActionConnectionEdge';
+  /**
+   * A cursor for use in pagination
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The item at the end of the edge
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  node: CallToAction;
+};
+
+/** Page Info on the &quot;CallToActionToCallToActionConnection&quot; */
+export type CallToActionToCallToActionConnectionPageInfo = CallToActionConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'CallToActionToCallToActionConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Connection between the CallToAction type and the callToAction type */
+export type CallToActionToParentConnectionEdge = CallToActionConnectionEdge & Edge & OneToOneConnection & {
+  __typename?: 'CallToActionToParentConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The node of the connection, without the edges
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  node: CallToAction;
+};
+
+/** Connection between the CallToAction type and the callToAction type */
+export type CallToActionToPreviewConnectionEdge = CallToActionConnectionEdge & Edge & OneToOneConnection & {
+  __typename?: 'CallToActionToPreviewConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The node of the connection, without the edges */
+  node: CallToAction;
+};
+
+/** Connection between the CallToAction type and the callToAction type */
+export type CallToActionToRevisionConnection = CallToActionConnection & Connection & {
+  __typename?: 'CallToActionToRevisionConnection';
+  /** Edges for the CallToActionToRevisionConnection connection */
+  edges: Array<CallToActionToRevisionConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<CallToAction>;
+  /** Information about pagination in a connection. */
+  pageInfo: CallToActionToRevisionConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type CallToActionToRevisionConnectionEdge = CallToActionConnectionEdge & Edge & {
+  __typename?: 'CallToActionToRevisionConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: CallToAction;
+};
+
+/** Page Info on the &quot;CallToActionToRevisionConnection&quot; */
+export type CallToActionToRevisionConnectionPageInfo = CallToActionConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'CallToActionToRevisionConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the CallToActionToRevisionConnection connection */
+export type CallToActionToRevisionConnectionWhereArgs = {
+  /** Filter the connection based on dates */
+  dateQuery?: InputMaybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Specific database ID of the object */
+  id?: InputMaybe<Scalars['Int']['input']>;
+  /** Array of IDs for the objects to retrieve */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: InputMaybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** What parameter to use to order the objects by. */
+  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: InputMaybe<Scalars['ID']['input']>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Show posts with a specific password. */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** Show Posts based on a keyword search */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: InputMaybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
 };
 
 /** The caseStudy type */
-export type CaseStudy = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type CaseStudy = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
   __typename?: 'CaseStudy';
-  /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
-  ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
+  /**
+   * The ancestors of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  ancestors?: Maybe<CaseStudyToCaseStudyConnection>;
   /**
    * The id field matches the WP_Post-&gt;ID field.
    * @deprecated Deprecated in favor of the databaseId field
    */
   caseStudyId: Scalars['Int']['output'];
-  /** Connection between the HierarchicalContentNode type and the ContentNode type */
-  children?: Maybe<HierarchicalContentNodeToContentNodeChildrenConnection>;
   /** Connection between the ContentNode type and the ContentType type */
   contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
   /** The name of the Content Type the node belongs to */
@@ -347,12 +737,11 @@ export type CaseStudy = ContentNode & DatabaseIdentifier & HierarchicalContentNo
   modified?: Maybe<Scalars['String']['output']>;
   /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
   modifiedGmt?: Maybe<Scalars['String']['output']>;
-  /** The parent of the node. The parent object can be of various types */
-  parent?: Maybe<HierarchicalContentNodeToParentContentNodeConnectionEdge>;
-  /** Database id of the parent node */
-  parentDatabaseId?: Maybe<Scalars['Int']['output']>;
-  /** The globally unique identifier of the parent node. */
-  parentId?: Maybe<Scalars['ID']['output']>;
+  /**
+   * The parent of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  parent?: Maybe<CaseStudyToParentConnectionEdge>;
   /** The password for the dental-case-studies object. */
   password?: Maybe<Scalars['String']['output']>;
   /** Connection between the CaseStudy type and the caseStudy type */
@@ -371,7 +760,7 @@ export type CaseStudy = ContentNode & DatabaseIdentifier & HierarchicalContentNo
   slug?: Maybe<Scalars['String']['output']>;
   /** The current status of the object */
   status?: Maybe<Scalars['String']['output']>;
-  /** The template assigned to a node of content */
+  /** The template assigned to the node */
   template?: Maybe<ContentTemplate>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
   title?: Maybe<Scalars['String']['output']>;
@@ -386,17 +775,6 @@ export type CaseStudyAncestorsArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs>;
-};
-
-
-/** The caseStudy type */
-export type CaseStudyChildrenArgs = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Int']['input']>;
-  last?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs>;
 };
 
 
@@ -471,9 +849,64 @@ export enum CaseStudyIdType {
   DatabaseId = 'DATABASE_ID',
   /** Identify a resource by the (hashed) Global ID. */
   Id = 'ID',
+  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
+  Slug = 'SLUG',
   /** Identify a resource by the URI. */
   Uri = 'URI'
 }
+
+/** Connection between the CaseStudy type and the caseStudy type */
+export type CaseStudyToCaseStudyConnection = CaseStudyConnection & Connection & {
+  __typename?: 'CaseStudyToCaseStudyConnection';
+  /** Edges for the CaseStudyToCaseStudyConnection connection */
+  edges: Array<CaseStudyToCaseStudyConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<CaseStudy>;
+  /** Information about pagination in a connection. */
+  pageInfo: CaseStudyToCaseStudyConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type CaseStudyToCaseStudyConnectionEdge = CaseStudyConnectionEdge & Edge & {
+  __typename?: 'CaseStudyToCaseStudyConnectionEdge';
+  /**
+   * A cursor for use in pagination
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The item at the end of the edge
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  node: CaseStudy;
+};
+
+/** Page Info on the &quot;CaseStudyToCaseStudyConnection&quot; */
+export type CaseStudyToCaseStudyConnectionPageInfo = CaseStudyConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'CaseStudyToCaseStudyConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Connection between the CaseStudy type and the caseStudy type */
+export type CaseStudyToParentConnectionEdge = CaseStudyConnectionEdge & Edge & OneToOneConnection & {
+  __typename?: 'CaseStudyToParentConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The node of the connection, without the edges
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  node: CaseStudy;
+};
 
 /** Connection between the CaseStudy type and the caseStudy type */
 export type CaseStudyToPreviewConnectionEdge = CaseStudyConnectionEdge & Edge & OneToOneConnection & {
@@ -1814,6 +2247,8 @@ export enum ContentTypeEnum {
   /** The Type of Content object */
   Attachment = 'ATTACHMENT',
   /** The Type of Content object */
+  CallToActions = 'CALL_TO_ACTIONS',
+  /** The Type of Content object */
   DentalCaseStudies = 'DENTAL_CASE_STUDIES',
   /** The Type of Content object */
   DentalServices = 'DENTAL_SERVICES',
@@ -1822,7 +2257,9 @@ export enum ContentTypeEnum {
   /** The Type of Content object */
   Page = 'PAGE',
   /** The Type of Content object */
-  Post = 'POST'
+  Post = 'POST',
+  /** The Type of Content object */
+  Review = 'REVIEW'
 }
 
 /** The Type of Identifier used to fetch a single Content Type node. To be used along with the "id" field. Default is "ID". */
@@ -1961,6 +2398,12 @@ export enum ContentTypesOfTagEnum {
   Post = 'POST'
 }
 
+/** Allowed Content Types of the TypePage taxonomy. */
+export enum ContentTypesOfTypePageEnum {
+  /** The Type of Content object */
+  Page = 'PAGE'
+}
+
 export type Cookies = AcfOptionsPage & Node & {
   __typename?: 'Cookies';
   /** The globally unique ID for the object */
@@ -1968,6 +2411,33 @@ export type Cookies = AcfOptionsPage & Node & {
   menuTitle?: Maybe<Scalars['String']['output']>;
   pageTitle?: Maybe<Scalars['String']['output']>;
   parentId?: Maybe<Scalars['String']['output']>;
+};
+
+/** Input for the createCallToAction mutation. */
+export type CreateCallToActionInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
+  date?: InputMaybe<Scalars['String']['input']>;
+  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
+  menuOrder?: InputMaybe<Scalars['Int']['input']>;
+  /** The password used to protect the content of the object */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** The slug of the object */
+  slug?: InputMaybe<Scalars['String']['input']>;
+  /** The status of the object */
+  status?: InputMaybe<PostStatusEnum>;
+  /** The title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The payload for the createCallToAction mutation. */
+export type CreateCallToActionPayload = {
+  __typename?: 'CreateCallToActionPayload';
+  /** The Post object mutation type. */
+  callToAction?: Maybe<CallToAction>;
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
 };
 
 /** Input for the createCaseStudy mutation. */
@@ -1978,8 +2448,6 @@ export type CreateCaseStudyInput = {
   date?: InputMaybe<Scalars['String']['input']>;
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: InputMaybe<Scalars['Int']['input']>;
-  /** The ID of the parent object */
-  parentId?: InputMaybe<Scalars['ID']['input']>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars['String']['input']>;
   /** The slug of the object */
@@ -2128,6 +2596,8 @@ export type CreatePageInput = {
   status?: InputMaybe<PostStatusEnum>;
   /** The title of the object */
   title?: InputMaybe<Scalars['String']['input']>;
+  /** Set connections between the page and typePages */
+  typePages?: InputMaybe<PageTypePagesInput>;
 };
 
 /** The payload for the createPage mutation. */
@@ -2209,6 +2679,35 @@ export type CreatePostPayload = {
   post?: Maybe<Post>;
 };
 
+/** Input for the createReview mutation. */
+export type CreateReviewInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The content of the object */
+  content?: InputMaybe<Scalars['String']['input']>;
+  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
+  date?: InputMaybe<Scalars['String']['input']>;
+  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
+  menuOrder?: InputMaybe<Scalars['Int']['input']>;
+  /** The password used to protect the content of the object */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** The slug of the object */
+  slug?: InputMaybe<Scalars['String']['input']>;
+  /** The status of the object */
+  status?: InputMaybe<PostStatusEnum>;
+  /** The title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The payload for the createReview mutation. */
+export type CreateReviewPayload = {
+  __typename?: 'CreateReviewPayload';
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The Post object mutation type. */
+  review?: Maybe<Review>;
+};
+
 /** Input for the createService mutation. */
 export type CreateServiceInput = {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -2217,8 +2716,6 @@ export type CreateServiceInput = {
   date?: InputMaybe<Scalars['String']['input']>;
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: InputMaybe<Scalars['Int']['input']>;
-  /** The ID of the parent object */
-  parentId?: InputMaybe<Scalars['ID']['input']>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars['String']['input']>;
   /** The slug of the object */
@@ -2269,8 +2766,6 @@ export type CreateTeamInput = {
   date?: InputMaybe<Scalars['String']['input']>;
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: InputMaybe<Scalars['Int']['input']>;
-  /** The ID of the parent object */
-  parentId?: InputMaybe<Scalars['ID']['input']>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars['String']['input']>;
   /** The slug of the object */
@@ -2288,6 +2783,29 @@ export type CreateTeamPayload = {
   clientMutationId?: Maybe<Scalars['String']['output']>;
   /** The Post object mutation type. */
   team?: Maybe<Team>;
+};
+
+/** Input for the createTypePage mutation. */
+export type CreateTypePageInput = {
+  /** The slug that the type-page will be an alias of */
+  aliasOf?: InputMaybe<Scalars['String']['input']>;
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The description of the type-page object */
+  description?: InputMaybe<Scalars['String']['input']>;
+  /** The name of the type-page object to mutate */
+  name: Scalars['String']['input'];
+  /** If this argument exists then the slug will be checked to see if it is not an existing valid term. If that check succeeds (it is not a valid term), then it is added and the term id is given. If it fails, then a check is made to whether the taxonomy is hierarchical and the parent argument is not empty. If the second check succeeds, the term will be inserted and the term id will be given. If the slug argument is empty, then it will be calculated from the term name. */
+  slug?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The payload for the createTypePage mutation. */
+export type CreateTypePagePayload = {
+  __typename?: 'CreateTypePagePayload';
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The created type-page */
+  typePage?: Maybe<TypePage>;
 };
 
 /** Input for the createUser mutation. */
@@ -2390,6 +2908,29 @@ export type DefaultTemplate = ContentTemplate & {
   __typename?: 'DefaultTemplate';
   /** The name of the template */
   templateName?: Maybe<Scalars['String']['output']>;
+};
+
+/** Input for the deleteCallToAction mutation. */
+export type DeleteCallToActionInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** Whether the object should be force deleted instead of being moved to the trash */
+  forceDelete?: InputMaybe<Scalars['Boolean']['input']>;
+  /** The ID of the callToAction to delete */
+  id: Scalars['ID']['input'];
+  /** Override the edit lock when another user is editing the post */
+  ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** The payload for the deleteCallToAction mutation. */
+export type DeleteCallToActionPayload = {
+  __typename?: 'DeleteCallToActionPayload';
+  /** The object before it was deleted */
+  callToAction?: Maybe<CallToAction>;
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The ID of the deleted object */
+  deletedId?: Maybe<Scalars['ID']['output']>;
 };
 
 /** Input for the deleteCaseStudy mutation. */
@@ -2541,6 +3082,29 @@ export type DeletePostPayload = {
   post?: Maybe<Post>;
 };
 
+/** Input for the deleteReview mutation. */
+export type DeleteReviewInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** Whether the object should be force deleted instead of being moved to the trash */
+  forceDelete?: InputMaybe<Scalars['Boolean']['input']>;
+  /** The ID of the review to delete */
+  id: Scalars['ID']['input'];
+  /** Override the edit lock when another user is editing the post */
+  ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** The payload for the deleteReview mutation. */
+export type DeleteReviewPayload = {
+  __typename?: 'DeleteReviewPayload';
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The ID of the deleted object */
+  deletedId?: Maybe<Scalars['ID']['output']>;
+  /** The object before it was deleted */
+  review?: Maybe<Review>;
+};
+
 /** Input for the deleteService mutation. */
 export type DeleteServiceInput = {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -2604,6 +3168,25 @@ export type DeleteTeamPayload = {
   deletedId?: Maybe<Scalars['ID']['output']>;
   /** The object before it was deleted */
   team?: Maybe<Team>;
+};
+
+/** Input for the deleteTypePage mutation. */
+export type DeleteTypePageInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The ID of the typePage to delete */
+  id: Scalars['ID']['input'];
+};
+
+/** The payload for the deleteTypePage mutation. */
+export type DeleteTypePagePayload = {
+  __typename?: 'DeleteTypePagePayload';
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The ID of the deleted object */
+  deletedId?: Maybe<Scalars['ID']['output']>;
+  /** The deleted term object */
+  typePage?: Maybe<TypePage>;
 };
 
 /** Input for the deleteUser mutation. */
@@ -3704,6 +4287,510 @@ export type HierarchicalTermNodeEnqueuedStylesheetsArgs = {
   last?: InputMaybe<Scalars['Int']['input']>;
 };
 
+/** The &quot;HomePageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettings = AcfFieldGroup & AcfFieldGroupFields & HomePageSettings_Fields & {
+  __typename?: 'HomePageSettings';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  arsSection?: Maybe<HomePageSettingsArsSection>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  instagram?: Maybe<HomePageSettingsInstagram>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  presentation?: Maybe<HomePageSettingsPresentation>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  reviewSection?: Maybe<HomePageSettingsReviewSection>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  serviceSection?: Maybe<HomePageSettingsServiceSection>;
+};
+
+
+/** The &quot;HomePageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;HomePageSettingsArsSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsArsSection = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsArsSection_Fields & {
+  __typename?: 'HomePageSettingsArsSection';
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;HomePageSettingsArsSection&quot; Field Group */
+  arsImages?: Maybe<AcfMediaItemConnection>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsArsSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;HomePageSettingsArsSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsArsSectionArsImagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsArsSection&quot; Field Group */
+export type HomePageSettingsArsSection_Fields = {
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;HomePageSettingsArsSection&quot; Field Group */
+  arsImages?: Maybe<AcfMediaItemConnection>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsArsSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsArsSection&quot; Field Group */
+export type HomePageSettingsArsSection_FieldsArsImagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;HomePageSettingsInstagram&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsInstagram = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsInstagram_Fields & {
+  __typename?: 'HomePageSettingsInstagram';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  button?: Maybe<HomePageSettingsInstagramButton>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  carouselOptions?: Maybe<HomePageSettingsInstagramCarouselOptions>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  icon?: Maybe<HomePageSettingsInstagramIcon>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsInstagramButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsInstagramButton = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsInstagramButton_Fields & {
+  __typename?: 'HomePageSettingsInstagramButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramButton&quot; Field Group */
+  variant?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsInstagramButton&quot; Field Group */
+export type HomePageSettingsInstagramButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramButton&quot; Field Group */
+  variant?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+/** The &quot;HomePageSettingsInstagramCarouselOptions&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsInstagramCarouselOptions = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsInstagramCarouselOptions_Fields & {
+  __typename?: 'HomePageSettingsInstagramCarouselOptions';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;true_false&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramCarouselOptions&quot; Field Group */
+  playOnInit?: Maybe<Scalars['Boolean']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramCarouselOptions&quot; Field Group */
+  speed?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsInstagramCarouselOptions&quot; Field Group */
+export type HomePageSettingsInstagramCarouselOptions_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;true_false&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramCarouselOptions&quot; Field Group */
+  playOnInit?: Maybe<Scalars['Boolean']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramCarouselOptions&quot; Field Group */
+  speed?: Maybe<Scalars['Float']['output']>;
+};
+
+/** The &quot;HomePageSettingsInstagramIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsInstagramIcon = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsInstagramIcon_Fields & {
+  __typename?: 'HomePageSettingsInstagramIcon';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+  position?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+export type HomePageSettingsInstagramIcon_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+  position?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagramIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsInstagram&quot; Field Group */
+export type HomePageSettingsInstagram_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  button?: Maybe<HomePageSettingsInstagramButton>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  carouselOptions?: Maybe<HomePageSettingsInstagramCarouselOptions>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  icon?: Maybe<HomePageSettingsInstagramIcon>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsInstagram&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsPresentation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsPresentation = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsPresentation_Fields & {
+  __typename?: 'HomePageSettingsPresentation';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  card?: Maybe<HomePageSettingsPresentationCard>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  className: Scalars['String']['output'];
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  image?: Maybe<HomePageSettingsPresentationImage>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsPresentationCard&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsPresentationCard = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsPresentationCard_Fields & {
+  __typename?: 'HomePageSettingsPresentationCard';
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCard&quot; Field Group */
+  button?: Maybe<Array<Maybe<HomePageSettingsPresentationCardButton>>>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCard&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsPresentationCardButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsPresentationCardButton = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsPresentationCardButton_Fields & {
+  __typename?: 'HomePageSettingsPresentationCardButton';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  icon?: Maybe<HomePageSettingsPresentationCardButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsPresentationCardButtonIcon = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsPresentationCardButtonIcon_Fields & {
+  __typename?: 'HomePageSettingsPresentationCardButtonIcon';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+  position: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+export type HomePageSettingsPresentationCardButtonIcon_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+  position: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+export type HomePageSettingsPresentationCardButton_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  icon?: Maybe<HomePageSettingsPresentationCardButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCardButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsPresentationCard&quot; Field Group */
+export type HomePageSettingsPresentationCard_Fields = {
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCard&quot; Field Group */
+  button?: Maybe<Array<Maybe<HomePageSettingsPresentationCardButton>>>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationCard&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsPresentationImage&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsPresentationImage = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsPresentationImage_Fields & {
+  __typename?: 'HomePageSettingsPresentationImage';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationImage&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationImage&quot; Field Group */
+  img?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsPresentationImage&quot; Field Group */
+export type HomePageSettingsPresentationImage_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationImage&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationImage&quot; Field Group */
+  img?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsPresentation&quot; Field Group */
+export type HomePageSettingsPresentation_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  card?: Maybe<HomePageSettingsPresentationCard>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  className: Scalars['String']['output'];
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  image?: Maybe<HomePageSettingsPresentationImage>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsReviewSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsReviewSection = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsReviewSection_Fields & {
+  __typename?: 'HomePageSettingsReviewSection';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsReviewSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;HomePageSettingsReviewSection&quot; Field Group */
+  reviews?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsReviewSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;HomePageSettingsReviewSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsReviewSectionReviewsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsReviewSection&quot; Field Group */
+export type HomePageSettingsReviewSection_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsReviewSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;HomePageSettingsReviewSection&quot; Field Group */
+  reviews?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsReviewSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsReviewSection&quot; Field Group */
+export type HomePageSettingsReviewSection_FieldsReviewsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;HomePageSettingsServiceSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsServiceSection = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsServiceSection_Fields & {
+  __typename?: 'HomePageSettingsServiceSection';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSection&quot; Field Group */
+  button?: Maybe<HomePageSettingsServiceSectionButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;HomePageSettingsServiceSectionButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type HomePageSettingsServiceSectionButton = AcfFieldGroup & AcfFieldGroupFields & HomePageSettingsServiceSectionButton_Fields & {
+  __typename?: 'HomePageSettingsServiceSectionButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+export type HomePageSettingsServiceSectionButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSectionButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettingsServiceSection&quot; Field Group */
+export type HomePageSettingsServiceSection_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSection&quot; Field Group */
+  button?: Maybe<HomePageSettingsServiceSectionButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsServiceSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;HomePageSettings&quot; Field Group */
+export type HomePageSettings_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  arsSection?: Maybe<HomePageSettingsArsSection>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  instagram?: Maybe<HomePageSettingsInstagram>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  presentation?: Maybe<HomePageSettingsPresentation>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  reviewSection?: Maybe<HomePageSettingsReviewSection>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettings&quot; Field Group */
+  serviceSection?: Maybe<HomePageSettingsServiceSection>;
+};
+
+
+/** Interface representing fields of the ACF &quot;HomePageSettings&quot; Field Group */
+export type HomePageSettings_FieldsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
 /** File details for a Media Item */
 export type MediaDetails = {
   __typename?: 'MediaDetails';
@@ -4367,7 +5454,7 @@ export enum MenuItemNodeIdTypeEnum {
 }
 
 /** Deprecated in favor of MenuItemLinkeable Interface */
-export type MenuItemObjectUnion = CaseStudy | Category | Page | Post | Service | Tag | Team;
+export type MenuItemObjectUnion = CallToAction | CaseStudy | Category | Page | Post | Review | Service | Tag | Team | TypePage;
 
 /** Connection between the MenuItem type and the Menu type */
 export type MenuItemToMenuConnectionEdge = Edge & MenuConnectionEdge & OneToOneConnection & {
@@ -4855,7 +5942,7 @@ export enum OrderEnum {
 }
 
 /** The page type */
-export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfHomePageSettings & {
   __typename?: 'Page';
   /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
   ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
@@ -4905,6 +5992,8 @@ export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   guid?: Maybe<Scalars['String']['output']>;
   /** Whether the page object is password protected. */
   hasPassword?: Maybe<Scalars['Boolean']['output']>;
+  /** Fields of the HomePageSettings ACF Field Group */
+  homePageSettings?: Maybe<HomePageSettings>;
   /** The globally unique identifier of the page object. */
   id: Scalars['ID']['output'];
   /** Whether the node is a Comment */
@@ -4966,8 +6055,12 @@ export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   status?: Maybe<Scalars['String']['output']>;
   /** The template assigned to a node of content */
   template?: Maybe<ContentTemplate>;
+  /** Connection between the Page type and the TermNode type */
+  terms?: Maybe<PageToTermNodeConnection>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
   title?: Maybe<Scalars['String']['output']>;
+  /** Connection between the Page type and the typePage type */
+  typePages?: Maybe<PageToTypePageConnection>;
   /** The unique resource identifier path */
   uri?: Maybe<Scalars['String']['output']>;
 };
@@ -5038,8 +6131,28 @@ export type PageRevisionsArgs = {
 
 
 /** The page type */
+export type PageTermsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<PageToTermNodeConnectionWhereArgs>;
+};
+
+
+/** The page type */
 export type PageTitleArgs = {
   format?: InputMaybe<PostObjectFieldFormatEnum>;
+};
+
+
+/** The page type */
+export type PageTypePagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<PageToTypePageConnectionWhereArgs>;
 };
 
 /** Connection to page Nodes */
@@ -5281,6 +6394,192 @@ export type PageToRevisionConnectionWhereArgs = {
   status?: InputMaybe<PostStatusEnum>;
   /** Title of the object */
   title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** Connection between the Page type and the TermNode type */
+export type PageToTermNodeConnection = Connection & TermNodeConnection & {
+  __typename?: 'PageToTermNodeConnection';
+  /** Edges for the PageToTermNodeConnection connection */
+  edges: Array<PageToTermNodeConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<TermNode>;
+  /** Information about pagination in a connection. */
+  pageInfo: PageToTermNodeConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type PageToTermNodeConnectionEdge = Edge & TermNodeConnectionEdge & {
+  __typename?: 'PageToTermNodeConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: TermNode;
+};
+
+/** Page Info on the &quot;PageToTermNodeConnection&quot; */
+export type PageToTermNodeConnectionPageInfo = PageInfo & TermNodeConnectionPageInfo & WpPageInfo & {
+  __typename?: 'PageToTermNodeConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the PageToTermNodeConnection connection */
+export type PageToTermNodeConnectionWhereArgs = {
+  /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
+  cacheDomain?: InputMaybe<Scalars['String']['input']>;
+  /** Term ID to retrieve child terms of. If multiple taxonomies are passed, $child_of is ignored. Default 0. */
+  childOf?: InputMaybe<Scalars['Int']['input']>;
+  /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
+  childless?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Retrieve terms where the description is LIKE the input value. Default empty. */
+  descriptionLike?: InputMaybe<Scalars['String']['input']>;
+  /** Array of term ids to exclude. If $include is non-empty, $exclude is ignored. Default empty array. */
+  exclude?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of term ids to exclude along with all of their descendant terms. If $include is non-empty, $exclude_tree is ignored. Default empty array. */
+  excludeTree?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Whether to hide terms not assigned to any posts. Accepts true or false. Default false */
+  hideEmpty?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Whether to include terms that have non-empty descendants (even if $hide_empty is set to true). Default true. */
+  hierarchical?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Array of term ids to include. Default empty array. */
+  include?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of names to return term(s) for. Default empty. */
+  name?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Retrieve terms where the name is LIKE the input value. Default empty. */
+  nameLike?: InputMaybe<Scalars['String']['input']>;
+  /** Array of object IDs. Results will be limited to terms associated with these objects. */
+  objectIds?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Direction the connection should be ordered in */
+  order?: InputMaybe<OrderEnum>;
+  /** Field(s) to order terms by. Defaults to 'name'. */
+  orderby?: InputMaybe<TermObjectsConnectionOrderbyEnum>;
+  /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
+  padCounts?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Parent term ID to retrieve direct-child terms of. Default empty. */
+  parent?: InputMaybe<Scalars['Int']['input']>;
+  /** Search criteria to match terms. Will be SQL-formatted with wildcards before and after. Default empty. */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Array of slugs to return term(s) for. Default empty. */
+  slug?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** The Taxonomy to filter terms by */
+  taxonomies?: InputMaybe<Array<InputMaybe<TaxonomyEnum>>>;
+  /** Array of term taxonomy IDs, to match when querying terms. */
+  termTaxonomId?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of term taxonomy IDs, to match when querying terms. */
+  termTaxonomyId?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Whether to prime meta caches for matched terms. Default true. */
+  updateTermMetaCache?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** Connection between the Page type and the typePage type */
+export type PageToTypePageConnection = Connection & TypePageConnection & {
+  __typename?: 'PageToTypePageConnection';
+  /** Edges for the PageToTypePageConnection connection */
+  edges: Array<PageToTypePageConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<TypePage>;
+  /** Information about pagination in a connection. */
+  pageInfo: PageToTypePageConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type PageToTypePageConnectionEdge = Edge & TypePageConnectionEdge & {
+  __typename?: 'PageToTypePageConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The Yoast SEO Primary type-page */
+  isPrimary?: Maybe<Scalars['Boolean']['output']>;
+  /** The item at the end of the edge */
+  node: TypePage;
+};
+
+/** Page Info on the &quot;PageToTypePageConnection&quot; */
+export type PageToTypePageConnectionPageInfo = PageInfo & TypePageConnectionPageInfo & WpPageInfo & {
+  __typename?: 'PageToTypePageConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the PageToTypePageConnection connection */
+export type PageToTypePageConnectionWhereArgs = {
+  /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
+  cacheDomain?: InputMaybe<Scalars['String']['input']>;
+  /** Term ID to retrieve child terms of. If multiple taxonomies are passed, $child_of is ignored. Default 0. */
+  childOf?: InputMaybe<Scalars['Int']['input']>;
+  /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
+  childless?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Retrieve terms where the description is LIKE the input value. Default empty. */
+  descriptionLike?: InputMaybe<Scalars['String']['input']>;
+  /** Array of term ids to exclude. If $include is non-empty, $exclude is ignored. Default empty array. */
+  exclude?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of term ids to exclude along with all of their descendant terms. If $include is non-empty, $exclude_tree is ignored. Default empty array. */
+  excludeTree?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Whether to hide terms not assigned to any posts. Accepts true or false. Default false */
+  hideEmpty?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Whether to include terms that have non-empty descendants (even if $hide_empty is set to true). Default true. */
+  hierarchical?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Array of term ids to include. Default empty array. */
+  include?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of names to return term(s) for. Default empty. */
+  name?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Retrieve terms where the name is LIKE the input value. Default empty. */
+  nameLike?: InputMaybe<Scalars['String']['input']>;
+  /** Array of object IDs. Results will be limited to terms associated with these objects. */
+  objectIds?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Direction the connection should be ordered in */
+  order?: InputMaybe<OrderEnum>;
+  /** Field(s) to order terms by. Defaults to 'name'. */
+  orderby?: InputMaybe<TermObjectsConnectionOrderbyEnum>;
+  /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
+  padCounts?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Parent term ID to retrieve direct-child terms of. Default empty. */
+  parent?: InputMaybe<Scalars['Int']['input']>;
+  /** Search criteria to match terms. Will be SQL-formatted with wildcards before and after. Default empty. */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Array of slugs to return term(s) for. Default empty. */
+  slug?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Array of term taxonomy IDs, to match when querying terms. */
+  termTaxonomId?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of term taxonomy IDs, to match when querying terms. */
+  termTaxonomyId?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Whether to prime meta caches for matched terms. Default true. */
+  updateTermMetaCache?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** Set relationships between the page to typePages */
+export type PageTypePagesInput = {
+  /** If true, this will append the typePage to existing related typePages. If false, this will replace existing relationships. Default true. */
+  append?: InputMaybe<Scalars['Boolean']['input']>;
+  /** The input list of items to set. */
+  nodes?: InputMaybe<Array<InputMaybe<PageTypePagesNodeInput>>>;
+};
+
+/** List of typePages to connect the page to. If an ID is set, it will be used to create the connection. If not, it will look for a slug. If neither are valid existing terms, and the site is configured to allow terms to be created during post mutations, a term will be created using the Name if it exists in the input, then fallback to the slug if it exists. */
+export type PageTypePagesNodeInput = {
+  /** The description of the typePage. This field is used to set a description of the typePage if a new one is created during the mutation. */
+  description?: InputMaybe<Scalars['String']['input']>;
+  /** The ID of the typePage. If present, this will be used to connect to the page. If no existing typePage exists with this ID, no connection will be made. */
+  id?: InputMaybe<Scalars['ID']['input']>;
+  /** The name of the typePage. This field is used to create a new term, if term creation is enabled in nested mutations, and if one does not already exist with the provided slug or ID or if a slug or ID is not provided. If no name is included and a term is created, the creation will fallback to the slug field. */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** The slug of the typePage. If no ID is present, this field will be used to make a connection. If no existing term exists with this slug, this field will be used as a fallback to the Name field when creating a new term to connect to, if term creation is enabled as a nested mutation. */
+  slug?: InputMaybe<Scalars['String']['input']>;
 };
 
 /** An plugin object */
@@ -6896,9 +8195,312 @@ export type RestoreCommentPayload = {
   restoredId?: Maybe<Scalars['ID']['output']>;
 };
 
+/** The review type */
+export type Review = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfReviewsSettings & {
+  __typename?: 'Review';
+  /**
+   * The ancestors of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  ancestors?: Maybe<ReviewToReviewConnection>;
+  /** The content of the post. */
+  content?: Maybe<Scalars['String']['output']>;
+  /** Connection between the ContentNode type and the ContentType type */
+  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
+  /** The name of the Content Type the node belongs to */
+  contentTypeName: Scalars['String']['output'];
+  /** The unique identifier stored in the database */
+  databaseId: Scalars['Int']['output'];
+  /** Post publishing date. */
+  date?: Maybe<Scalars['String']['output']>;
+  /** The publishing date set in GMT. */
+  dateGmt?: Maybe<Scalars['String']['output']>;
+  /** The desired slug of the post */
+  desiredSlug?: Maybe<Scalars['String']['output']>;
+  /** If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds */
+  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
+  /** The RSS enclosure for the object */
+  enclosure?: Maybe<Scalars['String']['output']>;
+  /** Connection between the ContentNode type and the EnqueuedScript type */
+  enqueuedScripts?: Maybe<ContentNodeToEnqueuedScriptConnection>;
+  /** Connection between the ContentNode type and the EnqueuedStylesheet type */
+  enqueuedStylesheets?: Maybe<ContentNodeToEnqueuedStylesheetConnection>;
+  /** Connection between the NodeWithFeaturedImage type and the MediaItem type */
+  featuredImage?: Maybe<NodeWithFeaturedImageToMediaItemConnectionEdge>;
+  /** The database identifier for the featured image node assigned to the content node */
+  featuredImageDatabaseId?: Maybe<Scalars['Int']['output']>;
+  /** Globally unique ID of the featured image assigned to the node */
+  featuredImageId?: Maybe<Scalars['ID']['output']>;
+  /** The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table. */
+  guid?: Maybe<Scalars['String']['output']>;
+  /** Whether the review object is password protected. */
+  hasPassword?: Maybe<Scalars['Boolean']['output']>;
+  /** The globally unique identifier of the review object. */
+  id: Scalars['ID']['output'];
+  /** Whether the node is a Comment */
+  isComment: Scalars['Boolean']['output'];
+  /** Whether the node is a Content Node */
+  isContentNode: Scalars['Boolean']['output'];
+  /** Whether the node represents the front page. */
+  isFrontPage: Scalars['Boolean']['output'];
+  /** Whether  the node represents the blog page. */
+  isPostsPage: Scalars['Boolean']['output'];
+  /** Whether the object is a node in the preview state */
+  isPreview?: Maybe<Scalars['Boolean']['output']>;
+  /** Whether the object is restricted from the current viewer */
+  isRestricted?: Maybe<Scalars['Boolean']['output']>;
+  /** Whether the node is a Term */
+  isTermNode: Scalars['Boolean']['output'];
+  /** The user that most recently edited the node */
+  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
+  /** The permalink of the post */
+  link?: Maybe<Scalars['String']['output']>;
+  /** The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time. */
+  modified?: Maybe<Scalars['String']['output']>;
+  /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
+  modifiedGmt?: Maybe<Scalars['String']['output']>;
+  /**
+   * The parent of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  parent?: Maybe<ReviewToParentConnectionEdge>;
+  /** The password for the review object. */
+  password?: Maybe<Scalars['String']['output']>;
+  /** Connection between the Review type and the review type */
+  preview?: Maybe<ReviewToPreviewConnectionEdge>;
+  /** The database id of the preview node */
+  previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
+  /** Whether the object is a node in the preview state */
+  previewRevisionId?: Maybe<Scalars['ID']['output']>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of the databaseId field
+   */
+  reviewId: Scalars['Int']['output'];
+  /** Fields of the ReviewsSettings ACF Field Group */
+  reviewsSettings?: Maybe<ReviewsSettings>;
+  /** The Yoast SEO data of the ContentNode */
+  seo?: Maybe<PostTypeSeo>;
+  /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
+  slug?: Maybe<Scalars['String']['output']>;
+  /** The current status of the object */
+  status?: Maybe<Scalars['String']['output']>;
+  /** The template assigned to the node */
+  template?: Maybe<ContentTemplate>;
+  /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
+  title?: Maybe<Scalars['String']['output']>;
+  /** The unique resource identifier path */
+  uri?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The review type */
+export type ReviewAncestorsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The review type */
+export type ReviewContentArgs = {
+  format?: InputMaybe<PostObjectFieldFormatEnum>;
+};
+
+
+/** The review type */
+export type ReviewEnqueuedScriptsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The review type */
+export type ReviewEnqueuedStylesheetsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The review type */
+export type ReviewTitleArgs = {
+  format?: InputMaybe<PostObjectFieldFormatEnum>;
+};
+
+/** Connection to review Nodes */
+export type ReviewConnection = {
+  /** A list of edges (relational context) between RootQuery and connected review Nodes */
+  edges: Array<ReviewConnectionEdge>;
+  /** A list of connected review Nodes */
+  nodes: Array<Review>;
+  /** Information about pagination in a connection. */
+  pageInfo: ReviewConnectionPageInfo;
+};
+
+/** Edge between a Node and a connected review */
+export type ReviewConnectionEdge = {
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The connected review Node */
+  node: Review;
+};
+
+/** Page Info on the connected ReviewConnectionEdge */
+export type ReviewConnectionPageInfo = {
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** The Type of Identifier used to fetch a single resource. Default is ID. */
+export enum ReviewIdType {
+  /** Identify a resource by the Database ID. */
+  DatabaseId = 'DATABASE_ID',
+  /** Identify a resource by the (hashed) Global ID. */
+  Id = 'ID',
+  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
+  Slug = 'SLUG',
+  /** Identify a resource by the URI. */
+  Uri = 'URI'
+}
+
+/** Connection between the Review type and the review type */
+export type ReviewToParentConnectionEdge = Edge & OneToOneConnection & ReviewConnectionEdge & {
+  __typename?: 'ReviewToParentConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The node of the connection, without the edges
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  node: Review;
+};
+
+/** Connection between the Review type and the review type */
+export type ReviewToPreviewConnectionEdge = Edge & OneToOneConnection & ReviewConnectionEdge & {
+  __typename?: 'ReviewToPreviewConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The node of the connection, without the edges */
+  node: Review;
+};
+
+/** Connection between the Review type and the review type */
+export type ReviewToReviewConnection = Connection & ReviewConnection & {
+  __typename?: 'ReviewToReviewConnection';
+  /** Edges for the ReviewToReviewConnection connection */
+  edges: Array<ReviewToReviewConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<Review>;
+  /** Information about pagination in a connection. */
+  pageInfo: ReviewToReviewConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type ReviewToReviewConnectionEdge = Edge & ReviewConnectionEdge & {
+  __typename?: 'ReviewToReviewConnectionEdge';
+  /**
+   * A cursor for use in pagination
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The item at the end of the edge
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  node: Review;
+};
+
+/** Page Info on the &quot;ReviewToReviewConnection&quot; */
+export type ReviewToReviewConnectionPageInfo = PageInfo & ReviewConnectionPageInfo & WpPageInfo & {
+  __typename?: 'ReviewToReviewConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;ReviewsSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ReviewsSettings = AcfFieldGroup & AcfFieldGroupFields & ReviewsSettings_Fields & {
+  __typename?: 'ReviewsSettings';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ReviewsSettings&quot; Field Group */
+  author?: Maybe<ReviewsSettingsAuthor>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ReviewsSettings&quot; Field Group */
+  comment?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ReviewsSettings&quot; Field Group */
+  rating?: Maybe<Scalars['Float']['output']>;
+};
+
+/** The &quot;ReviewsSettingsAuthor&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ReviewsSettingsAuthor = AcfFieldGroup & AcfFieldGroupFields & ReviewsSettingsAuthor_Fields & {
+  __typename?: 'ReviewsSettingsAuthor';
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ReviewsSettingsAuthor&quot; Field Group */
+  avatar?: Maybe<AcfMediaItemConnectionEdge>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ReviewsSettingsAuthor&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;ReviewsSettingsAuthor&quot; Field Group */
+export type ReviewsSettingsAuthor_Fields = {
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ReviewsSettingsAuthor&quot; Field Group */
+  avatar?: Maybe<AcfMediaItemConnectionEdge>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ReviewsSettingsAuthor&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;ReviewsSettings&quot; Field Group */
+export type ReviewsSettings_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ReviewsSettings&quot; Field Group */
+  author?: Maybe<ReviewsSettingsAuthor>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ReviewsSettings&quot; Field Group */
+  comment?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;ReviewsSettings&quot; Field Group */
+  rating?: Maybe<Scalars['Float']['output']>;
+};
+
 /** The root mutation */
 export type RootMutation = {
   __typename?: 'RootMutation';
+  /** The createCallToAction mutation */
+  createCallToAction?: Maybe<CreateCallToActionPayload>;
   /** The createCaseStudy mutation */
   createCaseStudy?: Maybe<CreateCaseStudyPayload>;
   /** The createCategory mutation */
@@ -6913,14 +8515,20 @@ export type RootMutation = {
   createPost?: Maybe<CreatePostPayload>;
   /** The createPostFormat mutation */
   createPostFormat?: Maybe<CreatePostFormatPayload>;
+  /** The createReview mutation */
+  createReview?: Maybe<CreateReviewPayload>;
   /** The createService mutation */
   createService?: Maybe<CreateServicePayload>;
   /** The createTag mutation */
   createTag?: Maybe<CreateTagPayload>;
   /** The createTeam mutation */
   createTeam?: Maybe<CreateTeamPayload>;
+  /** The createTypePage mutation */
+  createTypePage?: Maybe<CreateTypePagePayload>;
   /** The createUser mutation */
   createUser?: Maybe<CreateUserPayload>;
+  /** The deleteCallToAction mutation */
+  deleteCallToAction?: Maybe<DeleteCallToActionPayload>;
   /** The deleteCaseStudy mutation */
   deleteCaseStudy?: Maybe<DeleteCaseStudyPayload>;
   /** The deleteCategory mutation */
@@ -6935,12 +8543,16 @@ export type RootMutation = {
   deletePost?: Maybe<DeletePostPayload>;
   /** The deletePostFormat mutation */
   deletePostFormat?: Maybe<DeletePostFormatPayload>;
+  /** The deleteReview mutation */
+  deleteReview?: Maybe<DeleteReviewPayload>;
   /** The deleteService mutation */
   deleteService?: Maybe<DeleteServicePayload>;
   /** The deleteTag mutation */
   deleteTag?: Maybe<DeleteTagPayload>;
   /** The deleteTeam mutation */
   deleteTeam?: Maybe<DeleteTeamPayload>;
+  /** The deleteTypePage mutation */
+  deleteTypePage?: Maybe<DeleteTypePagePayload>;
   /** The deleteUser mutation */
   deleteUser?: Maybe<DeleteUserPayload>;
   /** Increase the count. */
@@ -6953,6 +8565,8 @@ export type RootMutation = {
   restoreComment?: Maybe<RestoreCommentPayload>;
   /** Send password reset email to user */
   sendPasswordResetEmail?: Maybe<SendPasswordResetEmailPayload>;
+  /** The updateCallToAction mutation */
+  updateCallToAction?: Maybe<UpdateCallToActionPayload>;
   /** The updateCaseStudy mutation */
   updateCaseStudy?: Maybe<UpdateCaseStudyPayload>;
   /** The updateCategory mutation */
@@ -6967,6 +8581,8 @@ export type RootMutation = {
   updatePost?: Maybe<UpdatePostPayload>;
   /** The updatePostFormat mutation */
   updatePostFormat?: Maybe<UpdatePostFormatPayload>;
+  /** The updateReview mutation */
+  updateReview?: Maybe<UpdateReviewPayload>;
   /** The updateService mutation */
   updateService?: Maybe<UpdateServicePayload>;
   /** The updateSettings mutation */
@@ -6975,8 +8591,16 @@ export type RootMutation = {
   updateTag?: Maybe<UpdateTagPayload>;
   /** The updateTeam mutation */
   updateTeam?: Maybe<UpdateTeamPayload>;
+  /** The updateTypePage mutation */
+  updateTypePage?: Maybe<UpdateTypePagePayload>;
   /** The updateUser mutation */
   updateUser?: Maybe<UpdateUserPayload>;
+};
+
+
+/** The root mutation */
+export type RootMutationCreateCallToActionArgs = {
+  input: CreateCallToActionInput;
 };
 
 
@@ -7023,6 +8647,12 @@ export type RootMutationCreatePostFormatArgs = {
 
 
 /** The root mutation */
+export type RootMutationCreateReviewArgs = {
+  input: CreateReviewInput;
+};
+
+
+/** The root mutation */
 export type RootMutationCreateServiceArgs = {
   input: CreateServiceInput;
 };
@@ -7041,8 +8671,20 @@ export type RootMutationCreateTeamArgs = {
 
 
 /** The root mutation */
+export type RootMutationCreateTypePageArgs = {
+  input: CreateTypePageInput;
+};
+
+
+/** The root mutation */
 export type RootMutationCreateUserArgs = {
   input: CreateUserInput;
+};
+
+
+/** The root mutation */
+export type RootMutationDeleteCallToActionArgs = {
+  input: DeleteCallToActionInput;
 };
 
 
@@ -7089,6 +8731,12 @@ export type RootMutationDeletePostFormatArgs = {
 
 
 /** The root mutation */
+export type RootMutationDeleteReviewArgs = {
+  input: DeleteReviewInput;
+};
+
+
+/** The root mutation */
 export type RootMutationDeleteServiceArgs = {
   input: DeleteServiceInput;
 };
@@ -7103,6 +8751,12 @@ export type RootMutationDeleteTagArgs = {
 /** The root mutation */
 export type RootMutationDeleteTeamArgs = {
   input: DeleteTeamInput;
+};
+
+
+/** The root mutation */
+export type RootMutationDeleteTypePageArgs = {
+  input: DeleteTypePageInput;
 };
 
 
@@ -7139,6 +8793,12 @@ export type RootMutationRestoreCommentArgs = {
 /** The root mutation */
 export type RootMutationSendPasswordResetEmailArgs = {
   input: SendPasswordResetEmailInput;
+};
+
+
+/** The root mutation */
+export type RootMutationUpdateCallToActionArgs = {
+  input: UpdateCallToActionInput;
 };
 
 
@@ -7185,6 +8845,12 @@ export type RootMutationUpdatePostFormatArgs = {
 
 
 /** The root mutation */
+export type RootMutationUpdateReviewArgs = {
+  input: UpdateReviewInput;
+};
+
+
+/** The root mutation */
 export type RootMutationUpdateServiceArgs = {
   input: UpdateServiceInput;
 };
@@ -7209,6 +8875,12 @@ export type RootMutationUpdateTeamArgs = {
 
 
 /** The root mutation */
+export type RootMutationUpdateTypePageArgs = {
+  input: UpdateTypePageInput;
+};
+
+
+/** The root mutation */
 export type RootMutationUpdateUserArgs = {
   input: UpdateUserInput;
 };
@@ -7220,6 +8892,15 @@ export type RootQuery = WithAcfOptionsPageAbout & WithAcfOptionsPageBlocks & Wit
   /** Entry point to get all settings for the site */
   allSettings?: Maybe<Settings>;
   blocks?: Maybe<Blocks>;
+  /** An object of the callToAction Type.  */
+  callToAction?: Maybe<CallToAction>;
+  /**
+   * A callToAction object
+   * @deprecated Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)
+   */
+  callToActionBy?: Maybe<CallToAction>;
+  /** Connection between the RootQuery type and the callToAction type */
+  callToActions?: Maybe<RootQueryToCallToActionConnection>;
   /** Connection between the RootQuery type and the caseStudy type */
   caseStudies?: Maybe<RootQueryToCaseStudyConnection>;
   /** An object of the caseStudy Type.  */
@@ -7304,6 +8985,15 @@ export type RootQuery = WithAcfOptionsPageAbout & WithAcfOptionsPageBlocks & Wit
   registeredScripts?: Maybe<RootQueryToEnqueuedScriptConnection>;
   /** Connection between the RootQuery type and the EnqueuedStylesheet type */
   registeredStylesheets?: Maybe<RootQueryToEnqueuedStylesheetConnection>;
+  /** An object of the review Type.  */
+  review?: Maybe<Review>;
+  /**
+   * A review object
+   * @deprecated Deprecated in favor of using the single entry point for this type with ID and IDType fields. For example, instead of postBy( id: &quot;&quot; ), use post(id: &quot;&quot; idType: &quot;&quot;)
+   */
+  reviewBy?: Maybe<Review>;
+  /** Connection between the RootQuery type and the review type */
+  reviews?: Maybe<RootQueryToReviewConnection>;
   /** Connection between the RootQuery type and the ContentNode type */
   revisions?: Maybe<RootQueryToRevisionsConnection>;
   /** Returns seo site data */
@@ -7342,6 +9032,10 @@ export type RootQuery = WithAcfOptionsPageAbout & WithAcfOptionsPageBlocks & Wit
   theme?: Maybe<Theme>;
   /** Connection between the RootQuery type and the Theme type */
   themes?: Maybe<RootQueryToThemeConnection>;
+  /** A 0bject */
+  typePage?: Maybe<TypePage>;
+  /** Connection between the RootQuery type and the typePage type */
+  typePages?: Maybe<RootQueryToTypePageConnection>;
   /** Returns a user */
   user?: Maybe<User>;
   /** Returns a user role */
@@ -7355,6 +9049,33 @@ export type RootQuery = WithAcfOptionsPageAbout & WithAcfOptionsPageBlocks & Wit
   websiteSettings?: Maybe<WebsiteSettings>;
   /** Fields of the &#039;WritingSettings&#039; settings group */
   writingSettings?: Maybe<WritingSettings>;
+};
+
+
+/** The root entry point into the Graph */
+export type RootQueryCallToActionArgs = {
+  asPreview?: InputMaybe<Scalars['Boolean']['input']>;
+  id: Scalars['ID']['input'];
+  idType?: InputMaybe<CallToActionIdType>;
+};
+
+
+/** The root entry point into the Graph */
+export type RootQueryCallToActionByArgs = {
+  callToActionId?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['ID']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
+  uri?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** The root entry point into the Graph */
+export type RootQueryCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<RootQueryToCallToActionConnectionWhereArgs>;
 };
 
 
@@ -7380,6 +9101,7 @@ export type RootQueryCaseStudyArgs = {
 export type RootQueryCaseStudyByArgs = {
   caseStudyId?: InputMaybe<Scalars['Int']['input']>;
   id?: InputMaybe<Scalars['ID']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
   uri?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -7631,6 +9353,33 @@ export type RootQueryRegisteredStylesheetsArgs = {
 
 
 /** The root entry point into the Graph */
+export type RootQueryReviewArgs = {
+  asPreview?: InputMaybe<Scalars['Boolean']['input']>;
+  id: Scalars['ID']['input'];
+  idType?: InputMaybe<ReviewIdType>;
+};
+
+
+/** The root entry point into the Graph */
+export type RootQueryReviewByArgs = {
+  id?: InputMaybe<Scalars['ID']['input']>;
+  reviewId?: InputMaybe<Scalars['Int']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
+  uri?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** The root entry point into the Graph */
+export type RootQueryReviewsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<RootQueryToReviewConnectionWhereArgs>;
+};
+
+
+/** The root entry point into the Graph */
 export type RootQueryRevisionsArgs = {
   after?: InputMaybe<Scalars['String']['input']>;
   before?: InputMaybe<Scalars['String']['input']>;
@@ -7652,6 +9401,7 @@ export type RootQueryServiceArgs = {
 export type RootQueryServiceByArgs = {
   id?: InputMaybe<Scalars['ID']['input']>;
   serviceId?: InputMaybe<Scalars['Int']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
   uri?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -7710,6 +9460,7 @@ export type RootQueryTeamArgs = {
 /** The root entry point into the Graph */
 export type RootQueryTeamByArgs = {
   id?: InputMaybe<Scalars['ID']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
   teamId?: InputMaybe<Scalars['Int']['input']>;
   uri?: InputMaybe<Scalars['String']['input']>;
 };
@@ -7759,6 +9510,23 @@ export type RootQueryThemesArgs = {
 
 
 /** The root entry point into the Graph */
+export type RootQueryTypePageArgs = {
+  id: Scalars['ID']['input'];
+  idType?: InputMaybe<TypePageIdType>;
+};
+
+
+/** The root entry point into the Graph */
+export type RootQueryTypePagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<RootQueryToTypePageConnectionWhereArgs>;
+};
+
+
+/** The root entry point into the Graph */
 export type RootQueryUserArgs = {
   id: Scalars['ID']['input'];
   idType?: InputMaybe<UserNodeIdTypeEnum>;
@@ -7787,6 +9555,79 @@ export type RootQueryUsersArgs = {
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<RootQueryToUserConnectionWhereArgs>;
+};
+
+/** Connection between the RootQuery type and the callToAction type */
+export type RootQueryToCallToActionConnection = CallToActionConnection & Connection & {
+  __typename?: 'RootQueryToCallToActionConnection';
+  /** Edges for the RootQueryToCallToActionConnection connection */
+  edges: Array<RootQueryToCallToActionConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<CallToAction>;
+  /** Information about pagination in a connection. */
+  pageInfo: RootQueryToCallToActionConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type RootQueryToCallToActionConnectionEdge = CallToActionConnectionEdge & Edge & {
+  __typename?: 'RootQueryToCallToActionConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: CallToAction;
+};
+
+/** Page Info on the &quot;RootQueryToCallToActionConnection&quot; */
+export type RootQueryToCallToActionConnectionPageInfo = CallToActionConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'RootQueryToCallToActionConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the RootQueryToCallToActionConnection connection */
+export type RootQueryToCallToActionConnectionWhereArgs = {
+  /** Filter the connection based on dates */
+  dateQuery?: InputMaybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Specific database ID of the object */
+  id?: InputMaybe<Scalars['Int']['input']>;
+  /** Array of IDs for the objects to retrieve */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: InputMaybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** What parameter to use to order the objects by. */
+  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: InputMaybe<Scalars['ID']['input']>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Show posts with a specific password. */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** Show Posts based on a keyword search */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: InputMaybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
 };
 
 /** Connection between the RootQuery type and the caseStudy type */
@@ -8701,6 +10542,79 @@ export type RootQueryToPostFormatConnectionWhereArgs = {
   updateTermMetaCache?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
+/** Connection between the RootQuery type and the review type */
+export type RootQueryToReviewConnection = Connection & ReviewConnection & {
+  __typename?: 'RootQueryToReviewConnection';
+  /** Edges for the RootQueryToReviewConnection connection */
+  edges: Array<RootQueryToReviewConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<Review>;
+  /** Information about pagination in a connection. */
+  pageInfo: RootQueryToReviewConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type RootQueryToReviewConnectionEdge = Edge & ReviewConnectionEdge & {
+  __typename?: 'RootQueryToReviewConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: Review;
+};
+
+/** Page Info on the &quot;RootQueryToReviewConnection&quot; */
+export type RootQueryToReviewConnectionPageInfo = PageInfo & ReviewConnectionPageInfo & WpPageInfo & {
+  __typename?: 'RootQueryToReviewConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the RootQueryToReviewConnection connection */
+export type RootQueryToReviewConnectionWhereArgs = {
+  /** Filter the connection based on dates */
+  dateQuery?: InputMaybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Specific database ID of the object */
+  id?: InputMaybe<Scalars['Int']['input']>;
+  /** Array of IDs for the objects to retrieve */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: InputMaybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** What parameter to use to order the objects by. */
+  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: InputMaybe<Scalars['ID']['input']>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Show posts with a specific password. */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** Show Posts based on a keyword search */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: InputMaybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
 /** Connection between the RootQuery type and the ContentNode type */
 export type RootQueryToRevisionsConnection = Connection & ContentNodeConnection & {
   __typename?: 'RootQueryToRevisionsConnection';
@@ -9156,6 +11070,87 @@ export type RootQueryToThemeConnectionPageInfo = PageInfo & ThemeConnectionPageI
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
+/** Connection between the RootQuery type and the typePage type */
+export type RootQueryToTypePageConnection = Connection & TypePageConnection & {
+  __typename?: 'RootQueryToTypePageConnection';
+  /** Edges for the RootQueryToTypePageConnection connection */
+  edges: Array<RootQueryToTypePageConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<TypePage>;
+  /** Information about pagination in a connection. */
+  pageInfo: RootQueryToTypePageConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type RootQueryToTypePageConnectionEdge = Edge & TypePageConnectionEdge & {
+  __typename?: 'RootQueryToTypePageConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: TypePage;
+};
+
+/** Page Info on the &quot;RootQueryToTypePageConnection&quot; */
+export type RootQueryToTypePageConnectionPageInfo = PageInfo & TypePageConnectionPageInfo & WpPageInfo & {
+  __typename?: 'RootQueryToTypePageConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the RootQueryToTypePageConnection connection */
+export type RootQueryToTypePageConnectionWhereArgs = {
+  /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
+  cacheDomain?: InputMaybe<Scalars['String']['input']>;
+  /** Term ID to retrieve child terms of. If multiple taxonomies are passed, $child_of is ignored. Default 0. */
+  childOf?: InputMaybe<Scalars['Int']['input']>;
+  /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
+  childless?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Retrieve terms where the description is LIKE the input value. Default empty. */
+  descriptionLike?: InputMaybe<Scalars['String']['input']>;
+  /** Array of term ids to exclude. If $include is non-empty, $exclude is ignored. Default empty array. */
+  exclude?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of term ids to exclude along with all of their descendant terms. If $include is non-empty, $exclude_tree is ignored. Default empty array. */
+  excludeTree?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Whether to hide terms not assigned to any posts. Accepts true or false. Default false */
+  hideEmpty?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Whether to include terms that have non-empty descendants (even if $hide_empty is set to true). Default true. */
+  hierarchical?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Array of term ids to include. Default empty array. */
+  include?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of names to return term(s) for. Default empty. */
+  name?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Retrieve terms where the name is LIKE the input value. Default empty. */
+  nameLike?: InputMaybe<Scalars['String']['input']>;
+  /** Array of object IDs. Results will be limited to terms associated with these objects. */
+  objectIds?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Direction the connection should be ordered in */
+  order?: InputMaybe<OrderEnum>;
+  /** Field(s) to order terms by. Defaults to 'name'. */
+  orderby?: InputMaybe<TermObjectsConnectionOrderbyEnum>;
+  /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
+  padCounts?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Parent term ID to retrieve direct-child terms of. Default empty. */
+  parent?: InputMaybe<Scalars['Int']['input']>;
+  /** Search criteria to match terms. Will be SQL-formatted with wildcards before and after. Default empty. */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Array of slugs to return term(s) for. Default empty. */
+  slug?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Array of term taxonomy IDs, to match when querying terms. */
+  termTaxonomId?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Array of term taxonomy IDs, to match when querying terms. */
+  termTaxonomyId?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Whether to prime meta caches for matched terms. Default true. */
+  updateTermMetaCache?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
 /** Connection between the RootQuery type and the User type */
 export type RootQueryToUserConnection = Connection & UserConnection & {
   __typename?: 'RootQueryToUserConnection';
@@ -9322,10 +11317,12 @@ export type SeoContentTypeArchive = {
 /** The Yoast SEO search appearance content types */
 export type SeoContentTypes = {
   __typename?: 'SEOContentTypes';
+  callToAction?: Maybe<SeoContentType>;
   caseStudy?: Maybe<SeoContentType>;
   mediaItem?: Maybe<SeoContentType>;
   page?: Maybe<SeoContentType>;
   post?: Maybe<SeoContentType>;
+  review?: Maybe<SeoContentType>;
   service?: Maybe<SeoContentType>;
   team?: Maybe<SeoContentType>;
 };
@@ -9585,12 +11582,13 @@ export type SendPasswordResetEmailPayload = {
 };
 
 /** The Service type */
-export type Service = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type Service = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfServiceSettings & {
   __typename?: 'Service';
-  /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
-  ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
-  /** Connection between the HierarchicalContentNode type and the ContentNode type */
-  children?: Maybe<HierarchicalContentNodeToContentNodeChildrenConnection>;
+  /**
+   * The ancestors of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  ancestors?: Maybe<ServiceToServiceConnection>;
   /** Connection between the ContentNode type and the ContentType type */
   contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
   /** The name of the Content Type the node belongs to */
@@ -9647,12 +11645,11 @@ export type Service = ContentNode & DatabaseIdentifier & HierarchicalContentNode
   modified?: Maybe<Scalars['String']['output']>;
   /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
   modifiedGmt?: Maybe<Scalars['String']['output']>;
-  /** The parent of the node. The parent object can be of various types */
-  parent?: Maybe<HierarchicalContentNodeToParentContentNodeConnectionEdge>;
-  /** Database id of the parent node */
-  parentDatabaseId?: Maybe<Scalars['Int']['output']>;
-  /** The globally unique identifier of the parent node. */
-  parentId?: Maybe<Scalars['ID']['output']>;
+  /**
+   * The parent of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  parent?: Maybe<ServiceToParentConnectionEdge>;
   /** The password for the dental-services object. */
   password?: Maybe<Scalars['String']['output']>;
   /** Connection between the Service type and the Service type */
@@ -9672,11 +11669,13 @@ export type Service = ContentNode & DatabaseIdentifier & HierarchicalContentNode
    * @deprecated Deprecated in favor of the databaseId field
    */
   serviceId: Scalars['Int']['output'];
+  /** Fields of the ServiceSettings ACF Field Group */
+  serviceSettings?: Maybe<ServiceSettings>;
   /** The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table. */
   slug?: Maybe<Scalars['String']['output']>;
   /** The current status of the object */
   status?: Maybe<Scalars['String']['output']>;
-  /** The template assigned to a node of content */
+  /** The template assigned to the node */
   template?: Maybe<ContentTemplate>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
   title?: Maybe<Scalars['String']['output']>;
@@ -9691,17 +11690,6 @@ export type ServiceAncestorsArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs>;
-};
-
-
-/** The Service type */
-export type ServiceChildrenArgs = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Int']['input']>;
-  last?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs>;
 };
 
 
@@ -9776,9 +11764,123 @@ export enum ServiceIdType {
   DatabaseId = 'DATABASE_ID',
   /** Identify a resource by the (hashed) Global ID. */
   Id = 'ID',
+  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
+  Slug = 'SLUG',
   /** Identify a resource by the URI. */
   Uri = 'URI'
 }
+
+/** The &quot;ServiceSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ServiceSettings = AcfFieldGroup & AcfFieldGroupFields & ServiceSettings_Fields & {
+  __typename?: 'ServiceSettings';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  button?: Maybe<ServiceSettingsButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  editor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  gallery?: Maybe<AcfMediaItemConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  icon?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  img?: Maybe<AcfMediaItemConnectionEdge>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  summary?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;ServiceSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ServiceSettingsGalleryArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;ServiceSettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ServiceSettingsButton = AcfFieldGroup & AcfFieldGroupFields & ServiceSettingsButton_Fields & {
+  __typename?: 'ServiceSettingsButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;ServiceSettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;ServiceSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;ServiceSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;ServiceSettingsButton&quot; Field Group */
+export type ServiceSettingsButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;ServiceSettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;ServiceSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;ServiceSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;ServiceSettings&quot; Field Group */
+export type ServiceSettings_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  button?: Maybe<ServiceSettingsButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  editor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  gallery?: Maybe<AcfMediaItemConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  icon?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  img?: Maybe<AcfMediaItemConnectionEdge>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  summary?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;ServiceSettings&quot; Field Group */
+export type ServiceSettings_FieldsGalleryArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** Connection between the Service type and the Service type */
+export type ServiceToParentConnectionEdge = Edge & OneToOneConnection & ServiceConnectionEdge & {
+  __typename?: 'ServiceToParentConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The node of the connection, without the edges
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  node: Service;
+};
 
 /** Connection between the Service type and the Service type */
 export type ServiceToPreviewConnectionEdge = Edge & OneToOneConnection & ServiceConnectionEdge & {
@@ -9860,6 +11962,47 @@ export type ServiceToRevisionConnectionWhereArgs = {
   status?: InputMaybe<PostStatusEnum>;
   /** Title of the object */
   title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** Connection between the Service type and the Service type */
+export type ServiceToServiceConnection = Connection & ServiceConnection & {
+  __typename?: 'ServiceToServiceConnection';
+  /** Edges for the ServiceToServiceConnection connection */
+  edges: Array<ServiceToServiceConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<Service>;
+  /** Information about pagination in a connection. */
+  pageInfo: ServiceToServiceConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type ServiceToServiceConnectionEdge = Edge & ServiceConnectionEdge & {
+  __typename?: 'ServiceToServiceConnectionEdge';
+  /**
+   * A cursor for use in pagination
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The item at the end of the edge
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  node: Service;
+};
+
+/** Page Info on the &quot;ServiceToServiceConnection&quot; */
+export type ServiceToServiceConnectionPageInfo = PageInfo & ServiceConnectionPageInfo & WpPageInfo & {
+  __typename?: 'ServiceToServiceConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
 };
 
 /** All of the registered settings */
@@ -10332,7 +12475,9 @@ export enum TaxonomyEnum {
   /** Taxonomy enum post_format */
   Postformat = 'POSTFORMAT',
   /** Taxonomy enum post_tag */
-  Tag = 'TAG'
+  Tag = 'TAG',
+  /** Taxonomy enum type-page */
+  Typepage = 'TYPEPAGE'
 }
 
 /** The Type of Identifier used to fetch a single Taxonomy node. To be used along with the "id" field. Default is "ID". */
@@ -10442,12 +12587,13 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo & TermNodeConnection
 };
 
 /** The Team type */
-export type Team = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
   __typename?: 'Team';
-  /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
-  ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
-  /** Connection between the HierarchicalContentNode type and the ContentNode type */
-  children?: Maybe<HierarchicalContentNodeToContentNodeChildrenConnection>;
+  /**
+   * The ancestors of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  ancestors?: Maybe<TeamToTeamConnection>;
   /** Connection between the ContentNode type and the ContentType type */
   contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
   /** The name of the Content Type the node belongs to */
@@ -10504,12 +12650,11 @@ export type Team = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   modified?: Maybe<Scalars['String']['output']>;
   /** The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT. */
   modifiedGmt?: Maybe<Scalars['String']['output']>;
-  /** The parent of the node. The parent object can be of various types */
-  parent?: Maybe<HierarchicalContentNodeToParentContentNodeConnectionEdge>;
-  /** Database id of the parent node */
-  parentDatabaseId?: Maybe<Scalars['Int']['output']>;
-  /** The globally unique identifier of the parent node. */
-  parentId?: Maybe<Scalars['ID']['output']>;
+  /**
+   * The parent of the content node.
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  parent?: Maybe<TeamToParentConnectionEdge>;
   /** The password for the dental-team object. */
   password?: Maybe<Scalars['String']['output']>;
   /** Connection between the Team type and the Team type */
@@ -10533,7 +12678,7 @@ export type Team = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
    * @deprecated Deprecated in favor of the databaseId field
    */
   teamId: Scalars['Int']['output'];
-  /** The template assigned to a node of content */
+  /** The template assigned to the node */
   template?: Maybe<ContentTemplate>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
   title?: Maybe<Scalars['String']['output']>;
@@ -10548,17 +12693,6 @@ export type TeamAncestorsArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<HierarchicalContentNodeToContentNodeAncestorsConnectionWhereArgs>;
-};
-
-
-/** The Team type */
-export type TeamChildrenArgs = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Int']['input']>;
-  last?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs>;
 };
 
 
@@ -10633,9 +12767,23 @@ export enum TeamIdType {
   DatabaseId = 'DATABASE_ID',
   /** Identify a resource by the (hashed) Global ID. */
   Id = 'ID',
+  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
+  Slug = 'SLUG',
   /** Identify a resource by the URI. */
   Uri = 'URI'
 }
+
+/** Connection between the Team type and the Team type */
+export type TeamToParentConnectionEdge = Edge & OneToOneConnection & TeamConnectionEdge & {
+  __typename?: 'TeamToParentConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The node of the connection, without the edges
+   * @deprecated This content type is not hierarchical and typically will not have a parent
+   */
+  node: Team;
+};
 
 /** Connection between the Team type and the Team type */
 export type TeamToPreviewConnectionEdge = Edge & OneToOneConnection & TeamConnectionEdge & {
@@ -10717,6 +12865,47 @@ export type TeamToRevisionConnectionWhereArgs = {
   status?: InputMaybe<PostStatusEnum>;
   /** Title of the object */
   title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** Connection between the Team type and the Team type */
+export type TeamToTeamConnection = Connection & TeamConnection & {
+  __typename?: 'TeamToTeamConnection';
+  /** Edges for the TeamToTeamConnection connection */
+  edges: Array<TeamToTeamConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<Team>;
+  /** Information about pagination in a connection. */
+  pageInfo: TeamToTeamConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type TeamToTeamConnectionEdge = Edge & TeamConnectionEdge & {
+  __typename?: 'TeamToTeamConnectionEdge';
+  /**
+   * A cursor for use in pagination
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /**
+   * The item at the end of the edge
+   * @deprecated This content type is not hierarchical and typically will not have ancestors
+   */
+  node: Team;
+};
+
+/** Page Info on the &quot;TeamToTeamConnection&quot; */
+export type TeamToTeamConnectionPageInfo = PageInfo & TeamConnectionPageInfo & WpPageInfo & {
+  __typename?: 'TeamToTeamConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
 };
 
 /** Terms are nodes within a Taxonomy, used to group and relate other nodes. */
@@ -10995,6 +13184,311 @@ export type ThemeConnectionPageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
+/** The typePage type */
+export type TypePage = DatabaseIdentifier & MenuItemLinkable & Node & TermNode & UniformResourceIdentifiable & {
+  __typename?: 'TypePage';
+  /** Connection between the TypePage type and the ContentNode type */
+  contentNodes?: Maybe<TypePageToContentNodeConnection>;
+  /** The number of objects connected to the object */
+  count?: Maybe<Scalars['Int']['output']>;
+  /** The unique identifier stored in the database */
+  databaseId: Scalars['Int']['output'];
+  /** The description of the object */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Connection between the TermNode type and the EnqueuedScript type */
+  enqueuedScripts?: Maybe<TermNodeToEnqueuedScriptConnection>;
+  /** Connection between the TermNode type and the EnqueuedStylesheet type */
+  enqueuedStylesheets?: Maybe<TermNodeToEnqueuedStylesheetConnection>;
+  /** The globally unique ID for the object */
+  id: Scalars['ID']['output'];
+  /** Whether the node is a Comment */
+  isComment: Scalars['Boolean']['output'];
+  /** Whether the node is a Content Node */
+  isContentNode: Scalars['Boolean']['output'];
+  /** Whether the node represents the front page. */
+  isFrontPage: Scalars['Boolean']['output'];
+  /** Whether  the node represents the blog page. */
+  isPostsPage: Scalars['Boolean']['output'];
+  /** Whether the object is restricted from the current viewer */
+  isRestricted?: Maybe<Scalars['Boolean']['output']>;
+  /** Whether the node is a Term */
+  isTermNode: Scalars['Boolean']['output'];
+  /** The link to the term */
+  link?: Maybe<Scalars['String']['output']>;
+  /** The human friendly name of the object. */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Connection between the TypePage type and the page type */
+  pages?: Maybe<TypePageToPageConnection>;
+  /** The Yoast SEO data of the Types Pages taxonomy. */
+  seo?: Maybe<TaxonomySeo>;
+  /** An alphanumeric identifier for the object unique to its type. */
+  slug?: Maybe<Scalars['String']['output']>;
+  /** Connection between the TypePage type and the Taxonomy type */
+  taxonomy?: Maybe<TypePageToTaxonomyConnectionEdge>;
+  /** The name of the taxonomy that the object is associated with */
+  taxonomyName?: Maybe<Scalars['String']['output']>;
+  /** The ID of the term group that this term object belongs to */
+  termGroupId?: Maybe<Scalars['Int']['output']>;
+  /** The taxonomy ID that the object is associated with */
+  termTaxonomyId?: Maybe<Scalars['Int']['output']>;
+  /**
+   * The id field matches the WP_Post-&gt;ID field.
+   * @deprecated Deprecated in favor of databaseId
+   */
+  typePageId?: Maybe<Scalars['Int']['output']>;
+  /** The unique resource identifier path */
+  uri?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The typePage type */
+export type TypePageContentNodesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<TypePageToContentNodeConnectionWhereArgs>;
+};
+
+
+/** The typePage type */
+export type TypePageEnqueuedScriptsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The typePage type */
+export type TypePageEnqueuedStylesheetsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The typePage type */
+export type TypePagePagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<TypePageToPageConnectionWhereArgs>;
+};
+
+/** Connection to typePage Nodes */
+export type TypePageConnection = {
+  /** A list of edges (relational context) between RootQuery and connected typePage Nodes */
+  edges: Array<TypePageConnectionEdge>;
+  /** A list of connected typePage Nodes */
+  nodes: Array<TypePage>;
+  /** Information about pagination in a connection. */
+  pageInfo: TypePageConnectionPageInfo;
+};
+
+/** Edge between a Node and a connected typePage */
+export type TypePageConnectionEdge = {
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The connected typePage Node */
+  node: TypePage;
+};
+
+/** Page Info on the connected TypePageConnectionEdge */
+export type TypePageConnectionPageInfo = {
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** The Type of Identifier used to fetch a single resource. Default is ID. */
+export enum TypePageIdType {
+  /** The Database ID for the node */
+  DatabaseId = 'DATABASE_ID',
+  /** The hashed Global ID */
+  Id = 'ID',
+  /** The name of the node */
+  Name = 'NAME',
+  /** Url friendly name of the node */
+  Slug = 'SLUG',
+  /** The URI for the node */
+  Uri = 'URI'
+}
+
+/** Connection between the TypePage type and the ContentNode type */
+export type TypePageToContentNodeConnection = Connection & ContentNodeConnection & {
+  __typename?: 'TypePageToContentNodeConnection';
+  /** Edges for the TypePageToContentNodeConnection connection */
+  edges: Array<TypePageToContentNodeConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<ContentNode>;
+  /** Information about pagination in a connection. */
+  pageInfo: TypePageToContentNodeConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type TypePageToContentNodeConnectionEdge = ContentNodeConnectionEdge & Edge & {
+  __typename?: 'TypePageToContentNodeConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: ContentNode;
+};
+
+/** Page Info on the &quot;TypePageToContentNodeConnection&quot; */
+export type TypePageToContentNodeConnectionPageInfo = ContentNodeConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'TypePageToContentNodeConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the TypePageToContentNodeConnection connection */
+export type TypePageToContentNodeConnectionWhereArgs = {
+  /** The Types of content to filter */
+  contentTypes?: InputMaybe<Array<InputMaybe<ContentTypesOfTypePageEnum>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: InputMaybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Specific database ID of the object */
+  id?: InputMaybe<Scalars['Int']['input']>;
+  /** Array of IDs for the objects to retrieve */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: InputMaybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** What parameter to use to order the objects by. */
+  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: InputMaybe<Scalars['ID']['input']>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Show posts with a specific password. */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** Show Posts based on a keyword search */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: InputMaybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** Connection between the TypePage type and the page type */
+export type TypePageToPageConnection = Connection & PageConnection & {
+  __typename?: 'TypePageToPageConnection';
+  /** Edges for the TypePageToPageConnection connection */
+  edges: Array<TypePageToPageConnectionEdge>;
+  /** The nodes of the connection, without the edges */
+  nodes: Array<Page>;
+  /** Information about pagination in a connection. */
+  pageInfo: TypePageToPageConnectionPageInfo;
+};
+
+/** An edge in a connection */
+export type TypePageToPageConnectionEdge = Edge & PageConnectionEdge & {
+  __typename?: 'TypePageToPageConnectionEdge';
+  /** A cursor for use in pagination */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The item at the end of the edge */
+  node: Page;
+};
+
+/** Page Info on the &quot;TypePageToPageConnection&quot; */
+export type TypePageToPageConnectionPageInfo = PageConnectionPageInfo & PageInfo & WpPageInfo & {
+  __typename?: 'TypePageToPageConnectionPageInfo';
+  /** When paginating forwards, the cursor to continue. */
+  endCursor?: Maybe<Scalars['String']['output']>;
+  /** When paginating forwards, are there more items? */
+  hasNextPage: Scalars['Boolean']['output'];
+  /** When paginating backwards, are there more items? */
+  hasPreviousPage: Scalars['Boolean']['output'];
+  /** Raw schema for page */
+  seo?: Maybe<SeoPostTypePageInfo>;
+  /** When paginating backwards, the cursor to continue. */
+  startCursor?: Maybe<Scalars['String']['output']>;
+};
+
+/** Arguments for filtering the TypePageToPageConnection connection */
+export type TypePageToPageConnectionWhereArgs = {
+  /** The user that's connected as the author of the object. Use the userId for the author object. */
+  author?: InputMaybe<Scalars['Int']['input']>;
+  /** Find objects connected to author(s) in the array of author's userIds */
+  authorIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Find objects connected to the author by the author's nicename */
+  authorName?: InputMaybe<Scalars['String']['input']>;
+  /** Find objects NOT connected to author(s) in the array of author's userIds */
+  authorNotIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Filter the connection based on dates */
+  dateQuery?: InputMaybe<DateQueryInput>;
+  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
+  hasPassword?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Specific database ID of the object */
+  id?: InputMaybe<Scalars['Int']['input']>;
+  /** Array of IDs for the objects to retrieve */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Get objects with a specific mimeType property */
+  mimeType?: InputMaybe<MimeTypeEnum>;
+  /** Slug / post_name of the object */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** Specify objects to retrieve. Use slugs */
+  nameIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** What parameter to use to order the objects by. */
+  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
+  /** Use ID to return only children. Use 0 to return only top-level items */
+  parent?: InputMaybe<Scalars['ID']['input']>;
+  /** Specify objects whose parent is in an array */
+  parentIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Specify posts whose parent is not in an array */
+  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  /** Show posts with a specific password. */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** Show Posts based on a keyword search */
+  search?: InputMaybe<Scalars['String']['input']>;
+  /** Retrieve posts where post status is in an array. */
+  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
+  /** Show posts with a specific status. */
+  status?: InputMaybe<PostStatusEnum>;
+  /** Title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** Connection between the TypePage type and the Taxonomy type */
+export type TypePageToTaxonomyConnectionEdge = Edge & OneToOneConnection & TaxonomyConnectionEdge & {
+  __typename?: 'TypePageToTaxonomyConnectionEdge';
+  /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
+  cursor?: Maybe<Scalars['String']['output']>;
+  /** The node of the connection, without the edges */
+  node: Taxonomy;
+};
+
 /** Any node that has a URI */
 export type UniformResourceIdentifiable = {
   /** The globally unique ID for the object */
@@ -11013,6 +13507,37 @@ export type UniformResourceIdentifiable = {
   uri?: Maybe<Scalars['String']['output']>;
 };
 
+/** Input for the updateCallToAction mutation. */
+export type UpdateCallToActionInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
+  date?: InputMaybe<Scalars['String']['input']>;
+  /** The ID of the callToAction object */
+  id: Scalars['ID']['input'];
+  /** Override the edit lock when another user is editing the post */
+  ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
+  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
+  menuOrder?: InputMaybe<Scalars['Int']['input']>;
+  /** The password used to protect the content of the object */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** The slug of the object */
+  slug?: InputMaybe<Scalars['String']['input']>;
+  /** The status of the object */
+  status?: InputMaybe<PostStatusEnum>;
+  /** The title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The payload for the updateCallToAction mutation. */
+export type UpdateCallToActionPayload = {
+  __typename?: 'UpdateCallToActionPayload';
+  /** The Post object mutation type. */
+  callToAction?: Maybe<CallToAction>;
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+};
+
 /** Input for the updateCaseStudy mutation. */
 export type UpdateCaseStudyInput = {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -11025,8 +13550,6 @@ export type UpdateCaseStudyInput = {
   ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: InputMaybe<Scalars['Int']['input']>;
-  /** The ID of the parent object */
-  parentId?: InputMaybe<Scalars['ID']['input']>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars['String']['input']>;
   /** The slug of the object */
@@ -11185,6 +13708,8 @@ export type UpdatePageInput = {
   status?: InputMaybe<PostStatusEnum>;
   /** The title of the object */
   title?: InputMaybe<Scalars['String']['input']>;
+  /** Set connections between the page and typePages */
+  typePages?: InputMaybe<PageTypePagesInput>;
 };
 
 /** The payload for the updatePage mutation. */
@@ -11272,6 +13797,39 @@ export type UpdatePostPayload = {
   post?: Maybe<Post>;
 };
 
+/** Input for the updateReview mutation. */
+export type UpdateReviewInput = {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The content of the object */
+  content?: InputMaybe<Scalars['String']['input']>;
+  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
+  date?: InputMaybe<Scalars['String']['input']>;
+  /** The ID of the review object */
+  id: Scalars['ID']['input'];
+  /** Override the edit lock when another user is editing the post */
+  ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
+  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
+  menuOrder?: InputMaybe<Scalars['Int']['input']>;
+  /** The password used to protect the content of the object */
+  password?: InputMaybe<Scalars['String']['input']>;
+  /** The slug of the object */
+  slug?: InputMaybe<Scalars['String']['input']>;
+  /** The status of the object */
+  status?: InputMaybe<PostStatusEnum>;
+  /** The title of the object */
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The payload for the updateReview mutation. */
+export type UpdateReviewPayload = {
+  __typename?: 'UpdateReviewPayload';
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The Post object mutation type. */
+  review?: Maybe<Review>;
+};
+
 /** Input for the updateService mutation. */
 export type UpdateServiceInput = {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -11284,8 +13842,6 @@ export type UpdateServiceInput = {
   ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: InputMaybe<Scalars['Int']['input']>;
-  /** The ID of the parent object */
-  parentId?: InputMaybe<Scalars['ID']['input']>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars['String']['input']>;
   /** The slug of the object */
@@ -11401,8 +13957,6 @@ export type UpdateTeamInput = {
   ignoreEditLock?: InputMaybe<Scalars['Boolean']['input']>;
   /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
   menuOrder?: InputMaybe<Scalars['Int']['input']>;
-  /** The ID of the parent object */
-  parentId?: InputMaybe<Scalars['ID']['input']>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars['String']['input']>;
   /** The slug of the object */
@@ -11420,6 +13974,31 @@ export type UpdateTeamPayload = {
   clientMutationId?: Maybe<Scalars['String']['output']>;
   /** The Post object mutation type. */
   team?: Maybe<Team>;
+};
+
+/** Input for the updateTypePage mutation. */
+export type UpdateTypePageInput = {
+  /** The slug that the type-page will be an alias of */
+  aliasOf?: InputMaybe<Scalars['String']['input']>;
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** The description of the type-page object */
+  description?: InputMaybe<Scalars['String']['input']>;
+  /** The ID of the typePage object to update */
+  id: Scalars['ID']['input'];
+  /** The name of the type-page object to mutate */
+  name?: InputMaybe<Scalars['String']['input']>;
+  /** If this argument exists then the slug will be checked to see if it is not an existing valid term. If that check succeeds (it is not a valid term), then it is added and the term id is given. If it fails, then a check is made to whether the taxonomy is hierarchical and the parent argument is not empty. If the second check succeeds, the term will be inserted and the term id will be given. If the slug argument is empty, then it will be calculated from the term name. */
+  slug?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** The payload for the updateTypePage mutation. */
+export type UpdateTypePagePayload = {
+  __typename?: 'UpdateTypePagePayload';
+  /** If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The created type-page */
+  typePage?: Maybe<TypePage>;
 };
 
 /** Input for the updateUser mutation. */
@@ -12354,6 +14933,12 @@ export type WebsiteSettings = AcfOptionsPage & Node & {
   parentId?: Maybe<Scalars['String']['output']>;
 };
 
+/** Provides access to fields of the &quot;CallToActionSettings&quot; ACF Field Group via the &quot;callToActionSettings&quot; field */
+export type WithAcfCallToActionSettings = {
+  /** Fields of the CallToActionSettings ACF Field Group */
+  callToActionSettings?: Maybe<CallToActionSettings>;
+};
+
 /** Provides access to fields of the &quot;FooterConfig&quot; ACF Field Group via the &quot;footerConfig&quot; field */
 export type WithAcfFooterConfig = {
   /** Fields of the FooterConfig ACF Field Group */
@@ -12364,6 +14949,12 @@ export type WithAcfFooterConfig = {
 export type WithAcfHeaderSettings = {
   /** Fields of the HeaderSettings ACF Field Group */
   headerSettings?: Maybe<HeaderSettings>;
+};
+
+/** Provides access to fields of the &quot;HomePageSettings&quot; ACF Field Group via the &quot;homePageSettings&quot; field */
+export type WithAcfHomePageSettings = {
+  /** Fields of the HomePageSettings ACF Field Group */
+  homePageSettings?: Maybe<HomePageSettings>;
 };
 
 /** Access point for the &quot;About&quot; ACF Options Page */
@@ -12401,6 +14992,18 @@ export type WithAcfOptionsPageWebsiteSettings = {
   websiteSettings?: Maybe<WebsiteSettings>;
 };
 
+/** Provides access to fields of the &quot;ReviewsSettings&quot; ACF Field Group via the &quot;reviewsSettings&quot; field */
+export type WithAcfReviewsSettings = {
+  /** Fields of the ReviewsSettings ACF Field Group */
+  reviewsSettings?: Maybe<ReviewsSettings>;
+};
+
+/** Provides access to fields of the &quot;ServiceSettings&quot; ACF Field Group via the &quot;serviceSettings&quot; field */
+export type WithAcfServiceSettings = {
+  /** Fields of the ServiceSettings ACF Field Group */
+  serviceSettings?: Maybe<ServiceSettings>;
+};
+
 /** Provides access to fields of the &quot;Test&quot; ACF Field Group via the &quot;test&quot; field */
 export type WithAcfTest = {
   /** Fields of the Test ACF Field Group */
@@ -12418,6 +15021,20 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>;
 };
 
+export type GetCallToActionByIdQueryVariables = Exact<{
+  id?: InputMaybe<Scalars['ID']['input']>;
+}>;
+
+
+export type GetCallToActionByIdQuery = { __typename?: 'RootQuery', callToAction?: { __typename?: 'CallToAction', title?: string | null, callToActionSettings?: { __typename?: 'CallToActionSettings', description?: string | null, type: Array<string | null>, className?: string | null, button?: { __typename?: 'CallToActionSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null } | null, image?: { __typename?: 'CallToActionSettingsImage', className?: string | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, sourceUrl?: string | null, title?: string | null } } | null } | null, items?: Array<{ __typename?: 'CallToActionSettingsItems', title?: string | null, description?: string | null, icon?: { __typename?: 'CallToActionSettingsItemsIcon', name?: string | null, size?: number | null, className?: string | null } | null } | null> | null } | null } | null };
+
+export type GetHomePageQueryVariables = Exact<{
+  uri?: InputMaybe<Scalars['ID']['input']>;
+}>;
+
+
+export type GetHomePageQuery = { __typename?: 'RootQuery', page?: { __typename?: 'Page', id: string, uri?: string | null, title?: string | null, homePageSettings?: { __typename?: 'HomePageSettings', arsSection?: { __typename?: 'HomePageSettingsArsSection', title?: string | null, arsImages?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, sourceUrl?: string | null } }> } | null } | null, instagram?: { __typename?: 'HomePageSettingsInstagram', title?: string | null, button?: { __typename?: 'HomePageSettingsInstagramButton', size: Array<string | null>, variant?: Array<string | null> | null, link?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null } | null, icon?: { __typename?: 'HomePageSettingsInstagramIcon', name?: string | null, position?: Array<string | null> | null, size?: number | null } | null, carouselOptions?: { __typename?: 'HomePageSettingsInstagramCarouselOptions', playOnInit?: boolean | null, speed?: number | null } | null } | null, reviewSection?: { __typename?: 'HomePageSettingsReviewSection', title?: string | null, description?: string | null, reviews?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string, slug?: string | null } | { __typename?: 'CaseStudy', id: string, slug?: string | null } | { __typename?: 'MediaItem', id: string, slug?: string | null } | { __typename?: 'Page', id: string, slug?: string | null } | { __typename?: 'Post', id: string, slug?: string | null } | { __typename?: 'Review', id: string, slug?: string | null } | { __typename?: 'Service', id: string, slug?: string | null } | { __typename?: 'Team', id: string, slug?: string | null } }> } | null } | null, callToActions?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string } | { __typename?: 'CaseStudy', id: string } | { __typename?: 'MediaItem', id: string } | { __typename?: 'Page', id: string } | { __typename?: 'Post', id: string } | { __typename?: 'Review', id: string } | { __typename?: 'Service', id: string } | { __typename?: 'Team', id: string } }> } | null, serviceSection?: { __typename?: 'HomePageSettingsServiceSection', title?: string | null, description?: string | null, button?: { __typename?: 'HomePageSettingsServiceSectionButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null } | null } | null, presentation?: { __typename?: 'HomePageSettingsPresentation', title?: string | null, description?: string | null, className: string, image?: { __typename?: 'HomePageSettingsPresentationImage', className?: string | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', sourceUrl?: string | null, altText?: string | null } } | null } | null, card?: { __typename?: 'HomePageSettingsPresentationCard', title?: string | null, button?: Array<{ __typename?: 'HomePageSettingsPresentationCardButton', variant: Array<string | null>, size: Array<string | null>, className?: string | null, link?: { __typename?: 'AcfLink', title?: string | null, url?: string | null, target?: string | null } | null, icon?: { __typename?: 'HomePageSettingsPresentationCardButtonIcon', name?: string | null, position: Array<string | null>, size?: number | null } | null } | null> | null } | null } | null } | null } | null };
+
 export type GetNavbarInfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -12433,13 +15050,31 @@ export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type PostsQuery = { __typename?: 'RootQuery', posts?: { __typename?: 'RootQueryToPostConnection', edges: Array<{ __typename?: 'RootQueryToPostConnectionEdge', node: { __typename?: 'Post', slug?: string | null, title?: string | null } }> } | null };
 
-export type GetServicesQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetReviewByIdQueryVariables = Exact<{
+  id?: InputMaybe<Scalars['ID']['input']>;
+}>;
 
 
-export type GetServicesQuery = { __typename?: 'RootQuery', services?: { __typename?: 'RootQueryToServiceConnection', edges: Array<{ __typename?: 'RootQueryToServiceConnectionEdge', node: { __typename?: 'Service', title?: string | null, slug?: string | null } }> } | null };
+export type GetReviewByIdQuery = { __typename?: 'RootQuery', review?: { __typename?: 'Review', reviewsSettings?: { __typename?: 'ReviewsSettings', rating?: number | null, comment?: string | null, author?: { __typename?: 'ReviewsSettingsAuthor', name?: string | null, avatar?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, sourceUrl?: string | null } } | null } | null } | null } | null };
+
+export type GetServicesInfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
+export type GetServicesInfoQuery = { __typename?: 'RootQuery', services?: { __typename?: 'RootQueryToServiceConnection', edges: Array<{ __typename?: 'RootQueryToServiceConnectionEdge', node: { __typename?: 'Service', id: string, slug?: string | null, title?: string | null, serviceSettings?: { __typename?: 'ServiceSettings', summary?: string | null, className?: string | null, icon?: string | null, button?: { __typename?: 'ServiceSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null } | null } }> } | null };
+
+export type GetServiceBySlugQueryVariables = Exact<{
+  slug?: InputMaybe<Scalars['ID']['input']>;
+}>;
+
+
+export type GetServiceBySlugQuery = { __typename?: 'RootQuery', service?: { __typename?: 'Service', id: string, title?: string | null, slug?: string | null, serviceSettings?: { __typename?: 'ServiceSettings', description?: string | null, className?: string | null, editor?: string | null, summary?: string | null, icon?: string | null, gallery?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', id: string, altText?: string | null, link?: string | null } }> } | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, id: string, link?: string | null } } | null, button?: { __typename?: 'ServiceSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null } | null } | null };
+
+
+export const GetCallToActionByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCallToActionByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"callToAction"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"callToActionSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCallToActionByIdQuery, GetCallToActionByIdQueryVariables>;
+export const GetHomePageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getHomePage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/home/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"uri"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"homePageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"arsSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"arsImages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instagram"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"carouselOptions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"playOnInit"}},{"kind":"Field","name":{"kind":"Name","value":"speed"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"reviewSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"reviews"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"serviceSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"presentation"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"card"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetHomePageQuery, GetHomePageQueryVariables>;
 export const GetNavbarInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getNavbarInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"header"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"headerSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sociallinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"phone"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"language"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"lang"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"navbarItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"subMenuItem"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetNavbarInfoQuery, GetNavbarInfoQueryVariables>;
 export const GetFooterInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getFooterInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footerConfig"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"color"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"copyRight"}}]}}]}}]}}]} as unknown as DocumentNode<GetFooterInfoQuery, GetFooterInfoQueryVariables>;
 export const PostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]} as unknown as DocumentNode<PostsQuery, PostsQueryVariables>;
-export const GetServicesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetServices"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetServicesQuery, GetServicesQueryVariables>;
+export const GetReviewByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getReviewByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"review"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"reviewsSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"rating"}},{"kind":"Field","name":{"kind":"Name","value":"comment"}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetReviewByIdQuery, GetReviewByIdQueryVariables>;
+export const GetServicesInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServicesInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetServicesInfoQuery, GetServicesInfoQueryVariables>;
+export const GetServiceBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServiceBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"service"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"editor"}},{"kind":"Field","name":{"kind":"Name","value":"gallery"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]} as unknown as DocumentNode<GetServiceBySlugQuery, GetServiceBySlugQueryVariables>;
