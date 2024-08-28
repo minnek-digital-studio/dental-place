@@ -16,14 +16,20 @@ import LetUsHelpSection, {
 
 import LetHelpInfo from "@/modules/services/data/let-us-help.json";
 
+import { getServices } from "../actions/services.action";
+
 const ServicesPage = async () => {
+    const ServicesSection = {
+        ...ServicesInfo,
+        items: await getServices(),
+    };
     return (
         <Layout
             navbarVariant={{
                 variant: "info",
             }}
         >
-            <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
+            <ServiceSection {...(ServicesSection as ServiceSectionProps)} />
             <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
             <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
         </Layout>
