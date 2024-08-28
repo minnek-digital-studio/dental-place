@@ -1,18 +1,36 @@
 "use server";
 
 import {
-    type GetServicesInfoQuery,
-    GetServicesInfoDocument,
     type GetServiceBySlugQuery,
+    type GetServicePageInfoQuery,
+    type GetServicesInfoQuery,
     GetServiceBySlugDocument,
+    GetServicePageInfoDocument,
+    GetServicesInfoDocument,
 } from "@/graphql/generated/graphql";
 
 import {
-    mapServicesData,
     mapServiceData,
+    mapServicesData,
 } from "@/modules/common/utils/services.map";
 
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
+
+import { CallToAction } from "@/modules/common/types";
+import { ServiceSectionProps } from "@/modules/services/components/services-section";
+import { ClinicSectionProps } from "../components/clinic-section";
+
+import {
+    mapCalltoActions,
+    mapClinicSectionData,
+    mapServicePageData,
+} from "@/modules/services/utils/";
+
+export type ServicePageInfo = {
+    servicesSectionInfo: ServiceSectionProps;
+    clinicSectionInfo: ClinicSectionProps;
+    callToActions: CallToAction[];
+};
 
 export const getServices = async () => {
     const { data } = await getClient().query<GetServicesInfoQuery>({
@@ -35,4 +53,18 @@ export const getServiceBySlug = async (slug: string) => {
     const service = mapServiceData(data?.service);
 
     return service;
+};
+
+export const getServicePage = async (): Promise<ServicePageInfo> => {
+    const { data } = await getClient().query<GetServicePageInfoQuery>({
+        query: GetServicePageInfoDocument,
+    });
+
+    const servicePage: ServicePageInfo = {
+        servicesSectionInfo: await mapServicePageData(data?.page),
+        clinicSectionInfo: await mapClinicSectionData(data?.page),
+        callToActions: await mapCalltoActions(data?.page),
+    };
+
+    return servicePage;
 };

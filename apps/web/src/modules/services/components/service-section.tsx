@@ -50,9 +50,9 @@ const ServiceSection = ({
                         <div
                             className={`grid ${columnsClass[gallery.length]} w-full items-center justify-center gap-6 overflow-hidden`}
                         >
-                            {gallery.map((img) => (
+                            {gallery.map((img, index) => (
                                 <picture
-                                    key={img.src}
+                                    key={`${img.src}-${index}`}
                                     className="rounded-lg overflow-hidden w-full h-full flex-1"
                                 >
                                     <Image {...img} />

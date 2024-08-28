@@ -16,22 +16,25 @@ import LetUsHelpSection, {
 
 import LetHelpInfo from "@/modules/services/data/let-us-help.json";
 
+import CallToAction from "@/modules/common/components/CallToAction";
 import { getServices } from "../actions/services.action";
 
+import { getServicePage } from "../actions/services.action";
+
 const ServicesPage = async () => {
-    const ServicesSection = {
-        ...ServicesInfo,
-        items: await getServices(),
-    };
+    const { servicesSectionInfo, clinicSectionInfo, callToActions } =
+        await getServicePage();
     return (
         <Layout
             navbarVariant={{
                 variant: "info",
             }}
         >
-            <ServiceSection {...(ServicesSection as ServiceSectionProps)} />
-            <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
-            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+            <ServiceSection {...(servicesSectionInfo as ServiceSectionProps)} />
+            <ClinicSection {...(clinicSectionInfo as ClinicSectionProps)} />
+            {callToActions?.map((cta, index) => (
+                <CallToAction key={index} {...cta} />
+            ))}
         </Layout>
     );
 };
