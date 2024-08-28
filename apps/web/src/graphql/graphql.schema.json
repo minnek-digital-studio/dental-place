@@ -527,6 +527,21 @@
           },
           {
             "kind": "OBJECT",
+            "name": "ServicePageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettingsClinicSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettingsServicesSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "ServiceSettings",
             "ofType": null
           },
@@ -748,6 +763,21 @@
           {
             "kind": "OBJECT",
             "name": "ReviewsSettingsAuthor",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettingsClinicSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettingsServicesSection",
             "ofType": null
           },
           {
@@ -37197,6 +37227,18 @@
             "deprecationReason": null
           },
           {
+            "name": "servicePageSettings",
+            "description": "Fields of the ServicePageSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ServicePageSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "slug",
             "description": "The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.",
             "args": [],
@@ -37501,6 +37543,11 @@
           {
             "kind": "INTERFACE",
             "name": "WithAcfHomePageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "WithAcfServicePageSettings",
             "ofType": null
           }
         ],
@@ -71905,6 +71952,637 @@
       },
       {
         "kind": "OBJECT",
+        "name": "ServicePageSettings",
+        "description": "The &quot;ServicePageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "callToActions",
+            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ServicePageSettings&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfContentNodeConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "clinicSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServicePageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ServicePageSettingsClinicSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "servicesSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServicePageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ServicePageSettingsServicesSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "ServicePageSettings_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ServicePageSettingsClinicSection",
+        "description": "The &quot;ServicePageSettingsClinicSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "imagesClinic",
+            "description": "Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsClinicSection&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsClinicSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "ServicePageSettingsClinicSection_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "ServicePageSettingsClinicSection_Fields",
+        "description": "Interface representing fields of the ACF &quot;ServicePageSettingsClinicSection&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "imagesClinic",
+            "description": "Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsClinicSection&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsClinicSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettingsClinicSection",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ServicePageSettingsServicesSection",
+        "description": "The &quot;ServicePageSettingsServicesSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsServicesSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsServicesSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsServicesSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "ServicePageSettingsServicesSection_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "ServicePageSettingsServicesSection_Fields",
+        "description": "Interface representing fields of the ACF &quot;ServicePageSettingsServicesSection&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsServicesSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsServicesSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServicePageSettingsServicesSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettingsServicesSection",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "ServicePageSettings_Fields",
+        "description": "Interface representing fields of the ACF &quot;ServicePageSettings&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "callToActions",
+            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ServicePageSettings&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfContentNodeConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "clinicSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServicePageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ServicePageSettingsClinicSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "servicesSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServicePageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ServicePageSettingsServicesSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "ServicePageSettings",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
         "name": "ServiceSettings",
         "description": "The &quot;ServiceSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
         "isOneOf": null,
@@ -92179,6 +92857,36 @@
           {
             "kind": "OBJECT",
             "name": "Review",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "WithAcfServicePageSettings",
+        "description": "Provides access to fields of the &quot;ServicePageSettings&quot; ACF Field Group via the &quot;servicePageSettings&quot; field",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "servicePageSettings",
+            "description": "Fields of the ServicePageSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ServicePageSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "Page",
             "ofType": null
           }
         ]
