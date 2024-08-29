@@ -10,6 +10,10 @@ import LetUsHelpSection, {
 } from "@/modules/common/components/lethelp-section";
 import LetUsHelpInfo from "../data/let-us-help.json";
 import { notFound } from "next/navigation";
+import CaseStudiesInfo from "../data/case-studies.json";
+import CaseStudiesSection, {
+    type CaseStudiesSectionProps,
+} from "../components/case-studies-section";
 
 type Props = {
     params: { slug: string };
@@ -41,6 +45,9 @@ const ServicePage = async ({ params }) => {
             }}
         >
             <ServiceSection {...(service as ServiceSectionProps)} />
+            <CaseStudiesSection
+                {...(CaseStudiesInfo as CaseStudiesSectionProps)}
+            />
             <LetUsHelpSection {...(LetUsHelpInfo as LetUsHelpSectionProps)} />
         </Layout>
     );

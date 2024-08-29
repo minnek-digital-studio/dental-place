@@ -1,0 +1,50 @@
+{
+  "title": "Case Studies",
+  "items": [
+    {
+      "title": "How Jeena Williams Got Braces?",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat",
+      "image": {
+        "src": "/images/case-studies/case-1.webp",
+        "alt": "Case Study 1",
+        "className": ""
+      },
+      "button": {
+        "text": "View Details",
+        "link": "#",
+        "variant": "link",
+        "size": "link"
+      }
+    },
+    {
+      "title": "Alex Surgery - Removal of wisdom Tooth",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat",
+      "image": {
+        "src": "/images/case-studies/case-2.webp",
+        "alt": "Case Study 2",
+        "className": ""
+      },
+      "button": {
+        "text": "View Details",
+        "link": "#",
+        "variant": "link",
+        "size": "link"
+      }
+    },
+    {
+      "title": "Pain in the Julie Braces - How we did the treatment?",
+      "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat",
+      "image": {
+        "src": "/images/case-studies/case-3.webp",
+        "alt": "Case Study 3",
+        "className": ""
+      },
+      "button": {
+        "text": "View Details",
+        "link": "#",
+        "variant": "link",
+        "size": "link"
+      }
+    }
+  ]
+}
