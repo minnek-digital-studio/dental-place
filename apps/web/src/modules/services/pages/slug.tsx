@@ -38,6 +38,10 @@ const ServicePage = async ({ params }) => {
     const { slug } = params;
     const service = await getServiceBySlug(slug);
 
+    if (!service) {
+        return notFound();
+    }
+
     return (
         <Layout
             navbarVariant={{
