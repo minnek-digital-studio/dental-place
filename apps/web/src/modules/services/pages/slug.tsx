@@ -2,7 +2,13 @@ import React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 import { getServices, getServiceBySlug } from "../actions/services.action";
 import Layout from "@/modules/common/layouts/layout";
-import ServiceSection from "../components/service-section";
+import ServiceSection, {
+    type ServiceSectionProps,
+} from "../components/service-section";
+import LetUsHelpSection, {
+    type LetUsHelpSectionProps,
+} from "@/modules/common/components/lethelp-section";
+import LetUsHelpInfo from "../data/let-us-help.json";
 import { notFound } from "next/navigation";
 import CaseStudiesInfo from "../data/case-studies.json";
 import CaseStudiesSection, {
@@ -32,21 +38,17 @@ const ServicePage = async ({ params }) => {
     const { slug } = params;
     const service = await getServiceBySlug(slug);
 
-    if (!service) {
-        return notFound();
-    }
-
     return (
         <Layout
             navbarVariant={{
                 variant: "secondary",
             }}
         >
-            <ServiceSection {...service} />
-
+            <ServiceSection {...(service as ServiceSectionProps)} />
             <CaseStudiesSection
                 {...(CaseStudiesInfo as CaseStudiesSectionProps)}
             />
+            <LetUsHelpSection {...(LetUsHelpInfo as LetUsHelpSectionProps)} />
         </Layout>
     );
 };
