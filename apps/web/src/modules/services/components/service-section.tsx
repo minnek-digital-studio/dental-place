@@ -147,7 +147,7 @@ const ServiceSection = ({
                             >
                                 <Link
                                     href="tel:+18095818686"
-                                    className="text-wrap"
+                                    className="text-wrap max-[400px]:h-[3.75rem]"
                                 >
                                     <IconByName name="WhatsApp" size={20} />
                                     Make An Appointment
