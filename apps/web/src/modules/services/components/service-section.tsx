@@ -6,7 +6,8 @@ import { IconByName } from "@minnek/ui/components/icons/index";
 import Link from "next/link";
 import { BreadCrumb } from "@/modules/common/components/breadcrumb";
 
-interface ServiceSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ServiceSectionProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     slug: string;
     description: string;
