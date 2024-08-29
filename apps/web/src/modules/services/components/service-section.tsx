@@ -5,7 +5,8 @@ import { Button } from "@minnek/ui/components/button";
 import { IconByName } from "@minnek/ui/components/icons/index";
 import Link from "next/link";
 
-interface ServiceSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ServiceSectionProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     description: string;
     content?: string;
