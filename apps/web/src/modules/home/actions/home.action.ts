@@ -9,7 +9,7 @@ import { type ReviewsSectionProps } from "../components/reviews-section";
 import { type ArsSectionProps } from "../components/ars-section";
 import { PresentationSectionProps } from "../components/presentation-section";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
-import { CallToAction } from "@/modules/common/types";
+import { CallToAction, Seo } from "@/modules/common/types";
 import {
     mapReviewData,
     mapServiceData,
@@ -18,8 +18,10 @@ import {
     mapInstagramData,
     mapArsData,
 } from "../utils/sections.map";
+import { mapSeo } from "@/modules/common/utils/seo.map";
 
 export type HomePageInfo = {
+    seo: Seo;
     PresentationInfo: PresentationSectionProps;
     ServicesInfo: ServiceSectionProps;
     callToActions: CallToAction[];
@@ -35,6 +37,7 @@ export const getHomePageInfo = async (): Promise<HomePageInfo> => {
     });
 
     return {
+        seo: mapSeo(data?.page?.seo),
         PresentationInfo: mapPresentationData(data?.page),
         ServicesInfo: await mapServiceData(data?.page),
         callToActions: await mapCalltoActions(data?.page),

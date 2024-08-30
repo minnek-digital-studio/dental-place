@@ -36,9 +36,13 @@ import Layout from "@/modules/common/layouts/layout";
 import { getHomePageInfo } from "../actions/home.action";
 import CallToAction from "@/modules/common/components/CallToAction";
 
-export const metadata: Metadata = {
-    title: `Next.js Blog Example with ${CMS_NAME}`,
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const { seo } = await getHomePageInfo();
+
+    return {
+        ...seo,
+    };
+}
 
 export default async function HomePage() {
     const {
@@ -56,10 +60,10 @@ export default async function HomePage() {
                 {...(PresentationInfo as PresentationSectionProps)}
             />
             <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
-            <CallToAction {...callToActions[0]} />
-            <CallToAction {...callToActions[1]} />
+            {callToActions[0] && <CallToAction {...callToActions[0]} />}
+            {callToActions[1] && <CallToAction {...callToActions[1]} />}
             <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
-            <CallToAction {...callToActions[2]} />
+            {callToActions[2] && <CallToAction {...callToActions[2]} />}
             <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
             <ArsSection {...(ArsInfo as ArsSectionProps)} />
         </Layout>

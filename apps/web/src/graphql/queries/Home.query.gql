@@ -3,6 +3,11 @@ query getHomePage($uri: ID = "/home/") {
         id
         uri
         title
+        seo {
+            title
+            metaDesc
+            metaKeywords
+        }
         homePageSettings {
             arsSection {
                 title
