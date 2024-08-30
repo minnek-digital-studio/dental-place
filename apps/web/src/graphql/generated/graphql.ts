@@ -5942,7 +5942,7 @@ export enum OrderEnum {
 }
 
 /** The page type */
-export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfHomePageSettings & WithAcfServicePageSettings & {
+export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfHomePageSettings & WithAcfServicePageSettings & WithAcfTeamPageSettings & {
   __typename?: 'Page';
   /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
   ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
@@ -6055,6 +6055,8 @@ export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   slug?: Maybe<Scalars['String']['output']>;
   /** The current status of the object */
   status?: Maybe<Scalars['String']['output']>;
+  /** Fields of the TeamPageSettings ACF Field Group */
+  teamPageSettings?: Maybe<TeamPageSettings>;
   /** The template assigned to a node of content */
   template?: Maybe<ContentTemplate>;
   /** Connection between the Page type and the TermNode type */
@@ -7359,6 +7361,8 @@ export enum PostStatusEnum {
   AcfDisabled = 'ACF_DISABLED',
   /** Objects with the auto-draft status */
   AutoDraft = 'AUTO_DRAFT',
+  /** Objects with the dp-rewrite-republish status */
+  DpRewriteRepublish = 'DP_REWRITE_REPUBLISH',
   /** Objects with the draft status */
   Draft = 'DRAFT',
   /** Objects with the future status */
@@ -12714,7 +12718,7 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo & TermNodeConnection
 };
 
 /** The Team type */
-export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfTeamMemberSettings & {
   __typename?: 'Team';
   /**
    * The ancestors of the content node.
@@ -12805,6 +12809,8 @@ export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & 
    * @deprecated Deprecated in favor of the databaseId field
    */
   teamId: Scalars['Int']['output'];
+  /** Fields of the TeamMemberSettings ACF Field Group */
+  teamMemberSettings?: Maybe<TeamMemberSettings>;
   /** The template assigned to the node */
   template?: Maybe<ContentTemplate>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -12899,6 +12905,366 @@ export enum TeamIdType {
   /** Identify a resource by the URI. */
   Uri = 'URI'
 }
+
+/** The &quot;TeamMemberSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettings = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettings_Fields & {
+  __typename?: 'TeamMemberSettings';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  description: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  education?: Maybe<Array<Maybe<TeamMemberSettingsEducation>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  educationTitle: Scalars['String']['output'];
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  socialLink?: Maybe<Array<Maybe<TeamMemberSettingsSocialLink>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  speciality: Scalars['String']['output'];
+};
+
+/** The &quot;TeamMemberSettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsButton = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsButton_Fields & {
+  __typename?: 'TeamMemberSettingsButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsButton&quot; Field Group */
+export type TeamMemberSettingsButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;TeamMemberSettingsEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsEducation = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsEducation_Fields & {
+  __typename?: 'TeamMemberSettingsEducation';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsEducationButton>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  institution?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;TeamMemberSettingsEducationButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsEducationButton = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsEducationButton_Fields & {
+  __typename?: 'TeamMemberSettingsEducationButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsEducationButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsEducationButtonIcon = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsEducationButtonIcon_Fields & {
+  __typename?: 'TeamMemberSettingsEducationButtonIcon';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+export type TeamMemberSettingsEducationButtonIcon_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+export type TeamMemberSettingsEducationButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsEducationButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsEducation&quot; Field Group */
+export type TeamMemberSettingsEducation_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsEducationButton>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  institution?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;TeamMemberSettingsSocialLink&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsSocialLink = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsSocialLink_Fields & {
+  __typename?: 'TeamMemberSettingsSocialLink';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsSocialLinkIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsSocialLinkIcon = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsSocialLinkIcon_Fields & {
+  __typename?: 'TeamMemberSettingsSocialLinkIcon';
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+export type TeamMemberSettingsSocialLinkIcon_Fields = {
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+export type TeamMemberSettingsSocialLink_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsSocialLinkIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettings&quot; Field Group */
+export type TeamMemberSettings_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  description: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  education?: Maybe<Array<Maybe<TeamMemberSettingsEducation>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  educationTitle: Scalars['String']['output'];
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  socialLink?: Maybe<Array<Maybe<TeamMemberSettingsSocialLink>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  speciality: Scalars['String']['output'];
+};
+
+/** The &quot;TeamPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettings = AcfFieldGroup & AcfFieldGroupFields & TeamPageSettings_Fields & {
+  __typename?: 'TeamPageSettings';
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  faq?: Maybe<TeamPageSettingsFaq>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;TeamPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettingsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;TeamPageSettingsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettingsFaq = AcfFieldGroup & AcfFieldGroupFields & TeamPageSettingsFaq_Fields & {
+  __typename?: 'TeamPageSettingsFaq';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  questions?: Maybe<Array<Maybe<TeamPageSettingsFaqQuestions>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;TeamPageSettingsFaqQuestions&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettingsFaqQuestions = AcfFieldGroup & AcfFieldGroupFields & TeamPageSettingsFaqQuestions_Fields & {
+  __typename?: 'TeamPageSettingsFaqQuestions';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  answer?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  question?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+export type TeamPageSettingsFaqQuestions_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  answer?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  question?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamPageSettingsFaq&quot; Field Group */
+export type TeamPageSettingsFaq_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  questions?: Maybe<Array<Maybe<TeamPageSettingsFaqQuestions>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamPageSettings&quot; Field Group */
+export type TeamPageSettings_Fields = {
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  faq?: Maybe<TeamPageSettingsFaq>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;TeamPageSettings&quot; Field Group */
+export type TeamPageSettings_FieldsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
 
 /** Connection between the Team type and the Team type */
 export type TeamToParentConnectionEdge = Edge & OneToOneConnection & TeamConnectionEdge & {
@@ -15137,6 +15503,18 @@ export type WithAcfServiceSettings = {
   serviceSettings?: Maybe<ServiceSettings>;
 };
 
+/** Provides access to fields of the &quot;TeamMemberSettings&quot; ACF Field Group via the &quot;teamMemberSettings&quot; field */
+export type WithAcfTeamMemberSettings = {
+  /** Fields of the TeamMemberSettings ACF Field Group */
+  teamMemberSettings?: Maybe<TeamMemberSettings>;
+};
+
+/** Provides access to fields of the &quot;TeamPageSettings&quot; ACF Field Group via the &quot;teamPageSettings&quot; field */
+export type WithAcfTeamPageSettings = {
+  /** Fields of the TeamPageSettings ACF Field Group */
+  teamPageSettings?: Maybe<TeamPageSettings>;
+};
+
 /** Provides access to fields of the &quot;Test&quot; ACF Field Group via the &quot;test&quot; field */
 export type WithAcfTest = {
   /** Fields of the Test ACF Field Group */
@@ -15202,6 +15580,18 @@ export type GetServiceBySlugQueryVariables = Exact<{
 
 export type GetServiceBySlugQuery = { __typename?: 'RootQuery', service?: { __typename?: 'Service', id: string, title?: string | null, slug?: string | null, serviceSettings?: { __typename?: 'ServiceSettings', description?: string | null, className?: string | null, editor?: string | null, summary?: string | null, icon?: string | null, gallery?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', id: string, altText?: string | null, link?: string | null } }> } | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, id: string, link?: string | null } } | null, button?: { __typename?: 'ServiceSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null } | null } | null };
 
+export type GetTeamMembersQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetTeamMembersQuery = { __typename?: 'RootQuery', teams?: { __typename?: 'RootQueryToTeamConnection', edges: Array<{ __typename?: 'RootQueryToTeamConnectionEdge', node: { __typename?: 'Team', id: string, title?: string | null, teamMemberSettings?: { __typename?: 'TeamMemberSettings', name: string, description: string, speciality: string, educationTitle: string, image?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', sourceUrl?: string | null, altText?: string | null } } | null, button?: { __typename?: 'TeamMemberSettingsButton', variant: Array<string | null>, size: Array<string | null>, link?: { __typename?: 'AcfLink', title?: string | null, url?: string | null, target?: string | null } | null } | null, education?: Array<{ __typename?: 'TeamMemberSettingsEducation', title?: string | null, institution?: string | null, button?: { __typename?: 'TeamMemberSettingsEducationButton', size: Array<string | null>, variant: Array<string | null>, icon?: { __typename?: 'TeamMemberSettingsEducationButtonIcon', name?: string | null, size?: number | null } | null, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null } | null> | null, socialLink?: Array<{ __typename?: 'TeamMemberSettingsSocialLink', variant: Array<string | null>, size: Array<string | null>, icon?: { __typename?: 'TeamMemberSettingsSocialLinkIcon', color?: string | null, fill?: string | null, name: string, size?: number | null, stroke?: string | null } | null, link?: { __typename?: 'AcfLink', title?: string | null, url?: string | null, target?: string | null } | null } | null> | null } | null } }> } | null };
+
+export type GetTeamPageInfoQueryVariables = Exact<{
+  uri?: InputMaybe<Scalars['ID']['input']>;
+}>;
+
+
+export type GetTeamPageInfoQuery = { __typename?: 'RootQuery', page?: { __typename?: 'Page', title?: string | null, id: string, seo?: { __typename?: 'PostTypeSEO', title?: string | null, metaDesc?: string | null, metaKeywords?: string | null } | null, teamPageSettings?: { __typename?: 'TeamPageSettings', title?: string | null, description?: string | null, callToActions?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string } | { __typename?: 'CaseStudy', id: string } | { __typename?: 'MediaItem', id: string } | { __typename?: 'Page', id: string } | { __typename?: 'Post', id: string } | { __typename?: 'Review', id: string } | { __typename?: 'Service', id: string } | { __typename?: 'Team', id: string } }> } | null, faq?: { __typename?: 'TeamPageSettingsFaq', title?: string | null, className?: string | null, questions?: Array<{ __typename?: 'TeamPageSettingsFaqQuestions', question?: string | null, answer?: string | null } | null> | null } | null } | null } | null };
+
 
 export const GetCallToActionByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCallToActionByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"callToAction"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"callToActionSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCallToActionByIdQuery, GetCallToActionByIdQueryVariables>;
 export const GetHomePageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getHomePage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/home/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"uri"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"homePageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"arsSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"arsImages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instagram"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"carouselOptions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"playOnInit"}},{"kind":"Field","name":{"kind":"Name","value":"speed"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"reviewSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"reviews"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"serviceSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"presentation"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"card"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetHomePageQuery, GetHomePageQueryVariables>;
@@ -15211,3 +15601,5 @@ export const PostsDocument = {"kind":"Document","definitions":[{"kind":"Operatio
 export const GetReviewByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getReviewByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"review"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"reviewsSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"rating"}},{"kind":"Field","name":{"kind":"Name","value":"comment"}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetReviewByIdQuery, GetReviewByIdQueryVariables>;
 export const GetServicesInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServicesInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetServicesInfoQuery, GetServicesInfoQueryVariables>;
 export const GetServiceBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServiceBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"service"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"editor"}},{"kind":"Field","name":{"kind":"Name","value":"gallery"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]} as unknown as DocumentNode<GetServiceBySlugQuery, GetServiceBySlugQueryVariables>;
+export const GetTeamMembersDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getTeamMembers"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"teams"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"teamMemberSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"speciality"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"educationTitle"}},{"kind":"Field","name":{"kind":"Name","value":"education"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"institution"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"color"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetTeamMembersQuery, GetTeamMembersQueryVariables>;
+export const GetTeamPageInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getTeamPageInfo"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/team/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"teamPageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"faq"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"questions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"question"}},{"kind":"Field","name":{"kind":"Name","value":"answer"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetTeamPageInfoQuery, GetTeamPageInfoQueryVariables>;
