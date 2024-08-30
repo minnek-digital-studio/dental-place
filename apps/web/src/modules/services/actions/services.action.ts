@@ -19,6 +19,8 @@ import { getClient } from "@/modules/common/lib/apollo/apollo-client";
 import { CallToAction } from "@/modules/common/types";
 import { ServiceSectionProps } from "@/modules/services/components/services-section";
 import { ClinicSectionProps } from "../components/clinic-section";
+import { mapSeo } from "@/modules/common/utils/seo.map";
+import { Seo } from "@/modules/common/types";
 
 import {
     mapCalltoActions,
@@ -27,6 +29,7 @@ import {
 } from "@/modules/services/utils/";
 
 export type ServicePageInfo = {
+    seo: Seo;
     servicesSectionInfo: ServiceSectionProps;
     clinicSectionInfo: ClinicSectionProps;
     callToActions: CallToAction[];
@@ -61,6 +64,7 @@ export const getServicePage = async (): Promise<ServicePageInfo> => {
     });
 
     const servicePage: ServicePageInfo = {
+        seo: mapSeo(data?.page?.seo),
         servicesSectionInfo: await mapServicePageData(data?.page),
         clinicSectionInfo: await mapClinicSectionData(data?.page),
         callToActions: await mapCalltoActions(data?.page),

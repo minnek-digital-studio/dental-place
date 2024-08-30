@@ -43,3 +43,9 @@ export type CallToAction = {
         icon: Icon;
     }>;
 };
+
+export type Seo = {
+    title: string;
+    description: string;
+    keywords: string;
+};
