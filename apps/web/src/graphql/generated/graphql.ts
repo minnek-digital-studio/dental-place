@@ -25,7 +25,7 @@ export type About = AcfOptionsPage & Node & {
   parentId?: Maybe<Scalars['String']['output']>;
 };
 
-/** Connection between the HomePageSettingsReviewSection_Fields type and the ContentNode type */
+/** Connection between the BracesExpressPageSettings_Fields type and the ContentNode type */
 export type AcfContentNodeConnection = Connection & ContentNodeConnection & {
   __typename?: 'AcfContentNodeConnection';
   /** Edges for the AcfContentNodeConnection connection */
@@ -89,7 +89,7 @@ export type AcfLink = {
   url?: Maybe<Scalars['String']['output']>;
 };
 
-/** Connection between the HomePageSettingsArsSection_Fields type and the MediaItem type */
+/** Connection between the BracesExpressPageSettingsGallerySection_Fields type and the MediaItem type */
 export type AcfMediaItemConnection = Connection & MediaItemConnection & {
   __typename?: 'AcfMediaItemConnection';
   /** Edges for the AcfMediaItemConnection connection */
@@ -100,7 +100,7 @@ export type AcfMediaItemConnection = Connection & MediaItemConnection & {
   pageInfo: AcfMediaItemConnectionPageInfo;
 };
 
-/** Connection between the CallToActionSettingsImage_Fields type and the MediaItem type */
+/** Connection between the BracesExpressPageSettingsHeroSectionImages_Fields type and the MediaItem type */
 export type AcfMediaItemConnectionEdge = Edge & MediaItemConnectionEdge & OneToOneConnection & {
   __typename?: 'AcfMediaItemConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -179,6 +179,236 @@ export type Blocks = AcfOptionsPage & Node & {
   menuTitle?: Maybe<Scalars['String']['output']>;
   pageTitle?: Maybe<Scalars['String']['output']>;
   parentId?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;BracesExpressPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettings = AcfFieldGroup & AcfFieldGroupFields & BracesExpressPageSettings_Fields & {
+  __typename?: 'BracesExpressPageSettings';
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group */
+  gallerySection?: Maybe<BracesExpressPageSettingsGallerySection>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group */
+  heroSection?: Maybe<BracesExpressPageSettingsHeroSection>;
+};
+
+
+/** The &quot;BracesExpressPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;BracesExpressPageSettingsGallerySection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsGallerySection = AcfFieldGroup & AcfFieldGroupFields & BracesExpressPageSettingsGallerySection_Fields & {
+  __typename?: 'BracesExpressPageSettingsGallerySection';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group */
+  images?: Maybe<AcfMediaItemConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;BracesExpressPageSettingsGallerySection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsGallerySectionImagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettingsGallerySection&quot; Field Group */
+export type BracesExpressPageSettingsGallerySection_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group */
+  images?: Maybe<AcfMediaItemConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettingsGallerySection&quot; Field Group */
+export type BracesExpressPageSettingsGallerySection_FieldsImagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;BracesExpressPageSettingsHeroSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsHeroSection = AcfFieldGroup & AcfFieldGroupFields & BracesExpressPageSettingsHeroSection_Fields & {
+  __typename?: 'BracesExpressPageSettingsHeroSection';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  button?: Maybe<BracesExpressPageSettingsHeroSectionButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  images: Array<Maybe<BracesExpressPageSettingsHeroSectionImages>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsHeroSectionButton = AcfFieldGroup & AcfFieldGroupFields & BracesExpressPageSettingsHeroSectionButton_Fields & {
+  __typename?: 'BracesExpressPageSettingsHeroSectionButton';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  icon?: Maybe<BracesExpressPageSettingsHeroSectionButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsHeroSectionButtonIcon = AcfFieldGroup & AcfFieldGroupFields & BracesExpressPageSettingsHeroSectionButtonIcon_Fields & {
+  __typename?: 'BracesExpressPageSettingsHeroSectionButtonIcon';
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+export type BracesExpressPageSettingsHeroSectionButtonIcon_Fields = {
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+export type BracesExpressPageSettingsHeroSectionButton_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  icon?: Maybe<BracesExpressPageSettingsHeroSectionButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type BracesExpressPageSettingsHeroSectionImages = AcfFieldGroup & AcfFieldGroupFields & BracesExpressPageSettingsHeroSectionImages_Fields & {
+  __typename?: 'BracesExpressPageSettingsHeroSectionImages';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group */
+export type BracesExpressPageSettingsHeroSectionImages_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+export type BracesExpressPageSettingsHeroSection_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  button?: Maybe<BracesExpressPageSettingsHeroSectionButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  images: Array<Maybe<BracesExpressPageSettingsHeroSectionImages>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettings&quot; Field Group */
+export type BracesExpressPageSettings_Fields = {
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group */
+  gallerySection?: Maybe<BracesExpressPageSettingsGallerySection>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group */
+  heroSection?: Maybe<BracesExpressPageSettingsHeroSection>;
+};
+
+
+/** Interface representing fields of the ACF &quot;BracesExpressPageSettings&quot; Field Group */
+export type BracesExpressPageSettings_FieldsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
 };
 
 /** The callToAction type */
@@ -5942,7 +6172,7 @@ export enum OrderEnum {
 }
 
 /** The page type */
-export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfHomePageSettings & WithAcfServicePageSettings & WithAcfTeamPageSettings & {
+export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfBracesExpressPageSettings & WithAcfHomePageSettings & WithAcfServicePageSettings & WithAcfTeamPageSettings & {
   __typename?: 'Page';
   /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
   ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
@@ -5952,6 +6182,8 @@ export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   authorDatabaseId?: Maybe<Scalars['Int']['output']>;
   /** The globally unique identifier of the author of the node */
   authorId?: Maybe<Scalars['ID']['output']>;
+  /** Fields of the BracesExpressPageSettings ACF Field Group */
+  bracesExpressPageSettings?: Maybe<BracesExpressPageSettings>;
   /** Connection between the HierarchicalContentNode type and the ContentNode type */
   children?: Maybe<HierarchicalContentNodeToContentNodeChildrenConnection>;
   /** The number of comments. Even though WPGraphQL denotes this field as an integer, in WordPress this field should be saved as a numeric string for compatibility. */
@@ -15422,6 +15654,12 @@ export type WebsiteSettings = AcfOptionsPage & Node & {
   menuTitle?: Maybe<Scalars['String']['output']>;
   pageTitle?: Maybe<Scalars['String']['output']>;
   parentId?: Maybe<Scalars['String']['output']>;
+};
+
+/** Provides access to fields of the &quot;BracesExpressPageSettings&quot; ACF Field Group via the &quot;bracesExpressPageSettings&quot; field */
+export type WithAcfBracesExpressPageSettings = {
+  /** Fields of the BracesExpressPageSettings ACF Field Group */
+  bracesExpressPageSettings?: Maybe<BracesExpressPageSettings>;
 };
 
 /** Provides access to fields of the &quot;CallToActionSettings&quot; ACF Field Group via the &quot;callToActionSettings&quot; field */
