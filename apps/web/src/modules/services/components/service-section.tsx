@@ -6,7 +6,8 @@ import { IconByName } from "@minnek/ui/components/icons/index";
 import Link from "next/link";
 import { ImageType } from "@/modules/common/types";
 
-interface ServiceSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ServiceSectionProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     summary: string;
     gallery: ImageType[];
