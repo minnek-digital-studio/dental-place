@@ -1,0 +1,60 @@
+query getBracesExpressPageInfo($uri: ID = "/braces/") {
+    page(id: $uri, idType: URI) {
+        title
+        id
+        seo {
+            title
+            metaDesc
+            metaKeywords
+        }
+        bracesExpressPageSettings {
+            callToActions {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+            gallerySection {
+                title
+                images {
+                    edges {
+                        node {
+                            sourceUrl
+                            altText
+                        }
+                    }
+                }
+            }
+            heroSection {
+                title
+                description
+                button {
+                    variant
+                    size
+                    link {
+                        title
+                        url
+                        target
+                    }
+                    className
+                    icon {
+                        color
+                        name
+                        size
+                    }
+                }
+                images {
+                    image {
+                        node {
+                            altText
+                            sourceUrl
+                        }
+                    }
+                    className
+                }
+                className
+            }
+        }
+    }
+}

@@ -53,7 +53,7 @@ const AboutBracesSection = ({
                             dangerouslySetInnerHTML={descriptionHTML}
                         />
                     )}
-                    {button && (
+                    {button?.text && (
                         <Button
                             variant={button.variant}
                             className="gap-2 h-12"
