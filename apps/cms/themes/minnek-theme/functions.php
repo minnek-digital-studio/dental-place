@@ -169,7 +169,6 @@ if (!function_exists('a_register_services_custom_post_types')) {
             'publicly_queryable' => true,
             'graphql_single_name' => $singular_name,
             'graphql_plural_name' => $plural_name,
-            'hierarchical' => true,
         ));
     }
     add_action('init', 'a_register_services_custom_post_types');
@@ -196,7 +195,6 @@ if (!function_exists('a_register_case_studies_custom_post_types')) {
             'publicly_queryable' => true,
             'graphql_single_name' => 'caseStudy',
             'graphql_plural_name' => 'caseStudies',
-            'hierarchical' => true,
         ));
     }
     add_action('init', 'a_register_case_studies_custom_post_types');
@@ -223,7 +221,6 @@ if (!function_exists('a_register_call_to_action_custom_post_types')) {
             'publicly_queryable' => true,
             'graphql_single_name' => 'callToAction',
             'graphql_plural_name' => 'callToActions',
-            'hierarchical' => true,
         ));
     }
     add_action('init', 'a_register_call_to_action_custom_post_types');
@@ -250,7 +247,6 @@ if (!function_exists('a_register_team_custom_post_types')) {
             'publicly_queryable' => true,
             'graphql_single_name' => $singular_name,
             'graphql_plural_name' => $plural_name,
-            'hierarchical' => true,
         ));
     }
     add_action('init', 'a_register_team_custom_post_types');

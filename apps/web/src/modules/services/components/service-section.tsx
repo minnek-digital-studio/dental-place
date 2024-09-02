@@ -4,16 +4,32 @@ import { Image } from "@/modules/common/components/image";
 import { Button } from "@minnek/ui/components/button";
 import { IconByName } from "@minnek/ui/components/icons/index";
 import Link from "next/link";
+import { ImageType } from "@/modules/common/types";
 
 export interface ServiceSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
+    summary: string;
+    gallery: ImageType[];
     description: string;
-    content?: string;
+    img?: ImageType;
+    editor?: string;
 }
+
+const columnsClass = {
+    1: "grid-cols-1",
+    2: "grid-cols-2",
+    3: "grid-cols-3",
+    4: "grid-cols-4",
+    5: "grid-cols-5",
+};
 
 const ServiceSection = ({
     title,
+    summary,
+    gallery,
+    editor,
+    img,
     description,
     content,
     ...props
@@ -27,76 +43,50 @@ const ServiceSection = ({
                 <header className="max-w-[50rem] flex flex-col gap-6 text-center">
                     <Typography as="h2">{title}</Typography>
                     <Typography as="p" className="text-dark-grey">
-                        {description}
+                        {summary}
                     </Typography>
                 </header>
                 <main className="w-full max-w-[55rem] flex flex-col gap-9">
-                    <div className="grid grid-cols-3 w-full items-center justify-center gap-6 overflow-hidden">
-                        <picture className="rounded-lg overflow-hidden w-full h-full flex-1">
-                            <Image
-                                src="https://dentalplace.minnekdigital.com/wp-content/uploads/2024/08/service-1.webp"
-                                alt="Dental"
-                            />
+                    {gallery?.length > 0 && (
+                        <div
+                            className={`grid ${columnsClass[gallery.length]} w-full items-center justify-center gap-6 overflow-hidden`}
+                        >
+                            {gallery.map((img) => (
+                                <picture
+                                    key={img.src}
+                                    className="rounded-lg overflow-hidden w-full h-full flex-1"
+                                >
+                                    <Image {...img} />
+                                </picture>
+                            ))}
+                        </div>
+                    )}
+                    {editor && (
+                        <div
+                            className="flex gap-6 max-md:flex-col"
+                            dangerouslySetInnerHTML={{
+                                __html: editor,
+                            }}
+                        ></div>
+                    )}
+
+                    {img?.src && (
+                        <picture className="h-[30rem] rounded-lg overflow-hidden">
+                            <Image {...img} />
                         </picture>
-                        <picture className="rounded-lg overflow-hidden w-full h-full flex-1">
-                            <Image
-                                src="https://dentalplace.minnekdigital.com/wp-content/uploads/2024/08/clinic-1.webp"
-                                alt="Clinic"
-                            />
-                        </picture>
-                        <picture className="rounded-lg overflow-hidden w-full h-full flex-1">
-                            <Image
-                                src="https://dentalplace.minnekdigital.com/wp-content/uploads/2024/08/service-2.webp"
-                                alt="Dental"
-                            />
-                        </picture>
-                    </div>
-                    <div className="flex gap-6 max-md:flex-col ">
-                        <p>
-                            Lörem ipsum ogooglebar paratenat antiprepal. Soderat
-                            saling supranedusaska, prede. Lörem ipsum ogooglebar
-                            paratenat
-                            <br />
-                            antiprepal. Lörem ipsum ogooglebar
-                        </p>
-                        <p>
-                            Lörem ipsum ogooglebar paratenat antiprepal. Soderat
-                            saling supranedusaska, prede. Lörem ipsum ogooglebar
-                            paratenat
-                            <br />
-                            antiprepal. Lörem ipsum ogooglebar
-                        </p>
-                    </div>
-                    <picture className="h-[30rem] rounded-lg overflow-hidden">
-                        <img
-                            decoding="async"
-                            className="w-full h-full object-cover"
-                            src="https://dentalplace.minnekdigital.com/wp-content/uploads/2024/08/service-3.webp"
-                            alt="Dental"
-                        />
-                    </picture>
+                    )}
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:auto-rows-fr">
                         <div className="flex flex-col gap-6">
                             <h2 className="font-noto-sans text-black text-3xl lg:text-4xl font-bold tracking-tight">
                                 Service Description
                             </h2>
-                            <p className="font-noto-sans text-black text-base">
-                                Lörem ipsum ogooglebar paratenat antiprepal.
-                                Soderat saling supranedusaska, prede. Lörem
-                                ipsum ogooglebar paratenat antiprepal. Lörem
-                                ipsum ogooglebar paratenat antiprepal. Soderat
-                                saling supranedusaska, prede. Lörem ipsum
-                                ogooglebar paratenat antiprepal.
-                            </p>
-                            <p className="font-noto-sans text-black text-base">
-                                Lörem ipsum ogooglebar paratenat antiprepal.
-                                Soderat saling supranedusaska, prede. Lörem
-                                ipsum ogooglebar paratenat antiprepal. Lörem
-                                ipsum ogooglebar paratenat antiprepal. Soderat
-                                saling supranedusaska, prede. Lörem ipsum
-                                ogooglebar paratenat antiprepal.
-                            </p>
+                            <div
+                                className="flex flex-col gap-6"
+                                dangerouslySetInnerHTML={{
+                                    __html: description,
+                                }}
+                            ></div>
                         </div>
                         <div className="bg-secondary/40 rounded-3xl flex flex-col gap-3 p-11">
                             <h3 className="font-noto-sans text-black tracking-tight text-xl lg:text-xl font-extrabold leading-none">

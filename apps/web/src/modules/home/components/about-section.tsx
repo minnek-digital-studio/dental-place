@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export type AboutSectionProps = {
     title: string;
-    description: string;
+    description?: string;
     button: ButtonType;
     img: ImageType;
     className?: string;

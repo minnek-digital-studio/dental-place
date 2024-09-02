@@ -1,0 +1,38 @@
+query getCallToActionByID($id: ID = "") {
+    callToAction(id: $id, idType: ID) {
+        title
+        callToActionSettings {
+            description
+            button {
+                link {
+                    url
+                    title
+                    target
+                }
+                size
+                variant
+            }
+            image {
+                img {
+                    node {
+                        altText
+                        sourceUrl
+                        title
+                    }
+                }
+                className
+            }
+            type
+            className
+            items {
+                title
+                description
+                icon {
+                    name
+                    size
+                    className
+                }
+            }
+        }
+    }
+}
