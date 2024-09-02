@@ -1,5 +1,6 @@
 import { type ButtonVariants } from "@minnek/ui/components/button";
 import { type IconsName } from "@minnek/ui/icons";
+import { ComponentType } from "../utils/CallToActions";
 
 export type ButtonType = {
     text: string;
@@ -27,4 +28,24 @@ export type Icon = {
 export type Author = {
     name: string;
     img: ImageType;
-}
+};
+
+export type CallToAction = {
+    title: string;
+    description?: string;
+    type?: ComponentType;
+    button: ButtonType;
+    img: ImageType;
+    className?: string;
+    items: Array<{
+        title: string;
+        description: string;
+        icon: Icon;
+    }>;
+};
+
+export type Seo = {
+    title: string;
+    description: string;
+    keywords: string;
+};

@@ -18,7 +18,6 @@ export type ReviewsSectionProps = {
     title: string;
     description: string;
     items: ReviewCardProps[];
-    button: buttonProps;
 };
 
 export type buttonProps = {
@@ -28,12 +27,7 @@ export type buttonProps = {
     size: ButtonVariants["size"];
 };
 
-const ReviewsSection = ({
-    title,
-    description,
-    items,
-    button,
-}: ReviewsSectionProps) => {
+const ReviewsSection = ({ title, description, items }: ReviewsSectionProps) => {
     return (
         <section className="flex flex-col gap-9 items-center py-6 container">
             <header className="flex flex-col gap-4 items-center">

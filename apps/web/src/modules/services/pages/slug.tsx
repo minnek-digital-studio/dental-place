@@ -30,7 +30,7 @@ export async function generateMetadata(
 
     return {
         title: `${service?.title} | Dental Place`,
-        description: `${service?.description}`,
+        description: `${service?.summary}`,
     };
 }
 
