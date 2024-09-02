@@ -3,20 +3,13 @@ import Layout from "@/modules/common/layouts/layout";
 import HeroSection, {
     type HeroSectionProps,
 } from "@/modules/braces/components/hero-section";
-import HeroInfo from "@/modules/braces/data/hero.json";
-import WhyBracesSection, {
-    type WhyBracesSectionProps,
-} from "@/modules/braces/components/why-braces-section";
-import WhyBracesInfo from "@/modules/braces/data/why-braces.json";
-import AboutBracesSection, {
-    type AboutBracesSectionProps,
-} from "@/modules/braces/components/about-braces";
-import AboutBracesInfo from "@/modules/braces/data/about-braces.json";
 import BracesPhotosSection, {
     type BracesPhotosSectionProps,
 } from "@/modules/braces/components/braces-photos-section";
-import BracesInfo from "@/modules/braces/data/braces-photos.json";
 import type { Metadata } from "next";
+import CallToAction from "@/modules/common/components/CallToAction";
+
+import { getBracesExpressPageInfo } from "@/modules/braces/actions/braces.actions";
 
 export const metadata: Metadata = {
     title: "Express Braces",
@@ -24,6 +17,8 @@ export const metadata: Metadata = {
 };
 
 const ExpressBracesPage = async () => {
+    const { HeroInfo, BracesPhotosInfo, callToActions } =
+        await getBracesExpressPageInfo();
     return (
         <Layout
             navbarVariant={{
@@ -31,12 +26,11 @@ const ExpressBracesPage = async () => {
             }}
         >
             <HeroSection {...(HeroInfo as HeroSectionProps)} />
-            <AboutBracesSection
-                {...(AboutBracesInfo as AboutBracesSectionProps)}
-            />
-            <WhyBracesSection {...(WhyBracesInfo as WhyBracesSectionProps)} />
+            {callToActions.map((cta) => (
+                <CallToAction {...cta} />
+            ))}
             <BracesPhotosSection
-                {...(BracesInfo as BracesPhotosSectionProps)}
+                {...(BracesPhotosInfo as BracesPhotosSectionProps)}
             />
         </Layout>
     );
