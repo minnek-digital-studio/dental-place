@@ -10,6 +10,10 @@ import type { Metadata } from "next";
 import CallToAction from "@/modules/common/components/CallToAction";
 
 import { getBracesExpressPageInfo } from "@/modules/braces/actions/braces.actions";
+import HelpFormSection, {
+    type HelpFormSectionProps,
+} from "../components/help-form-section";
+import HelpFormInfo from "../data/helpform.json";
 
 export const metadata: Metadata = {
     title: "Express Braces",
@@ -26,12 +30,13 @@ const ExpressBracesPage = async () => {
             }}
         >
             <HeroSection {...(HeroInfo as HeroSectionProps)} />
-            {callToActions.map((cta) => (
-                <CallToAction {...cta} />
+            {callToActions.map((cta, index) => (
+                <CallToAction {...cta} key={`${cta.title}-${index}`} />
             ))}
             <BracesPhotosSection
                 {...(BracesPhotosInfo as BracesPhotosSectionProps)}
             />
+            <HelpFormSection {...(HelpFormInfo as HelpFormSectionProps)} />
         </Layout>
     );
 };
