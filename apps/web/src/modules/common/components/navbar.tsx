@@ -133,24 +133,27 @@ export async function NavbarItem({
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="grid px-4 py-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                        {subItems.map(({ title, href }) => (
-                                            <Link
-                                                href={href}
-                                                key={title}
-                                                legacyBehavior
-                                                passHref
-                                            >
-                                                <NavigationMenuLink
-                                                    className={navigationMenuTriggerStyle(
-                                                        {
-                                                            direction: "column",
-                                                        },
-                                                    )}
+                                        {subItems.map(
+                                            ({ title, href }, index) => (
+                                                <Link
+                                                    href={href}
+                                                    key={`${title}-${index}`}
+                                                    legacyBehavior
+                                                    passHref
                                                 >
-                                                    {title}
-                                                </NavigationMenuLink>
-                                            </Link>
-                                        ))}
+                                                    <NavigationMenuLink
+                                                        className={navigationMenuTriggerStyle(
+                                                            {
+                                                                direction:
+                                                                    "column",
+                                                            },
+                                                        )}
+                                                    >
+                                                        {title}
+                                                    </NavigationMenuLink>
+                                                </Link>
+                                            ),
+                                        )}
                                     </ul>
                                 </AccordionContent>
                             </AccordionItem>
@@ -226,8 +229,11 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                         </Link>
                         <NavigationMenu className="hidden md:flex">
                             <NavigationMenuList>
-                                {navItems.map((item) => (
-                                    <NavbarItem key={item.title} {...item} />
+                                {navItems.map((item, index) => (
+                                    <NavbarItem
+                                        key={`${item.title}-${index}`}
+                                        {...item}
+                                    />
                                 ))}
                             </NavigationMenuList>
                         </NavigationMenu>
@@ -252,7 +258,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                 </Typography>
                             </Button>
 
-                            {SocialLinksConfig?.map((social) => {
+                            {SocialLinksConfig?.map((social, index) => {
                                 if (
                                     social.icon === null ||
                                     social.icon === undefined
@@ -266,6 +272,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                         <Button
                                             variant={button as any}
                                             size="icon"
+                                            key={`${index}-${social.title}`}
                                             className="hidden md:flex"
                                             asChild
                                         >
