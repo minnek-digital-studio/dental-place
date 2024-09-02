@@ -63,3 +63,39 @@ query getServiceBySlug($slug: ID = "") {
         }
     }
 }
+
+query getServicePageInfo($uri: ID = "/services/") {
+    page(id: $uri, idType: URI) {
+        id
+        seo {
+            title
+            metaDesc
+            metaKeywords
+        }
+        servicePageSettings {
+            servicesSection {
+                title
+                description
+                className
+            }
+            clinicSection {
+                title
+                imagesClinic {
+                    edges {
+                        node {
+                            altText
+                            sourceUrl
+                        }
+                    }
+                }
+            }
+            callToActions {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+        }
+    }
+}
