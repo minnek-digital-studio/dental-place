@@ -5942,7 +5942,7 @@ export enum OrderEnum {
 }
 
 /** The page type */
-export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfHomePageSettings & WithAcfServicePageSettings & {
+export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & HierarchicalNode & MenuItemLinkable & Node & NodeWithAuthor & NodeWithComments & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfHomePageSettings & WithAcfServicePageSettings & WithAcfTeamPageSettings & {
   __typename?: 'Page';
   /** Returns ancestors of the node. Default ordered as lowest (closest to the child) to highest (closest to the root). */
   ancestors?: Maybe<HierarchicalContentNodeToContentNodeAncestorsConnection>;
@@ -6055,6 +6055,8 @@ export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   slug?: Maybe<Scalars['String']['output']>;
   /** The current status of the object */
   status?: Maybe<Scalars['String']['output']>;
+  /** Fields of the TeamPageSettings ACF Field Group */
+  teamPageSettings?: Maybe<TeamPageSettings>;
   /** The template assigned to a node of content */
   template?: Maybe<ContentTemplate>;
   /** Connection between the Page type and the TermNode type */
@@ -12714,7 +12716,7 @@ export type TaxonomyToTermNodeConnectionPageInfo = PageInfo & TermNodeConnection
 };
 
 /** The Team type */
-export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfTeamMemberSettings & {
   __typename?: 'Team';
   /**
    * The ancestors of the content node.
@@ -12805,6 +12807,8 @@ export type Team = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & 
    * @deprecated Deprecated in favor of the databaseId field
    */
   teamId: Scalars['Int']['output'];
+  /** Fields of the TeamMemberSettings ACF Field Group */
+  teamMemberSettings?: Maybe<TeamMemberSettings>;
   /** The template assigned to the node */
   template?: Maybe<ContentTemplate>;
   /** The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made. */
@@ -12899,6 +12903,366 @@ export enum TeamIdType {
   /** Identify a resource by the URI. */
   Uri = 'URI'
 }
+
+/** The &quot;TeamMemberSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettings = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettings_Fields & {
+  __typename?: 'TeamMemberSettings';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  description: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  education?: Maybe<Array<Maybe<TeamMemberSettingsEducation>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  educationTitle: Scalars['String']['output'];
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  socialLink?: Maybe<Array<Maybe<TeamMemberSettingsSocialLink>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  speciality: Scalars['String']['output'];
+};
+
+/** The &quot;TeamMemberSettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsButton = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsButton_Fields & {
+  __typename?: 'TeamMemberSettingsButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsButton&quot; Field Group */
+export type TeamMemberSettingsButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;TeamMemberSettingsEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsEducation = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsEducation_Fields & {
+  __typename?: 'TeamMemberSettingsEducation';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsEducationButton>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  institution?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;TeamMemberSettingsEducationButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsEducationButton = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsEducationButton_Fields & {
+  __typename?: 'TeamMemberSettingsEducationButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsEducationButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsEducationButtonIcon = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsEducationButtonIcon_Fields & {
+  __typename?: 'TeamMemberSettingsEducationButtonIcon';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+export type TeamMemberSettingsEducationButtonIcon_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+export type TeamMemberSettingsEducationButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsEducationButtonIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsEducation&quot; Field Group */
+export type TeamMemberSettingsEducation_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsEducationButton>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  institution?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;TeamMemberSettingsSocialLink&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsSocialLink = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsSocialLink_Fields & {
+  __typename?: 'TeamMemberSettingsSocialLink';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsSocialLinkIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamMemberSettingsSocialLinkIcon = AcfFieldGroup & AcfFieldGroupFields & TeamMemberSettingsSocialLinkIcon_Fields & {
+  __typename?: 'TeamMemberSettingsSocialLinkIcon';
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+export type TeamMemberSettingsSocialLinkIcon_Fields = {
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  color?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  fill?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group */
+  stroke?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+export type TeamMemberSettingsSocialLink_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  icon?: Maybe<TeamMemberSettingsSocialLinkIcon>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamMemberSettings&quot; Field Group */
+export type TeamMemberSettings_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  button?: Maybe<TeamMemberSettingsButton>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  description: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  education?: Maybe<Array<Maybe<TeamMemberSettingsEducation>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  educationTitle: Scalars['String']['output'];
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  name: Scalars['String']['output'];
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  socialLink?: Maybe<Array<Maybe<TeamMemberSettingsSocialLink>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group */
+  speciality: Scalars['String']['output'];
+};
+
+/** The &quot;TeamPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettings = AcfFieldGroup & AcfFieldGroupFields & TeamPageSettings_Fields & {
+  __typename?: 'TeamPageSettings';
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  faq?: Maybe<TeamPageSettingsFaq>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;TeamPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettingsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;TeamPageSettingsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettingsFaq = AcfFieldGroup & AcfFieldGroupFields & TeamPageSettingsFaq_Fields & {
+  __typename?: 'TeamPageSettingsFaq';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  questions?: Maybe<Array<Maybe<TeamPageSettingsFaqQuestions>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;TeamPageSettingsFaqQuestions&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type TeamPageSettingsFaqQuestions = AcfFieldGroup & AcfFieldGroupFields & TeamPageSettingsFaqQuestions_Fields & {
+  __typename?: 'TeamPageSettingsFaqQuestions';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  answer?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  question?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+export type TeamPageSettingsFaqQuestions_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  answer?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group */
+  question?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamPageSettingsFaq&quot; Field Group */
+export type TeamPageSettingsFaq_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  questions?: Maybe<Array<Maybe<TeamPageSettingsFaqQuestions>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;TeamPageSettings&quot; Field Group */
+export type TeamPageSettings_Fields = {
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  faq?: Maybe<TeamPageSettingsFaq>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;TeamPageSettings&quot; Field Group */
+export type TeamPageSettings_FieldsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
 
 /** Connection between the Team type and the Team type */
 export type TeamToParentConnectionEdge = Edge & OneToOneConnection & TeamConnectionEdge & {
@@ -15135,6 +15499,18 @@ export type WithAcfServicePageSettings = {
 export type WithAcfServiceSettings = {
   /** Fields of the ServiceSettings ACF Field Group */
   serviceSettings?: Maybe<ServiceSettings>;
+};
+
+/** Provides access to fields of the &quot;TeamMemberSettings&quot; ACF Field Group via the &quot;teamMemberSettings&quot; field */
+export type WithAcfTeamMemberSettings = {
+  /** Fields of the TeamMemberSettings ACF Field Group */
+  teamMemberSettings?: Maybe<TeamMemberSettings>;
+};
+
+/** Provides access to fields of the &quot;TeamPageSettings&quot; ACF Field Group via the &quot;teamPageSettings&quot; field */
+export type WithAcfTeamPageSettings = {
+  /** Fields of the TeamPageSettings ACF Field Group */
+  teamPageSettings?: Maybe<TeamPageSettings>;
 };
 
 /** Provides access to fields of the &quot;Test&quot; ACF Field Group via the &quot;test&quot; field */
