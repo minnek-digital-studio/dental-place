@@ -5,12 +5,14 @@ import { Button } from "@minnek/ui/components/button";
 import { IconByName } from "@minnek/ui/components/icons/index";
 import Link from "next/link";
 import { ImageType } from "@/modules/common/types";
+import { BreadCrumb } from "@/modules/common/components/breadcrumb";
 
 export interface ServiceSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     summary: string;
     gallery: ImageType[];
+    slug: string;
     description: string;
     img?: ImageType;
     editor?: string;
@@ -31,17 +33,35 @@ const ServiceSection = ({
     editor,
     img,
     description,
+    slug,
     content,
     ...props
 }: ServiceSectionProps) => {
+    const links = [
+        {
+            href: "/",
+            text: "Inicio",
+        },
+        {
+            href: "/services",
+            text: "Servicios",
+        },
+        {
+            href: `/services/${slug}`,
+            text: title,
+            active: true,
+        },
+    ];
+
     return (
         <section
             {...props}
             className="bg-gradient-to-b from-secondary/40 from-[15%] to-[0%]"
         >
             <div className="flex flex-col gap-9 items-center py-6 container pb-10">
-                <header className="max-w-[50rem] flex flex-col gap-6 text-center">
+                <header className="max-w-[50rem] flex flex-col gap-6 text-center items-center">
                     <Typography as="h2">{title}</Typography>
+                    <BreadCrumb links={links} />
                     <Typography as="p" className="text-dark-grey">
                         {summary}
                     </Typography>
@@ -117,7 +137,7 @@ const ServiceSection = ({
                             >
                                 <Link
                                     href="tel:+18095818686"
-                                    className="text-wrap"
+                                    className="text-wrap max-[400px]:h-[3.75rem]"
                                 >
                                     <IconByName name="WhatsApp" size={20} />
                                     Make An Appointment
