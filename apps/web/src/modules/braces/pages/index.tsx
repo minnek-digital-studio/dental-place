@@ -17,6 +17,10 @@ import BracesPhotosSection, {
 } from "@/modules/braces/components/braces-photos-section";
 import BracesInfo from "@/modules/braces/data/braces-photos.json";
 import type { Metadata } from "next";
+import HelpFormSection, {
+    type HelpFormSectionProps,
+} from "../components/help-form-section";
+import HelpFormInfo from "../data/helpform.json";
 
 export const metadata: Metadata = {
     title: "Express Braces",
@@ -38,6 +42,7 @@ const ExpressBracesPage = async () => {
             <BracesPhotosSection
                 {...(BracesInfo as BracesPhotosSectionProps)}
             />
+            <HelpFormSection {...(HelpFormInfo as HelpFormSectionProps)} />
         </Layout>
     );
 };

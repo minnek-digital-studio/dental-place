@@ -86,7 +86,7 @@
       {
         "kind": "OBJECT",
         "name": "AcfContentNodeConnection",
-        "description": "Connection between the HomePageSettingsReviewSection_Fields type and the ContentNode type",
+        "description": "Connection between the BracesExpressPageSettings_Fields type and the ContentNode type",
         "isOneOf": null,
         "fields": [
           {
@@ -340,6 +340,36 @@
         "interfaces": [],
         "enumValues": null,
         "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsGallerySection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionButtonIcon",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionImages",
+            "ofType": null
+          },
           {
             "kind": "OBJECT",
             "name": "CallToActionSettings",
@@ -630,6 +660,36 @@
         "interfaces": [],
         "enumValues": null,
         "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsGallerySection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionButtonIcon",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionImages",
+            "ofType": null
+          },
           {
             "kind": "OBJECT",
             "name": "CallToActionSettings",
@@ -948,7 +1008,7 @@
       {
         "kind": "OBJECT",
         "name": "AcfMediaItemConnection",
-        "description": "Connection between the HomePageSettingsArsSection_Fields type and the MediaItem type",
+        "description": "Connection between the BracesExpressPageSettingsGallerySection_Fields type and the MediaItem type",
         "isOneOf": null,
         "fields": [
           {
@@ -1035,7 +1095,7 @@
       {
         "kind": "OBJECT",
         "name": "AcfMediaItemConnectionEdge",
-        "description": "Connection between the CallToActionSettingsImage_Fields type and the MediaItem type",
+        "description": "Connection between the BracesExpressPageSettingsHeroSectionImages_Fields type and the MediaItem type",
         "isOneOf": null,
         "fields": [
           {
@@ -1550,6 +1610,1216 @@
         "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettings",
+        "description": "The &quot;BracesExpressPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "callToActions",
+            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfContentNodeConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "gallerySection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsGallerySection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "heroSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHeroSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettings_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsGallerySection",
+        "description": "The &quot;BracesExpressPageSettingsGallerySection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "images",
+            "description": "Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsGallerySection_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsGallerySection_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsGallerySection&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "images",
+            "description": "Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsGallerySection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsGallerySection",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHeroSection",
+        "description": "The &quot;BracesExpressPageSettingsHeroSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHeroSectionButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "images",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "BracesExpressPageSettingsHeroSectionImages",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHeroSection_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHeroSectionButton",
+        "description": "The &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "icon",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHeroSectionButtonIcon",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHeroSectionButton_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHeroSectionButtonIcon",
+        "description": "The &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "color",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHeroSectionButtonIcon_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHeroSectionButtonIcon_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "color",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionButtonIcon",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHeroSectionButton_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "icon",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHeroSectionButtonIcon",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionButton",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHeroSectionImages",
+        "description": "The &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "image",
+            "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHeroSectionImages_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHeroSectionImages_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "image",
+            "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSectionImages&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSectionImages",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHeroSection_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHeroSectionButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "images",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "BracesExpressPageSettingsHeroSectionImages",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHeroSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHeroSection",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettings_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettings&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "callToActions",
+            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfContentNodeConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "gallerySection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsGallerySection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "heroSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHeroSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettings",
+            "ofType": null
+          }
+        ]
       },
       {
         "kind": "OBJECT",
@@ -36429,6 +37699,18 @@
             "deprecationReason": null
           },
           {
+            "name": "bracesExpressPageSettings",
+            "description": "Fields of the BracesExpressPageSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "children",
             "description": "Connection between the HierarchicalContentNode type and the ContentNode type",
             "args": [
@@ -37654,6 +38936,11 @@
           },
           {
             "kind": "INTERFACE",
+            "name": "WithAcfBracesExpressPageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
             "name": "WithAcfHomePageSettings",
             "ofType": null
           },
@@ -37661,14 +38948,11 @@
             "kind": "INTERFACE",
             "name": "WithAcfServicePageSettings",
             "ofType": null
-<<<<<<< HEAD
-=======
           },
           {
             "kind": "INTERFACE",
             "name": "WithAcfTeamPageSettings",
             "ofType": null
->>>>>>> release/DP-55
           }
         ],
         "enumValues": null,
@@ -94617,6 +95901,36 @@
         ],
         "enumValues": null,
         "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "WithAcfBracesExpressPageSettings",
+        "description": "Provides access to fields of the &quot;BracesExpressPageSettings&quot; ACF Field Group via the &quot;bracesExpressPageSettings&quot; field",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "bracesExpressPageSettings",
+            "description": "Fields of the BracesExpressPageSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "Page",
+            "ofType": null
+          }
+        ]
       },
       {
         "kind": "INTERFACE",
