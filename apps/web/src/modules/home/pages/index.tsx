@@ -19,9 +19,13 @@ import Layout from "@/modules/common/layouts/layout";
 import { getHomePageInfo } from "../actions/home.action";
 import CallToAction from "@/modules/common/components/CallToAction";
 
-export const metadata: Metadata = {
-    title: `Next.js Blog Example with ${CMS_NAME}`,
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const { seo } = await getHomePageInfo();
+
+    return {
+        ...seo,
+    };
+}
 
 export default async function HomePage() {
     const {
