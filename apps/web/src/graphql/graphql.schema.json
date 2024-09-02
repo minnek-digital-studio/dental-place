@@ -552,6 +552,56 @@
           },
           {
             "kind": "OBJECT",
+            "name": "TeamMemberSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducation",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducationButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducationButtonIcon",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsSocialLink",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsSocialLinkIcon",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettingsFaq",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettingsFaqQuestions",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "Test",
             "ofType": null
           }
@@ -788,6 +838,56 @@
           {
             "kind": "OBJECT",
             "name": "ServiceSettingsButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducation",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducationButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducationButtonIcon",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsSocialLink",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsSocialLinkIcon",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettings",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettingsFaq",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettingsFaqQuestions",
             "ofType": null
           },
           {
@@ -37263,6 +37363,18 @@
             "deprecationReason": null
           },
           {
+            "name": "teamPageSettings",
+            "description": "Fields of the TeamPageSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamPageSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "template",
             "description": "The template assigned to a node of content",
             "args": [],
@@ -37549,6 +37661,14 @@
             "kind": "INTERFACE",
             "name": "WithAcfServicePageSettings",
             "ofType": null
+<<<<<<< HEAD
+=======
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "WithAcfTeamPageSettings",
+            "ofType": null
+>>>>>>> release/DP-55
           }
         ],
         "enumValues": null,
@@ -78503,6 +78623,18 @@
             "deprecationReason": "Deprecated in favor of the databaseId field"
           },
           {
+            "name": "teamMemberSettings",
+            "description": "Fields of the TeamMemberSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "template",
             "description": "The template assigned to the node",
             "args": [],
@@ -78602,6 +78734,11 @@
           {
             "kind": "INTERFACE",
             "name": "UniformResourceIdentifiable",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "WithAcfTeamMemberSettings",
             "ofType": null
           }
         ],
@@ -78920,6 +79057,1986 @@
           }
         ],
         "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettings",
+        "description": "The &quot;TeamMemberSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "education",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeamMemberSettingsEducation",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "educationTitle",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "image",
+            "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "socialLink",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeamMemberSettingsSocialLink",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "speciality",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettings_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettingsButton",
+        "description": "The &quot;TeamMemberSettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettingsButton_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettingsButton_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettingsButton&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsButton",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettingsEducation",
+        "description": "The &quot;TeamMemberSettingsEducation&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsEducationButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "institution",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettingsEducation_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettingsEducationButton",
+        "description": "The &quot;TeamMemberSettingsEducationButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "icon",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsEducationButtonIcon",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettingsEducationButton_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettingsEducationButtonIcon",
+        "description": "The &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettingsEducationButtonIcon_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettingsEducationButtonIcon_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButtonIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducationButtonIcon",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettingsEducationButton_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "icon",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsEducationButtonIcon",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducationButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducationButton",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettingsEducation_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettingsEducation&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsEducationButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "institution",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsEducation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsEducation",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettingsSocialLink",
+        "description": "The &quot;TeamMemberSettingsSocialLink&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "icon",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsSocialLinkIcon",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettingsSocialLink_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamMemberSettingsSocialLinkIcon",
+        "description": "The &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "color",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fill",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamMemberSettingsSocialLinkIcon_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettingsSocialLinkIcon_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "color",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fill",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stroke",
+            "description": "Field of the &quot;color_picker&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLinkIcon&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsSocialLinkIcon",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettingsSocialLink_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "icon",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsSocialLinkIcon",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;TeamMemberSettingsSocialLink&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettingsSocialLink",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamMemberSettings_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamMemberSettings&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettingsButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "education",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeamMemberSettingsEducation",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "educationTitle",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "image",
+            "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "socialLink",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeamMemberSettingsSocialLink",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "speciality",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamMemberSettings",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamPageSettings",
+        "description": "The &quot;TeamPageSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "callToActions",
+            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfContentNodeConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "faq",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamPageSettingsFaq",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamPageSettings_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamPageSettingsFaq",
+        "description": "The &quot;TeamPageSettingsFaq&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "questions",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeamPageSettingsFaqQuestions",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamPageSettingsFaq_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeamPageSettingsFaqQuestions",
+        "description": "The &quot;TeamPageSettingsFaqQuestions&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "answer",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "question",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "TeamPageSettingsFaqQuestions_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamPageSettingsFaqQuestions_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamPageSettingsFaqQuestions&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "answer",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "question",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaqQuestions&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettingsFaqQuestions",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamPageSettingsFaq_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamPageSettingsFaq&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "questions",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeamPageSettingsFaqQuestions",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettingsFaq&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettingsFaq",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TeamPageSettings_Fields",
+        "description": "Interface representing fields of the ACF &quot;TeamPageSettings&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "callToActions",
+            "description": "Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [
+              {
+                "name": "after",
+                "description": "Cursor used along with the \"first\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Cursor used along with the \"last\" argument to reference where in the dataset to get data",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "The number of items to return after the referenced \"after\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "The number of items to return before the referenced \"before\" cursor",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfContentNodeConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "faq",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamPageSettingsFaq",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "TeamPageSettings",
+            "ofType": null
+          }
+        ]
       },
       {
         "kind": "OBJECT",
@@ -92917,6 +95034,66 @@
           {
             "kind": "OBJECT",
             "name": "Service",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "WithAcfTeamMemberSettings",
+        "description": "Provides access to fields of the &quot;TeamMemberSettings&quot; ACF Field Group via the &quot;teamMemberSettings&quot; field",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "teamMemberSettings",
+            "description": "Fields of the TeamMemberSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamMemberSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "Team",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "WithAcfTeamPageSettings",
+        "description": "Provides access to fields of the &quot;TeamPageSettings&quot; ACF Field Group via the &quot;teamPageSettings&quot; field",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "teamPageSettings",
+            "description": "Fields of the TeamPageSettings ACF Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeamPageSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "Page",
             "ofType": null
           }
         ]
