@@ -3,13 +3,14 @@
 import { useSuspenseQuery } from "@apollo/client";
 
 import {
-    GetServicesDocument,
-    GetServicesQuery,
+    GetServicePageInfoDocument,
+    GetServicesInfoQuery,
 } from "@/graphql/generated/graphql";
 
 const ClientQueryTest = () => {
-    const { data, error } =
-        useSuspenseQuery<GetServicesQuery>(GetServicesDocument);
+    const { data, error } = useSuspenseQuery<GetServicesInfoQuery>(
+        GetServicePageInfoDocument,
+    );
 
     return (
         <div>
