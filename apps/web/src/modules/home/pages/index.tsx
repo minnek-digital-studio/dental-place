@@ -10,7 +10,7 @@ import InstagramSection, {
 } from "@/modules/home/components/instagram-section";
 import LetUsHelpSection, {
     LetUsHelpSectionProps,
-} from "@/modules/home/components/lethelp-section";
+} from "@/modules/common/components/lethelp-section";
 import PresentationSection, {
     type PresentationSectionProps,
 } from "@/modules/home/components/presentation-section";
