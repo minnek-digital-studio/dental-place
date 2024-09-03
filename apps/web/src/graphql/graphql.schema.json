@@ -352,6 +352,31 @@
           },
           {
             "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionForm",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFields",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "BracesExpressPageSettingsHeroSection",
             "ofType": null
           },
@@ -668,6 +693,31 @@
           {
             "kind": "OBJECT",
             "name": "BracesExpressPageSettingsGallerySection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSection",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionForm",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormButton",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFields",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput",
             "ofType": null
           },
           {
@@ -1703,6 +1753,18 @@
             "deprecationReason": null
           },
           {
+            "name": "helpFormSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "heroSection",
             "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
             "args": [],
@@ -1959,6 +2021,979 @@
           {
             "kind": "OBJECT",
             "name": "BracesExpressPageSettingsGallerySection",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHelpFormSection",
+        "description": "The &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "form",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSectionForm",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHelpFormSection_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHelpFormSectionForm",
+        "description": "The &quot;BracesExpressPageSettingsHelpFormSectionForm&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionForm&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSectionFormButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fields",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionForm&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "BracesExpressPageSettingsHelpFormSectionFormFields",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHelpFormSectionForm_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHelpFormSectionFormButton",
+        "description": "The &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormButton_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHelpFormSectionFormButton_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "link",
+            "description": "Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfLink",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "size",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormButton&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormButton",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHelpFormSectionFormFields",
+        "description": "The &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "input",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "label",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "textarea",
+            "description": "Field of the &quot;true_false&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFields_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput",
+        "description": "The &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "placeholder",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sizes",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "placeholder",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sizes",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "variant",
+            "description": "Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFieldsInput&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHelpFormSectionFormFields_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "input",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSectionFormFieldsInput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "label",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "textarea",
+            "description": "Field of the &quot;true_false&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionFormFields&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionFormFields",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHelpFormSectionForm_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHelpFormSectionForm&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "button",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionForm&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSectionFormButton",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "fields",
+            "description": "Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSectionForm&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "BracesExpressPageSettingsHelpFormSectionFormFields",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSectionForm",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "BracesExpressPageSettingsHelpFormSection_Fields",
+        "description": "Interface representing fields of the ACF &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "description",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "form",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSectionForm",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettingsHelpFormSection&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "BracesExpressPageSettingsHelpFormSection",
             "ofType": null
           }
         ]
@@ -2781,6 +3816,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "BracesExpressPageSettingsGallerySection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "helpFormSection",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;BracesExpressPageSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BracesExpressPageSettingsHelpFormSection",
               "ofType": null
             },
             "isDeprecated": false,

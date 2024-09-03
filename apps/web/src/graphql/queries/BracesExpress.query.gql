@@ -8,6 +8,36 @@ query getBracesExpressPageInfo($uri: ID = "/braces/") {
             metaKeywords
         }
         bracesExpressPageSettings {
+            helpFormSection {
+                id
+                title
+                description
+                form {
+                    fields {
+                        name
+                        label
+                        description
+                        textarea
+                        input {
+                            name
+                            placeholder
+                            sizes
+                            variant
+                            className
+                        }
+                    }
+                    button {
+                        className
+                        link {
+                            title
+                            url
+                        }
+                        size
+                        type
+                        variant
+                    }
+                }
+            }
             callToActions {
                 edges {
                     node {

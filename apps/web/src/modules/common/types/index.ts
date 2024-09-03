@@ -9,6 +9,7 @@ export type ButtonType = {
     size: ButtonVariants["size"];
     className?: string;
     icon?: Icon;
+    type?: "submit" | "button" | "reset";
 };
 
 export type ImageType = {

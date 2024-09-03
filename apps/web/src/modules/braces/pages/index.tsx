@@ -15,13 +15,16 @@ import HelpFormSection, {
 } from "../components/help-form-section";
 import HelpFormInfo from "../data/helpform.json";
 
-export const metadata: Metadata = {
-    title: "Express Braces",
-    description: "Express Braces",
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const { seo } = await getBracesExpressPageInfo();
+
+    return {
+        ...seo,
+    };
+}
 
 const ExpressBracesPage = async () => {
-    const { HeroInfo, BracesPhotosInfo, callToActions } =
+    const { HeroInfo, BracesPhotosInfo, callToActions, helpFormInfo } =
         await getBracesExpressPageInfo();
     return (
         <Layout
@@ -36,7 +39,7 @@ const ExpressBracesPage = async () => {
             <BracesPhotosSection
                 {...(BracesPhotosInfo as BracesPhotosSectionProps)}
             />
-            <HelpFormSection {...(HelpFormInfo as HelpFormSectionProps)} />
+            <HelpFormSection {...(helpFormInfo as HelpFormSectionProps)} />
         </Layout>
     );
 };
