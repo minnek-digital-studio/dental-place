@@ -28,7 +28,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={notoSans.variable}>{children}</body>
+            <body
+                className={`${notoSans.variable} min-h-dvh flex flex-col relative`}
+            >
+                {children}
+            </body>
         </html>
     );
 }
