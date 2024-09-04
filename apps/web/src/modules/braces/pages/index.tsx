@@ -19,8 +19,9 @@ import BracesInfo from "@/modules/braces/data/braces-photos.json";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Express Braces",
-    description: "Express Braces",
+    title: "Express Braces | Dental Place",
+    description:
+        "Express Braces are a fast and effective way to straighten your teeth.",
 };
 
 const ExpressBracesPage = async () => {
