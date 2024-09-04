@@ -15,96 +15,96 @@
       "icon": "CleanTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Ortodoncia",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "orthodontics",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/orthodontics",
         "variant": "link",
         "size": "link"
       },
       "icon": "ServiceTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Endodoncia",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "endodontics",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/endodontics",
         "variant": "link",
         "size": "link"
       },
       "icon": "CarieTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Periodoncia",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "periodontics",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/periodontics",
         "variant": "link",
         "size": "link"
       },
       "icon": "CarieTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Odontología Estética",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "aesthetic-dentistry",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/aesthetic-dentistry",
         "variant": "link",
         "size": "link"
       },
       "icon": "CarieTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Cirugía Oral y Maxilofacial",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "oral-and-maxillofacial-surgery",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/oral-and-maxillofacial-surgery",
         "variant": "link",
         "size": "link"
       },
       "icon": "CarieTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Implantología Dental",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "dental-implants",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/dental-implants",
         "variant": "link",
         "size": "link"
       },
       "icon": "CarieTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Odontopediatria",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "pediatric-dentistry",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/pediatric-dentistry",
         "variant": "link",
         "size": "link"
       },
       "icon": "CarieTooth"
     },
     {
-      "title": "Odontología General",
+      "title": "Rehabilitación Bucal",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
-      "slug": "odontology-general",
+      "slug": "oral-rehabilitation",
       "button": {
         "text": "Learn More",
-        "link": "/services/odontology-general",
+        "link": "/services/oral-rehabilitation",
         "variant": "link",
         "size": "link"
       },
