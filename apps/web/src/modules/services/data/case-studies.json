@@ -11,7 +11,7 @@
       },
       "button": {
         "text": "View Details",
-        "link": "#",
+        "link": "/case_studies/how-jeena-williams-got-braces",
         "variant": "link",
         "size": "link"
       }
@@ -26,7 +26,7 @@
       },
       "button": {
         "text": "View Details",
-        "link": "#",
+        "link": "/case_studies/alex-surgery-removal-of-wisdom-tooth",
         "variant": "link",
         "size": "link"
       }
@@ -41,7 +41,7 @@
       },
       "button": {
         "text": "View Details",
-        "link": "#",
+        "link": "/case_studies/pain-in-the-julie-braces-how-we-did-the-treatment",
         "variant": "link",
         "size": "link"
       }
