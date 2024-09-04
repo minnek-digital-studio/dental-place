@@ -9,7 +9,6 @@
   },
   "icon": {
     "name": "SadTooth",
-    "className": "md:-mb-20 -mt-10 -mb-10 size-56 md:size-96",
     "size": 24
   }
 }

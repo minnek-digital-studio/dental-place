@@ -15,7 +15,14 @@ const NotFound = ({ title, description, button, icon }: NotFoundProps) => {
     return (
         <section className="flex flex-col w-full items-center justify-center pb-12 gap-9 text-center bg-primary">
             <header className="flex flex-col gap-9 text-center justify-center items-center px-6">
-                <IconByName {...icon} />
+                <IconByName
+                    {...icon}
+                    className={
+                        icon?.className
+                            ? icon.className
+                            : "md:-mb-20 -mt-10 -mb-10 size-56 md:size-96"
+                    }
+                />
                 <Typography as="h1">{title}</Typography>
                 <Typography
                     as="p"
