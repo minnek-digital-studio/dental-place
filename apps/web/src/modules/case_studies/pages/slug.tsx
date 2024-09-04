@@ -3,10 +3,6 @@ import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
 import Footer from "@/modules/common/components/footer";
 import { Metadata } from "next";
-import LetUsHelpSection, {
-    LetUsHelpSectionProps,
-} from "@/modules/common/components/lethelp-section";
-import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
 import ServiceDescriptionSection, {
     ServiceDescriptionSectionProps,
 } from "../components/service-description";
@@ -17,6 +13,10 @@ import CaseStudiesDetailsSection, {
     CaseStudiesDetailsSectionProps,
 } from "../components/case-studies-details-section";
 import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "@/modules/common/components/lethelp-section";
+import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
@@ -25,24 +25,20 @@ export const metadata: Metadata = {
 };
 
 const CaseStudiesPage = ({ params }) => {
-    const letUsHelp = LetHelpInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
-
     const servicesDescription = ServiceDescriptionInfo.items.find(
         (item) => item.slug === params.slug,
     );
 
-    const beenDone = BeenDoneInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    const beenDone = BeenDoneInfo;
 
     const caseStudies = CaseStudiesDetailsInfo.items.find(
         (item) => item.slug === params.slug,
     );
 
-    if (!caseStudies || !servicesDescription || !letUsHelp || !beenDone) {
-        notFound();
+    const letUsHelp = LetHelpInfo;
+
+    if (!beenDone || !servicesDescription || !caseStudies || !letUsHelp) {
+        return notFound();
     }
 
     return (
