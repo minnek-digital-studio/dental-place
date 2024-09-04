@@ -15,6 +15,13 @@ import LetUsHelpSection, {
 } from "@/modules/common/components/lethelp-section";
 
 import LetHelpInfo from "@/modules/services/data/let-us-help.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Services | Dental Place",
+    description:
+        "Dental Place offers a wide range of dental services to help you achieve a healthy smile.",
+};
 
 const ServicesPage = async () => {
     return (

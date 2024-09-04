@@ -6,6 +6,13 @@ import HeroSection from "../components/hero-section";
 import GoogleMaps from "../components/google-maps";
 import ContactForm from "../components/contact-form";
 import ContactUsData from "../data/contact-us.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact Us | Dental Place",
+    description:
+        "Contact Dental Place for any inquiries or to book an appointment.",
+};
 
 const ContactPage = () => {
     return (

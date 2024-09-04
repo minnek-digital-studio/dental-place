@@ -2,7 +2,7 @@ import Layout from "@/modules/common/layouts/layout";
 import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
 import Footer from "@/modules/common/components/footer";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import ServiceDescriptionSection, {
     ServiceDescriptionSectionProps,
 } from "../components/service-description";
@@ -19,10 +19,26 @@ import LetUsHelpSection, {
 import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
 import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-    title: "Case Studies",
-    description: "Meet the team that makes Dental Place possible",
+type Props = {
+    params: { slug: string };
 };
+
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
+    // read route params
+    const { slug } = params;
+
+    const caseStudy = CaseStudiesDetailsInfo.items.find(
+        (item) => item.slug === slug,
+    );
+
+    return {
+        title: `${caseStudy?.title} | Dental Place`,
+        description: `${caseStudy?.description}`,
+    };
+}
 
 const CaseStudiesPage = ({ params }) => {
     const servicesDescription = ServiceDescriptionInfo.items.find(
