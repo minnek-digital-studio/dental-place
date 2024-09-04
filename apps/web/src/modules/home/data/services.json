@@ -7,7 +7,7 @@
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
       "button": {
         "text": "Learn More",
-        "link": "#",
+        "link": "/services/odontology-general",
         "variant": "link",
         "size": "link"
       },
@@ -15,11 +15,11 @@
       "className": "bg-info"
     },
     {
-      "title": "Odontología General",
+      "title": "Ortodoncia",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
       "button": {
         "text": "Learn More",
-        "link": "#",
+        "link": "/services/orthodontics",
         "variant": "link",
         "size": "link"
       },
@@ -27,11 +27,11 @@
       "className": "bg-info"
     },
     {
-      "title": "Odontología General",
+      "title": "Endodoncia",
       "description": "Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal.",
       "button": {
         "text": "Learn More",
-        "link": "#",
+        "link": "/services/endodontics",
         "variant": "link",
         "size": "link"
       },

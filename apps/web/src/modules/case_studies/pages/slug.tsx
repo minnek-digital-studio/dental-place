@@ -29,17 +29,13 @@ const CaseStudiesPage = ({ params }) => {
         (item) => item.slug === params.slug,
     );
 
-    const beenDone = BeenDoneInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    const beenDone = BeenDoneInfo;
 
     const caseStudies = CaseStudiesDetailsInfo.items.find(
         (item) => item.slug === params.slug,
     );
 
-    const letUsHelp = LetHelpInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    const letUsHelp = LetHelpInfo;
 
     if (!beenDone || !servicesDescription || !caseStudies || !letUsHelp) {
         return notFound();

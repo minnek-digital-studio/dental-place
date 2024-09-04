@@ -12,7 +12,7 @@
     "buttons": [
       {
         "text": "Descubrir",
-        "link": "#",
+        "link": "/braces",
         "variant": "dark",
         "size": "lg",
         "icon": {
