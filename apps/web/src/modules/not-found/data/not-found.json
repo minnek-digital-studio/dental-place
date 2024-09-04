@@ -1,0 +1,15 @@
+{
+  "title": "Oops, this page doesn't exist!",
+  "description": "TWe couldn't find the page you were looking for. But don't worry, you can head back to the homepage and start fresh.",
+  "button": {
+    "text": "Go back to home",
+    "link": "/",
+    "variant": "dark",
+    "size": "xl"
+  },
+  "icon": {
+    "name": "SadTooth",
+    "className": "md:-mb-20 -mt-10 -mb-10 size-56 md:size-96",
+    "size": 24
+  }
+}
