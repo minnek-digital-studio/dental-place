@@ -7,12 +7,12 @@ import ClinicSection, {
     type ClinicSectionProps,
 } from "@/modules/services/components/clinic-section";
 import CallToAction from "@/modules/common/components/CallToAction";
-import { getServicePage } from "../actions/services.action";
+import { getServicesPage } from "../actions/services.action";
 
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const { seo } = await getServicePage();
+    const { seo } = await getServicesPage();
 
     return {
         ...seo,
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const ServicesPage = async () => {
     const { servicesSectionInfo, clinicSectionInfo, callToActions } =
-        await getServicePage();
+        await getServicesPage();
     return (
         <Layout
             navbarVariant={{

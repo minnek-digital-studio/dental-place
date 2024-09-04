@@ -7,6 +7,7 @@ import { Icon, CallToAction } from "../types";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
 import { ButtonProps } from "@minnek/ui/components/button";
 import { ComponentType } from "../utils/CallToActions";
+import { IconsName } from "@minnek/ui/components/icons/index";
 
 export const getCallToAction = async (id: string): Promise<CallToAction> => {
     const { data } = await getClient().query<GetCallToActionByIdQuery>({
@@ -19,6 +20,10 @@ export const getCallToAction = async (id: string): Promise<CallToAction> => {
     return {
         title: callToAction?.title as string,
         description: callToAction?.callToActionSettings?.description as string,
+        subTitle: callToAction?.callToActionSettings?.callUs
+            ?.subTitle as string,
+        phoneNumber: callToAction?.callToActionSettings?.callUs
+            ?.phoneNumber as string,
         type: callToAction?.callToActionSettings?.type[0] as ComponentType,
         button: {
             text: callToAction?.callToActionSettings?.button?.link
@@ -29,6 +34,16 @@ export const getCallToAction = async (id: string): Promise<CallToAction> => {
                 ?.variant[0] as ButtonProps["variant"],
             size: callToAction?.callToActionSettings?.button
                 ?.size[0] as ButtonProps["size"],
+            icon: {
+                name: callToAction?.callToActionSettings?.button?.icon
+                    ?.name as IconsName,
+                size: callToAction?.callToActionSettings?.button?.icon
+                    ?.size as number,
+                position: callToAction?.callToActionSettings?.button?.icon
+                    ?.position?.[0] as "left" | "right",
+            },
+            className: callToAction?.callToActionSettings?.button
+                ?.className as string,
         },
         img: {
             src: callToAction?.callToActionSettings?.image?.img?.node

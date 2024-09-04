@@ -1,20 +1,16 @@
 import React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
 import { getServices, getServiceBySlug } from "../actions/services.action";
 import Layout from "@/modules/common/layouts/layout";
 import ServiceSection, {
     type ServiceSectionProps,
 } from "../components/service-section";
-import LetUsHelpSection, {
-    type LetUsHelpSectionProps,
-} from "@/modules/common/components/lethelp-section";
-import LetUsHelpInfo from "../data/let-us-help.json";
-import { notFound } from "next/navigation";
-import CaseStudiesInfo from "../data/case-studies.json";
 import CaseStudiesSection, {
     type CaseStudiesSectionProps,
 } from "../components/case-studies-section";
+import { notFound } from "next/navigation";
+import CallToAction from "@/modules/common/components/CallToAction";
 
+import type { Metadata, ResolvingMetadata } from "next";
 type Props = {
     params: { slug: string };
 };
@@ -26,33 +22,38 @@ export async function generateMetadata(
     // read route params
     const { slug } = params;
 
-    const service = await getServiceBySlug(slug);
+    const response = await getServiceBySlug(slug);
 
+    if (!response) {
+        return notFound();
+    }
     return {
-        title: `${service?.title} | Dental Place`,
-        description: `${service?.summary}`,
+        ...response.seo,
     };
 }
 
 const ServicePage = async ({ params }) => {
     const { slug } = params;
-    const service = await getServiceBySlug(slug);
+    const response = await getServiceBySlug(slug);
 
-    if (!service) {
+    if (!response) {
         return notFound();
     }
 
+    const { serviceSection, CaseStudiesInfo, callToActions } = response;
     return (
         <Layout
             navbarVariant={{
                 variant: "secondary",
             }}
         >
-            <ServiceSection {...(service as ServiceSectionProps)} />
+            <ServiceSection {...(serviceSection as ServiceSectionProps)} />
             <CaseStudiesSection
                 {...(CaseStudiesInfo as CaseStudiesSectionProps)}
             />
-            <LetUsHelpSection {...(LetUsHelpInfo as LetUsHelpSectionProps)} />
+            {callToActions.map((cta, index) => (
+                <CallToAction key={`${index}-${cta.title}`} {...cta} />
+            ))}
         </Layout>
     );
 };
