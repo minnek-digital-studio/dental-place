@@ -35,7 +35,8 @@ import { Metadata } from "next";
 import Layout from "@/modules/common/layouts/layout";
 
 export const metadata: Metadata = {
-    title: `Next.js Blog Example with ${CMS_NAME}`,
+    title: `Home | Dental Place`,
+    description: `Dental Place is a dental clinic that offers a wide range of dental services to help you achieve a healthy smile.`,
 };
 
 export default async function HomePage() {

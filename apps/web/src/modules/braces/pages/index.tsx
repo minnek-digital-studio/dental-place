@@ -23,8 +23,9 @@ import HelpFormSection, {
 import HelpFormInfo from "../data/helpform.json";
 
 export const metadata: Metadata = {
-    title: "Express Braces",
-    description: "Express Braces",
+    title: "Express Braces | Dental Place",
+    description:
+        "Express Braces are a fast and effective way to straighten your teeth.",
 };
 
 const ExpressBracesPage = async () => {
