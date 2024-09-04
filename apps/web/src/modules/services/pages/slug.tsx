@@ -14,6 +14,7 @@ import CaseStudiesInfo from "../data/case-studies.json";
 import CaseStudiesSection, {
     type CaseStudiesSectionProps,
 } from "../components/case-studies-section";
+import { metadata } from "@/app/not-found";
 
 type Props = {
     params: { slug: string };
@@ -27,6 +28,10 @@ export async function generateMetadata(
     const { slug } = params;
 
     const service = await getServiceBySlug(slug);
+
+    if (!service) {
+        return metadata;
+    }
 
     return {
         title: `${service?.title} | Dental Place`,
