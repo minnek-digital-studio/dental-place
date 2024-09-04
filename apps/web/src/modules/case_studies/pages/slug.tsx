@@ -19,6 +19,8 @@ import LetUsHelpSection, {
 import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
 import { notFound } from "next/navigation";
 
+import { metadata } from "@/app/not-found";
+
 type Props = {
     params: { slug: string };
 };
@@ -33,6 +35,10 @@ export async function generateMetadata(
     const caseStudy = CaseStudiesDetailsInfo.items.find(
         (item) => item.slug === slug,
     );
+
+    if (!caseStudy) {
+        return metadata;
+    }
 
     return {
         title: `${caseStudy?.title} | Dental Place`,
