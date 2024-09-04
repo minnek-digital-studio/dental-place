@@ -25,7 +25,7 @@ export const BreadCrumb = ({ links }: BreadCrumbProps) => {
             <BreadcrumbList className="items-center justify-center">
                 {links.map((link, index) => (
                     <>
-                        <BreadcrumbItem key={index}>
+                        <BreadcrumbItem key={`${index}-${link.text}`}>
                             {link.active ? (
                                 <BreadcrumbPage>{link.text}</BreadcrumbPage>
                             ) : (

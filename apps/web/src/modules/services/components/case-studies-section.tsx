@@ -16,6 +16,8 @@ const CaseStudiesSection = ({
     className,
     ...props
 }: CaseStudiesSectionProps) => {
+    if (!items.length) return null;
+
     return (
         <section
             className={cn("bg-info", className)}
@@ -28,7 +30,7 @@ const CaseStudiesSection = ({
                 </Typography>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {items.map((item, index) => (
-                        <CaseCard key={index} {...item} />
+                        <CaseCard key={`${index}-${item.title}`} {...item} />
                     ))}
                 </div>
             </div>

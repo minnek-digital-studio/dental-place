@@ -43,7 +43,7 @@ const BeenDoneSection = ({
                         dangerouslySetInnerHTML={descriptionHTML}
                     />
                 )}
-                <ul className="flex flex-col gap-4 md:gap-6 grid md:grid-cols-2 mt-3">
+                <ul className="max-md:flex flex-col gap-4 md:gap-6 grid md:grid-cols-2 mt-3">
                     {itemsIcons.map((item, index) => (
                         <li key={index} className="flex gap-4 items-center">
                             <div className="bg-[#28AF77] rounded-full size-5 md:size-6 flex items-center justify-center">
