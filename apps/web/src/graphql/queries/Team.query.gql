@@ -1,0 +1,95 @@
+query getTeamMembers {
+    teams {
+        edges {
+            node {
+                id
+                title
+                teamMemberSettings {
+                    name
+                    description
+                    speciality
+                    image {
+                        node {
+                            sourceUrl
+                            altText
+                        }
+                    }
+                    button {
+                        link {
+                            title
+                            url
+                            target
+                        }
+                        variant
+                        size
+                    }
+                    educationTitle
+                    education {
+                        title
+                        institution
+                        button {
+                            icon {
+                                name
+                                size
+                            }
+                            link {
+                                target
+                                title
+                                url
+                            }
+                            size
+                            variant
+                        }
+                    }
+                    socialLink {
+                        icon {
+                            color
+                            fill
+                            name
+                            size
+                            stroke
+                        }
+                        link {
+                            title
+                            url
+                            target
+                        }
+                        variant
+                        size
+                    }
+                }
+            }
+        }
+    }
+}
+
+query getTeamPageInfo($uri: ID = "/team/") {
+    page(id: $uri, idType: URI) {
+        title
+        id
+        seo {
+            title
+            metaDesc
+            metaKeywords
+        }
+        teamPageSettings {
+            title
+            description
+            callToActions {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+            faq {
+                title
+                questions {
+                    question
+                    answer
+                }
+                className
+            }
+        }
+    }
+}

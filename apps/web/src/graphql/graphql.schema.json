@@ -46860,6 +46860,12 @@
             "deprecationReason": null
           },
           {
+            "name": "DP_REWRITE_REPUBLISH",
+            "description": "Objects with the dp-rewrite-republish status",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "DRAFT",
             "description": "Objects with the draft status",
             "isDeprecated": false,
