@@ -788,6 +788,8 @@ export type CallToActionSettings = AcfFieldGroup & AcfFieldGroupFields & CallToA
   __typename?: 'CallToActionSettings';
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   button?: Maybe<CallToActionSettingsButton>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
+  callUs?: Maybe<CallToActionSettingsCallUs>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
@@ -808,11 +810,15 @@ export type CallToActionSettings = AcfFieldGroup & AcfFieldGroupFields & CallToA
 /** The &quot;CallToActionSettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
 export type CallToActionSettingsButton = AcfFieldGroup & AcfFieldGroupFields & CallToActionSettingsButton_Fields & {
   __typename?: 'CallToActionSettingsButton';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  icon?: Maybe<CallToActionSettingsButtonIcon>;
   /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
   link?: Maybe<AcfLink>;
   /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
@@ -821,19 +827,81 @@ export type CallToActionSettingsButton = AcfFieldGroup & AcfFieldGroupFields & C
   variant: Array<Maybe<Scalars['String']['output']>>;
 };
 
-/** Interface representing fields of the ACF &quot;CallToActionSettingsButton&quot; Field Group */
-export type CallToActionSettingsButton_Fields = {
+/** The &quot;CallToActionSettingsButtonIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CallToActionSettingsButtonIcon = AcfFieldGroup & AcfFieldGroupFields & CallToActionSettingsButtonIcon_Fields & {
+  __typename?: 'CallToActionSettingsButtonIcon';
   /**
    * The name of the field group
    * @deprecated Use __typename instead
    */
   fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+  position?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+export type CallToActionSettingsButtonIcon_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+  position?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButtonIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;CallToActionSettingsButton&quot; Field Group */
+export type CallToActionSettingsButton_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
+  icon?: Maybe<CallToActionSettingsButtonIcon>;
   /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
   link?: Maybe<AcfLink>;
   /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
   size: Array<Maybe<Scalars['String']['output']>>;
   /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsButton&quot; Field Group */
   variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;CallToActionSettingsCallUs&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CallToActionSettingsCallUs = AcfFieldGroup & AcfFieldGroupFields & CallToActionSettingsCallUs_Fields & {
+  __typename?: 'CallToActionSettingsCallUs';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsCallUs&quot; Field Group */
+  phoneNumber?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsCallUs&quot; Field Group */
+  subTitle?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;CallToActionSettingsCallUs&quot; Field Group */
+export type CallToActionSettingsCallUs_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsCallUs&quot; Field Group */
+  phoneNumber?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsCallUs&quot; Field Group */
+  subTitle?: Maybe<Scalars['String']['output']>;
 };
 
 /** The &quot;CallToActionSettingsImage&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
@@ -929,6 +997,8 @@ export type CallToActionSettingsItems_Fields = {
 export type CallToActionSettings_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   button?: Maybe<CallToActionSettingsButton>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
+  callUs?: Maybe<CallToActionSettingsCallUs>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
@@ -1082,7 +1152,7 @@ export type CallToActionToRevisionConnectionWhereArgs = {
 };
 
 /** The caseStudy type */
-export type CaseStudy = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & {
+export type CaseStudy = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithFeaturedImage & NodeWithRevisions & NodeWithTemplate & NodeWithTitle & Previewable & UniformResourceIdentifiable & WithAcfCaseStudySettings & {
   __typename?: 'CaseStudy';
   /**
    * The ancestors of the content node.
@@ -1094,6 +1164,8 @@ export type CaseStudy = ContentNode & DatabaseIdentifier & MenuItemLinkable & No
    * @deprecated Deprecated in favor of the databaseId field
    */
   caseStudyId: Scalars['Int']['output'];
+  /** Fields of the CaseStudySettings ACF Field Group */
+  caseStudySettings?: Maybe<CaseStudySettings>;
   /** Connection between the ContentNode type and the ContentType type */
   contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
   /** The name of the Content Type the node belongs to */
@@ -1267,6 +1339,275 @@ export enum CaseStudyIdType {
   /** Identify a resource by the URI. */
   Uri = 'URI'
 }
+
+/** The &quot;CaseStudySettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettings = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettings_Fields & {
+  __typename?: 'CaseStudySettings';
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  beenDoneSection?: Maybe<CaseStudySettingsBeenDoneSection>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  button?: Maybe<CaseStudySettingsButton>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  image?: Maybe<CaseStudySettingsImage>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  serviceDescriptionSection?: Maybe<CaseStudySettingsServiceDescriptionSection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  summary?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;CaseStudySettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** The &quot;CaseStudySettingsBeenDoneSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsBeenDoneSection = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettingsBeenDoneSection_Fields & {
+  __typename?: 'CaseStudySettingsBeenDoneSection';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+  itemsIcons?: Maybe<Array<Maybe<CaseStudySettingsBeenDoneSectionItemsIcons>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;CaseStudySettingsBeenDoneSectionItemsIcons&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsBeenDoneSectionItemsIcons = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettingsBeenDoneSectionItemsIcons_Fields & {
+  __typename?: 'CaseStudySettingsBeenDoneSectionItemsIcons';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIcons&quot; Field Group */
+  icon?: Maybe<CaseStudySettingsBeenDoneSectionItemsIconsIcon>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIcons&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsBeenDoneSectionItemsIconsIcon = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettingsBeenDoneSectionItemsIconsIcon_Fields & {
+  __typename?: 'CaseStudySettingsBeenDoneSectionItemsIconsIcon';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  strokeWidth?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+export type CaseStudySettingsBeenDoneSectionItemsIconsIcon_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  name?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;number&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  size?: Maybe<Scalars['Float']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIconsIcon&quot; Field Group */
+  strokeWidth?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsBeenDoneSectionItemsIcons&quot; Field Group */
+export type CaseStudySettingsBeenDoneSectionItemsIcons_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIcons&quot; Field Group */
+  icon?: Maybe<CaseStudySettingsBeenDoneSectionItemsIconsIcon>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSectionItemsIcons&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+export type CaseStudySettingsBeenDoneSection_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;repeater&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+  itemsIcons?: Maybe<Array<Maybe<CaseStudySettingsBeenDoneSectionItemsIcons>>>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsBeenDoneSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** The &quot;CaseStudySettingsButton&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsButton = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettingsButton_Fields & {
+  __typename?: 'CaseStudySettingsButton';
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsButton&quot; Field Group */
+export type CaseStudySettingsButton_Fields = {
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;link&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsButton&quot; Field Group */
+  link?: Maybe<AcfLink>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsButton&quot; Field Group */
+  size: Array<Maybe<Scalars['String']['output']>>;
+  /** Field of the &quot;select&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsButton&quot; Field Group */
+  variant: Array<Maybe<Scalars['String']['output']>>;
+};
+
+/** The &quot;CaseStudySettingsImage&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsImage = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettingsImage_Fields & {
+  __typename?: 'CaseStudySettingsImage';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsImage&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsImage&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsImage&quot; Field Group */
+export type CaseStudySettingsImage_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsImage&quot; Field Group */
+  className?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsImage&quot; Field Group */
+  image?: Maybe<AcfMediaItemConnectionEdge>;
+};
+
+/** The &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsServiceDescriptionSection = AcfFieldGroup & AcfFieldGroupFields & CaseStudySettingsServiceDescriptionSection_Fields & {
+  __typename?: 'CaseStudySettingsServiceDescriptionSection';
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  images?: Maybe<AcfMediaItemConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  subDescription?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type CaseStudySettingsServiceDescriptionSectionImagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+export type CaseStudySettingsServiceDescriptionSection_Fields = {
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;gallery&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  images?: Maybe<AcfMediaItemConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  subDescription?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;CaseStudySettingsServiceDescriptionSection&quot; Field Group */
+export type CaseStudySettingsServiceDescriptionSection_FieldsImagesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** Interface representing fields of the ACF &quot;CaseStudySettings&quot; Field Group */
+export type CaseStudySettings_Fields = {
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  beenDoneSection?: Maybe<CaseStudySettingsBeenDoneSection>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  button?: Maybe<CaseStudySettingsButton>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * The name of the field group
+   * @deprecated Use __typename instead
+   */
+  fieldGroupName?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  image?: Maybe<CaseStudySettingsImage>;
+  /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  serviceDescriptionSection?: Maybe<CaseStudySettingsServiceDescriptionSection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CaseStudySettings&quot; Field Group */
+  summary?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;CaseStudySettings&quot; Field Group */
+export type CaseStudySettings_FieldsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
 
 /** Connection between the CaseStudy type and the caseStudy type */
 export type CaseStudyToCaseStudyConnection = CaseStudyConnection & Connection & {
@@ -12321,6 +12662,14 @@ export type ServiceSettings = AcfFieldGroup & AcfFieldGroupFields & ServiceSetti
   __typename?: 'ServiceSettings';
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   button?: Maybe<ServiceSettingsButton>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  callUsAction?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  caseStudieTitle?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  caseStudies?: Maybe<AcfContentNodeConnection>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
@@ -12339,7 +12688,36 @@ export type ServiceSettings = AcfFieldGroup & AcfFieldGroupFields & ServiceSetti
   /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   img?: Maybe<AcfMediaItemConnectionEdge>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  subTitle?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   summary?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** The &quot;ServiceSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ServiceSettingsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The &quot;ServiceSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ServiceSettingsCallUsActionArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** The &quot;ServiceSettings&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;. */
+export type ServiceSettingsCaseStudiesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
 };
 
 
@@ -12386,6 +12764,14 @@ export type ServiceSettingsButton_Fields = {
 export type ServiceSettings_Fields = {
   /** Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   button?: Maybe<ServiceSettingsButton>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  callToActions?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;post_object&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  callUsAction?: Maybe<AcfContentNodeConnection>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  caseStudieTitle?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;relationship&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  caseStudies?: Maybe<AcfContentNodeConnection>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
@@ -12404,7 +12790,36 @@ export type ServiceSettings_Fields = {
   /** Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   img?: Maybe<AcfMediaItemConnectionEdge>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
+  subTitle?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;ServiceSettings&quot; Field Group */
   summary?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;ServiceSettings&quot; Field Group */
+export type ServiceSettings_FieldsCallToActionsArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;ServiceSettings&quot; Field Group */
+export type ServiceSettings_FieldsCallUsActionArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+/** Interface representing fields of the ACF &quot;ServiceSettings&quot; Field Group */
+export type ServiceSettings_FieldsCaseStudiesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
 };
 
 
@@ -15853,6 +16268,12 @@ export type WithAcfCallToActionSettings = {
   callToActionSettings?: Maybe<CallToActionSettings>;
 };
 
+/** Provides access to fields of the &quot;CaseStudySettings&quot; ACF Field Group via the &quot;caseStudySettings&quot; field */
+export type WithAcfCaseStudySettings = {
+  /** Fields of the CaseStudySettings ACF Field Group */
+  caseStudySettings?: Maybe<CaseStudySettings>;
+};
+
 /** Provides access to fields of the &quot;FooterConfig&quot; ACF Field Group via the &quot;footerConfig&quot; field */
 export type WithAcfFooterConfig = {
   /** Fields of the FooterConfig ACF Field Group */
@@ -15965,7 +16386,19 @@ export type GetCallToActionByIdQueryVariables = Exact<{
 }>;
 
 
-export type GetCallToActionByIdQuery = { __typename?: 'RootQuery', callToAction?: { __typename?: 'CallToAction', title?: string | null, callToActionSettings?: { __typename?: 'CallToActionSettings', description?: string | null, type: Array<string | null>, className?: string | null, button?: { __typename?: 'CallToActionSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null } | null, image?: { __typename?: 'CallToActionSettingsImage', className?: string | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, sourceUrl?: string | null, title?: string | null } } | null } | null, items?: Array<{ __typename?: 'CallToActionSettingsItems', title?: string | null, description?: string | null, icon?: { __typename?: 'CallToActionSettingsItemsIcon', name?: string | null, size?: number | null, className?: string | null } | null } | null> | null } | null } | null };
+export type GetCallToActionByIdQuery = { __typename?: 'RootQuery', callToAction?: { __typename?: 'CallToAction', title?: string | null, callToActionSettings?: { __typename?: 'CallToActionSettings', description?: string | null, type: Array<string | null>, className?: string | null, callUs?: { __typename?: 'CallToActionSettingsCallUs', phoneNumber?: string | null, subTitle?: string | null } | null, button?: { __typename?: 'CallToActionSettingsButton', size: Array<string | null>, variant: Array<string | null>, className?: string | null, link?: { __typename?: 'AcfLink', url?: string | null, title?: string | null, target?: string | null } | null, icon?: { __typename?: 'CallToActionSettingsButtonIcon', name?: string | null, position?: Array<string | null> | null, size?: number | null } | null } | null, image?: { __typename?: 'CallToActionSettingsImage', className?: string | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, sourceUrl?: string | null, title?: string | null } } | null } | null, items?: Array<{ __typename?: 'CallToActionSettingsItems', title?: string | null, description?: string | null, icon?: { __typename?: 'CallToActionSettingsItemsIcon', name?: string | null, size?: number | null, className?: string | null } | null } | null> | null } | null } | null };
+
+export type GetCaseStudiesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetCaseStudiesQuery = { __typename?: 'RootQuery', caseStudies?: { __typename?: 'RootQueryToCaseStudyConnection', edges: Array<{ __typename?: 'RootQueryToCaseStudyConnectionEdge', node: { __typename?: 'CaseStudy', title?: string | null, featuredImage?: { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge', node: { __typename?: 'MediaItem', title?: string | null, sourceUrl?: string | null, altText?: string | null } } | null, caseStudySettings?: { __typename?: 'CaseStudySettings', summary?: string | null, description?: string | null, button?: { __typename?: 'CaseStudySettingsButton', variant: Array<string | null>, size: Array<string | null>, link?: { __typename?: 'AcfLink', title?: string | null, url?: string | null, target?: string | null } | null } | null, callToActions?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string } | { __typename?: 'CaseStudy', id: string } | { __typename?: 'MediaItem', id: string } | { __typename?: 'Page', id: string } | { __typename?: 'Post', id: string } | { __typename?: 'Review', id: string } | { __typename?: 'Service', id: string } | { __typename?: 'Team', id: string } }> } | null, serviceDescriptionSection?: { __typename?: 'CaseStudySettingsServiceDescriptionSection', title?: string | null, description?: string | null, subDescription?: string | null, images?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', title?: string | null, altText?: string | null, sourceUrl?: string | null } }> } | null } | null, beenDoneSection?: { __typename?: 'CaseStudySettingsBeenDoneSection', title?: string | null, description?: string | null, itemsIcons?: Array<{ __typename?: 'CaseStudySettingsBeenDoneSectionItemsIcons', title?: string | null, icon?: { __typename?: 'CaseStudySettingsBeenDoneSectionItemsIconsIcon', name?: string | null, size?: number | null, strokeWidth?: string | null, className?: string | null } | null } | null> | null } | null } | null } }> } | null };
+
+export type GetCaseStudieBySlugQueryVariables = Exact<{
+  slug?: InputMaybe<Scalars['ID']['input']>;
+}>;
+
+
+export type GetCaseStudieBySlugQuery = { __typename?: 'RootQuery', caseStudy?: { __typename?: 'CaseStudy', title?: string | null, slug?: string | null, seo?: { __typename?: 'PostTypeSEO', title?: string | null, metaDesc?: string | null, metaKeywords?: string | null } | null, featuredImage?: { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge', node: { __typename?: 'MediaItem', title?: string | null, sourceUrl?: string | null, altText?: string | null } } | null, caseStudySettings?: { __typename?: 'CaseStudySettings', summary?: string | null, description?: string | null, button?: { __typename?: 'CaseStudySettingsButton', variant: Array<string | null>, size: Array<string | null>, link?: { __typename?: 'AcfLink', title?: string | null, url?: string | null, target?: string | null } | null } | null, callToActions?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string } | { __typename?: 'CaseStudy', id: string } | { __typename?: 'MediaItem', id: string } | { __typename?: 'Page', id: string } | { __typename?: 'Post', id: string } | { __typename?: 'Review', id: string } | { __typename?: 'Service', id: string } | { __typename?: 'Team', id: string } }> } | null, serviceDescriptionSection?: { __typename?: 'CaseStudySettingsServiceDescriptionSection', title?: string | null, description?: string | null, subDescription?: string | null, images?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', title?: string | null, altText?: string | null, sourceUrl?: string | null } }> } | null } | null, beenDoneSection?: { __typename?: 'CaseStudySettingsBeenDoneSection', title?: string | null, description?: string | null, itemsIcons?: Array<{ __typename?: 'CaseStudySettingsBeenDoneSectionItemsIcons', title?: string | null, icon?: { __typename?: 'CaseStudySettingsBeenDoneSectionItemsIconsIcon', name?: string | null, size?: number | null, strokeWidth?: string | null, className?: string | null } | null } | null> | null } | null } | null } | null };
 
 export type GetHomePageQueryVariables = Exact<{
   uri?: InputMaybe<Scalars['ID']['input']>;
@@ -16006,7 +16439,7 @@ export type GetServiceBySlugQueryVariables = Exact<{
 }>;
 
 
-export type GetServiceBySlugQuery = { __typename?: 'RootQuery', service?: { __typename?: 'Service', id: string, title?: string | null, slug?: string | null, serviceSettings?: { __typename?: 'ServiceSettings', description?: string | null, className?: string | null, editor?: string | null, summary?: string | null, icon?: string | null, gallery?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', id: string, altText?: string | null, link?: string | null } }> } | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, id: string, link?: string | null } } | null, button?: { __typename?: 'ServiceSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null } | null } | null };
+export type GetServiceBySlugQuery = { __typename?: 'RootQuery', service?: { __typename?: 'Service', id: string, title?: string | null, slug?: string | null, seo?: { __typename?: 'PostTypeSEO', title?: string | null, metaDesc?: string | null, metaKeywords?: string | null } | null, serviceSettings?: { __typename?: 'ServiceSettings', description?: string | null, subTitle?: string | null, className?: string | null, editor?: string | null, caseStudieTitle?: string | null, summary?: string | null, icon?: string | null, callUsAction?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string } | { __typename?: 'CaseStudy', id: string } | { __typename?: 'MediaItem', id: string } | { __typename?: 'Page', id: string } | { __typename?: 'Post', id: string } | { __typename?: 'Review', id: string } | { __typename?: 'Service', id: string } | { __typename?: 'Team', id: string } }> } | null, callToActions?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string } | { __typename?: 'CaseStudy', id: string } | { __typename?: 'MediaItem', id: string } | { __typename?: 'Page', id: string } | { __typename?: 'Post', id: string } | { __typename?: 'Review', id: string } | { __typename?: 'Service', id: string } | { __typename?: 'Team', id: string } }> } | null, caseStudies?: { __typename?: 'AcfContentNodeConnection', edges: Array<{ __typename?: 'AcfContentNodeConnectionEdge', node: { __typename?: 'CallToAction', id: string, slug?: string | null } | { __typename?: 'CaseStudy', id: string, slug?: string | null } | { __typename?: 'MediaItem', id: string, slug?: string | null } | { __typename?: 'Page', id: string, slug?: string | null } | { __typename?: 'Post', id: string, slug?: string | null } | { __typename?: 'Review', id: string, slug?: string | null } | { __typename?: 'Service', id: string, slug?: string | null } | { __typename?: 'Team', id: string, slug?: string | null } }> } | null, gallery?: { __typename?: 'AcfMediaItemConnection', edges: Array<{ __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', id: string, altText?: string | null, link?: string | null } }> } | null, img?: { __typename?: 'AcfMediaItemConnectionEdge', node: { __typename?: 'MediaItem', altText?: string | null, id: string, link?: string | null } } | null, button?: { __typename?: 'ServiceSettingsButton', size: Array<string | null>, variant: Array<string | null>, link?: { __typename?: 'AcfLink', target?: string | null, title?: string | null, url?: string | null } | null } | null } | null } | null };
 
 export type GetServicePageInfoQueryVariables = Exact<{
   uri?: InputMaybe<Scalars['ID']['input']>;
@@ -16029,14 +16462,16 @@ export type GetTeamPageInfoQuery = { __typename?: 'RootQuery', page?: { __typena
 
 
 export const GetBracesExpressPageInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getBracesExpressPageInfo"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/braces/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"bracesExpressPageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"helpFormSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"form"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fields"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"textarea"}},{"kind":"Field","name":{"kind":"Name","value":"input"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"placeholder"}},{"kind":"Field","name":{"kind":"Name","value":"sizes"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"gallerySection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"heroSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"color"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetBracesExpressPageInfoQuery, GetBracesExpressPageInfoQueryVariables>;
-export const GetCallToActionByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCallToActionByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"callToAction"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"callToActionSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCallToActionByIdQuery, GetCallToActionByIdQueryVariables>;
+export const GetCallToActionByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCallToActionByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"callToAction"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"callToActionSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"callUs"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"phoneNumber"}},{"kind":"Field","name":{"kind":"Name","value":"subTitle"}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCallToActionByIdQuery, GetCallToActionByIdQueryVariables>;
+export const GetCaseStudiesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCaseStudies"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"caseStudies"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"caseStudySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"serviceDescriptionSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"subDescription"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"beenDoneSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"itemsIcons"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"strokeWidth"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCaseStudiesQuery, GetCaseStudiesQueryVariables>;
+export const GetCaseStudieBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCaseStudieBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"caseStudy"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"caseStudySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"serviceDescriptionSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"subDescription"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"beenDoneSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"itemsIcons"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"strokeWidth"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetCaseStudieBySlugQuery, GetCaseStudieBySlugQueryVariables>;
 export const GetHomePageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getHomePage"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/home/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"uri"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"homePageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"arsSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"arsImages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"instagram"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"carouselOptions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"playOnInit"}},{"kind":"Field","name":{"kind":"Name","value":"speed"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"reviewSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"reviews"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"serviceSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"presentation"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"card"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetHomePageQuery, GetHomePageQueryVariables>;
 export const GetNavbarInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getNavbarInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"header"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"headerSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sociallinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"schedules"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"schedule"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"phone"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"language"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"lang"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"navbarItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"subMenuItem"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetNavbarInfoQuery, GetNavbarInfoQueryVariables>;
 export const GetFooterInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getFooterInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"footerConfig"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"color"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"Field","name":{"kind":"Name","value":"copyRight"}}]}}]}}]}}]} as unknown as DocumentNode<GetFooterInfoQuery, GetFooterInfoQueryVariables>;
 export const PostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]}}]}}]}}]} as unknown as DocumentNode<PostsQuery, PostsQueryVariables>;
 export const GetReviewByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getReviewByID"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"id"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"review"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"id"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"ID"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"reviewsSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"rating"}},{"kind":"Field","name":{"kind":"Name","value":"comment"}},{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"avatar"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetReviewByIdQuery, GetReviewByIdQueryVariables>;
 export const GetServicesInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServicesInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetServicesInfoQuery, GetServicesInfoQueryVariables>;
-export const GetServiceBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServiceBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"service"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"editor"}},{"kind":"Field","name":{"kind":"Name","value":"gallery"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]} as unknown as DocumentNode<GetServiceBySlugQuery, GetServiceBySlugQueryVariables>;
+export const GetServiceBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServiceBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"service"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"SLUG"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"serviceSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"subTitle"}},{"kind":"Field","name":{"kind":"Name","value":"className"}},{"kind":"Field","name":{"kind":"Name","value":"editor"}},{"kind":"Field","name":{"kind":"Name","value":"callUsAction"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"caseStudieTitle"}},{"kind":"Field","name":{"kind":"Name","value":"caseStudies"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"gallery"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"summary"}},{"kind":"Field","name":{"kind":"Name","value":"img"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}}]}}]}}]} as unknown as DocumentNode<GetServiceBySlugQuery, GetServiceBySlugQueryVariables>;
 export const GetServicePageInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getServicePageInfo"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/services/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"servicePageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"servicesSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}},{"kind":"Field","name":{"kind":"Name","value":"clinicSection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"imagesClinic"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"altText"}},{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}}]}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetServicePageInfoQuery, GetServicePageInfoQueryVariables>;
 export const GetTeamMembersDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getTeamMembers"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"teams"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"teamMemberSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"speciality"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"sourceUrl"}},{"kind":"Field","name":{"kind":"Name","value":"altText"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"educationTitle"}},{"kind":"Field","name":{"kind":"Name","value":"education"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"institution"}},{"kind":"Field","name":{"kind":"Name","value":"button"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"variant"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLink"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"icon"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"color"}},{"kind":"Field","name":{"kind":"Name","value":"fill"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"size"}},{"kind":"Field","name":{"kind":"Name","value":"stroke"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"target"}}]}},{"kind":"Field","name":{"kind":"Name","value":"variant"}},{"kind":"Field","name":{"kind":"Name","value":"size"}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetTeamMembersQuery, GetTeamMembersQueryVariables>;
 export const GetTeamPageInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getTeamPageInfo"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"uri"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}},"defaultValue":{"kind":"StringValue","value":"/team/","block":false}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"page"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"uri"}}},{"kind":"Argument","name":{"kind":"Name","value":"idType"},"value":{"kind":"EnumValue","value":"URI"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"seo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"metaDesc"}},{"kind":"Field","name":{"kind":"Name","value":"metaKeywords"}}]}},{"kind":"Field","name":{"kind":"Name","value":"teamPageSettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"callToActions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"faq"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"questions"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"question"}},{"kind":"Field","name":{"kind":"Name","value":"answer"}}]}},{"kind":"Field","name":{"kind":"Name","value":"className"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetTeamPageInfoQuery, GetTeamPageInfoQueryVariables>;

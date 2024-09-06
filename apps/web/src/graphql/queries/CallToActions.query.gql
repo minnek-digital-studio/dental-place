@@ -3,6 +3,10 @@ query getCallToActionByID($id: ID = "") {
         title
         callToActionSettings {
             description
+            callUs {
+                phoneNumber
+                subTitle
+            }
             button {
                 link {
                     url
@@ -11,6 +15,12 @@ query getCallToActionByID($id: ID = "") {
                 }
                 size
                 variant
+                icon {
+                    name
+                    position
+                    size
+                }
+                className
             }
             image {
                 img {

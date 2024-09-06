@@ -5,4 +5,8 @@ export const mapSeo = (data?: PostTypeSeo | null): Seo => ({
     title: data?.title || "",
     description: data?.metaDesc || "",
     keywords: data?.metaDesc || "",
+    openGraph: {
+        title: data?.title || "",
+        description: data?.metaDesc || "",
+    },
 });

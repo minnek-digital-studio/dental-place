@@ -29,10 +29,39 @@ query getServiceBySlug($slug: ID = "") {
         id
         title
         slug
+        seo {
+            title
+            metaDesc
+            metaKeywords
+        }
         serviceSettings {
             description
+            subTitle
             className
             editor
+            callUsAction {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+            callToActions {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+            caseStudieTitle
+            caseStudies {
+                edges {
+                    node {
+                        id
+                        slug
+                    }
+                }
+            }
             gallery {
                 edges {
                     node {
