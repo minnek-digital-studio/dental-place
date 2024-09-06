@@ -18,7 +18,7 @@ const ContactPage = () => {
     return (
         <>
             <HeroSection />
-            <main className="absolute w-full -translate-y-20 md:-translate-y-48">
+            <main className="absolute w-full translate-y-80 md:translate-y-[19.25rem]">
                 <section className="container max-w-[1060px] mb-20 flex flex-col gap-6">
                     <div className="w-full max-h-[30rem] md:w-[380px] md:hidden">
                         <GoogleMaps src={ContactUsData.embedMapUrl} />
