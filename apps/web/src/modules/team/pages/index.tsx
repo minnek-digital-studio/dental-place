@@ -1,24 +1,25 @@
 import Layout from "@/modules/common/layouts/layout";
-import HeroSection, {
-    type HeroSectionProps,
-} from "@/modules/team/components/hero-section";
-import HeroInfo from "@/modules/team/data/hero.json";
 import AskSection, {
     type AskSectionProps,
 } from "@/modules/team/components/ask-section";
-import AskInfo from "@/modules/team/data/asks.json";
 import { Metadata } from "next";
 import OurTeamSection, {
     type OurTeamSectionProps,
 } from "@/modules/team/components/team-section";
-import TeamInfo from "@/modules/team/data/ourTeam.json";
+import { getTeamPageInfo } from "../actions/team.action";
 
-export const metadata: Metadata = {
-    title: "Our Team",
-    description: "Meet the team that makes Dental Place possible",
-};
+import CallToAction from "@/modules/common/components/CallToAction";
 
-const TeamPage = () => {
+export async function generateMetadata(): Promise<Metadata> {
+    const { seo } = await getTeamPageInfo();
+
+    return {
+        ...seo,
+    };
+}
+
+const TeamPage = async () => {
+    const { TeamInfo, callToActions, FAQInfo } = await getTeamPageInfo();
     return (
         <Layout
             navbarVariant={{
@@ -26,8 +27,10 @@ const TeamPage = () => {
             }}
         >
             <OurTeamSection {...(TeamInfo as OurTeamSectionProps)} />
-            <HeroSection {...(HeroInfo as HeroSectionProps)} />
-            <AskSection {...(AskInfo as AskSectionProps)} />
+            {callToActions.map((cta, index) => (
+                <CallToAction key={`${index}-${cta.title}`} {...cta} />
+            ))}
+            <AskSection {...(FAQInfo as AskSectionProps)} />
         </Layout>
     );
 };
