@@ -10,7 +10,6 @@ import { type ButtonType } from "@/modules/common/types";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -20,6 +19,7 @@ import {
 import { Input, type InputProps } from "@minnek/ui/components/input";
 import { Textarea, type TextareaProps } from "@minnek/ui/components/textarea";
 import { cn } from "@minnek/ui/lib/utils";
+import { SendEmail } from "@/modules/common/actions/contact-form.action";
 
 const formSchema = z.object({
     name: z.string().min(2).max(50),
@@ -30,7 +30,7 @@ const formSchema = z.object({
 
 export type FormType = z.infer<typeof formSchema>;
 
-type FormTypeKeys = keyof FormType;
+export type FormTypeKeys = keyof FormType;
 
 export type FormField = {
     name: string;
@@ -67,8 +67,13 @@ const HelpForm = ({
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        const formData = new FormData();
+        Object.entries(values).forEach(([key, value]) => {
+            formData.append(key == "name" ? "your-name" : key, value);
+        });
+        const result = await SendEmail(formData);
+        console.log(result);
     }
 
     return (
