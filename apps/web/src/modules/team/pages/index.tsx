@@ -14,7 +14,7 @@ import OurTeamSection, {
 import TeamInfo from "@/modules/team/data/ourTeam.json";
 
 export const metadata: Metadata = {
-    title: "Our Team",
+    title: "Our Team | Dental Place",
     description: "Meet the team that makes Dental Place possible",
 };
 

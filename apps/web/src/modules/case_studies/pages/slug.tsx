@@ -2,11 +2,7 @@ import Layout from "@/modules/common/layouts/layout";
 import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
 import Footer from "@/modules/common/components/footer";
-import { Metadata } from "next";
-import LetUsHelpSection, {
-    LetUsHelpSectionProps,
-} from "@/modules/common/components/lethelp-section";
-import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
+import { Metadata, ResolvingMetadata } from "next";
 import ServiceDescriptionSection, {
     ServiceDescriptionSectionProps,
 } from "../components/service-description";
@@ -17,32 +13,48 @@ import CaseStudiesDetailsSection, {
     CaseStudiesDetailsSectionProps,
 } from "../components/case-studies-details-section";
 import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "@/modules/common/components/lethelp-section";
+import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
 import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-    title: "Case Studies",
-    description: "Meet the team that makes Dental Place possible",
+type Props = {
+    params: { slug: string };
 };
 
-const CaseStudiesPage = ({ params }) => {
-    const letUsHelp = LetHelpInfo.items.find(
-        (item) => item.slug === params.slug,
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
+    // read route params
+    const { slug } = params;
+
+    const caseStudy = CaseStudiesDetailsInfo.items.find(
+        (item) => item.slug === slug,
     );
 
+    return {
+        title: `${caseStudy?.title} | Dental Place`,
+        description: `${caseStudy?.description}`,
+    };
+}
+
+const CaseStudiesPage = ({ params }) => {
     const servicesDescription = ServiceDescriptionInfo.items.find(
         (item) => item.slug === params.slug,
     );
 
-    const beenDone = BeenDoneInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    const beenDone = BeenDoneInfo;
 
     const caseStudies = CaseStudiesDetailsInfo.items.find(
         (item) => item.slug === params.slug,
     );
 
-    if (!caseStudies || !servicesDescription || !letUsHelp || !beenDone) {
-        notFound();
+    const letUsHelp = LetHelpInfo;
+
+    if (!beenDone || !servicesDescription || !caseStudies || !letUsHelp) {
+        return notFound();
     }
 
     return (
