@@ -1,6 +1,7 @@
 import { type ButtonVariants } from "@minnek/ui/components/button";
 import { type IconsName } from "@minnek/ui/icons";
 import { ComponentType } from "../utils/CallToActions";
+import { Metadata } from "next";
 
 export type ButtonType = {
     text: string;
@@ -44,10 +45,12 @@ export type CallToAction = {
         description: string;
         icon: Icon;
     }>;
+    subTitle?: string;
+    phoneNumber?: string;
 };
 
 export type Seo = {
     title: string;
     description: string;
     keywords: string;
-};
+} & Metadata;

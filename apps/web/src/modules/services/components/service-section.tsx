@@ -1,19 +1,21 @@
 import React from "react";
 import { Typography } from "@minnek/ui/components/typography";
 import { Image } from "@/modules/common/components/image";
-import { Button } from "@minnek/ui/components/button";
-import { IconByName } from "@minnek/ui/components/icons/index";
-import Link from "next/link";
-import { ImageType } from "@/modules/common/types";
+import { ImageType, CallToAction } from "@/modules/common/types";
 import { BreadCrumb } from "@/modules/common/components/breadcrumb";
+import CallUs from "./card-action";
+import { CardToActionProps } from "./card-action";
+import CallToActionComp from "@/modules/common/components/CallToAction";
 
 export interface ServiceSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
+    subTitle?: string;
     summary: string;
     gallery: ImageType[];
     slug: string;
     description: string;
+    callUsAction?: CallToAction;
     img?: ImageType;
     editor?: string;
 }
@@ -28,11 +30,13 @@ const columnsClass = {
 
 const ServiceSection = ({
     title,
+    subTitle,
     summary,
     gallery,
     editor,
     img,
     description,
+    callUsAction,
     slug,
     content,
     ...props
@@ -69,7 +73,9 @@ const ServiceSection = ({
                 <main className="w-full max-w-[55rem] flex flex-col gap-9">
                     {gallery?.length > 0 && (
                         <div
-                            className={`grid ${columnsClass[gallery.length]} w-full items-center justify-center gap-6 overflow-hidden`}
+                            className={`grid ${
+                                columnsClass[gallery.length]
+                            } w-full items-center justify-center gap-6 overflow-hidden`}
                         >
                             {gallery.map((img, index) => (
                                 <picture
@@ -99,52 +105,16 @@ const ServiceSection = ({
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:auto-rows-fr">
                         <div className="flex flex-col gap-6">
                             <h2 className="font-noto-sans text-black text-3xl lg:text-4xl font-bold tracking-tight">
-                                Service Description
+                                {subTitle ? subTitle : "Service Description"}
                             </h2>
                             <div
-                                className="flex flex-col gap-6"
+                                className="flex flex-col gap-6 font-noto-sans text-black text-base"
                                 dangerouslySetInnerHTML={{
                                     __html: description,
                                 }}
                             ></div>
                         </div>
-                        <div className="bg-secondary/40 rounded-3xl flex flex-col gap-3 p-11">
-                            <h3 className="font-noto-sans text-black tracking-tight text-xl lg:text-xl font-extrabold leading-none">
-                                Get Free Appointment
-                            </h3>
-                            <p className="font-noto-sans text-black text-base">
-                                Lörem ipsum suprahåt diss teteda trina. Väliga
-                                beröde för sars. Lörem
-                                <br />
-                                ipsum suprahåt diss teteda trina. Väliga beröde
-                                för sars.
-                            </p>
-                            <div className="flex flex-col">
-                                <p className="font-noto-sans text-black text-base">
-                                    Call Us Now
-                                </p>
-                                <p>
-                                    <span className="font-noto-sans text-black tracking-tight text-2xl lg:text-2xl font-extrabold">
-                                        (809) 581-8686
-                                    </span>
-                                </p>
-                            </div>
-                            <Button
-                                variant={"dark"}
-                                size={"lg"}
-                                className="w-full max-w-max pl-4"
-                                asChild
-                            >
-                                <Link
-                                    href="tel:+18095818686"
-                                    className="text-wrap max-[400px]:h-[3.75rem]"
-                                >
-                                    <IconByName name="WhatsApp" size={20} />
-                                    Make An Appointment
-                                    <IconByName name="MoveRight" size={24} />
-                                </Link>
-                            </Button>
-                        </div>
+                        {callUsAction && <CallToActionComp {...callUsAction} />}
                     </div>
                 </main>
             </div>

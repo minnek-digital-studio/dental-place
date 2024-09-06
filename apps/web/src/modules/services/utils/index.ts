@@ -1,6 +1,9 @@
 import { ServiceSectionProps } from "@/modules/services/components/services-section";
 import { ClinicSectionProps } from "../components/clinic-section";
-import { GetServicePageInfoQuery } from "@/graphql/generated/graphql";
+import {
+    GetServicePageInfoQuery,
+    GetServiceBySlugQuery,
+} from "@/graphql/generated/graphql";
 
 import {
     getServices,
@@ -39,7 +42,7 @@ export const mapClinicSectionData = async (
     return clinicSection;
 };
 
-export const mapCalltoActions = async (
+export const mapCalltoActionsServices = async (
     data: GetServicePageInfoQuery["page"],
 ): Promise<ServicePageInfo["callToActions"]> => {
     return await Promise.all(
@@ -47,4 +50,26 @@ export const mapCalltoActions = async (
             async ({ node: cta }) => await getCallToAction(cta.id),
         ),
     );
+};
+
+export const mapCalltoActionsService = async (
+    data: GetServiceBySlugQuery["service"],
+): Promise<ServicePageInfo["callToActions"]> => {
+    return await Promise.all(
+        (data?.serviceSettings?.callToActions?.edges || []).map(
+            async ({ node: cta }) => await getCallToAction(cta.id),
+        ),
+    );
+};
+
+export const mapCallusActionsService = async (
+    data: GetServiceBySlugQuery["service"],
+): Promise<ServicePageInfo["callToActions"]> => {
+    const result = await Promise.all(
+        (data?.serviceSettings?.callUsAction?.edges || []).map(
+            async ({ node: cta }) => await getCallToAction(cta.id),
+        ),
+    );
+
+    return result;
 };

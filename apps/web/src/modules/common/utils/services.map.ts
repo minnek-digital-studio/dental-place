@@ -33,6 +33,7 @@ export const mapServiceData = (data: GetServiceBySlugQuery["service"]) => {
             size: data?.serviceSettings?.button?.size[0] as string,
         },
         description: data?.serviceSettings?.description as string,
+        subTitle: data?.serviceSettings?.subTitle as string,
         summary: data?.serviceSettings?.summary as string,
         icon: data?.serviceSettings?.icon as string,
         editor: data?.serviceSettings?.editor as string,
