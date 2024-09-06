@@ -29,6 +29,8 @@ export interface InputProps
     extends React.InputHTMLAttributes<HTMLInputElement>,
         VariantProps<typeof inputVariants> {}
 
+export type InputVariants = VariantProps<typeof inputVariants>;
+
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ({ className, variant, sizes, type, ...props }, ref) => {
         return (

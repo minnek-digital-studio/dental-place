@@ -10,6 +10,7 @@ export type ButtonType = {
     size: ButtonVariants["size"];
     className?: string;
     icon?: Icon;
+    type?: "submit" | "button" | "reset";
 };
 
 export type ImageType = {
@@ -23,6 +24,7 @@ export type Icon = {
     name: IconsName;
     size: number;
     className?: string;
+    color?: string;
     position?: "left" | "right";
 };
 
