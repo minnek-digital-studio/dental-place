@@ -7,17 +7,29 @@ module.exports = {
     '@release-it/conventional-changelog': {
       path: '.',
       infile: 'CHANGELOG.md',
-      preset: 'conventionalcommits',
+      preset: {
+        name: "angular"
+      },
       gitRawCommitsOpts: {
         path: '.',
       },
+    "@release-it/bumper": {
+        "in": {
+            "file": "package.json",
+            "path": ["version"]
+        },
+      "out": {
+        "file": "package.json",
+        "path": ["version"]
+      }
+    }
     },
   },
   git: {
     push: true,
     tagName: `${packageName}-v${version}`,
     commitsPath: '.',
-    commitMessage: `chore(${scope}): release v${version} [skip ci]`,
+    commitMessage: `chore(${scope}): release v${version}`,
     requireCommits: true,
     requireCommitsFail: false,
   },
@@ -26,7 +38,7 @@ module.exports = {
     versionArgs: ['--workspaces false'],
   },
   github: {
-    release: true,
+    release: false,
     releaseName: `${packageName}-v${version}`,
   },
 };
