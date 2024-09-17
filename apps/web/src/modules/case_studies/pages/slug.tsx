@@ -2,7 +2,7 @@ import Layout from "@/modules/common/layouts/layout";
 import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
 import Footer from "@/modules/common/components/footer";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import LetUsHelpSection, {
     LetUsHelpSectionProps,
 } from "@/modules/common/components/lethelp-section";
@@ -18,33 +18,40 @@ import CaseStudiesDetailsSection, {
 } from "../components/case-studies-details-section";
 import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
 import { notFound } from "next/navigation";
+import { getCaseStudyPage } from "@/modules/common/actions/case-studie.action";
+import CallToAction from "@/modules/common/components/CallToAction";
 
-export const metadata: Metadata = {
-    title: "Case Studies",
-    description: "Meet the team that makes Dental Place possible",
+type Props = {
+    params: { slug: string };
 };
 
-const CaseStudiesPage = ({ params }) => {
-    const letUsHelp = LetHelpInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata,
+): Promise<Metadata> {
+    // read route params
+    const { slug } = params;
 
-    const servicesDescription = ServiceDescriptionInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    const response = await getCaseStudyPage(slug);
 
-    const beenDone = BeenDoneInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    if (!response) {
+        return notFound();
+    }
+    return {
+        ...response.seo,
+    };
+}
+const CaseStudiesPage = async ({ params }) => {
+    const { slug } = params;
 
-    const caseStudies = CaseStudiesDetailsInfo.items.find(
-        (item) => item.slug === params.slug,
-    );
+    const caseStudiesData = await getCaseStudyPage(slug);
 
-    if (!caseStudies || !servicesDescription || !letUsHelp || !beenDone) {
-        notFound();
+    if (!caseStudiesData) {
+        return notFound();
     }
 
+    const { servicesDescription, beenDone, callToActions, caseStudies } =
+        caseStudiesData;
     return (
         <Layout
             navbarVariant={{
@@ -58,7 +65,9 @@ const CaseStudiesPage = ({ params }) => {
                 {...(servicesDescription as ServiceDescriptionSectionProps)}
             />
             <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
-            <LetUsHelpSection {...(letUsHelp as LetUsHelpSectionProps)} />
+            {callToActions.map((cta, index) => (
+                <CallToAction key={`${index}-${cta.title}`} {...cta} />
+            ))}
         </Layout>
     );
 };

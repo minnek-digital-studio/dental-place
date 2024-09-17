@@ -23,14 +23,17 @@ const ArsSection = ({
             )}
             {...props}
         >
-            <Typography as="h3" className="text-xl lg:text-xl font-extrabold">
+            <Typography
+                as="h3"
+                className="text-xl lg:text-xl font-extrabold max-md:hidden"
+            >
                 {title}
             </Typography>
             <div className="flex gap-4 items-start justify-center flex-wrap md:flex-nowrap">
                 {images.map(({ className, ...image }) => (
                     <picture
                         className={cn(
-                            "h-20 max-w-40  md:h-28 md:max-w-52",
+                            "h-20 max-w-40 md:h-28 md:max-w-52",
                             className,
                         )}
                     >

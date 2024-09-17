@@ -1,42 +1,41 @@
-import * as React from "react";
-import Link from "next/link";
-import { Button } from "@minnek/ui/components/button";
-import { cva, type VariantProps, cn } from "@minnek/ui/lib/utils";
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-    NavigationMenuListColumn,
-} from "@minnek/ui/components/navigation-menu";
-import { Dropdown, type DropdownOption } from "./dropdown";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@minnek/ui/components/accordion";
+import { Button } from "@minnek/ui/components/button";
 import {
-    Phone,
-    Facebook,
-    Instagram,
-    Menu,
-    ChevronDown,
-} from "@minnek/ui/icons";
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuListColumn,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+} from "@minnek/ui/components/navigation-menu";
 import { Typography } from "@minnek/ui/components/typography";
+import {
+    ChevronDown,
+    IconByName,
+    Menu,
+    Phone,
+    type IconByNameProps,
+} from "@minnek/ui/icons";
+import { cn, cva, type VariantProps } from "@minnek/ui/lib/utils";
+import Link from "next/link";
+import * as React from "react";
+import { Dropdown, type DropdownOption } from "./dropdown";
 
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
-    SheetFooter,
 } from "@minnek/ui/components/sheet";
+
+import { getNavbarData } from "../actions/layout-actions";
 
 export type NavBarItem = {
     title: string;
@@ -50,70 +49,6 @@ export type NavbarSubItem = {
     description?: string;
     href: string;
 };
-
-const langs: DropdownOption[] = [
-    {
-        value: "es",
-        icon: {
-            name: "SpainFlag",
-        },
-        label: "Español",
-    },
-    {
-        value: "en",
-        label: "English",
-        icon: {
-            name: "UsaFlag",
-        },
-    },
-];
-
-const hours: DropdownOption[] = [
-    {
-        value: "am",
-        label: "8:00 AM - 12:00 PM",
-    },
-    {
-        value: "pm",
-        label: "2:00 PM - 6:00 PM",
-    },
-];
-
-const navItems: NavBarItem[] = [
-    {
-        title: "Inicio",
-        href: "/",
-    },
-    {
-        title: "Acerca",
-        href: "/about",
-    },
-    {
-        title: "Contacto",
-        href: "/contact",
-    },
-    {
-        title: "Servicios",
-        href: "/services",
-        subItems: [
-            {
-                title: "Servicio 1",
-                href: "/services/service-1",
-                description: "Descripción del servicio 1",
-            },
-            {
-                title: "Servicio 2",
-                href: "/services/service-2",
-                description: "Descripción del servicio 2",
-            },
-            {
-                title: "Servicio 3",
-                href: "/services/service-3",
-                description: "Descripción del servicio 3",
-            },
-        ],
-    },
-];
 
 const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
     variants: {
@@ -153,7 +88,12 @@ const variants = {
     },
 };
 
-export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
+export async function NavbarItem({
+    title,
+    href,
+    subItems,
+    column,
+}: NavBarItem) {
     return (
         <NavigationMenuItem direction={column ? "column" : "row"}>
             {subItems ? (
@@ -172,9 +112,7 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                                             key={subItem.title}
                                             title={subItem.title}
                                             href={subItem.href}
-                                        >
-                                            {subItem.description}
-                                        </ListItem>
+                                        />
                                     ))}
                                 </ul>
                             </NavigationMenuContent>
@@ -195,24 +133,27 @@ export function NavbarItem({ title, href, subItems, column }: NavBarItem) {
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="grid px-4 py-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                        {subItems.map(({ title, href }) => (
-                                            <Link
-                                                href={href}
-                                                key={title}
-                                                legacyBehavior
-                                                passHref
-                                            >
-                                                <NavigationMenuLink
-                                                    className={navigationMenuTriggerStyle(
-                                                        {
-                                                            direction: "column",
-                                                        },
-                                                    )}
+                                        {subItems.map(
+                                            ({ title, href }, index) => (
+                                                <Link
+                                                    href={href}
+                                                    key={`${title}-${index}`}
+                                                    legacyBehavior
+                                                    passHref
                                                 >
-                                                    {title}
-                                                </NavigationMenuLink>
-                                            </Link>
-                                        ))}
+                                                    <NavigationMenuLink
+                                                        className={navigationMenuTriggerStyle(
+                                                            {
+                                                                direction:
+                                                                    "column",
+                                                            },
+                                                        )}
+                                                    >
+                                                        {title}
+                                                    </NavigationMenuLink>
+                                                </Link>
+                                            ),
+                                        )}
                                     </ul>
                                 </AccordionContent>
                             </AccordionItem>
@@ -242,8 +183,31 @@ interface NavbarProps
     extends React.HTMLAttributes<HTMLDivElement>,
         NavbarVariants {}
 
-export function NavBar({ className, variant, ...props }: NavbarProps) {
+export async function NavBar({ className, variant, ...props }: NavbarProps) {
+    const {
+        LangConfig,
+        PhoneConfig,
+        SchedulesConfig,
+        SocialLinksConfig,
+        navItems,
+        error,
+    } = await getNavbarData();
+
+    if (error) {
+        console.error(error);
+        return null;
+    }
     const { logo, button } = variants[variant || "default"];
+
+    const SchedulesNavItems: NavBarItem = {
+        title: SchedulesConfig.title,
+        href: "#",
+        subItems: SchedulesConfig.schedules.map((hour) => ({
+            title: hour.label,
+            href: "#",
+        })),
+    };
+
     return (
         <>
             <header
@@ -265,76 +229,95 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                         </Link>
                         <NavigationMenu className="hidden md:flex">
                             <NavigationMenuList>
-                                {navItems.map((item) => (
-                                    <NavbarItem key={item.title} {...item} />
+                                {navItems.map((item, index) => (
+                                    <NavbarItem
+                                        key={`${item.title}-${index}`}
+                                        {...item}
+                                    />
                                 ))}
                             </NavigationMenuList>
                         </NavigationMenu>
                     </div>
                     <div className="flex gap-2 lg:gap-4 items-center">
-                        <Button
-                            variant={button as any}
-                            size="icon"
-                            className="lg:h-9 lg:px-5"
-                            asChild
-                        >
-                            <Typography
-                                as="a"
-                                href="tel:+18095818686"
-                                className="gap-2 flex items-center justify-center font-bold"
+                        <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
+                            <Button
+                                variant={button as any}
+                                size="icon"
+                                className="lg:h-9 lg:px-5"
+                                asChild
                             >
-                                <Phone size={15} fill="black" stroke="0" />
-                                <span className="hidden lg:flex">
-                                    (809) 581-8686
-                                </span>
-                            </Typography>
-                        </Button>
+                                <Typography
+                                    as="a"
+                                    href={PhoneConfig?.url as string}
+                                    className="gap-2 flex items-center justify-center font-bold"
+                                >
+                                    <Phone size={15} fill="black" stroke="0" />
+                                    <span className="hidden lg:flex">
+                                        {PhoneConfig?.title}
+                                    </span>
+                                </Typography>
+                            </Button>
 
-                        <Button
-                            variant={button as any}
-                            size="icon"
-                            className="hidden md:flex"
-                            asChild
-                        >
-                            <Typography as="a" href="#" aria-label="Facebook">
-                                <Facebook size={20} fill="black" stroke="0" />
-                            </Typography>
-                        </Button>
+                            {SocialLinksConfig?.map((social, index) => {
+                                if (
+                                    social.icon === null ||
+                                    social.icon === undefined
+                                )
+                                    return;
 
-                        <Button
-                            variant={button as any}
-                            size="icon"
-                            className="hidden md:flex"
-                            asChild
-                        >
-                            <Typography as="a" href="#" aria-label="Instagram">
-                                <Instagram size={18} />
-                            </Typography>
-                        </Button>
+                                const { stroke, fill, ...icon } = social.icon;
 
-                        <Dropdown
-                            defaultOption={langs[0] as DropdownOption}
-                            options={langs}
-                            label="Idioma"
-                            className="hidden md:flex"
-                            radioGroup
-                        />
-
-                        <Dropdown
-                            defaultOption={hours[0] as DropdownOption}
-                            options={hours}
-                            label="Horario"
-                            className="hidden md:flex"
-                            icon={{
-                                name: "Clock",
-                                size: 24,
-                                color:
-                                    variant === "transparent"
-                                        ? "white"
-                                        : "black",
-                            }}
-                        />
-
+                                return (
+                                    <>
+                                        <Button
+                                            variant={button as any}
+                                            size="icon"
+                                            key={`${index}-${social.title}`}
+                                            className="hidden md:flex"
+                                            asChild
+                                        >
+                                            <Typography
+                                                as="a"
+                                                href="#"
+                                                aria-label={social.title}
+                                            >
+                                                <IconByName
+                                                    stroke={stroke ?? ""}
+                                                    fill={fill ?? "transparent"}
+                                                    {...(icon as IconByNameProps)}
+                                                />
+                                            </Typography>
+                                        </Button>
+                                    </>
+                                );
+                            })}
+                            <Dropdown
+                                defaultOption={
+                                    LangConfig.languages[0] as DropdownOption
+                                }
+                                options={LangConfig.languages}
+                                label={LangConfig.title}
+                                className="flex"
+                                radioGroup
+                            />
+                            <Dropdown
+                                defaultOption={
+                                    SchedulesConfig
+                                        .schedules[0] as DropdownOption
+                                }
+                                options={SchedulesConfig.schedules}
+                                label={SchedulesConfig.title}
+                                className="hidden md:flex"
+                                icon={{
+                                    name: "Clock",
+                                    size: 24,
+                                    color:
+                                        variant === "transparent"
+                                            ? "white"
+                                            : "black",
+                                }}
+                            />
+                        </div>
                         <Sheet>
                             <SheetTrigger className="flex md:hidden" asChild>
                                 <Button
@@ -352,11 +335,15 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="text-black">
-                                <SheetHeader>
-                                    <SheetTitle>Menú</SheetTitle>
-                                    <SheetDescription>
-                                        Navega a través de las opciones
-                                    </SheetDescription>
+                                <SheetHeader className="flex flex-row justify-center px-2">
+                                    <Link href="/" className="w-max">
+                                        <img
+                                            src={logo}
+                                            alt="Dental Place Logo"
+                                            loading="lazy"
+                                            className="w-auto max-h-8"
+                                        />
+                                    </Link>
                                 </SheetHeader>
 
                                 <NavigationMenu className="bg-white max-h-max items-start w-full justify-start flex-1">
@@ -368,41 +355,13 @@ export function NavBar({ className, variant, ...props }: NavbarProps) {
                                                 {...item}
                                             />
                                         ))}
+
+                                        <NavbarItem
+                                            column
+                                            {...SchedulesNavItems}
+                                        />
                                     </NavigationMenuListColumn>
                                 </NavigationMenu>
-
-                                <SheetFooter>
-                                    <div className="flex w-full justify-between">
-                                        <Dropdown
-                                            defaultOption={
-                                                langs[0] as DropdownOption
-                                            }
-                                            options={langs}
-                                            label="Idioma"
-                                            radioGroup
-                                        >
-                                            <Typography as="span">
-                                                Idioma
-                                            </Typography>
-                                        </Dropdown>
-
-                                        <Dropdown
-                                            defaultOption={
-                                                hours[0] as DropdownOption
-                                            }
-                                            options={hours}
-                                            label="Horario"
-                                            icon={{
-                                                name: "Clock",
-                                                size: 24,
-                                            }}
-                                        >
-                                            <Typography as="span">
-                                                Horario
-                                            </Typography>
-                                        </Dropdown>
-                                    </div>
-                                </SheetFooter>
                             </SheetContent>
                         </Sheet>
                     </div>
@@ -424,7 +383,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                     <a
                         ref={ref}
                         className={cn(
-                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                             className,
                         )}
                         {...props}
@@ -432,9 +391,12 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                         <div className="text-sm font-medium leading-none">
                             {title}
                         </div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            {children}
-                        </p>
+
+                        {children && (
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                {children}
+                            </p>
+                        )}
                     </a>
                 </NavigationMenuLink>
             </li>

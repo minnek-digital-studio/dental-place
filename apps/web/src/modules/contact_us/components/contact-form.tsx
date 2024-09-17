@@ -5,10 +5,10 @@ import { Button } from "@minnek/ui/components/button";
 
 const ContactForm = () => {
     return (
-        <form className="flex flex-col w-full h-full md:h-[745px]">
-            <div className="flex gap-6 flex-col md:flex-row mb-11">
+        <form className="flex flex-col w-full h-full max-h-max gap-8">
+            <div className="flex gap-6 flex-col md:flex-row">
                 <Label className="w-full">
-                    <span className="text-2xl font-bold">Tu nombre</span>
+                    <span className="text-2xl font-bold">Nombre</span>
                     <Input
                         type="text"
                         variant="info"
@@ -18,7 +18,7 @@ const ContactForm = () => {
                     />
                 </Label>
                 <Label className="w-full">
-                    <span className="text-2xl font-bold">Tu Email</span>
+                    <span className="text-2xl font-bold">Email</span>
                     <Input
                         type="email"
                         variant="info"
@@ -28,7 +28,7 @@ const ContactForm = () => {
                     />
                 </Label>
             </div>
-            <Label className="w-full mb-11">
+            <Label className="w-full">
                 <span className="text-2xl font-bold">Número de teléfono</span>
                 <Input
                     type="tel"
@@ -38,10 +38,10 @@ const ContactForm = () => {
                     className="border-0 border-none h-14"
                 />
             </Label>
-            <Label className=" mb-8">
-                <span className="text-2xl font-bold">Escribenos aquí...</span>
+            <Label className="">
+                <span className="text-2xl font-bold">Mensaje</span>
                 <Textarea
-                    className="rounded-3xl h-[314px] resize-none border-0 border-none"
+                    className="rounded-3xl h-[10rem] resize-none border-0 border-none"
                     variant="info"
                     sizes="lg"
                     placeholder="Escribenos aquí..."

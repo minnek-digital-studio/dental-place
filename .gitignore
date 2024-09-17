@@ -1,8 +1,5 @@
 wp-data/
 db-data/
-themes/
-plugins/
-vendor/
 /cypress/screenshots/
 /cypress/downloads/
 /cypress/videos/
@@ -22,7 +19,6 @@ composer.lock
 node_modules/
 ehthumbs.db
 Thumbs.db
-!/plugins/minnek-plugin
-!/themes/minnek-theme
 .turbo
 .vercel
+!/apps/cms/custom/data/dental_dev.sql
