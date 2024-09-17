@@ -1,5 +1,16 @@
 
 
+# [0.3.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.2.0...@minnek/web-v0.3.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-33 add hero section ([9af4b06](https://github.com/minnek-digital-studio/dental-place/commit/9af4b06b2538e7572ad6c70720acb8f76741367c))
+* **app:web:** DP-34 add about express braces section ([b68b008](https://github.com/minnek-digital-studio/dental-place/commit/b68b0082d4dc81f4de55a5a0d761cc066fa02d79))
+* **app:web:** DP-35 add why braces section ([6c55735](https://github.com/minnek-digital-studio/dental-place/commit/6c55735ca00bf9788f085ea6623e853893f8cf59))
+* **app:web:** DP-36 add braces photos section ([dc10305](https://github.com/minnek-digital-studio/dental-place/commit/dc103052084969347a7e1603ea936c3a55041a00))
+* **app:web:** DP-37 add let help form section ([e512235](https://github.com/minnek-digital-studio/dental-place/commit/e5122351c9051f05977c70530e28792ee47a0a95))
+
 # [0.2.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.1.0...@minnek/web-v0.2.0) (2024-09-17)
 
 
