@@ -1,6 +1,6 @@
 {
   "name": "@dental-place/cms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "private": true,
   "author": "Minnek",
@@ -25,6 +25,7 @@
     "@wordpress/scripts": "^27.2.0",
     "@wordpress/stylelint-config": "^21.34.0",
     "cypress": "^13.6.4",
-    "eslint-plugin-cypress": "^2.15.1"
+    "eslint-plugin-cypress": "^2.15.1",
+    "@minnek/config-release-it": "workspace:*"
   }
 }
