@@ -1,5 +1,15 @@
 
 
+# [0.5.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.4.0...@minnek/web-v0.5.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-43 add service placeholder content ([274960f](https://github.com/minnek-digital-studio/dental-place/commit/274960f429348b40811a3a376c58b6a0b3fa8691))
+* **app:web:** DP-43 connect service & services with wordpress ([bbaf050](https://github.com/minnek-digital-studio/dental-place/commit/bbaf05064979451853ed0895d7d94ecb9a40660c))
+* **app:web:** DP-46 add case studies section ([e95bf3f](https://github.com/minnek-digital-studio/dental-place/commit/e95bf3f378756beafa68e952be398011f215e6e7))
+* **app:web:** DP-47 add Lets Help Section ([c629d4d](https://github.com/minnek-digital-studio/dental-place/commit/c629d4df5b5ffc669e306801ccc3e118666d0135))
+
 # [0.4.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.3.0...@minnek/web-v0.4.0) (2024-09-17)
 
 

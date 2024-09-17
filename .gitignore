@@ -1,7 +1,7 @@
 wp-data/
 db-data/
-themes/*
-plugins/*
+themes/
+plugins/
 vendor/
 /cypress/screenshots/
 /cypress/downloads/

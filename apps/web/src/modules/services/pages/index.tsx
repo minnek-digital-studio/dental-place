@@ -16,7 +16,7 @@ import LetUsHelpSection, {
 
 import LetHelpInfo from "@/modules/services/data/let-us-help.json";
 
-const ServicesPage = () => {
+const ServicesPage = async () => {
     return (
         <Layout
             navbarVariant={{
