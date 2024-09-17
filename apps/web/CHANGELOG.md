@@ -1,5 +1,26 @@
 
 
+# [0.6.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.5.0...@minnek/web-v0.6.0) (2024-09-17)
+
+
+### Features
+
+* adding studies section ([24422df](https://github.com/minnek-digital-studio/dental-place/commit/24422df065a84e75c95009ef95e153188e7313b8))
+* creating let us help section ([3189276](https://github.com/minnek-digital-studio/dental-place/commit/3189276ec36c78c676cf95a73f8044428bca4aaf))
+* creating service-description section ([70fa325](https://github.com/minnek-digital-studio/dental-place/commit/70fa325d0b57f8fae9ed4895f55af09084f33855))
+* creating the section 'What Has Been Done' ([46dea2b](https://github.com/minnek-digital-studio/dental-place/commit/46dea2be597cc86fc64b2faec03434245c090e1f))
+* improve HTML semantics by changing <header> to <main> ([2447f15](https://github.com/minnek-digital-studio/dental-place/commit/2447f1575191678141809c1defebd8f7f89cd365))
+* modifying the padding of the section ([949ccd5](https://github.com/minnek-digital-studio/dental-place/commit/949ccd5c03fd5722eacd78bb702b16f9a0d86bdf))
+* modifying the padding of the section ([a9ff4f1](https://github.com/minnek-digital-studio/dental-place/commit/a9ff4f14d67111851312769874a428c02c86db77))
+* modifying the section margin ([83858fc](https://github.com/minnek-digital-studio/dental-place/commit/83858fcceadd9668b174d953958b4d7036d5d30b))
+* reducing the image width ([d1118a9](https://github.com/minnek-digital-studio/dental-place/commit/d1118a9862afdfd0d566368d662407fd2fd47041))
+* reorganizing the sections ([b1adb65](https://github.com/minnek-digital-studio/dental-place/commit/b1adb659d9ebba28c4619344b12e052ce7dc5dde))
+* update case study page import paths ([6371060](https://github.com/minnek-digital-studio/dental-place/commit/63710605399e4b29b1740a856f14d855a4ffddf5))
+* update case_studies section ([e24ec49](https://github.com/minnek-digital-studio/dental-place/commit/e24ec49c378437251fff1c24994babe818917b37))
+* updating the text margins ([66ffecb](https://github.com/minnek-digital-studio/dental-place/commit/66ffecb90bfc3c91ac3a54217ce67e93a095c367))
+* updating the text margins and aligning to the left side of the text ([af8a779](https://github.com/minnek-digital-studio/dental-place/commit/af8a7799c533b53493d307dc1119e52a443f1afd))
+* updating the text margins and aligning to the left side of the text ([5a8508a](https://github.com/minnek-digital-studio/dental-place/commit/5a8508a7bac3e97dcbf21373fbf40a32587143bd))
+
 # [0.5.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.4.0...@minnek/web-v0.5.0) (2024-09-17)
 
 
