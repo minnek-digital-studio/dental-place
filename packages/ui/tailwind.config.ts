@@ -31,13 +31,13 @@ const config = {
         link: "var(--link)",
         input: "var(--input)",
         "dark-primary": "var(--dark-primary)",
-        "dark-grey": "var(--dark-grey)",
+        "dark-grey": "hsl(var(--dark-grey))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
+          DEFAULT: "hsl(var(--secondary))",
           foreground: "var(--secondary-foreground)",
         },
         dark: {
