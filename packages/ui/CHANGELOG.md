@@ -1,5 +1,7 @@
 
 
+## [0.4.1](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.3.0...@minnek/ui-v0.4.1) (2024-09-17)
+
 # [0.4.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.3.0...@minnek/ui-v0.4.0) (2024-09-17)
 
 
