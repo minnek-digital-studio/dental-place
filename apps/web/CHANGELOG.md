@@ -1,5 +1,18 @@
 
 
+# [0.5.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.2.0...@minnek/web-v0.5.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-39 add services section on services page ([2651d94](https://github.com/minnek-digital-studio/dental-place/commit/2651d9470f1a50ce477ae034eb6c8fa280816f15))
+* **app:web:** DP-40 add carousel clinic photos section ([21dc8ac](https://github.com/minnek-digital-studio/dental-place/commit/21dc8acbd88c931b88e0870e7a2548c415bbdfb6))
+* **app:web:** DP-41 add let us Help sections into services ([0ad8481](https://github.com/minnek-digital-studio/dental-place/commit/0ad8481fcd2fe756db7e5ff0da88dcb605043b2f))
+* **app:web:** DP-43 add service placeholder content ([274960f](https://github.com/minnek-digital-studio/dental-place/commit/274960f429348b40811a3a376c58b6a0b3fa8691))
+* **app:web:** DP-43 connect service & services with wordpress ([bbaf050](https://github.com/minnek-digital-studio/dental-place/commit/bbaf05064979451853ed0895d7d94ecb9a40660c))
+* **app:web:** DP-46 add case studies section ([e95bf3f](https://github.com/minnek-digital-studio/dental-place/commit/e95bf3f378756beafa68e952be398011f215e6e7))
+* **app:web:** DP-47 add Lets Help Section ([c629d4d](https://github.com/minnek-digital-studio/dental-place/commit/c629d4df5b5ffc669e306801ccc3e118666d0135))
+
 # [0.4.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.3.0...@minnek/web-v0.4.0) (2024-09-17)
 
 
