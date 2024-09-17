@@ -14,27 +14,36 @@ import Link from "next/link";
 import { Typography } from "@minnek/ui/components/typography";
 import { cn } from "@minnek/ui/lib/utils";
 import { IconByName } from "@minnek/ui/icons";
-
+import MemberCardButton from "./member-card-button";
 export interface TeamMemberCard extends React.HTMLAttributes<HTMLDivElement> {
     id: string;
     name: string;
     specialty: string;
     img: ImageType;
     button: ButtonType;
+    education?: Education[];
+    description?: string;
+    educationtitle?: string;
     socialLinks: ButtonType[];
 }
 
-const MemberCard = ({
-    id,
-    name,
-    specialty,
-    img,
-    button,
-    socialLinks,
-    className,
-    ...props
-}: TeamMemberCard) => {
-    const { text: buttonText, ...buttonProps } = button;
+export type Education = {
+    title: string;
+    institution: string;
+    button: ButtonType;
+};
+
+const MemberCard = (member: TeamMemberCard) => {
+    const {
+        id,
+        name,
+        specialty,
+        img,
+        button,
+        socialLinks,
+        className,
+        ...props
+    } = member;
     return (
         <Card
             {...props}
@@ -44,7 +53,7 @@ const MemberCard = ({
             )}
         >
             <CardHeader className="flex items-center w-full px-6">
-                <picture className="bg-secondary/25 rounded-full max-w-40">
+                <picture className="bg-secondary/25 rounded-full size-40">
                     <Image {...img} />
                 </picture>
             </CardHeader>
@@ -74,7 +83,7 @@ const MemberCard = ({
                 </div>
             </CardContent>
             <CardFooter className="flex justify-center px-6">
-                <Button {...buttonProps}>{buttonText}</Button>
+                <MemberCardButton {...member} />
             </CardFooter>
         </Card>
     );

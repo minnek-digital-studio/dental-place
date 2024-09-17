@@ -46,7 +46,7 @@ export function Dropdown({
     const [option, setOption] = useState(defaultOption);
 
     return (
-        <DropdownMenu modal>
+        <DropdownMenu modal={false}>
             <DropdownMenuTrigger
                 aria-label={`Dropdown ${label}`}
                 className={cn("flex items-center", className)}

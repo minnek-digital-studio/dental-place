@@ -1,0 +1,16 @@
+{
+  "title": "Let Us Help You",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies tincidunt eros, vel molestie odio faucibus ultrices. Vestibulum sit amet euismod dolor.",
+  "img": {
+    "src": "/images/let-us-help.webp",
+    "alt": "About Us",
+    "className": ""
+  },
+  "button": {
+    "text": "Descubrir",
+    "link": "#",
+    "variant": "dark",
+    "size": "lg"
+  },
+  "className": "bg-primary/40"
+}
