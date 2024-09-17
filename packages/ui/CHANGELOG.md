@@ -1,5 +1,13 @@
 
 
+# [0.5.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.3.0...@minnek/ui-v0.5.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-43 add service placeholder content ([274960f](https://github.com/minnek-digital-studio/dental-place/commit/274960f429348b40811a3a376c58b6a0b3fa8691))
+* **app:web:** DP-43 connect service & services with wordpress ([bbaf050](https://github.com/minnek-digital-studio/dental-place/commit/bbaf05064979451853ed0895d7d94ecb9a40660c))
+
 ## [0.4.1](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.4.0...@minnek/ui-v0.4.1) (2024-09-17)
 
 # [0.4.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.3.0...@minnek/ui-v0.4.0) (2024-09-17)
