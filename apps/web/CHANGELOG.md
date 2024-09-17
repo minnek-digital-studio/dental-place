@@ -1,5 +1,14 @@
 
 
+# [0.4.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.3.0...@minnek/web-v0.4.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-39 add services section on services page ([2651d94](https://github.com/minnek-digital-studio/dental-place/commit/2651d9470f1a50ce477ae034eb6c8fa280816f15))
+* **app:web:** DP-40 add carousel clinic photos section ([21dc8ac](https://github.com/minnek-digital-studio/dental-place/commit/21dc8acbd88c931b88e0870e7a2548c415bbdfb6))
+* **app:web:** DP-41 add let us Help sections into services ([0ad8481](https://github.com/minnek-digital-studio/dental-place/commit/0ad8481fcd2fe756db7e5ff0da88dcb605043b2f))
+
 # [0.3.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.2.0...@minnek/web-v0.3.0) (2024-09-17)
 
 
