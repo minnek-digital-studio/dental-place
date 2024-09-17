@@ -1,15 +1,16 @@
 {
-  "name": "web",
-  "version": "0.0.0",
+  "name": "@minnek/web",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "release": "release-it"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@minnek/typescript-config": "workspace:*",
     "@minnek/ui": "workspace:*",
     "@types/node": "^18.6.3",
@@ -20,12 +21,16 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "zod": "^3.23.8",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "autoprefixer": "10.4.7",
     "next-transpile-modules": "^10.0.1",
     "postcss": "8.4.31",
-    "tailwindcss": "^3.0.24"
+    "typescript": "^5.3.3",
+    "tailwindcss": "^3.0.24",
+    "@minnek/config-release-it": "workspace:*"
   }
 }
