@@ -1,0 +1,10 @@
+{
+  "title": "About Express Braces",
+  "description": "Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. <br/><br/> Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede.<br/><br/>Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal. Soderat saling supranedusaska, prede.",
+  "img": {
+    "src": "/images/braces/why-braces.webp",
+    "alt": "About Us",
+    "className": "rounded-xl shadow-image"
+  },
+  "className": ""
+}
