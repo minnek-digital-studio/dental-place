@@ -1,5 +1,23 @@
 
 
+# [0.2.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.1.0...@minnek/web-v0.2.0) (2024-09-17)
+
+
+### Features
+
+* add hero section to team page ([09e15bc](https://github.com/minnek-digital-studio/dental-place/commit/09e15bcfca7b88f0e251743fe3c86790e78ae00b))
+* **app:web:** DP-27 add our team section ([284ad74](https://github.com/minnek-digital-studio/dental-place/commit/284ad74c2ea0a0d76bafa5c61e7584384388f0f5))
+* **app:web:** DP-29 add frequently ask section ([88354df](https://github.com/minnek-digital-studio/dental-place/commit/88354dfdbbb9d065fc38fdbc178a55f3786a5636))
+* **app:web:** DP-31 add Team member modal ([569f7cd](https://github.com/minnek-digital-studio/dental-place/commit/569f7cd90cdb633dcf814cf7c7f5ba209ff302e6))
+* DP-26 add contact page hero ([794cd77](https://github.com/minnek-digital-studio/dental-place/commit/794cd77c86234000bcaa86058f0199597dfd720f))
+* DP-26 add contact us page ([1c00099](https://github.com/minnek-digital-studio/dental-place/commit/1c00099f50c7046542d91b0b4f16dc8a15d5061f))
+* DP-26 update contact form ([06eaa19](https://github.com/minnek-digital-studio/dental-place/commit/06eaa196d00482d35dfb3d26f60047c3ddd19e0f))
+* DP-26 update contact module design ([f6bc706](https://github.com/minnek-digital-studio/dental-place/commit/f6bc706751d08e205ed9becd04ef2283d1a173f2))
+* DP-26 update contact page card section ([12da227](https://github.com/minnek-digital-studio/dental-place/commit/12da2273cb9176f4b7c38408c41db42a93e71573))
+* DP-26 update contact us module ([568844a](https://github.com/minnek-digital-studio/dental-place/commit/568844a8c41ebf13385fe9026880b267e1f33b96))
+* update header transparent variant ([ac1287b](https://github.com/minnek-digital-studio/dental-place/commit/ac1287b767dda5b254e65d3f93cdca6984bc0feb))
+* update line height issue in Typography component ([7404d4e](https://github.com/minnek-digital-studio/dental-place/commit/7404d4e8f4d5d90c0ab13efb045d65f5f928db23))
+
 # 0.1.0 (2024-09-17)
 
 
