@@ -1,5 +1,18 @@
 
 
+# [0.7.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.6.0...@minnek/web-v0.7.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-78 add seo support for Home page ([79ff5e5](https://github.com/minnek-digital-studio/dental-place/commit/79ff5e5286491d89f68230631bebb7472eeafaff))
+* **app:web:** DP-78 connect home page with wordpress ([cd9d83c](https://github.com/minnek-digital-studio/dental-place/commit/cd9d83cb3396f37ed66cedd8c39d4adb81c8890d))
+* **app:web:** DP-79 add seo for services page ([25530a0](https://github.com/minnek-digital-studio/dental-place/commit/25530a02cae2da1942bd192ccd1f7ddd1854cc90))
+* **app:web:** DP-79 connect services page ([03a656a](https://github.com/minnek-digital-studio/dental-place/commit/03a656a56749b4301232762a0a387ac3f145f072))
+* **app:web:** DP-81 add help-form section & connect with wordpress ([1a93c06](https://github.com/minnek-digital-studio/dental-place/commit/1a93c06ffb5e3843ec2ee55018fa46a0d8aad3de))
+* **app:web:** DP-81 connect express braces page with wordpress ([4a37c1e](https://github.com/minnek-digital-studio/dental-place/commit/4a37c1e8aaf5a50ee7e9fa81beae1e8b899b9b3a))
+* **app:web:** DP-82 connect service & case study page with wordpress ([651301d](https://github.com/minnek-digital-studio/dental-place/commit/651301d6b4615ffa3a1dfe4c0e5dd43e13818c31))
+
 # [0.6.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.5.0...@minnek/web-v0.6.0) (2024-09-17)
 
 

@@ -1,0 +1,10 @@
+query Posts {
+    posts {
+        edges {
+            node {
+                slug
+                title
+            }
+        }
+    }
+}

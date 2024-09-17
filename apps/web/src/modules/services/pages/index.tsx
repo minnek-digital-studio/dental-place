@@ -3,29 +3,36 @@ import Layout from "@/modules/common/layouts/layout";
 import ServiceSection, {
     type ServiceSectionProps,
 } from "@/modules/services/components/services-section";
-import ServicesInfo from "@/modules/services/data/services.json";
-
 import ClinicSection, {
     type ClinicSectionProps,
 } from "@/modules/services/components/clinic-section";
-import ClinicInfo from "@/modules/services/data/clinic.json";
+import CallToAction from "@/modules/common/components/CallToAction";
+import { getServicesPage } from "../actions/services.action";
 
-import LetUsHelpSection, {
-    LetUsHelpSectionProps,
-} from "@/modules/common/components/lethelp-section";
+import type { Metadata } from "next";
 
-import LetHelpInfo from "@/modules/services/data/let-us-help.json";
+export async function generateMetadata(): Promise<Metadata> {
+    const { seo } = await getServicesPage();
+
+    return {
+        ...seo,
+    };
+}
 
 const ServicesPage = async () => {
+    const { servicesSectionInfo, clinicSectionInfo, callToActions } =
+        await getServicesPage();
     return (
         <Layout
             navbarVariant={{
                 variant: "info",
             }}
         >
-            <ServiceSection {...(ServicesInfo as ServiceSectionProps)} />
-            <ClinicSection {...(ClinicInfo as ClinicSectionProps)} />
-            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+            <ServiceSection {...(servicesSectionInfo as ServiceSectionProps)} />
+            <ClinicSection {...(clinicSectionInfo as ClinicSectionProps)} />
+            {callToActions?.map((cta, index) => (
+                <CallToAction key={index} {...cta} />
+            ))}
         </Layout>
     );
 };

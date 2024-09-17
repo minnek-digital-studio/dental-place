@@ -22,6 +22,8 @@ import {
     IconByName,
 } from "@minnek/ui/icons";
 import { Metadata } from "next";
+import ClientQueryTest from "../components/clients-query-test";
+import FormTest from "@/modules/docs/components/form-test";
 
 export const metadata: Metadata = {
     title: "Docs",
@@ -30,7 +32,14 @@ export const metadata: Metadata = {
 export default async function Docs() {
     return (
         <main className="w-full flex flex-col justify-center items-center gap-4">
-            <section className="min-h-screen flex flex-col items-center justify-center gap-6">
+            <section className="min-h-screen flex flex-col items-center justify-center gap-6 pt-6">
+                <div className="container">
+                    <h1>Contact Form 7</h1>
+                    <div className="container flex">
+                        <FormTest />
+                    </div>
+                </div>
+                <ClientQueryTest />
                 <div>
                     <h1>Cards</h1>
                     <div className="flex gap-4">

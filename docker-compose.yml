@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   wordpress:
@@ -34,7 +34,12 @@ services:
   phpmyadmin:
     image: phpmyadmin
     restart: always
+    depends_on:
+      - mysql
     ports:
       - 9090:80
     environment:
       - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_USER=${MYSQL_USER}
+      - PMA_PASSWORD=${MYSQL_PASSWORD}

@@ -7,25 +7,28 @@ import GoogleMaps from "../components/google-maps";
 import ContactForm from "../components/contact-form";
 import ContactUsData from "../data/contact-us.json";
 
-const ServicesPage = () => {
+const ContactPage = () => {
     return (
         <>
             <HeroSection />
-            <main className="absolute w-full -translate-y-36 md:-translate-y-48">
-                <section className="container max-w-[1430px] mb-20">
+            <main className="absolute w-full -translate-y-20 md:-translate-y-48">
+                <section className="container max-w-[1060px] mb-20 flex flex-col gap-6">
+                    <div className="w-full max-h-[30rem] md:w-[380px] md:hidden">
+                        <GoogleMaps src={ContactUsData.embedMapUrl} />
+                    </div>
                     <div
                         className={cn(
                             "flex flex-col md:flex-row h-full bg-white px-10 py-8 gap-14 shadow-sm shadow-card rounded-3xl",
                         )}
                     >
-                        <header className="w-full h-[216px] md:w-[380px] md:h-[656px]">
+                        <header className="w-full max-h-[30rem] md:w-[380px] max-md:hidden">
                             <GoogleMaps src={ContactUsData.embedMapUrl} />
                         </header>
                         <ContactForm />
                     </div>
                 </section>
-                <section className="container max-w-[1430px] mb-20">
-                    <div className="flex flex-row flex-wrap gap-10 lg:gap-6 justify-between mx-10">
+                <section className="container max-w-[1060px] mb-20 max-md:hidden flex justify-center">
+                    <div className="flex gap-7 justify-between w-full max-w-[900px]">
                         <ContactCard title="Headquaters" iconName="MapPin">
                             <Typography
                                 as="p"
@@ -58,4 +61,4 @@ const ServicesPage = () => {
     );
 };
 
-export default ServicesPage;
+export default ContactPage;

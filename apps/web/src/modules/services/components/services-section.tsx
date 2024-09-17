@@ -33,13 +33,13 @@ const ServiceSection = ({
     return (
         <section {...props}>
             <div className="flex flex-col gap-9 items-center py-6 container pb-10">
-                <header className="max-w-[30rem] flex flex-col gap-6 text-center">
+                <header className="max-w-[55rem] flex flex-col gap-6 text-center">
                     <Typography as="h2">{title}</Typography>
                     <Typography as="p" className="text-dark-grey">
                         {description}
                     </Typography>
                 </header>
-                <main className="justify-center items-center gap-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                <main className="justify-center items-center gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-fr">
                     {items.map((item) => (
                         <ServiceCard key={crypto.randomUUID()} {...item} />
                     ))}

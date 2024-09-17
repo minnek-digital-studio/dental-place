@@ -70,7 +70,7 @@ const WhyBracesSection = ({
                             </li>
                         ))}
                     </ul>
-                    {button && (
+                    {button?.text && (
                         <Button
                             variant={button.variant}
                             className="gap-2 h-12"
