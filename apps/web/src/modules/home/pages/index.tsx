@@ -1,11 +1,37 @@
-import { Metadata } from "next";
-import Container from "@/modules/common/components/container";
-import MoreStories from "@/modules/common/components/more-stories";
-import HeroPost from "@/modules/common/components/hero-post";
-import Intro from "@/modules/common/components/intro";
-import Layout from "@/modules/common/components/layout";
-import { getAllPostsForHome } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
+import AboutSection, {
+    type AboutSectionProps,
+} from "@/modules/home/components/about-section";
+import ArsSection, {
+    type ArsSectionProps,
+} from "@/modules/home/components/ars-section";
+import InstagramSection, {
+    type InstagramSectionProps,
+} from "@/modules/home/components/instagram-section";
+import LetUsHelpSection, {
+    LetUsHelpSectionProps,
+} from "@/modules/home/components/lethelp-section";
+import PresentationSection, {
+    type PresentationSectionProps,
+} from "@/modules/home/components/presentation-section";
+import ReviewsSection, {
+    type ReviewsSectionProps,
+} from "@/modules/home/components/reviews-section";
+import ServiceSection, {
+    ServiceSectionProps,
+} from "@/modules/home/components/services-section";
+import WhyUsSection, {
+    type WhyUsSectionProps,
+} from "@/modules/home/components/whyus-section";
+import AboutInfo from "@/modules/home/data/about.json";
+import ArsInfo from "@/modules/home/data/ars.json";
+import InstagramInfo from "@/modules/home/data/instagram.json";
+import LetHelpInfo from "@/modules/home/data/let-us-help.json";
+import PresentationInfo from "@/modules/home/data/presentation.json";
+import ReviewsInfo from "@/modules/home/data/reviews.json";
+import Services from "@/modules/home/data/services.json";
+import WhyUsInfo from "@/modules/home/data/whyus.json";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: `Next.js Blog Example with ${CMS_NAME}`,
@@ -13,10 +39,17 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
     return (
-        <Layout preview>
-            <Container>
-                <Intro />
-            </Container>
-        </Layout>
+        <div className="flex flex-col w-full gap-10">
+            <PresentationSection
+                {...(PresentationInfo as PresentationSectionProps)}
+            />
+            <ServiceSection {...(Services as ServiceSectionProps)} />
+            <AboutSection {...(AboutInfo as AboutSectionProps)} />
+            <WhyUsSection {...(WhyUsInfo as WhyUsSectionProps)} />
+            <ReviewsSection {...(ReviewsInfo as ReviewsSectionProps)} />
+            <LetUsHelpSection {...(LetHelpInfo as LetUsHelpSectionProps)} />
+            <InstagramSection {...(InstagramInfo as InstagramSectionProps)} />
+            <ArsSection {...(ArsInfo as ArsSectionProps)} />
+        </div>
     );
 }
