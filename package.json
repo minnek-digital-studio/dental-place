@@ -10,7 +10,9 @@
     "lint": "turbo run lint",
     "build": "turbo run build",
     "docker:up": "docker compose --env-file=./.env.local up -d",
-    "docker:down": "docker compose --env-file=./.env down"
+    "docker:down": "docker compose --env-file=./.env down",
+    "release": "turbo release --concurrency=1",
+    "release:ci": "turbo release --concurrency=1 -- --ci"
   },
   "dependencies": {},
   "devDependencies": {
