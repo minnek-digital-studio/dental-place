@@ -1,6 +1,6 @@
 {
-  "name": "web",
-  "version": "0.0.0",
+  "name": "@minnek/web",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "dev": "concurrently 'next' 'pnpm codegen:dev'",
@@ -46,6 +46,7 @@
     "date-fns": "^2.28.0",
     "postcss": "8.4.31",
     "typescript": "^5.3.3",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "@minnek/config-release-it": "workspace:*"
   }
 }

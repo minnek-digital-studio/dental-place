@@ -1,6 +1,6 @@
 {
   "name": "@minnek/ui",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "private": true,
   "author": "Minnek Digital Agency",
   "license": "ISC",
@@ -37,7 +37,8 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "postcss-load-config": "^6.0.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@minnek/config-release-it": "workspace:*"
   },
   "exports": {
     "./global.css": "./src/global.css",
