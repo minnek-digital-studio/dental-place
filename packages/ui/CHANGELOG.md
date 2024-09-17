@@ -1,5 +1,14 @@
 
 
+# [0.3.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.2.0...@minnek/ui-v0.3.0) (2024-09-17)
+
+
+### Features
+
+* **app:web:** DP-27 add our team section ([284ad74](https://github.com/minnek-digital-studio/dental-place/commit/284ad74c2ea0a0d76bafa5c61e7584384388f0f5))
+* **app:web:** DP-29 add frequently ask section ([88354df](https://github.com/minnek-digital-studio/dental-place/commit/88354dfdbbb9d065fc38fdbc178a55f3786a5636))
+* **app:web:** DP-31 add Team member modal ([569f7cd](https://github.com/minnek-digital-studio/dental-place/commit/569f7cd90cdb633dcf814cf7c7f5ba209ff302e6))
+
 # 0.2.0 (2024-09-17)
 
 
