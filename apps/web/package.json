@@ -1,6 +1,6 @@
 {
-  "name": "web",
-  "version": "0.0.0",
+  "name": "@minnek/web",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next",
@@ -27,6 +27,8 @@
     "autoprefixer": "10.4.7",
     "next-transpile-modules": "^10.0.1",
     "postcss": "8.4.31",
-    "tailwindcss": "^3.0.24"
+    "typescript": "^5.3.3",
+    "tailwindcss": "^3.0.24",
+    "@minnek/config-release-it": "workspace:*"
   }
 }
