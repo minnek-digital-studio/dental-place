@@ -7,6 +7,8 @@ import { cn } from "@minnek/ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { Typography } from "@minnek/ui/components/typography";
 
+import Buttons from "@/modules/home/components/buttons";
+
 export interface PresentationSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -27,30 +29,31 @@ const PresentationSection = ({
         <>
             <section
                 className={cn(
-                    "flex flex-col justify-center items-center w-full md:mb-14",
+                    "flex flex-col justify-center items-center w-full md:mb-14 h-full flex-1",
                     className,
+                    "bg-transparent filter",
                 )}
                 {...props}
             >
-                <div className="container relative flex max-md:pt-4 max-md:flex-col gap-5 items-center">
-                    <div className="flex flex-wrap justify-center items-center w-full max-md:gap-5">
-                        <div className="w-full md:w-[40%] flex flex-col gap-4 md:pb-20">
+                <div className="container relative flex max-md:pt-4 flex-col gap-5 items-start">
+                    <div className="flex flex-wrap justify-start items-center w-full max-md:gap-5">
+                        <div className="w-full md:w-[50%] flex flex-col gap-4 filter backdrop-blur-sm">
                             <Typography
                                 as="h1"
-                                className="font-bold text-black"
+                                className="font-medium text-white xl:text-5xl lg:text-5xl"
                             >
                                 {title}
                             </Typography>
-                            <Typography as="p" className="text-lg text-black ">
+                            <Typography as="p" className="text-lg text-white">
                                 {description}
                             </Typography>
+                            <div className="flex justify-start items-start">
+                                <Buttons buttons={card.buttons} />
+                            </div>
                         </div>
-                        <picture className="w-[60%] max-md:hidden">
+                        <picture className="w-[60%] hidden">
                             <Image {...img} />
                         </picture>
-                    </div>
-                    <div className="w-[calc(100%-4rem)] max-md:w-full max-md:mb-6 flex justify-center items-center md:absolute top-[calc(100%-3.75rem)]">
-                        <PresentationCard {...card} />
                     </div>
                 </div>
             </section>
