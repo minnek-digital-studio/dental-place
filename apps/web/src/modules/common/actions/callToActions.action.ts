@@ -20,6 +20,8 @@ export const getCallToAction = async (id: string): Promise<CallToAction> => {
     return {
         title: callToAction?.title as string,
         description: callToAction?.callToActionSettings?.description as string,
+        descriptionRich: callToAction?.callToActionSettings
+            ?.descriptionRich as string,
         subTitle: callToAction?.callToActionSettings?.callUs
             ?.subTitle as string,
         phoneNumber: callToAction?.callToActionSettings?.callUs
