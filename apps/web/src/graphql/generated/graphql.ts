@@ -794,6 +794,8 @@ export type CallToActionSettings = AcfFieldGroup & AcfFieldGroupFields & CallToA
   className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
+  descriptionRich?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
@@ -1003,6 +1005,8 @@ export type CallToActionSettings_Fields = {
   className?: Maybe<Scalars['String']['output']>;
   /** Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
   description?: Maybe<Scalars['String']['output']>;
+  /** Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group */
+  descriptionRich?: Maybe<Scalars['String']['output']>;
   /**
    * The name of the field group
    * @deprecated Use __typename instead
