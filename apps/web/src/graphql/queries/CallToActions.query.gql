@@ -3,6 +3,7 @@ query getCallToActionByID($id: ID = "") {
         title
         callToActionSettings {
             description
+            descriptionRich
             callUs {
                 phoneNumber
                 subTitle
