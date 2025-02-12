@@ -54,7 +54,7 @@ export function Dropdown({
                 <Button
                     variant="transparent"
                     size="icon"
-                    className="min-w-6 min-h-6 size-6 rounded-full overflow-hidden"
+                    className="min-w-6 min-h-6 size-6 rounded-full overflow-hidden border-0"
                     asChild
                 >
                     <div>
