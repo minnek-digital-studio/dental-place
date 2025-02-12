@@ -31,6 +31,13 @@ query getCallToActionByID($id: ID = "") {
                         title
                     }
                 }
+                otherImage {
+                    node {
+                        altText
+                        sourceUrl
+                        title
+                    }
+                }
                 className
             }
             type

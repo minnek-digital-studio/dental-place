@@ -12,6 +12,7 @@ export type AboutSectionProps = {
     descriptionRich?: string;
     button: ButtonType;
     img: ImageType;
+    otherImage?: ImageType;
     className?: string;
 };
 
@@ -20,12 +21,11 @@ const AboutSection = ({
     description,
     descriptionRich,
     img,
+    otherImage,
     button,
     className,
 }: AboutSectionProps) => {
-    let descriptionRichHTML = { __html: "" };
-
-    if (description) descriptionRichHTML = { __html: descriptionRich || "" };
+    const descriptionRichHTML = { __html: descriptionRich || "" };
 
     return (
         <section className=" container max-xl:pl-0 max-xl:pr-0">
@@ -76,7 +76,7 @@ const AboutSection = ({
                     </picture>
                     <picture className="overflow-hidden rounded-md py-14 lg:py-24">
                         <ImageAnimate
-                            {...img}
+                            {...otherImage}
                             direction="up"
                             position={-25}
                             speed={50}

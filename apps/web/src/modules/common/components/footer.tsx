@@ -79,7 +79,7 @@ export const FooterColumn = (column: FooterColumnType) => {
                                     >
                                         {icon && (
                                             <Button
-                                                variant="default"
+                                                variant="dark"
                                                 size="icon"
                                                 asChild
                                             >
@@ -112,7 +112,7 @@ export const FooterColumn = (column: FooterColumnType) => {
                             <li key={title}>
                                 {icon && (
                                     <Button
-                                        variant="default"
+                                        variant="dark"
                                         size="icon"
                                         aria-label={title}
                                         asChild
