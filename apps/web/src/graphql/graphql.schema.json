@@ -5836,6 +5836,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "otherImage",
+            "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsImage&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -5891,6 +5903,18 @@
           },
           {
             "name": "img",
+            "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsImage&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "otherImage",
             "description": "Field of the &quot;image&quot; Field Type added to the schema as part of the &quot;CallToActionSettingsImage&quot; Field Group",
             "args": [],
             "type": {
@@ -13771,15 +13795,15 @@
           },
           {
             "name": "authorIp",
-            "description": "IP address for the author. This field is equivalent to WP_Comment-&gt;comment_author_IP and the value matching the &quot;comment_author_IP&quot; column in SQL.",
+            "description": "IP address for the author at the time of commenting. This field is equivalent to WP_Comment-&gt;comment_author_IP and the value matching the &quot;comment_author_IP&quot; column in SQL.",
             "args": [],
             "type": {
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
             },
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use the ipAddress field on the edge between the comment and author"
           },
           {
             "name": "commentId",
@@ -15354,6 +15378,22 @@
             "deprecationReason": null
           },
           {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "userId",
             "description": "Include comments for a specific user ID.",
             "type": {
@@ -15389,6 +15429,42 @@
             "deprecationReason": null
           },
           {
+            "name": "email",
+            "description": "The email address representing the author for this particular comment",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ipAddress",
+            "description": "IP address of the author at the time of making this comment. This field is equivalent to WP_Comment-&gt;comment_author_IP and the value matching the &quot;comment_author_IP&quot; column in SQL.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "The display name of the comment author for this particular comment",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "node",
             "description": "The node of the connection, without the edges",
             "args": [],
@@ -15400,6 +15476,18 @@
                 "name": "Commenter",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "url",
+            "description": "The url entered for the comment author on this particular comment",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -15936,6 +16024,22 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
             },
             "defaultValue": null,
             "isDeprecated": false,
@@ -24944,6 +25048,18 @@
             "deprecationReason": "Use `EnqueuedScript.extraData` instead."
           },
           {
+            "name": "group",
+            "description": "The loading group to which this asset belongs.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "handle",
             "description": "The handle of the enqueued asset",
             "args": [],
@@ -25109,6 +25225,30 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "group",
+            "description": "The loading group to which this asset belongs.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "groupLocation",
+            "description": "The location where this script should be loaded",
+            "args": [],
+            "type": {
+              "kind": "ENUM",
+              "name": "ScriptLoadingGroupLocationEnum",
               "ofType": null
             },
             "isDeprecated": false,
@@ -25566,6 +25706,18 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use `EnqueuedScript.extraData` instead."
+          },
+          {
+            "name": "group",
+            "description": "The loading group to which this asset belongs.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "handle",
@@ -36281,6 +36433,22 @@
             "deprecationReason": null
           },
           {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "userId",
             "description": "Include comments for a specific user ID.",
             "type": {
@@ -38949,6 +39117,24 @@
           {
             "name": "IMAGE_HEIC",
             "description": "image/heic mime type.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "IMAGE_HEIC_SEQUENCE",
+            "description": "image/heic-sequence mime type.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "IMAGE_HEIF",
+            "description": "image/heif mime type.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "IMAGE_HEIF_SEQUENCE",
+            "description": "image/heif-sequence mime type.",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -43319,6 +43505,22 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
             },
             "defaultValue": null,
             "isDeprecated": false,
@@ -51151,6 +51353,22 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
             },
             "defaultValue": null,
             "isDeprecated": false,
@@ -63893,6 +64111,22 @@
             "deprecationReason": null
           },
           {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "userId",
             "description": "Include comments for a specific user ID.",
             "type": {
@@ -75023,6 +75257,30 @@
         "inputFields": null,
         "interfaces": [],
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "ScriptLoadingGroupLocationEnum",
+        "description": "Location in the document where the script to be loaded",
+        "isOneOf": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "FOOTER",
+            "description": "A script to be loaded in document at right before the closing `<body>` tag",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "HEADER",
+            "description": "A script to be loaded in document `<head>` tag",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -95597,6 +95855,22 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "statusIn",
+            "description": "One or more Comment Statuses to limit results by",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CommentStatusEnum",
+                "ofType": null
+              }
             },
             "defaultValue": null,
             "isDeprecated": false,

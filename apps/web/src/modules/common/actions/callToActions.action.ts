@@ -55,6 +55,14 @@ export const getCallToAction = async (id: string): Promise<CallToAction> => {
             className: callToAction?.callToActionSettings?.image
                 ?.className as string,
         },
+        otherImage: {
+            src: callToAction?.callToActionSettings?.image?.otherImage?.node
+                ?.sourceUrl as string,
+            alt: callToAction?.callToActionSettings?.image?.otherImage?.node
+                ?.altText as string,
+            className: callToAction?.callToActionSettings?.image
+                ?.className as string,
+        },
         className: callToAction?.callToActionSettings?.className as string,
         items: callToAction?.callToActionSettings?.items?.map((item) => ({
             title: item?.title as string,
