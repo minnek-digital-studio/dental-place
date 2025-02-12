@@ -40,6 +40,7 @@ export type CallToAction = {
     type?: ComponentType;
     button: ButtonType;
     img: ImageType;
+    otherImage?: ImageType;
     className?: string;
     items: Array<{
         title: string;

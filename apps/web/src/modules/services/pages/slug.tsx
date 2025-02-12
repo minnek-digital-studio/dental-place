@@ -32,7 +32,7 @@ export async function generateMetadata(
     };
 }
 
-const ServicePage = async ({ params }) => {
+const ServicePage: React.FC<Props> = async ({ params }) => {
     const { slug } = params;
     const response = await getServiceBySlug(slug);
 

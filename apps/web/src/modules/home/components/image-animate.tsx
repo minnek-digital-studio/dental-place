@@ -13,7 +13,6 @@ const ImageAnimate = ({
     speed = 5,
     direction = "up",
     position = 0,
-    src,
     ...imgProps
 }: ImageAnimateProps) => {
     const imageRef = useRef<HTMLImageElement>(null);
@@ -52,7 +51,7 @@ const ImageAnimate = ({
         };
     }, [speed, direction]);
 
-    return <Image ref={imageRef} {...imgProps} src="/images/about-us.webp" />;
+    return <Image ref={imageRef} {...imgProps} />;
 };
 
 export default ImageAnimate;
