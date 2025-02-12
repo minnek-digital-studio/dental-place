@@ -5179,6 +5179,18 @@
             "deprecationReason": null
           },
           {
+            "name": "descriptionRich",
+            "description": "Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "fieldGroupName",
             "description": "The name of the field group",
             "args": [],
@@ -6263,6 +6275,18 @@
           {
             "name": "description",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "descriptionRich",
+            "description": "Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;CallToActionSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
