@@ -2,7 +2,7 @@ import React from "react";
 import { type CallToAction } from "../types";
 import { ComponentByType, ComponentType } from "../utils/CallToActions";
 
-interface CallToActionProps extends CallToAction {
+export interface CallToActionProps extends CallToAction {
     type?: ComponentType;
 }
 

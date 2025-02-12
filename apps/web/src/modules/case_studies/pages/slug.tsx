@@ -20,6 +20,7 @@ import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetai
 import { notFound } from "next/navigation";
 import { getCaseStudyPage } from "@/modules/common/actions/case-studie.action";
 import CallToAction from "@/modules/common/components/CallToAction";
+import React from "react";
 
 type Props = {
     params: { slug: string };
@@ -41,7 +42,7 @@ export async function generateMetadata(
         ...response.seo,
     };
 }
-const CaseStudiesPage = async ({ params }) => {
+const CaseStudiesPage: React.FC<Props> = async ({ params }) => {
     const { slug } = params;
 
     const caseStudiesData = await getCaseStudyPage(slug);

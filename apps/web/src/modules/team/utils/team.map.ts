@@ -96,7 +96,7 @@ export const mapTeamMembers = (data: GetTeamMembersQuery["teams"]) => {
             socialLinks:
                 member.teamMemberSettings?.socialLink?.map((social) => ({
                     icon: {
-                        color: social?.icon?.color,
+                        color: social?.icon?.color ?? "currentColor",
                         name: (social?.icon?.name as IconsName) ?? "",
                         size: social?.icon?.size ?? 20,
                         stroke: social?.icon?.stroke,
