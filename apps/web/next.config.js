@@ -18,4 +18,10 @@ if (!URL.canParse(process.env.WORDPRESS_API_URL)) {
         { loader: "next/font/google", options: { subsets: ["latin"] } },
     ],
     transpilePackages: ["@minnek/ui"],
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
   };

@@ -45,7 +45,7 @@ export default async function Docs() {
                     <div className="flex gap-4">
                         <ServiceCard
                             title="Odontología General"
-                            description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
+                            summary="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             button={{
                                 text: "Learn More",
                                 link: "#",
@@ -58,7 +58,7 @@ export default async function Docs() {
 
                         <ServiceCard
                             title="Endodoncia"
-                            description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
+                            summary="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             button={{
                                 text: "Learn More",
                                 link: "#",
@@ -71,7 +71,7 @@ export default async function Docs() {
 
                         <ServiceCard
                             title="Odontología Estética"
-                            description="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
+                            summary="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             button={{
                                 text: "Learn More",
                                 link: "#",
