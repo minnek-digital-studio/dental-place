@@ -1,4 +1,6 @@
-import { CMS_NAME } from "@/lib/constants";
+import CallToAction from "@/modules/common/components/CallToAction";
+import Footer from "@/modules/common/components/footer";
+import { NavBar } from "@/modules/common/components/navbar";
 import ArsSection, {
     type ArsSectionProps,
 } from "@/modules/home/components/ars-section";
@@ -15,14 +17,9 @@ import ServiceSection, {
     ServiceSectionProps,
 } from "@/modules/home/components/services-section";
 import { Metadata } from "next";
-import Layout from "@/modules/common/layouts/layout";
-import { getHomePageInfo } from "../actions/home.action";
-import CallToAction from "@/modules/common/components/CallToAction";
-import Footer from "@/modules/common/components/footer";
-import {
-    NavBar,
-    type NavbarVariants,
-} from "@/modules/common/components/navbar";
+import { getHomePageInfo } from "@/modules/home/actions/home.action";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getHomePageInfo();
