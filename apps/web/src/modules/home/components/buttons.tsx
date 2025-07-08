@@ -23,7 +23,7 @@ const Buttons = ({ buttons, className, ...props }: ButtonsProps) => {
                     className={cn(
                         "",
                         className,
-                        "bg-transparent border border-white text-white hover:bg-light hover:text-black",
+                        "bg-white text-black border border-white hover:text-black hover:bg-light ",
                     )}
                     key={crypto.randomUUID()}
                     asChild
