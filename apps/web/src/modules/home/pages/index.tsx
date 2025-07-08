@@ -58,7 +58,8 @@ export default async function HomePage() {
                     </video>
                     <NavBar
                         className="relative backdrop-blur-sm"
-                        variant={"transparent"}
+                        variant={"transparentLight"}
+                        align="center"
                     />
                     <PresentationSection
                         {...(PresentationInfo as PresentationSectionProps)}
