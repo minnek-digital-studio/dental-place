@@ -52,7 +52,7 @@ const ServiceSection = ({
                             return (
                                 <CarouselItem
                                     key={crypto.randomUUID()}
-                                    className="flex justify-center items-center basis-[38%] md:basis-1/3 lg:basis-1/4"
+                                    className="flex justify-center items-center basis-[31%] md:basis-1/3 lg:basis-1/4"
                                 >
                                     <ServiceCard
                                         {...item}
@@ -61,7 +61,7 @@ const ServiceSection = ({
                                 </CarouselItem>
                             );
                         })}
-                        <CarouselItem className="flex justify-center items-center basis-[43%] md:hidden">
+                        <CarouselItem className="flex justify-center items-center basis-[38%] md:hidden">
                             <Button
                                 variant={button.variant}
                                 className="gap-2"
