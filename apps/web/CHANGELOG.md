@@ -1,5 +1,14 @@
 
 
+# [0.8.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.2.0...@minnek/web-v0.8.0) (2025-07-08)
+
+
+### Features
+
+* add 2do image to call to action about ([f52625a](https://github.com/minnek-digital-studio/dental-place/commit/f52625a785d18686bc5255980ae18428382efe2d))
+* DP-85 add video to hero background ([b1c3aeb](https://github.com/minnek-digital-studio/dental-place/commit/b1c3aeb7f2ddf155ffd6a7b08ad813f7c227dc66))
+* DP-86 redesign about section & add rich text ([05c5c94](https://github.com/minnek-digital-studio/dental-place/commit/05c5c946d0904e16f946402f2ba047dbe86123d8))
+
 # [0.7.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/web-v0.6.0...@minnek/web-v0.7.0) (2024-09-17)
 
 
