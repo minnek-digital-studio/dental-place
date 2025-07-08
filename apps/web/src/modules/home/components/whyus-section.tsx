@@ -30,12 +30,12 @@ const WhyUsSection = ({
     return (
         <section className="container">
             <div className={cn("flex flex-col md:flex-row", className)}>
-                <main className="flex flex-col gap-6 w-full md:w-[60%] pt-10 px-10 md:py-14 md:pr-10">
+                <main className="flex flex-col gap-6 w-full md:w-[60%] pt-10 px-6 md:px-10 md:py-14 md:pr-10">
                     <Typography as="h2">{title}</Typography>
                     <ul className="flex flex-col gap-6">
                         {items.map((item, index) => (
                             <li key={index} className="flex gap-4">
-                                <div>
+                                <div className="hidden md:flex">
                                     <IconByName {...item.icon} />
                                 </div>
                                 <div className="flex flex-col gap-1">
@@ -71,7 +71,7 @@ const WhyUsSection = ({
                         </Link>
                     </Button>
                 </main>
-                <picture className="md:w-[40%] w-full overflow-hidden p-10 md:py-14">
+                <picture className="md:w-[40%] w-full overflow-hidden p-10 max-md:px-6 md:py-14">
                     <Image {...img} />
                 </picture>
             </div>
