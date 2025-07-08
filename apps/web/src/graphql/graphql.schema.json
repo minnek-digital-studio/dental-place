@@ -11,7 +11,7 @@
       {
         "kind": "OBJECT",
         "name": "About",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -224,7 +224,7 @@
       {
         "kind": "OBJECT",
         "name": "AcfContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;AcfContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;AcfContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of AcfContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -1291,7 +1291,7 @@
       {
         "kind": "OBJECT",
         "name": "AcfMediaItemConnectionPageInfo",
-        "description": "Page Info on the &quot;AcfMediaItemConnection&quot;",
+        "description": "Pagination metadata specific to &quot;AcfMediaItemConnection&quot; collections. Provides cursors and flags for navigating through sets of AcfMediaItemConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -1493,7 +1493,7 @@
         "fields": [
           {
             "name": "default",
-            "description": "URL for the default image or a default type. Accepts &#039;404&#039; (return a 404 instead of a default image), &#039;retro&#039; (8bit), &#039;monsterid&#039; (monster), &#039;wavatar&#039; (cartoon face), &#039;indenticon&#039; (the &#039;quilt&#039;), &#039;mystery&#039;, &#039;mm&#039;, or &#039;mysteryman&#039; (The Oyster Man), &#039;blank&#039; (transparent GIF), or &#039;gravatar_default&#039; (the Gravatar logo).",
+            "description": "TEST: URL for the default image or a default type. Accepts &#039;404&#039; (return a 404 instead of a default image), &#039;retro&#039; (8bit), &#039;monsterid&#039; (monster), &#039;wavatar&#039; (cartoon face), &#039;indenticon&#039; (the &#039;quilt&#039;), &#039;mystery&#039;, &#039;mm&#039;, or &#039;mysteryman&#039; (The Oyster Man), &#039;blank&#039; (transparent GIF), or &#039;gravatar_default&#039; (the Gravatar logo).",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1632,7 +1632,7 @@
       {
         "kind": "ENUM",
         "name": "AvatarRatingEnum",
-        "description": "What rating to display avatars up to. Accepts 'G', 'PG', 'R', 'X', and are judged in that order. Default is the value of the 'avatar_rating' option",
+        "description": "Content rating filter for user avatars. Determines the maximum maturity level of avatars to display, following standard content rating classifications (G, PG, R, X).",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -1668,7 +1668,7 @@
       {
         "kind": "OBJECT",
         "name": "Blocks",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -4814,7 +4814,7 @@
       {
         "kind": "INTERFACE",
         "name": "CallToActionConnection",
-        "description": "Connection to callToAction Nodes",
+        "description": "A paginated collection of callToAction Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of callToAction Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -4912,7 +4912,7 @@
       {
         "kind": "INTERFACE",
         "name": "CallToActionConnectionEdge",
-        "description": "Edge between a Node and a connected callToAction",
+        "description": "Represents a connection to a callToAction. Contains both the callToAction Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -4984,7 +4984,7 @@
       {
         "kind": "INTERFACE",
         "name": "CallToActionConnectionPageInfo",
-        "description": "Page Info on the connected CallToActionConnectionEdge",
+        "description": "Pagination metadata specific to &quot;CallToActionConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;CallToActionConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -5091,7 +5091,7 @@
       {
         "kind": "ENUM",
         "name": "CallToActionIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific CallToAction. Specifies which unique attribute is used to find an exact CallToAction.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -6544,7 +6544,7 @@
       {
         "kind": "OBJECT",
         "name": "CallToActionToCallToActionConnectionPageInfo",
-        "description": "Page Info on the &quot;CallToActionToCallToActionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CallToActionToCallToActionConnection&quot; collections. Provides cursors and flags for navigating through sets of CallToActionToCallToActionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -6890,7 +6890,7 @@
       {
         "kind": "OBJECT",
         "name": "CallToActionToRevisionConnectionPageInfo",
-        "description": "Page Info on the &quot;CallToActionToRevisionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CallToActionToRevisionConnection&quot; collections. Provides cursors and flags for navigating through sets of CallToActionToRevisionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -8083,7 +8083,7 @@
       {
         "kind": "INTERFACE",
         "name": "CaseStudyConnection",
-        "description": "Connection to caseStudy Nodes",
+        "description": "A paginated collection of caseStudy Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of caseStudy Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -8181,7 +8181,7 @@
       {
         "kind": "INTERFACE",
         "name": "CaseStudyConnectionEdge",
-        "description": "Edge between a Node and a connected caseStudy",
+        "description": "Represents a connection to a caseStudy. Contains both the caseStudy Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -8253,7 +8253,7 @@
       {
         "kind": "INTERFACE",
         "name": "CaseStudyConnectionPageInfo",
-        "description": "Page Info on the connected CaseStudyConnectionEdge",
+        "description": "Pagination metadata specific to &quot;CaseStudyConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;CaseStudyConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -8360,7 +8360,7 @@
       {
         "kind": "ENUM",
         "name": "CaseStudyIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific CaseStudy. Specifies which unique attribute is used to find an exact CaseStudy.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -9937,7 +9937,7 @@
       {
         "kind": "OBJECT",
         "name": "CaseStudyToCaseStudyConnectionPageInfo",
-        "description": "Page Info on the &quot;CaseStudyToCaseStudyConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CaseStudyToCaseStudyConnection&quot; collections. Provides cursors and flags for navigating through sets of CaseStudyToCaseStudyConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -10283,7 +10283,7 @@
       {
         "kind": "OBJECT",
         "name": "CaseStudyToRevisionConnectionPageInfo",
-        "description": "Page Info on the &quot;CaseStudyToRevisionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CaseStudyToRevisionConnection&quot; collections. Provides cursors and flags for navigating through sets of CaseStudyToRevisionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -10623,7 +10623,7 @@
       {
         "kind": "OBJECT",
         "name": "Category",
-        "description": "The category type",
+        "description": "A taxonomy term that classifies content. Categories support hierarchy and can be used to create a nested structure.",
         "isOneOf": null,
         "fields": [
           {
@@ -11377,7 +11377,7 @@
       {
         "kind": "INTERFACE",
         "name": "CategoryConnection",
-        "description": "Connection to category Nodes",
+        "description": "A paginated collection of category Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of category Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -11480,7 +11480,7 @@
       {
         "kind": "INTERFACE",
         "name": "CategoryConnectionEdge",
-        "description": "Edge between a Node and a connected category",
+        "description": "Represents a connection to a category. Contains both the category Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -11552,7 +11552,7 @@
       {
         "kind": "INTERFACE",
         "name": "CategoryConnectionPageInfo",
-        "description": "Page Info on the connected CategoryConnectionEdge",
+        "description": "Pagination metadata specific to &quot;CategoryConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;CategoryConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -11664,7 +11664,7 @@
       {
         "kind": "ENUM",
         "name": "CategoryIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Category. Determines which unique property (global ID, database ID, slug, etc.) is used to locate the Category.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -11844,7 +11844,7 @@
       {
         "kind": "OBJECT",
         "name": "CategoryToAncestorsCategoryConnectionPageInfo",
-        "description": "Page Info on the &quot;CategoryToAncestorsCategoryConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CategoryToAncestorsCategoryConnection&quot; collections. Provides cursors and flags for navigating through sets of CategoryToAncestorsCategoryConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -12078,7 +12078,7 @@
       {
         "kind": "OBJECT",
         "name": "CategoryToCategoryConnectionPageInfo",
-        "description": "Page Info on the &quot;CategoryToCategoryConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CategoryToCategoryConnection&quot; collections. Provides cursors and flags for navigating through sets of CategoryToCategoryConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -12419,22 +12419,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -12608,7 +12592,7 @@
       {
         "kind": "OBJECT",
         "name": "CategoryToContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;CategoryToContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CategoryToContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of CategoryToContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -13158,7 +13142,7 @@
       {
         "kind": "OBJECT",
         "name": "CategoryToPostConnectionPageInfo",
-        "description": "Page Info on the &quot;CategoryToPostConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CategoryToPostConnection&quot; collections. Provides cursors and flags for navigating through sets of CategoryToPostConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -13754,7 +13738,7 @@
       {
         "kind": "OBJECT",
         "name": "Comment",
-        "description": "A Comment object",
+        "description": "A response or reaction to content submitted by users. Comments are typically associated with a specific content entry.",
         "isOneOf": null,
         "fields": [
           {
@@ -14366,7 +14350,7 @@
       {
         "kind": "INTERFACE",
         "name": "CommentConnection",
-        "description": "Connection to Comment Nodes",
+        "description": "A paginated collection of Comment Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Comment Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -14479,7 +14463,7 @@
       {
         "kind": "INTERFACE",
         "name": "CommentConnectionEdge",
-        "description": "Edge between a Node and a connected Comment",
+        "description": "Represents a connection to a Comment. Contains both the Comment Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -14561,7 +14545,7 @@
       {
         "kind": "INTERFACE",
         "name": "CommentConnectionPageInfo",
-        "description": "Page Info on the connected CommentConnectionEdge",
+        "description": "Pagination metadata specific to &quot;CommentConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;CommentConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -14683,7 +14667,7 @@
       {
         "kind": "ENUM",
         "name": "CommentNodeIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single comment node. Default is \"ID\". To be used along with the \"id\" field.",
+        "description": "Identifier types for retrieving a specific comment. Specifies which unique attribute is used to find a particular comment.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -14707,7 +14691,7 @@
       {
         "kind": "ENUM",
         "name": "CommentStatusEnum",
-        "description": "The status of the comment object.",
+        "description": "Moderation state for user comments. Determines whether comments are publicly visible, pending approval, or marked as spam.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -14881,7 +14865,7 @@
       {
         "kind": "OBJECT",
         "name": "CommentToCommentConnectionPageInfo",
-        "description": "Page Info on the &quot;CommentToCommentConnection&quot;",
+        "description": "Pagination metadata specific to &quot;CommentToCommentConnection&quot; collections. Provides cursors and flags for navigating through sets of CommentToCommentConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -15356,18 +15340,6 @@
           {
             "name": "search",
             "description": "Search term(s) to retrieve matching comments for.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "status",
-            "description": "Comment status to limit results by.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -16018,18 +15990,6 @@
             "deprecationReason": null
           },
           {
-            "name": "status",
-            "description": "Comment status to limit results by.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "statusIn",
             "description": "One or more Comment Statuses to limit results by",
             "type": {
@@ -16065,7 +16025,7 @@
       {
         "kind": "INTERFACE",
         "name": "Commenter",
-        "description": "The author of a comment",
+        "description": "A user or guest who has submitted a comment. Provides identification and contact information for the comment author.",
         "isOneOf": null,
         "fields": [
           {
@@ -16191,7 +16151,7 @@
       {
         "kind": "INTERFACE",
         "name": "CommenterConnectionEdge",
-        "description": "Edge between a Node and a connected Commenter",
+        "description": "Represents a connection to a Commenter. Contains both the Commenter Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -16243,7 +16203,7 @@
       {
         "kind": "ENUM",
         "name": "CommentsConnectionOrderbyEnum",
-        "description": "Options for ordering the connection",
+        "description": "Sorting attributes for comment collections. Specifies which comment property determines the order of results.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -16293,25 +16253,25 @@
           },
           {
             "name": "COMMENT_DATE",
-            "description": "Order by date/time timestamp of the comment.",
+            "description": "Chronological ordering by comment submission date.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "COMMENT_DATE_GMT",
-            "description": "Order by GMT timezone date/time timestamp of the comment.",
+            "description": "Chronological ordering by comment date in UTC/GMT time.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "COMMENT_ID",
-            "description": "Order by the globally unique identifier for the comment object",
+            "description": "Ordering by internal ID (typically reflects creation order).",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "COMMENT_IN",
-            "description": "Order by the array list of comment IDs listed in the where clause.",
+            "description": "Preserve custom order of IDs as specified in the query.",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -16323,25 +16283,25 @@
           },
           {
             "name": "COMMENT_PARENT",
-            "description": "Order by the comment parent ID.",
+            "description": "Ordering by parent comment relationship (threaded discussions).",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "COMMENT_POST_ID",
-            "description": "Order by the post object ID.",
+            "description": "Ordering by associated content item ID.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "COMMENT_TYPE",
-            "description": "Order by the the type of comment, such as 'comment', 'pingback', or 'trackback'.",
+            "description": "Ordering by comment classification (standard comments, pingbacks, etc.).",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "USER_ID",
-            "description": "Order by the user ID.",
+            "description": "Ordering by the user account ID associated with the comment as the comment author.",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -16351,7 +16311,7 @@
       {
         "kind": "INTERFACE",
         "name": "Connection",
-        "description": "A plural connection from one Node Type in the Graph to another Node Type, with support for relational data via &quot;edges&quot;.",
+        "description": "A paginated relationship between objects. Supports cursor-based pagination with edges containing relationship metadata and nodes containing the related objects.",
         "isOneOf": null,
         "fields": [
           {
@@ -16828,7 +16788,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentNode",
-        "description": "Nodes used to manage content",
+        "description": "Base interface for content objects like posts, pages, and media items. Provides common fields available across these content types.",
         "isOneOf": null,
         "fields": [
           {
@@ -17382,7 +17342,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentNodeConnection",
-        "description": "Connection to ContentNode Nodes",
+        "description": "A paginated collection of ContentNode Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of ContentNode Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -17520,7 +17480,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentNodeConnectionEdge",
-        "description": "Edge between a Node and a connected ContentNode",
+        "description": "Represents a connection to a ContentNode. Contains both the ContentNode Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -17637,7 +17597,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentNodeConnectionPageInfo",
-        "description": "Page Info on the connected ContentNodeConnectionEdge",
+        "description": "Pagination metadata specific to &quot;ContentNodeConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;ContentNodeConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -17784,7 +17744,7 @@
       {
         "kind": "ENUM",
         "name": "ContentNodeIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving specific content. Determines which property (global ID, database ID, URI) is used to locate content objects.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -18132,7 +18092,7 @@
       {
         "kind": "OBJECT",
         "name": "ContentNodeToEnqueuedScriptConnectionPageInfo",
-        "description": "Page Info on the &quot;ContentNodeToEnqueuedScriptConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ContentNodeToEnqueuedScriptConnection&quot; collections. Provides cursors and flags for navigating through sets of ContentNodeToEnqueuedScriptConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -18366,7 +18326,7 @@
       {
         "kind": "OBJECT",
         "name": "ContentNodeToEnqueuedStylesheetConnectionPageInfo",
-        "description": "Page Info on the &quot;ContentNodeToEnqueuedStylesheetConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ContentNodeToEnqueuedStylesheetConnection&quot; collections. Provides cursors and flags for navigating through sets of ContentNodeToEnqueuedStylesheetConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -18462,7 +18422,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentTemplate",
-        "description": "The template assigned to a node of content",
+        "description": "A layout pattern that can help inform how content might be structured and displayed. Templates can define specialized layouts for different types of content.",
         "isOneOf": null,
         "fields": [
           {
@@ -19045,7 +19005,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentTypeConnection",
-        "description": "Connection to ContentType Nodes",
+        "description": "A paginated collection of ContentType Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of ContentType Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -19138,7 +19098,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentTypeConnectionEdge",
-        "description": "Edge between a Node and a connected ContentType",
+        "description": "Represents a connection to a ContentType. Contains both the ContentType Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -19200,7 +19160,7 @@
       {
         "kind": "INTERFACE",
         "name": "ContentTypeConnectionPageInfo",
-        "description": "Page Info on the connected ContentTypeConnectionEdge",
+        "description": "Pagination metadata specific to &quot;ContentTypeConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;ContentTypeConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -19302,7 +19262,7 @@
       {
         "kind": "ENUM",
         "name": "ContentTypeEnum",
-        "description": "Allowed Content Types",
+        "description": "Available content entity types that can be queried or filtered. Identifies the primary content structures available in the system.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -19362,7 +19322,7 @@
       {
         "kind": "ENUM",
         "name": "ContentTypeIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single Content Type node. To be used along with the \"id\" field. Default is \"ID\".",
+        "description": "Identifier types for retrieving a specific content type definition. Determines whether to look up content types by ID or name.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -19524,7 +19484,7 @@
       {
         "kind": "OBJECT",
         "name": "ContentTypeToContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;ContentTypeToContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ContentTypeToContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of ContentTypeToContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -20018,7 +19978,7 @@
       {
         "kind": "OBJECT",
         "name": "ContentTypeToTaxonomyConnectionPageInfo",
-        "description": "Page Info on the &quot;ContentTypeToTaxonomyConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ContentTypeToTaxonomyConnection&quot; collections. Provides cursors and flags for navigating through sets of ContentTypeToTaxonomyConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -20186,7 +20146,7 @@
       {
         "kind": "OBJECT",
         "name": "Cookies",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -20582,8 +20542,20 @@
             "deprecationReason": null
           },
           {
+            "name": "parentDatabaseId",
+            "description": "The database ID of the category that should be set as the parent. This field cannot be used in conjunction with parentId",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "parentId",
-            "description": "The ID of the category that should be set as the parent",
+            "description": "The ID of the category that should be set as the parent. This field cannot be used in conjunction with parentDatabaseId",
             "type": {
               "kind": "SCALAR",
               "name": "ID",
@@ -20653,18 +20625,6 @@
         "isOneOf": false,
         "fields": null,
         "inputFields": [
-          {
-            "name": "approved",
-            "description": "The approval status of the comment.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
           {
             "name": "author",
             "description": "The name of the comment's author.",
@@ -22331,7 +22291,7 @@
           },
           {
             "name": "firstName",
-            "description": "\tThe user's first name.",
+            "description": "The user's first name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -22537,7 +22497,7 @@
       {
         "kind": "INTERFACE",
         "name": "DatabaseIdentifier",
-        "description": "Object that can be identified with a Database ID",
+        "description": "An object that has a unique numeric identifier in the database. Provides consistent access to the database ID across different object types.",
         "isOneOf": null,
         "fields": [
           {
@@ -24369,7 +24329,7 @@
       {
         "kind": "INTERFACE",
         "name": "Edge",
-        "description": "Relational context between connected nodes",
+        "description": "Represents a connection between two objects. Contains both the related object (node) and metadata about the relationship (cursor).",
         "isOneOf": null,
         "fields": [
           {
@@ -24960,7 +24920,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedAsset",
-        "description": "Asset enqueued by the CMS",
+        "description": "A script or stylesheet resource that should be loaded by the client. Contains information about the resource&#039;s location, dependencies, and loading behavior.",
         "isOneOf": null,
         "fields": [
           {
@@ -25338,7 +25298,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedScriptConnection",
-        "description": "Connection to EnqueuedScript Nodes",
+        "description": "A paginated collection of EnqueuedScript Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of EnqueuedScript Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -25441,7 +25401,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedScriptConnectionEdge",
-        "description": "Edge between a Node and a connected EnqueuedScript",
+        "description": "Represents a connection to a EnqueuedScript. Contains both the EnqueuedScript Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -25508,7 +25468,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedScriptConnectionPageInfo",
-        "description": "Page Info on the connected EnqueuedScriptConnectionEdge",
+        "description": "Pagination metadata specific to &quot;EnqueuedScriptConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;EnqueuedScriptConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -25863,7 +25823,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedStylesheetConnection",
-        "description": "Connection to EnqueuedStylesheet Nodes",
+        "description": "A paginated collection of EnqueuedStylesheet Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of EnqueuedStylesheet Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -25966,7 +25926,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedStylesheetConnectionEdge",
-        "description": "Edge between a Node and a connected EnqueuedStylesheet",
+        "description": "Represents a connection to a EnqueuedStylesheet. Contains both the EnqueuedStylesheet Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -26033,7 +25993,7 @@
       {
         "kind": "INTERFACE",
         "name": "EnqueuedStylesheetConnectionPageInfo",
-        "description": "Page Info on the connected EnqueuedStylesheetConnectionEdge",
+        "description": "Pagination metadata specific to &quot;EnqueuedStylesheetConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;EnqueuedStylesheetConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -26156,7 +26116,7 @@
       {
         "kind": "OBJECT",
         "name": "Footer",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -27398,7 +27358,7 @@
       {
         "kind": "OBJECT",
         "name": "Header",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -28988,7 +28948,7 @@
       {
         "kind": "INTERFACE",
         "name": "HierarchicalContentNode",
-        "description": "Content node with hierarchical (parent/child) relationships",
+        "description": "Content that can be organized in a parent-child structure. Provides fields for navigating up and down the hierarchy and maintaining structured relationships.",
         "isOneOf": null,
         "fields": [
           {
@@ -29847,7 +29807,7 @@
       {
         "kind": "OBJECT",
         "name": "HierarchicalContentNodeToContentNodeAncestorsConnectionPageInfo",
-        "description": "Page Info on the &quot;HierarchicalContentNodeToContentNodeAncestorsConnection&quot;",
+        "description": "Pagination metadata specific to &quot;HierarchicalContentNodeToContentNodeAncestorsConnection&quot; collections. Provides cursors and flags for navigating through sets of HierarchicalContentNodeToContentNodeAncestorsConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -30341,7 +30301,7 @@
       {
         "kind": "OBJECT",
         "name": "HierarchicalContentNodeToContentNodeChildrenConnectionPageInfo",
-        "description": "Page Info on the &quot;HierarchicalContentNodeToContentNodeChildrenConnection&quot;",
+        "description": "Pagination metadata specific to &quot;HierarchicalContentNodeToContentNodeChildrenConnection&quot; collections. Provides cursors and flags for navigating through sets of HierarchicalContentNodeToContentNodeChildrenConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -30753,7 +30713,7 @@
       {
         "kind": "INTERFACE",
         "name": "HierarchicalNode",
-        "description": "Node with hierarchical (parent/child) relationships",
+        "description": "Content that can exist in a parent-child structure. Provides fields for navigating up (parent) and down (children) through the hierarchy.",
         "isOneOf": null,
         "fields": [
           {
@@ -33968,6 +33928,18 @@
             "deprecationReason": null
           },
           {
+            "name": "filePath",
+            "description": "The path to the mediaItem relative to the uploads directory",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "height",
             "description": "The height of the mediaItem",
             "args": [],
@@ -34061,7 +34033,7 @@
       {
         "kind": "OBJECT",
         "name": "MediaItem",
-        "description": "The mediaItem type",
+        "description": "Represents uploaded media, including images, videos, documents, and audio files.",
         "isOneOf": null,
         "fields": [
           {
@@ -34626,6 +34598,56 @@
             "type": {
               "kind": "OBJECT",
               "name": "ContentNodeToEnqueuedStylesheetConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "file",
+            "description": "The filename of the mediaItem for the specified size (default size is full)",
+            "args": [
+              {
+                "name": "size",
+                "description": "Size of the MediaItem to return",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "MediaItemSizeEnum",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "filePath",
+            "description": "The path to the original file relative to the uploads directory",
+            "args": [
+              {
+                "name": "size",
+                "description": "Size of the MediaItem to return",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "MediaItemSizeEnum",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -35204,7 +35226,7 @@
       {
         "kind": "INTERFACE",
         "name": "MediaItemConnection",
-        "description": "Connection to mediaItem Nodes",
+        "description": "A paginated collection of mediaItem Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of mediaItem Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -35302,7 +35324,7 @@
       {
         "kind": "INTERFACE",
         "name": "MediaItemConnectionEdge",
-        "description": "Edge between a Node and a connected mediaItem",
+        "description": "Represents a connection to a mediaItem. Contains both the mediaItem Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -35369,7 +35391,7 @@
       {
         "kind": "INTERFACE",
         "name": "MediaItemConnectionPageInfo",
-        "description": "Page Info on the connected MediaItemConnectionEdge",
+        "description": "Pagination metadata specific to &quot;MediaItemConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;MediaItemConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -35476,7 +35498,7 @@
       {
         "kind": "ENUM",
         "name": "MediaItemIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific MediaItem. Specifies which unique attribute is used to find an exact MediaItem.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -35678,7 +35700,7 @@
       {
         "kind": "ENUM",
         "name": "MediaItemSizeEnum",
-        "description": "The size of the media item object.",
+        "description": "Predefined image size variations. Represents the standard image dimensions available for media assets.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -35686,73 +35708,73 @@
         "enumValues": [
           {
             "name": "CUSTOM_DESKTOP",
-            "description": "MediaItem with the custom-desktop size",
+            "description": "Custom Image Size. (1600x9999)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "CUSTOM_FULL",
-            "description": "MediaItem with the custom-full size",
+            "description": "Custom Image Size. (2560x9999)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "CUSTOM_LARGE",
-            "description": "MediaItem with the custom-large size",
+            "description": "Custom Image Size. (1200x9999)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "CUSTOM_LARGE_CROP",
-            "description": "MediaItem with the custom-large-crop size",
+            "description": "Custom Image Size. (1200x1200)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "CUSTOM_MEDIUM",
-            "description": "MediaItem with the custom-medium size",
+            "description": "Custom Image Size. (300x9999)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "CUSTOM_TABLET",
-            "description": "MediaItem with the custom-tablet size",
+            "description": "Custom Image Size. (600x9999)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "LARGE",
-            "description": "MediaItem with the large size",
+            "description": "Large image preview suitable for detail views. (1024x1024)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "MEDIUM",
-            "description": "MediaItem with the medium size",
+            "description": "Medium image preview typically suitable for listings and detail views. (300x300)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "MEDIUM_LARGE",
-            "description": "MediaItem with the medium_large size",
+            "description": "Medium-to-large image preview suitable for listings and detail views. (768x0)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "THUMBNAIL",
-            "description": "MediaItem with the thumbnail size",
+            "description": "Small image preview suitable for thumbnails and listings. (150x150)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "_1536X1536",
-            "description": "MediaItem with the 1536x1536 size",
+            "description": "Custom Image Size. (1536x1536)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "_2048X2048",
-            "description": "MediaItem with the 2048x2048 size",
+            "description": "Custom Image Size. (2048x2048)",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -35762,7 +35784,7 @@
       {
         "kind": "ENUM",
         "name": "MediaItemStatusEnum",
-        "description": "The status of the media item object.",
+        "description": "Publication status for media items. Controls whether media is publicly accessible, private, or in another state.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -35770,25 +35792,25 @@
         "enumValues": [
           {
             "name": "AUTO_DRAFT",
-            "description": "Objects with the auto-draft status",
+            "description": "Automatically created media that has not been finalized",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "INHERIT",
-            "description": "Objects with the inherit status",
+            "description": "Media that inherits its publication status from the parent content",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "PRIVATE",
-            "description": "Objects with the private status",
+            "description": "Media visible only to users with appropriate permissions",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "TRASH",
-            "description": "Objects with the trash status",
+            "description": "Media marked for deletion but still recoverable",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -35936,7 +35958,7 @@
       {
         "kind": "OBJECT",
         "name": "MediaItemToCommentConnectionPageInfo",
-        "description": "Page Info on the &quot;MediaItemToCommentConnection&quot;",
+        "description": "Pagination metadata specific to &quot;MediaItemToCommentConnection&quot; collections. Provides cursors and flags for navigating through sets of MediaItemToCommentConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -36421,18 +36443,6 @@
             "deprecationReason": null
           },
           {
-            "name": "status",
-            "description": "Comment status to limit results by.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "statusIn",
             "description": "One or more Comment Statuses to limit results by",
             "type": {
@@ -36474,6 +36484,18 @@
           {
             "name": "file",
             "description": "The filename of the referenced size",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "filePath",
+            "description": "The path of the file for the referenced size (default size is full)",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36564,7 +36586,7 @@
       {
         "kind": "OBJECT",
         "name": "Menu",
-        "description": "Menus are the containers for navigation items. Menus can be assigned to menu locations, which are typically registered by the active theme.",
+        "description": "Collections of navigation links. Menus can be assigned to designated locations and used to build site navigation structures.",
         "isOneOf": null,
         "fields": [
           {
@@ -36768,7 +36790,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuConnection",
-        "description": "Connection to Menu Nodes",
+        "description": "A paginated collection of Menu Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Menu Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -36856,7 +36878,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuConnectionEdge",
-        "description": "Edge between a Node and a connected Menu",
+        "description": "Represents a connection to a Menu. Contains both the Menu Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -36913,7 +36935,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuConnectionPageInfo",
-        "description": "Page Info on the connected MenuConnectionEdge",
+        "description": "Pagination metadata specific to &quot;MenuConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;MenuConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -37362,7 +37384,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuItemConnection",
-        "description": "Connection to MenuItem Nodes",
+        "description": "A paginated collection of MenuItem Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of MenuItem Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -37460,7 +37482,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuItemConnectionEdge",
-        "description": "Edge between a Node and a connected MenuItem",
+        "description": "Represents a connection to a MenuItem. Contains both the MenuItem Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -37522,7 +37544,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuItemConnectionPageInfo",
-        "description": "Page Info on the connected MenuItemConnectionEdge",
+        "description": "Pagination metadata specific to &quot;MenuItemConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;MenuItemConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -37629,7 +37651,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuItemLinkable",
-        "description": "Nodes that can be linked to as Menu Items",
+        "description": "Content that can be referenced by navigation menu items. Provides the essential fields needed to create links within navigation structures.",
         "isOneOf": null,
         "fields": [
           {
@@ -37832,7 +37854,7 @@
       {
         "kind": "INTERFACE",
         "name": "MenuItemLinkableConnectionEdge",
-        "description": "Edge between a Node and a connected MenuItemLinkable",
+        "description": "Represents a connection to a MenuItemLinkable. Contains both the MenuItemLinkable Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -37884,7 +37906,7 @@
       {
         "kind": "ENUM",
         "name": "MenuItemNodeIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single node. Default is \"ID\". To be used along with the \"id\" field.",
+        "description": "Identifier types for retrieving a specific menu item. Determines whether to look up menu items by global ID or database ID.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -38164,7 +38186,7 @@
       {
         "kind": "OBJECT",
         "name": "MenuItemToMenuItemConnectionPageInfo",
-        "description": "Page Info on the &quot;MenuItemToMenuItemConnection&quot;",
+        "description": "Pagination metadata specific to &quot;MenuItemToMenuItemConnection&quot; collections. Provides cursors and flags for navigating through sets of MenuItemToMenuItemConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -38376,7 +38398,7 @@
       {
         "kind": "ENUM",
         "name": "MenuLocationEnum",
-        "description": "Registered menu locations",
+        "description": "Designated areas where navigation menus can be displayed. Represents the named regions in the interface where menus can be assigned.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -38400,7 +38422,7 @@
       {
         "kind": "ENUM",
         "name": "MenuNodeIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single node. Default is \"ID\". To be used along with the \"id\" field.",
+        "description": "Identifier types for retrieving a specific navigation menu. Specifies which property (ID, name, location) is used to locate a particular menu.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -38580,7 +38602,7 @@
       {
         "kind": "OBJECT",
         "name": "MenuToMenuItemConnectionPageInfo",
-        "description": "Page Info on the &quot;MenuToMenuItemConnection&quot;",
+        "description": "Pagination metadata specific to &quot;MenuToMenuItemConnection&quot; collections. Provides cursors and flags for navigating through sets of MenuToMenuItemConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -38736,7 +38758,7 @@
       {
         "kind": "ENUM",
         "name": "MimeTypeEnum",
-        "description": "The MimeType of the object",
+        "description": "Media file type classification based on MIME standards. Used to identify and filter media items by their format and content type.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -39312,7 +39334,7 @@
       {
         "kind": "INTERFACE",
         "name": "Node",
-        "description": "An object with an ID",
+        "description": "An object with a globally unique identifier. All objects that can be identified by a unique ID implement this interface.",
         "isOneOf": null,
         "fields": [
           {
@@ -39491,7 +39513,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithAuthor",
-        "description": "A node that can have an author assigned to it",
+        "description": "Content that can be attributed to a specific user. Provides fields for accessing the author&#039;s information and establishing content ownership.",
         "isOneOf": null,
         "fields": [
           {
@@ -39633,7 +39655,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithComments",
-        "description": "A node that can have comments associated with it",
+        "description": "Content that can receive and display user-submitted comments. Provides fields for accessing comment counts and managing comment status.",
         "isOneOf": null,
         "fields": [
           {
@@ -39707,7 +39729,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithContentEditor",
-        "description": "A node that supports the content editor",
+        "description": "Content that has a main body field which can contain formatted text and media. Provides access to both raw (with appropriate permissions) and rendered versions of the content.",
         "isOneOf": null,
         "fields": [
           {
@@ -39782,7 +39804,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithExcerpt",
-        "description": "A node that can have an excerpt",
+        "description": "A node which provides an excerpt field, which is a condensed summary of the main content. Excerpts can be manually created or automatically generated and are often used in content listings and search results.",
         "isOneOf": null,
         "fields": [
           {
@@ -39847,7 +39869,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithFeaturedImage",
-        "description": "A node that can have a featured image set",
+        "description": "Content that can have a primary image attached. This image is typically used for thumbnails, social sharing, and prominent display in the presentation layer.",
         "isOneOf": null,
         "fields": [
           {
@@ -40009,7 +40031,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithPageAttributes",
-        "description": "A node that can have page attributes",
+        "description": "Content that supports ordering metadata. Includes a menu order field which can be used for custom sorting in navigation menus and other ordered collections.",
         "isOneOf": null,
         "fields": [
           {
@@ -40061,7 +40083,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithRevisions",
-        "description": "A node that can have revisions",
+        "description": "Content that maintains a history of changes. Provides access to previous versions of the content and the ability to restore earlier revisions.",
         "isOneOf": null,
         "fields": [
           {
@@ -40206,7 +40228,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithTemplate",
-        "description": "A node that can have a template associated with it",
+        "description": "Content that provides template metadata. The template can help inform how the content is might be structured, styled, and presented to the user.",
         "isOneOf": null,
         "fields": [
           {
@@ -40293,7 +40315,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithTitle",
-        "description": "A node that NodeWith a title",
+        "description": "Content with a dedicated title field. The title typically serves as the main heading and identifier for the content.",
         "isOneOf": null,
         "fields": [
           {
@@ -40405,7 +40427,7 @@
       {
         "kind": "INTERFACE",
         "name": "NodeWithTrackbacks",
-        "description": "A node that can have trackbacks and pingbacks",
+        "description": "Content that supports cross-site notifications when linked to by other sites. Includes fields for pingback status and linked URLs.",
         "isOneOf": null,
         "fields": [
           {
@@ -40489,7 +40511,7 @@
       {
         "kind": "INTERFACE",
         "name": "OneToOneConnection",
-        "description": "A singular connection from one Node to another, with support for relational data on the &quot;edge&quot; of the connection.",
+        "description": "A direct one-to-one relationship between objects. Unlike plural connections, this represents a single related object rather than a collection.",
         "isOneOf": null,
         "fields": [
           {
@@ -40691,7 +40713,7 @@
       {
         "kind": "ENUM",
         "name": "OrderEnum",
-        "description": "The cardinality of the connection order",
+        "description": "Sort direction for ordered results. Determines whether items are returned in ascending or descending order.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -40699,13 +40721,13 @@
         "enumValues": [
           {
             "name": "ASC",
-            "description": "Sort the query result set in an ascending order",
+            "description": "Results ordered from lowest to highest values (i.e. A-Z, oldest-newest)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "DESC",
-            "description": "Sort the query result set in a descending order",
+            "description": "Results ordered from highest to lowest values (i.e. Z-A, newest-oldest)",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -40715,7 +40737,7 @@
       {
         "kind": "OBJECT",
         "name": "Page",
-        "description": "The page type",
+        "description": "A standalone content entry generally used for static, non-chronological content such as &quot;About Us&quot; or &quot;Contact&quot; pages.",
         "isOneOf": null,
         "fields": [
           {
@@ -42090,7 +42112,7 @@
       {
         "kind": "INTERFACE",
         "name": "PageConnection",
-        "description": "Connection to page Nodes",
+        "description": "A paginated collection of page Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of page Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -42193,7 +42215,7 @@
       {
         "kind": "INTERFACE",
         "name": "PageConnectionEdge",
-        "description": "Edge between a Node and a connected page",
+        "description": "Represents a connection to a page. Contains both the page Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -42265,7 +42287,7 @@
       {
         "kind": "INTERFACE",
         "name": "PageConnectionPageInfo",
-        "description": "Page Info on the connected PageConnectionEdge",
+        "description": "Pagination metadata specific to &quot;PageConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;PageConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -42377,7 +42399,7 @@
       {
         "kind": "ENUM",
         "name": "PageIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Page. Specifies which unique attribute is used to find an exact Page.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -42407,7 +42429,7 @@
       {
         "kind": "INTERFACE",
         "name": "PageInfo",
-        "description": "Information about pagination in a connection.",
+        "description": "Metadata for cursor-based pagination. Provides cursors for continuing pagination and boolean flags indicating if more items exist in either direction.",
         "isOneOf": null,
         "fields": [
           {
@@ -43014,7 +43036,7 @@
       {
         "kind": "OBJECT",
         "name": "PageToCommentConnectionPageInfo",
-        "description": "Page Info on the &quot;PageToCommentConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PageToCommentConnection&quot; collections. Provides cursors and flags for navigating through sets of PageToCommentConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -43499,18 +43521,6 @@
             "deprecationReason": null
           },
           {
-            "name": "status",
-            "description": "Comment status to limit results by.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "statusIn",
             "description": "One or more Comment Statuses to limit results by",
             "type": {
@@ -43740,7 +43750,7 @@
       {
         "kind": "OBJECT",
         "name": "PageToRevisionConnectionPageInfo",
-        "description": "Page Info on the &quot;PageToRevisionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PageToRevisionConnection&quot; collections. Provides cursors and flags for navigating through sets of PageToRevisionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -44274,7 +44284,7 @@
       {
         "kind": "OBJECT",
         "name": "PageToTermNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;PageToTermNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PageToTermNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of PageToTermNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -44631,22 +44641,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -44832,7 +44826,7 @@
       {
         "kind": "OBJECT",
         "name": "PageToTypePageConnectionPageInfo",
-        "description": "Page Info on the &quot;PageToTypePageConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PageToTypePageConnection&quot; collections. Provides cursors and flags for navigating through sets of PageToTypePageConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -45173,22 +45167,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -45454,7 +45432,7 @@
       {
         "kind": "INTERFACE",
         "name": "PluginConnection",
-        "description": "Connection to Plugin Nodes",
+        "description": "A paginated collection of Plugin Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Plugin Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -45542,7 +45520,7 @@
       {
         "kind": "INTERFACE",
         "name": "PluginConnectionEdge",
-        "description": "Edge between a Node and a connected Plugin",
+        "description": "Represents a connection to a Plugin. Contains both the Plugin Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -45594,7 +45572,7 @@
       {
         "kind": "INTERFACE",
         "name": "PluginConnectionPageInfo",
-        "description": "Page Info on the connected PluginConnectionEdge",
+        "description": "Pagination metadata specific to &quot;PluginConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;PluginConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -45691,7 +45669,7 @@
       {
         "kind": "ENUM",
         "name": "PluginStatusEnum",
-        "description": "The status of the WordPress plugin.",
+        "description": "Operational status of a plugin. Indicates whether a plugin is active, inactive, or in another state that affects its functionality.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -45745,7 +45723,7 @@
       {
         "kind": "OBJECT",
         "name": "Post",
-        "description": "The post type",
+        "description": "A chronological content entry typically used for blog posts, news articles, or similar date-based content.",
         "isOneOf": null,
         "fields": [
           {
@@ -47258,7 +47236,7 @@
       {
         "kind": "INTERFACE",
         "name": "PostConnection",
-        "description": "Connection to post Nodes",
+        "description": "A paginated collection of post Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of post Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -47376,7 +47354,7 @@
       {
         "kind": "INTERFACE",
         "name": "PostConnectionEdge",
-        "description": "Edge between a Node and a connected post",
+        "description": "Represents a connection to a post. Contains both the post Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -47468,7 +47446,7 @@
       {
         "kind": "INTERFACE",
         "name": "PostConnectionPageInfo",
-        "description": "Page Info on the connected PostConnectionEdge",
+        "description": "Pagination metadata specific to &quot;PostConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;PostConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -47595,7 +47573,7 @@
       {
         "kind": "OBJECT",
         "name": "PostFormat",
-        "description": "The postFormat type",
+        "description": "A standardized classification system for content presentation styles. These formats can be used to display content differently based on type, such as &quot;standard&quot;, &quot;gallery&quot;, &quot;video&quot;, etc.",
         "isOneOf": null,
         "fields": [
           {
@@ -48164,7 +48142,7 @@
       {
         "kind": "INTERFACE",
         "name": "PostFormatConnection",
-        "description": "Connection to postFormat Nodes",
+        "description": "A paginated collection of postFormat Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of postFormat Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -48257,7 +48235,7 @@
       {
         "kind": "INTERFACE",
         "name": "PostFormatConnectionEdge",
-        "description": "Edge between a Node and a connected postFormat",
+        "description": "Represents a connection to a postFormat. Contains both the postFormat Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -48314,7 +48292,7 @@
       {
         "kind": "INTERFACE",
         "name": "PostFormatConnectionPageInfo",
-        "description": "Page Info on the connected PostFormatConnectionEdge",
+        "description": "Pagination metadata specific to &quot;PostFormatConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;PostFormatConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -48416,7 +48394,7 @@
       {
         "kind": "ENUM",
         "name": "PostFormatIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific PostFormat. Determines which unique property (global ID, database ID, slug, etc.) is used to locate the PostFormat.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -48596,7 +48574,7 @@
       {
         "kind": "OBJECT",
         "name": "PostFormatToContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;PostFormatToContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostFormatToContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of PostFormatToContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -49090,7 +49068,7 @@
       {
         "kind": "OBJECT",
         "name": "PostFormatToPostConnectionPageInfo",
-        "description": "Page Info on the &quot;PostFormatToPostConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostFormatToPostConnection&quot; collections. Provides cursors and flags for navigating through sets of PostFormatToPostConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -49686,7 +49664,7 @@
       {
         "kind": "ENUM",
         "name": "PostIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Post. Specifies which unique attribute is used to find an exact Post.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -49722,7 +49700,7 @@
       {
         "kind": "ENUM",
         "name": "PostObjectFieldFormatEnum",
-        "description": "The format of post field data.",
+        "description": "Content field rendering options. Determines whether content fields are returned as raw data or with applied formatting and transformations. Default is RENDERED.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -49730,13 +49708,13 @@
         "enumValues": [
           {
             "name": "RAW",
-            "description": "Provide the field value directly from database. Null on unauthenticated requests.",
+            "description": "Unprocessed content exactly as stored in the database, requires appropriate permissions.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "RENDERED",
-            "description": "Provide the field value as rendered by WordPress. Default.",
+            "description": "Content with all formatting and transformations applied, ready for display.",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -49746,7 +49724,7 @@
       {
         "kind": "ENUM",
         "name": "PostObjectsConnectionDateColumnEnum",
-        "description": "The column to use when filtering by date",
+        "description": "Date field selectors for content filtering. Specifies which date attribute (creation date, modification date) should be used for date-based queries.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -49770,7 +49748,7 @@
       {
         "kind": "ENUM",
         "name": "PostObjectsConnectionOrderbyEnum",
-        "description": "Field to order the connection by",
+        "description": "Content sorting attributes for post-type objects. Identifies which content property should be used to determine result order.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -49778,61 +49756,61 @@
         "enumValues": [
           {
             "name": "AUTHOR",
-            "description": "Order by author",
+            "description": "Ordering by content author (typically by author name).",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "COMMENT_COUNT",
-            "description": "Order by the number of comments it has acquired",
+            "description": "Ordering by popularity based on number of comments.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "DATE",
-            "description": "Order by publish date",
+            "description": "Chronological ordering by publication date.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "IN",
-            "description": "Preserve the ID order given in the IN array",
+            "description": "Maintain custom order of IDs exactly as specified in the query with the IN field.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "MENU_ORDER",
-            "description": "Order by the menu order value",
+            "description": "Ordering by manually defined sort position.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "MODIFIED",
-            "description": "Order by last modified date",
+            "description": "Chronological ordering by modified date.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "NAME_IN",
-            "description": "Preserve slug order given in the NAME_IN array",
+            "description": "Maintain custom order of IDs exactly as specified in the query with the NAME_IN field.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "PARENT",
-            "description": "Order by parent ID",
+            "description": "Ordering by parent-child relationship in hierarchical content.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "SLUG",
-            "description": "Order by slug",
+            "description": "Alphabetical ordering by URL-friendly name.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "TITLE",
-            "description": "Order by title",
+            "description": "Alphabetical ordering by content title",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -49986,7 +49964,7 @@
       {
         "kind": "ENUM",
         "name": "PostStatusEnum",
-        "description": "The status of the object.",
+        "description": "Publishing status that controls the visibility and editorial state of content. Determines whether content is published, pending review, in draft state, or private.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -50000,7 +49978,7 @@
           },
           {
             "name": "AUTO_DRAFT",
-            "description": "Objects with the auto-draft status",
+            "description": "Automatically saved content that has not been manually saved",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -50012,7 +49990,7 @@
           },
           {
             "name": "DRAFT",
-            "description": "Objects with the draft status",
+            "description": "Content that is saved but not yet published or visible to the public",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -50024,25 +50002,25 @@
           },
           {
             "name": "INHERIT",
-            "description": "Objects with the inherit status",
+            "description": "Content that inherits its status from a parent object",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "PENDING",
-            "description": "Objects with the pending status",
+            "description": "Content awaiting review before publication",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "PRIVATE",
-            "description": "Objects with the private status",
+            "description": "Content only visible to authorized users with appropriate permissions",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "PUBLISH",
-            "description": "Objects with the publish status",
+            "description": "Content that is publicly visible to all visitors",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -50072,7 +50050,7 @@
           },
           {
             "name": "TRASH",
-            "description": "Objects with the trash status",
+            "description": "Content marked for deletion but still recoverable",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -50332,7 +50310,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToCategoryConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToCategoryConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToCategoryConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToCategoryConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -50673,22 +50651,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -50862,7 +50824,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToCommentConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToCommentConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToCommentConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToCommentConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -51347,18 +51309,6 @@
             "deprecationReason": null
           },
           {
-            "name": "status",
-            "description": "Comment status to limit results by.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "statusIn",
             "description": "One or more Comment Statuses to limit results by",
             "type": {
@@ -51588,7 +51538,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToPostConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToPostConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToPostConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToPostConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -51834,7 +51784,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToPostFormatConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToPostFormatConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToPostFormatConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToPostFormatConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -52175,22 +52125,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -52420,7 +52354,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToRevisionConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToRevisionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToRevisionConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToRevisionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -53110,7 +53044,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToTagConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToTagConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToTagConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToTagConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -53451,22 +53385,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -53640,7 +53558,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToTermNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;PostToTermNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;PostToTermNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of PostToTermNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -53997,22 +53915,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -54360,7 +54262,7 @@
       {
         "kind": "OBJECT",
         "name": "PostTypeSEO",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -54676,7 +54578,7 @@
       {
         "kind": "INTERFACE",
         "name": "Previewable",
-        "description": "Nodes that can be seen in a preview (unpublished) state.",
+        "description": "Content that supports a draft preview mode. Allows viewing unpublished changes before they are made publicly available. Previewing unpublished changes requires appropriate permissions.",
         "isOneOf": null,
         "fields": [
           {
@@ -54886,7 +54788,7 @@
           },
           {
             "name": "firstName",
-            "description": "\tThe user's first name.",
+            "description": "The user's first name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -55076,7 +54978,7 @@
       {
         "kind": "ENUM",
         "name": "RelationEnum",
-        "description": "The logical relation between each item in the array when there are more than one.",
+        "description": "Logical operators for filter conditions. Determines whether multiple filtering criteria should be combined with AND (all must match) or OR (any can match).",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -55084,13 +54986,13 @@
         "enumValues": [
           {
             "name": "AND",
-            "description": "The logical AND condition returns true if both operands are true, otherwise, it returns false.",
+            "description": "All conditions must match (more restrictive filtering)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "OR",
-            "description": "The logical OR condition returns false if both operands are false, otherwise, it returns true.",
+            "description": "Any condition can match (more inclusive filtering)",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -56065,7 +55967,7 @@
       {
         "kind": "INTERFACE",
         "name": "ReviewConnection",
-        "description": "Connection to review Nodes",
+        "description": "A paginated collection of review Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of review Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -56158,7 +56060,7 @@
       {
         "kind": "INTERFACE",
         "name": "ReviewConnectionEdge",
-        "description": "Edge between a Node and a connected review",
+        "description": "Represents a connection to a review. Contains both the review Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -56225,7 +56127,7 @@
       {
         "kind": "INTERFACE",
         "name": "ReviewConnectionPageInfo",
-        "description": "Page Info on the connected ReviewConnectionEdge",
+        "description": "Pagination metadata specific to &quot;ReviewConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;ReviewConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -56327,7 +56229,7 @@
       {
         "kind": "ENUM",
         "name": "ReviewIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Review. Specifies which unique attribute is used to find an exact Review.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -56613,7 +56515,7 @@
       {
         "kind": "OBJECT",
         "name": "ReviewToReviewConnectionPageInfo",
-        "description": "Page Info on the &quot;ReviewToReviewConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ReviewToReviewConnection&quot; collections. Provides cursors and flags for navigating through sets of ReviewToReviewConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -62128,7 +62030,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToCallToActionConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToCallToActionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToCallToActionConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToCallToActionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -62606,7 +62508,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToCaseStudyConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToCaseStudyConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToCaseStudyConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToCaseStudyConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -63084,7 +62986,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToCategoryConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToCategoryConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToCategoryConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToCategoryConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -63425,22 +63327,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -63614,7 +63500,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToCommentConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToCommentConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToCommentConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToCommentConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -64099,18 +63985,6 @@
             "deprecationReason": null
           },
           {
-            "name": "status",
-            "description": "Comment status to limit results by.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "statusIn",
             "description": "One or more Comment Statuses to limit results by",
             "type": {
@@ -64284,7 +64158,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -64778,7 +64652,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToContentTypeConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToContentTypeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToContentTypeConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToContentTypeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -65012,7 +64886,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToEnqueuedScriptConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToEnqueuedScriptConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToEnqueuedScriptConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToEnqueuedScriptConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -65246,7 +65120,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToEnqueuedStylesheetConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToEnqueuedStylesheetConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToEnqueuedStylesheetConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToEnqueuedStylesheetConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -65480,7 +65354,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToMediaItemConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToMediaItemConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToMediaItemConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToMediaItemConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -66014,7 +65888,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToMenuConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToMenuConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToMenuConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToMenuConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -66296,7 +66170,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToMenuItemConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToMenuItemConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToMenuItemConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToMenuItemConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -66590,7 +66464,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToPageConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToPageConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToPageConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToPageConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -67124,7 +66998,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToPluginConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToPluginConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToPluginConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToPluginConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -67410,7 +67284,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToPostConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToPostConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToPostConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToPostConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -68088,7 +67962,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToPostFormatConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToPostFormatConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToPostFormatConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToPostFormatConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -68429,22 +68303,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -68618,7 +68476,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToReviewConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToReviewConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToReviewConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToReviewConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -69096,7 +68954,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToRevisionsConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToRevisionsConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToRevisionsConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToRevisionsConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -69590,7 +69448,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToServiceConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToServiceConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToServiceConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToServiceConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -70068,7 +69926,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToTagConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToTagConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToTagConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToTagConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -70409,22 +70267,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -70598,7 +70440,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToTaxonomyConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToTaxonomyConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToTaxonomyConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToTaxonomyConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -70832,7 +70674,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToTeamConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToTeamConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToTeamConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToTeamConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -71310,7 +71152,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToTermNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToTermNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToTermNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToTermNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -71667,22 +71509,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -71856,7 +71682,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToThemeConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToThemeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToThemeConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToThemeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -72090,7 +71916,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToTypePageConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToTypePageConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToTypePageConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToTypePageConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -72431,22 +72257,6 @@
             "deprecationReason": null
           },
           {
-            "name": "termTaxonomId",
-            "description": "Array of term taxonomy IDs, to match when querying terms.",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "termTaxonomyId",
             "description": "Array of term taxonomy IDs, to match when querying terms.",
             "type": {
@@ -72620,7 +72430,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToUserConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToUserConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToUserConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToUserConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -73090,7 +72900,7 @@
       {
         "kind": "OBJECT",
         "name": "RootQueryToUserRoleConnectionPageInfo",
-        "description": "Page Info on the &quot;RootQueryToUserRoleConnection&quot;",
+        "description": "Pagination metadata specific to &quot;RootQueryToUserRoleConnection&quot; collections. Provides cursors and flags for navigating through sets of RootQueryToUserRoleConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -73314,13 +73124,13 @@
         "enumValues": [
           {
             "name": "summary",
-            "description": null,
+            "description": "",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "summary_large_image",
-            "description": null,
+            "description": "",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -74114,7 +73924,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOPostTypeBreadcrumbs",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74558,7 +74368,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialFacebook",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74594,7 +74404,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialInstagram",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74618,7 +74428,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialLinkedIn",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74642,7 +74452,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialMySpace",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74666,7 +74476,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialPinterest",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74702,7 +74512,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialTwitter",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74738,7 +74548,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialWikipedia",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74762,7 +74572,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOSocialYoutube",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -74810,7 +74620,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOUser",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -75082,7 +74892,7 @@
       {
         "kind": "OBJECT",
         "name": "SEOUserSocial",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -75262,7 +75072,7 @@
       {
         "kind": "ENUM",
         "name": "ScriptLoadingGroupLocationEnum",
-        "description": "Location in the document where the script to be loaded",
+        "description": "Script insertion positions in the document structure. Determines whether scripts are placed in the document head or before the closing body tag.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -75270,13 +75080,13 @@
         "enumValues": [
           {
             "name": "FOOTER",
-            "description": "A script to be loaded in document at right before the closing `<body>` tag",
+            "description": "Delayed loading at end of document, right before the closing `<body>` tag. (allows content to render first)",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "HEADER",
-            "description": "A script to be loaded in document `<head>` tag",
+            "description": "Early loading in document `<head>` tag. (executes before page content renders)",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -75286,7 +75096,7 @@
       {
         "kind": "ENUM",
         "name": "ScriptLoadingStrategyEnum",
-        "description": "The strategy to use when loading the script",
+        "description": "Script loading optimization attributes. Controls browser behavior for script loading to improve page performance (async or defer).",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -75294,13 +75104,13 @@
         "enumValues": [
           {
             "name": "ASYNC",
-            "description": "Use the script `async` attribute",
+            "description": "Load script in parallel with page rendering, executing as soon as downloaded",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "DEFER",
-            "description": "Use the script `defer` attribute",
+            "description": "Download script in parallel but defer execution until page is fully parsed",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -76251,7 +76061,7 @@
       {
         "kind": "INTERFACE",
         "name": "ServiceConnection",
-        "description": "Connection to Service Nodes",
+        "description": "A paginated collection of Service Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Service Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -76349,7 +76159,7 @@
       {
         "kind": "INTERFACE",
         "name": "ServiceConnectionEdge",
-        "description": "Edge between a Node and a connected Service",
+        "description": "Represents a connection to a Service. Contains both the Service Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -76421,7 +76231,7 @@
       {
         "kind": "INTERFACE",
         "name": "ServiceConnectionPageInfo",
-        "description": "Page Info on the connected ServiceConnectionEdge",
+        "description": "Pagination metadata specific to &quot;ServiceConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;ServiceConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -76528,7 +76338,7 @@
       {
         "kind": "ENUM",
         "name": "ServiceIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Service. Specifies which unique attribute is used to find an exact Service.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -78415,7 +78225,7 @@
       {
         "kind": "OBJECT",
         "name": "ServiceToRevisionConnectionPageInfo",
-        "description": "Page Info on the &quot;ServiceToRevisionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ServiceToRevisionConnection&quot; collections. Provides cursors and flags for navigating through sets of ServiceToRevisionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -78893,7 +78703,7 @@
       {
         "kind": "OBJECT",
         "name": "ServiceToServiceConnectionPageInfo",
-        "description": "Page Info on the &quot;ServiceToServiceConnection&quot;",
+        "description": "Pagination metadata specific to &quot;ServiceToServiceConnection&quot; collections. Provides cursors and flags for navigating through sets of ServiceToServiceConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -79228,7 +79038,7 @@
       {
         "kind": "OBJECT",
         "name": "Tag",
-        "description": "The tag type",
+        "description": "A taxonomy term used to organize and classify content. Tags do not have a hierarchy and are generally used for more specific classifications.",
         "isOneOf": null,
         "fields": [
           {
@@ -79802,7 +79612,7 @@
       {
         "kind": "INTERFACE",
         "name": "TagConnection",
-        "description": "Connection to tag Nodes",
+        "description": "A paginated collection of tag Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of tag Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -79895,7 +79705,7 @@
       {
         "kind": "INTERFACE",
         "name": "TagConnectionEdge",
-        "description": "Edge between a Node and a connected tag",
+        "description": "Represents a connection to a tag. Contains both the tag Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -79952,7 +79762,7 @@
       {
         "kind": "INTERFACE",
         "name": "TagConnectionPageInfo",
-        "description": "Page Info on the connected TagConnectionEdge",
+        "description": "Pagination metadata specific to &quot;TagConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;TagConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -80054,7 +79864,7 @@
       {
         "kind": "ENUM",
         "name": "TagIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Tag. Determines which unique property (global ID, database ID, slug, etc.) is used to locate the Tag.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -80234,7 +80044,7 @@
       {
         "kind": "OBJECT",
         "name": "TagToContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;TagToContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TagToContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of TagToContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -80728,7 +80538,7 @@
       {
         "kind": "OBJECT",
         "name": "TagToPostConnectionPageInfo",
-        "description": "Page Info on the &quot;TagToPostConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TagToPostConnection&quot; collections. Provides cursors and flags for navigating through sets of TagToPostConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -81696,7 +81506,7 @@
       {
         "kind": "INTERFACE",
         "name": "TaxonomyConnection",
-        "description": "Connection to Taxonomy Nodes",
+        "description": "A paginated collection of Taxonomy Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Taxonomy Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -81789,7 +81599,7 @@
       {
         "kind": "INTERFACE",
         "name": "TaxonomyConnectionEdge",
-        "description": "Edge between a Node and a connected Taxonomy",
+        "description": "Represents a connection to a Taxonomy. Contains both the Taxonomy Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -81866,7 +81676,7 @@
       {
         "kind": "INTERFACE",
         "name": "TaxonomyConnectionPageInfo",
-        "description": "Page Info on the connected TaxonomyConnectionEdge",
+        "description": "Pagination metadata specific to &quot;TaxonomyConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;TaxonomyConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -81968,7 +81778,7 @@
       {
         "kind": "ENUM",
         "name": "TaxonomyEnum",
-        "description": "Allowed taxonomies",
+        "description": "Available classification systems for organizing content. Identifies the different taxonomy types that can be used for content categorization.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -82004,7 +81814,7 @@
       {
         "kind": "ENUM",
         "name": "TaxonomyIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single Taxonomy node. To be used along with the \"id\" field. Default is \"ID\".",
+        "description": "Identifier types for retrieving a taxonomy definition. Determines whether to look up taxonomies by ID or name.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -82028,7 +81838,7 @@
       {
         "kind": "OBJECT",
         "name": "TaxonomySEO",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -82470,7 +82280,7 @@
       {
         "kind": "OBJECT",
         "name": "TaxonomyToContentTypeConnectionPageInfo",
-        "description": "Page Info on the &quot;TaxonomyToContentTypeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TaxonomyToContentTypeConnection&quot; collections. Provides cursors and flags for navigating through sets of TaxonomyToContentTypeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -82704,7 +82514,7 @@
       {
         "kind": "OBJECT",
         "name": "TaxonomyToTermNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;TaxonomyToTermNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TaxonomyToTermNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of TaxonomyToTermNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -83653,7 +83463,7 @@
       {
         "kind": "INTERFACE",
         "name": "TeamConnection",
-        "description": "Connection to Team Nodes",
+        "description": "A paginated collection of Team Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Team Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -83751,7 +83561,7 @@
       {
         "kind": "INTERFACE",
         "name": "TeamConnectionEdge",
-        "description": "Edge between a Node and a connected Team",
+        "description": "Represents a connection to a Team. Contains both the Team Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -83823,7 +83633,7 @@
       {
         "kind": "INTERFACE",
         "name": "TeamConnectionPageInfo",
-        "description": "Page Info on the connected TeamConnectionEdge",
+        "description": "Pagination metadata specific to &quot;TeamConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;TeamConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -83930,7 +83740,7 @@
       {
         "kind": "ENUM",
         "name": "TeamIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific Team. Specifies which unique attribute is used to find an exact Team.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -86196,7 +86006,7 @@
       {
         "kind": "OBJECT",
         "name": "TeamToRevisionConnectionPageInfo",
-        "description": "Page Info on the &quot;TeamToRevisionConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TeamToRevisionConnection&quot; collections. Provides cursors and flags for navigating through sets of TeamToRevisionConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -86674,7 +86484,7 @@
       {
         "kind": "OBJECT",
         "name": "TeamToTeamConnectionPageInfo",
-        "description": "Page Info on the &quot;TeamToTeamConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TeamToTeamConnection&quot; collections. Provides cursors and flags for navigating through sets of TeamToTeamConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -86770,7 +86580,7 @@
       {
         "kind": "INTERFACE",
         "name": "TermNode",
-        "description": "Terms are nodes within a Taxonomy, used to group and relate other nodes.",
+        "description": "Base interface for taxonomy terms such as categories and tags. Terms are used to organize and classify content.",
         "isOneOf": null,
         "fields": [
           {
@@ -87168,7 +86978,7 @@
       {
         "kind": "INTERFACE",
         "name": "TermNodeConnection",
-        "description": "Connection to TermNode Nodes",
+        "description": "A paginated collection of TermNode Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of TermNode Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -87271,7 +87081,7 @@
       {
         "kind": "INTERFACE",
         "name": "TermNodeConnectionEdge",
-        "description": "Edge between a Node and a connected TermNode",
+        "description": "Represents a connection to a TermNode. Contains both the TermNode Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -87338,7 +87148,7 @@
       {
         "kind": "INTERFACE",
         "name": "TermNodeConnectionPageInfo",
-        "description": "Page Info on the connected TermNodeConnectionEdge",
+        "description": "Pagination metadata specific to &quot;TermNodeConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;TermNodeConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -87630,7 +87440,7 @@
       {
         "kind": "OBJECT",
         "name": "TermNodeToEnqueuedScriptConnectionPageInfo",
-        "description": "Page Info on the &quot;TermNodeToEnqueuedScriptConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TermNodeToEnqueuedScriptConnection&quot; collections. Provides cursors and flags for navigating through sets of TermNodeToEnqueuedScriptConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -87864,7 +87674,7 @@
       {
         "kind": "OBJECT",
         "name": "TermNodeToEnqueuedStylesheetConnectionPageInfo",
-        "description": "Page Info on the &quot;TermNodeToEnqueuedStylesheetConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TermNodeToEnqueuedStylesheetConnection&quot; collections. Provides cursors and flags for navigating through sets of TermNodeToEnqueuedStylesheetConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -87960,7 +87770,7 @@
       {
         "kind": "ENUM",
         "name": "TermObjectsConnectionOrderbyEnum",
-        "description": "Options for ordering the connection by",
+        "description": "Sorting attributes for taxonomy term collections. Determines which property of taxonomy terms is used for ordering results.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -87968,43 +87778,43 @@
         "enumValues": [
           {
             "name": "COUNT",
-            "description": "Order the connection by item count.",
+            "description": "Ordering by number of associated content items.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "DESCRIPTION",
-            "description": "Order the connection by description.",
+            "description": "Alphabetical ordering by term description text.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "NAME",
-            "description": "Order the connection by name.",
+            "description": "Alphabetical ordering by term name.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "SLUG",
-            "description": "Order the connection by slug.",
+            "description": "Alphabetical ordering by URL-friendly name.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "TERM_GROUP",
-            "description": "Order the connection by term group.",
+            "description": "Ordering by assigned term grouping value.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "TERM_ID",
-            "description": "Order the connection by term id.",
+            "description": "Ordering by internal identifier.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "TERM_ORDER",
-            "description": "Order the connection by term order.",
+            "description": "Ordering by manually defined sort position.",
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -88277,7 +88087,7 @@
       {
         "kind": "INTERFACE",
         "name": "ThemeConnection",
-        "description": "Connection to Theme Nodes",
+        "description": "A paginated collection of Theme Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of Theme Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -88365,7 +88175,7 @@
       {
         "kind": "INTERFACE",
         "name": "ThemeConnectionEdge",
-        "description": "Edge between a Node and a connected Theme",
+        "description": "Represents a connection to a Theme. Contains both the Theme Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -88417,7 +88227,7 @@
       {
         "kind": "INTERFACE",
         "name": "ThemeConnectionPageInfo",
-        "description": "Page Info on the connected ThemeConnectionEdge",
+        "description": "Pagination metadata specific to &quot;ThemeConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;ThemeConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -89088,7 +88898,7 @@
       {
         "kind": "INTERFACE",
         "name": "TypePageConnection",
-        "description": "Connection to typePage Nodes",
+        "description": "A paginated collection of typePage Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of typePage Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -89181,7 +88991,7 @@
       {
         "kind": "INTERFACE",
         "name": "TypePageConnectionEdge",
-        "description": "Edge between a Node and a connected typePage",
+        "description": "Represents a connection to a typePage. Contains both the typePage Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -89238,7 +89048,7 @@
       {
         "kind": "INTERFACE",
         "name": "TypePageConnectionPageInfo",
-        "description": "Page Info on the connected TypePageConnectionEdge",
+        "description": "Pagination metadata specific to &quot;TypePageConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;TypePageConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -89340,7 +89150,7 @@
       {
         "kind": "ENUM",
         "name": "TypePageIdType",
-        "description": "The Type of Identifier used to fetch a single resource. Default is ID.",
+        "description": "Identifier types for retrieving a specific TypePage. Determines which unique property (global ID, database ID, slug, etc.) is used to locate the TypePage.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -89520,7 +89330,7 @@
       {
         "kind": "OBJECT",
         "name": "TypePageToContentNodeConnectionPageInfo",
-        "description": "Page Info on the &quot;TypePageToContentNodeConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TypePageToContentNodeConnection&quot; collections. Provides cursors and flags for navigating through sets of TypePageToContentNodeConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -90014,7 +89824,7 @@
       {
         "kind": "OBJECT",
         "name": "TypePageToPageConnectionPageInfo",
-        "description": "Page Info on the &quot;TypePageToPageConnection&quot;",
+        "description": "Pagination metadata specific to &quot;TypePageToPageConnection&quot; collections. Provides cursors and flags for navigating through sets of TypePageToPageConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -90466,7 +90276,7 @@
       {
         "kind": "INTERFACE",
         "name": "UniformResourceIdentifiable",
-        "description": "Any node that has a URI",
+        "description": "An interface for content that can be accessed via a unique URI/URL path. Implemented by content types that have their own permalinks.",
         "isOneOf": null,
         "fields": [
           {
@@ -91057,8 +90867,20 @@
             "deprecationReason": null
           },
           {
+            "name": "parentDatabaseId",
+            "description": "The database ID of the category that should be set as the parent. This field cannot be used in conjunction with parentId",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "parentId",
-            "description": "The ID of the category that should be set as the parent",
+            "description": "The ID of the category that should be set as the parent. This field cannot be used in conjunction with parentDatabaseId",
             "type": {
               "kind": "SCALAR",
               "name": "ID",
@@ -91128,18 +90950,6 @@
         "isOneOf": false,
         "fields": null,
         "inputFields": [
-          {
-            "name": "approved",
-            "description": "The approval status of the comment.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
           {
             "name": "author",
             "description": "The name of the comment's author.",
@@ -93338,7 +93148,7 @@
           },
           {
             "name": "firstName",
-            "description": "\tThe user's first name.",
+            "description": "The user's first name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -93544,7 +93354,7 @@
       {
         "kind": "OBJECT",
         "name": "User",
-        "description": "A User object",
+        "description": "A registered user account. Users can be assigned roles, author content, and have various capabilities within the site.",
         "isOneOf": null,
         "fields": [
           {
@@ -94534,7 +94344,7 @@
       {
         "kind": "INTERFACE",
         "name": "UserConnection",
-        "description": "Connection to User Nodes",
+        "description": "A paginated collection of User Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of User Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -94622,7 +94432,7 @@
       {
         "kind": "INTERFACE",
         "name": "UserConnectionEdge",
-        "description": "Edge between a Node and a connected User",
+        "description": "Represents a connection to a User. Contains both the User Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -94689,7 +94499,7 @@
       {
         "kind": "INTERFACE",
         "name": "UserConnectionPageInfo",
-        "description": "Page Info on the connected UserConnectionEdge",
+        "description": "Pagination metadata specific to &quot;UserConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;UserConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -94786,7 +94596,7 @@
       {
         "kind": "ENUM",
         "name": "UserNodeIdTypeEnum",
-        "description": "The Type of Identifier used to fetch a single User node. To be used along with the \"id\" field. Default is \"ID\".",
+        "description": "Identifier types for retrieving a specific user. Determines whether to look up users by ID, email, username, or other unique properties.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -94920,7 +94730,7 @@
       {
         "kind": "INTERFACE",
         "name": "UserRoleConnection",
-        "description": "Connection to UserRole Nodes",
+        "description": "A paginated collection of UserRole Nodes, Supports cursor-based pagination and filtering to efficiently retrieve sets of UserRole Nodes",
         "isOneOf": null,
         "fields": [
           {
@@ -95013,7 +94823,7 @@
       {
         "kind": "INTERFACE",
         "name": "UserRoleConnectionEdge",
-        "description": "Edge between a Node and a connected UserRole",
+        "description": "Represents a connection to a UserRole. Contains both the UserRole Node and metadata about the relationship.",
         "isOneOf": null,
         "fields": [
           {
@@ -95070,7 +94880,7 @@
       {
         "kind": "INTERFACE",
         "name": "UserRoleConnectionPageInfo",
-        "description": "Page Info on the connected UserRoleConnectionEdge",
+        "description": "Pagination metadata specific to &quot;UserRoleConnectionEdge&quot; collections. Provides cursors and flags for navigating through sets of &quot;UserRoleConnectionEdge&quot; Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -95172,7 +94982,7 @@
       {
         "kind": "ENUM",
         "name": "UserRoleEnum",
-        "description": "Names of available user roles",
+        "description": "Permission levels for user accounts. Defines the standard access levels that control what actions users can perform within the system.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -95364,7 +95174,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToCommentConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToCommentConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToCommentConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToCommentConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -95849,18 +95659,6 @@
             "deprecationReason": null
           },
           {
-            "name": "status",
-            "description": "Comment status to limit results by.",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "statusIn",
             "description": "One or more Comment Statuses to limit results by",
             "type": {
@@ -96034,7 +95832,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToEnqueuedScriptConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToEnqueuedScriptConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToEnqueuedScriptConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToEnqueuedScriptConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -96268,7 +96066,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToEnqueuedStylesheetConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToEnqueuedStylesheetConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToEnqueuedStylesheetConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToEnqueuedStylesheetConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -96502,7 +96300,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToMediaItemConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToMediaItemConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToMediaItemConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToMediaItemConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -97036,7 +96834,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToPageConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToPageConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToPageConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToPageConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -97570,7 +97368,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToPostConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToPostConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToPostConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToPostConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -98248,7 +98046,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToRevisionsConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToRevisionsConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToRevisionsConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToRevisionsConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -98742,7 +98540,7 @@
       {
         "kind": "OBJECT",
         "name": "UserToUserRoleConnectionPageInfo",
-        "description": "Page Info on the &quot;UserToUserRoleConnection&quot;",
+        "description": "Pagination metadata specific to &quot;UserToUserRoleConnection&quot; collections. Provides cursors and flags for navigating through sets of UserToUserRoleConnection Nodes.",
         "isOneOf": null,
         "fields": [
           {
@@ -98838,7 +98636,7 @@
       {
         "kind": "ENUM",
         "name": "UsersConnectionOrderbyEnum",
-        "description": "Field to order the connection by",
+        "description": "User attribute sorting options. Determines which property of user accounts is used for ordering user listings.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -98938,7 +98736,7 @@
       {
         "kind": "ENUM",
         "name": "UsersConnectionSearchColumnEnum",
-        "description": "Column used for searching for users.",
+        "description": "User properties that can be targeted in search operations. Defines which user attributes can be searched when looking for specific users.",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -98980,7 +98778,7 @@
       {
         "kind": "INTERFACE",
         "name": "WPPageInfo",
-        "description": "Information about pagination in a connection.",
+        "description": "Metadata for cursor-based pagination. Provides cursors for continuing pagination and boolean flags indicating if more items exist in either direction.",
         "isOneOf": null,
         "fields": [
           {
@@ -99467,7 +99265,7 @@
       {
         "kind": "OBJECT",
         "name": "WebsiteSettings",
-        "description": "",
+        "description": null,
         "isOneOf": null,
         "fields": [
           {
@@ -101091,13 +100889,15 @@
         "description": "Marks an element of a GraphQL schema as no longer supported.",
         "isRepeatable": false,
         "locations": [
+          "ARGUMENT_DEFINITION",
           "ENUM_VALUE",
-          "FIELD_DEFINITION"
+          "FIELD_DEFINITION",
+          "INPUT_FIELD_DEFINITION"
         ],
         "args": [
           {
             "name": "reason",
-            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
+            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by [CommonMark](https://commonmark.org/).",
             "type": {
               "kind": "SCALAR",
               "name": "String",
