@@ -33,6 +33,7 @@ import {
     SheetContent,
     SheetHeader,
     SheetTrigger,
+    SheetFooter,
 } from "@minnek/ui/components/sheet";
 
 import { getNavbarData } from "../actions/layout-actions";
@@ -293,7 +294,11 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                             variant={button as any}
                                             size="icon"
                                             key={`${index}-${social.title}`}
-                                            className="hidden md:flex"
+                                            className={
+                                                index === 0
+                                                    ? "flex"
+                                                    : "hidden md:flex"
+                                            }
                                             asChild
                                         >
                                             <Typography
@@ -317,7 +322,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                 }
                                 options={LangConfig.languages}
                                 label={LangConfig.title}
-                                className="flex"
+                                className="hidden md:flex"
                                 radioGroup
                             />
                             <Dropdown
@@ -367,7 +372,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                     </Link>
                                 </SheetHeader>
 
-                                <NavigationMenu className="bg-white max-h-max items-start w-full justify-start flex-1">
+                                <NavigationMenu className="bg-white max-h-full items-start w-full justify-start flex-1">
                                     <NavigationMenuListColumn>
                                         {navItems.map((item) => (
                                             <NavbarItem
@@ -383,6 +388,18 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                         />
                                     </NavigationMenuListColumn>
                                 </NavigationMenu>
+                                <SheetFooter>
+                                    <Dropdown
+                                        defaultOption={
+                                            LangConfig
+                                                .languages[0] as DropdownOption
+                                        }
+                                        options={LangConfig.languages}
+                                        label={LangConfig.title}
+                                        className="flex"
+                                        radioGroup
+                                    />
+                                </SheetFooter>
                             </SheetContent>
                         </Sheet>
                     </div>
