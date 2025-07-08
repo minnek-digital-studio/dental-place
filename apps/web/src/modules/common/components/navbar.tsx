@@ -52,43 +52,341 @@ export type NavbarSubItem = {
     href: string;
 };
 
-const NavBarVariants = cva("w-full py-6 flex justify-center items-center", {
-    variants: {
-        variant: {
-            default: "bg-primary text-primary-foreground",
-            info: "bg-info text-info-foreground",
-            secondary: "bg-secondary/40 text-secondary-foreground",
-            transparent: "bg-transparent text-white",
-            "light-primary": "bg-primary/40 text-primary-foreground",
+const NavBarVariants = cva(
+    "w-full py-6 flex justify-center items-center transition-all duration-300 z-50",
+    {
+        variants: {
+            variant: {
+                default: "bg-primary text-primary-foreground",
+                info: "bg-info text-info-foreground",
+                secondary: "bg-secondary/40 text-secondary-foreground",
+                transparent: "bg-transparent text-white",
+                "light-primary": "bg-primary/40 text-primary-foreground",
+                transparentLight:
+                    "bg-transparent text-white group md:hover:text-black md:hover:bg-white",
+            },
+        },
+        defaultVariants: {
+            variant: "default",
         },
     },
-    defaultVariants: {
-        variant: "default",
-    },
-});
+);
 
 const variants = {
     default: {
         button: "secondary",
+        text: "",
         logo: "/images/logo/dental-logo.webp",
     },
     info: {
         button: "light",
+        text: "",
         logo: "/images/logo/dental-logo.webp",
     },
     secondary: {
         button: "light",
+        text: "",
         logo: "/images/logo/dental-logo.webp",
     },
     transparent: {
         button: "transparent",
+        text: "",
         logo: "/images/logo/dental-logo-white.webp",
     },
     "light-primary": {
         button: "light",
+        text: "",
         logo: "/images/logo/dental-logo.webp",
     },
+    transparentLight: {
+        button: "transparent",
+        text: "text-md mx-2",
+        logo: [
+            "/images/logo/dental-logo-white.webp",
+            "/images/logo/dental-logo.webp",
+        ],
+    },
 };
+
+export type NavbarVariants = VariantProps<typeof NavBarVariants>;
+
+interface NavbarProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        NavbarVariants {
+    align?: "left" | "center";
+}
+
+export async function NavBar({
+    className,
+    variant,
+    align = "left",
+    ...props
+}: NavbarProps) {
+    const {
+        LangConfig,
+        PhoneConfig,
+        SchedulesConfig,
+        SocialLinksConfig,
+        navItems,
+        error,
+    } = await getNavbarData();
+
+    if (error) {
+        console.error(error);
+        return null;
+    }
+    const { logo, button } = variants[variant || "default"];
+
+    const SchedulesNavItems: NavBarItem = {
+        title: SchedulesConfig.title,
+        href: "#",
+        subItems: SchedulesConfig.schedules.map((hour) => ({
+            title: hour.label,
+            href: "#",
+        })),
+    };
+
+    return (
+        <>
+            <header
+                className={cn(
+                    NavBarVariants({
+                        variant,
+                        className,
+                    }),
+                )}
+            >
+                <main className="flex w-full items-center justify-between container">
+                    <div className="flex items-center gap-4 lg:gap-6">
+                        <Link href="/">
+                            {logo instanceof Array ? (
+                                logo.map((src, index) => (
+                                    <img
+                                        key={index}
+                                        src={src}
+                                        alt="Dental Place Logo"
+                                        className={`w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12 ${index === 0 ? "flex md:group-hover:hidden" : "hidden md:group-hover:flex"}`}
+                                    />
+                                ))
+                            ) : (
+                                <img
+                                    src={logo}
+                                    alt="Dental Place Logo"
+                                    className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
+                                />
+                            )}
+                        </Link>
+                        {align === "left" && (
+                            <NavigationMenu className="hidden md:flex">
+                                <NavigationMenuList>
+                                    {navItems.map((item, index) => (
+                                        <NavbarItem
+                                            key={`${item.title}-${index}`}
+                                            variant={variant}
+                                            {...item}
+                                        />
+                                    ))}
+                                </NavigationMenuList>
+                            </NavigationMenu>
+                        )}
+                    </div>
+                    {align === "center" && (
+                        <div className="flex items-center gap-4 lg:gap-6">
+                            <NavigationMenu className="hidden md:flex">
+                                <NavigationMenuList>
+                                    {navItems.map((item, index) => (
+                                        <NavbarItem
+                                            key={`${item.title}-${index}`}
+                                            variant={variant}
+                                            {...item}
+                                        />
+                                    ))}
+                                </NavigationMenuList>
+                            </NavigationMenu>
+                        </div>
+                    )}
+                    <div className="flex gap-2 lg:gap-4 items-center">
+                        <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
+                            <Button
+                                variant={button as any}
+                                size="icon"
+                                className={cn(
+                                    variant === "transparentLight" &&
+                                        "md:group-hover:border-black",
+                                )}
+                                asChild
+                            >
+                                <Typography
+                                    as="a"
+                                    href={PhoneConfig?.url as string}
+                                    className="gap-2 flex items-center justify-center font-bold"
+                                >
+                                    <Phone
+                                        className={cn(
+                                            variant === "transparent" ||
+                                                variant === "transparentLight"
+                                                ? "fill-white"
+                                                : "fill-black",
+                                            variant === "transparentLight" &&
+                                                "md:group-hover:fill-black",
+                                        )}
+                                        size={15}
+                                        stroke="0"
+                                    />
+                                    <span className="hidden">
+                                        {PhoneConfig?.title}
+                                    </span>
+                                </Typography>
+                            </Button>
+
+                            {SocialLinksConfig?.map((social, index) => {
+                                if (
+                                    social.icon === null ||
+                                    social.icon === undefined
+                                )
+                                    return;
+
+                                const { stroke, fill, ...icon } = social.icon;
+
+                                return (
+                                    <>
+                                        <Button
+                                            variant={button as any}
+                                            size="icon"
+                                            key={`${index}-${social.title}`}
+                                            className={cn(
+                                                index === 0
+                                                    ? "flex"
+                                                    : "hidden md:flex",
+                                                variant ===
+                                                    "transparentLight" &&
+                                                    "md:group-hover:border-black",
+                                            )}
+                                            asChild
+                                        >
+                                            <Typography
+                                                as="a"
+                                                href={social.href}
+                                                aria-label={social.title}
+                                            >
+                                                <IconByName
+                                                    stroke={stroke ?? ""}
+                                                    className={cn(
+                                                        variant !==
+                                                            "transparent" &&
+                                                            variant !==
+                                                                "transparentLight" &&
+                                                            "fill-black",
+                                                        variant ===
+                                                            "transparentLight" &&
+                                                            "md:group-hover:fill-black",
+                                                    )}
+                                                    fill={fill ?? "transparent"}
+                                                    {...(icon as IconByNameProps)}
+                                                />
+                                            </Typography>
+                                        </Button>
+                                    </>
+                                );
+                            })}
+                            <Dropdown
+                                defaultOption={
+                                    LangConfig.languages[0] as DropdownOption
+                                }
+                                options={LangConfig.languages}
+                                label={LangConfig.title}
+                                className="hidden md:flex"
+                                radioGroup
+                            />
+                            <Dropdown
+                                defaultOption={
+                                    SchedulesConfig
+                                        .schedules[0] as DropdownOption
+                                }
+                                options={SchedulesConfig.schedules}
+                                label={SchedulesConfig.title}
+                                className="hidden md:flex"
+                                icon={{
+                                    name: "Clock",
+                                    size: 24,
+                                    className: cn(
+                                        variant === "transparent" ||
+                                            variant === "transparentLight"
+                                            ? "text-white"
+                                            : "text-black",
+                                        variant === "transparentLight" &&
+                                            "md:group-hover:text-black",
+                                    ),
+                                }}
+                            />
+                        </div>
+                        <Sheet>
+                            <SheetTrigger className="flex md:hidden" asChild>
+                                <Button
+                                    variant="transparent"
+                                    size="icon"
+                                    aria-label="Menu"
+                                    className="border-0"
+                                >
+                                    <Menu
+                                        className={cn(
+                                            "text-primary-foreground size-7",
+                                            (variant === "transparent" ||
+                                                variant ===
+                                                    "transparentLight") &&
+                                                "stroke-white",
+                                        )}
+                                    />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent className="text-black">
+                                <SheetHeader className="flex flex-row justify-center px-2">
+                                    <Link href="/" className="w-max">
+                                        <img
+                                            src={variants["default"].logo}
+                                            alt="Dental Place Logo"
+                                            loading="lazy"
+                                            className="w-auto max-h-8"
+                                        />
+                                    </Link>
+                                </SheetHeader>
+
+                                <NavigationMenu className="bg-white max-h-full items-start w-full justify-start flex-1">
+                                    <NavigationMenuListColumn>
+                                        {navItems.map((item) => (
+                                            <NavbarItem
+                                                key={item.title}
+                                                column
+                                                {...item}
+                                            />
+                                        ))}
+
+                                        <NavbarItem
+                                            column
+                                            {...SchedulesNavItems}
+                                        />
+                                    </NavigationMenuListColumn>
+                                </NavigationMenu>
+                                <SheetFooter>
+                                    <Dropdown
+                                        defaultOption={
+                                            LangConfig
+                                                .languages[0] as DropdownOption
+                                        }
+                                        options={LangConfig.languages}
+                                        label={LangConfig.title}
+                                        className="flex"
+                                        radioGroup
+                                    />
+                                </SheetFooter>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                </main>
+            </header>
+        </>
+    );
+}
 
 export async function NavbarItem({
     title,
@@ -97,6 +395,7 @@ export async function NavbarItem({
     column,
     variant,
 }: NavBarItem) {
+    const { text } = variants[variant || "default"];
     return (
         <NavigationMenuItem direction={column ? "column" : "row"}>
             {subItems ? (
@@ -106,8 +405,12 @@ export async function NavbarItem({
                             <NavigationMenuTrigger
                                 direction={column ? "column" : "row"}
                                 className={cn(
-                                    variant === "transparent" &&
+                                    text,
+                                    (variant === "transparent" ||
+                                        variant === "transparentLight") &&
                                         "md:data-[state=open]:border-white md:hover:border-white",
+                                    variant === "transparentLight" &&
+                                        "md:group-hover:data-[state=open]:border-black md:group-hover:hover:border-black transition-none duration-300",
                                 )}
                             >
                                 {title}
@@ -175,9 +478,13 @@ export async function NavbarItem({
                                 navigationMenuTriggerStyle({
                                     direction: "row",
                                 }),
-                                variant === "transparent" &&
+                                text,
+                                (variant === "transparent" ||
+                                    variant === "transparentLight") &&
                                     "hover:border-white",
-                                "max-md:w-full max-md:items-start max-md:justify-start",
+                                variant === "transparentLight" &&
+                                    "md:group-hover:hover:border-black",
+                                "max-md:w-full max-md:items-start max-md:justify-start transition-none duration-300",
                             )}
                         >
                             {title}
@@ -186,226 +493,6 @@ export async function NavbarItem({
                 )
             )}
         </NavigationMenuItem>
-    );
-}
-
-export type NavbarVariants = VariantProps<typeof NavBarVariants>;
-
-interface NavbarProps
-    extends React.HTMLAttributes<HTMLDivElement>,
-        NavbarVariants {}
-
-export async function NavBar({ className, variant, ...props }: NavbarProps) {
-    const {
-        LangConfig,
-        PhoneConfig,
-        SchedulesConfig,
-        SocialLinksConfig,
-        navItems,
-        error,
-    } = await getNavbarData();
-
-    if (error) {
-        console.error(error);
-        return null;
-    }
-    const { logo, button } = variants[variant || "default"];
-
-    const SchedulesNavItems: NavBarItem = {
-        title: SchedulesConfig.title,
-        href: "#",
-        subItems: SchedulesConfig.schedules.map((hour) => ({
-            title: hour.label,
-            href: "#",
-        })),
-    };
-
-    return (
-        <>
-            <header
-                className={cn(
-                    NavBarVariants({
-                        variant,
-                        className,
-                    }),
-                )}
-            >
-                <main className="flex w-full items-center justify-between container">
-                    <div className="flex items-center gap-4 lg:gap-6">
-                        <Link href="/">
-                            <img
-                                src={logo}
-                                alt="Dental Place Logo"
-                                className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
-                            />
-                        </Link>
-                        <NavigationMenu className="hidden md:flex">
-                            <NavigationMenuList>
-                                {navItems.map((item, index) => (
-                                    <NavbarItem
-                                        key={`${item.title}-${index}`}
-                                        variant={variant}
-                                        {...item}
-                                    />
-                                ))}
-                            </NavigationMenuList>
-                        </NavigationMenu>
-                    </div>
-                    <div className="flex gap-2 lg:gap-4 items-center">
-                        <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
-                            <Button
-                                variant={button as any}
-                                size="icon"
-                                className=""
-                                asChild
-                            >
-                                <Typography
-                                    as="a"
-                                    href={PhoneConfig?.url as string}
-                                    className="gap-2 flex items-center justify-center font-bold"
-                                >
-                                    <Phone
-                                        size={15}
-                                        fill={
-                                            button === "transparent"
-                                                ? "white"
-                                                : "black"
-                                        }
-                                        stroke="0"
-                                    />
-                                    <span className="hidden">
-                                        {PhoneConfig?.title}
-                                    </span>
-                                </Typography>
-                            </Button>
-
-                            {SocialLinksConfig?.map((social, index) => {
-                                if (
-                                    social.icon === null ||
-                                    social.icon === undefined
-                                )
-                                    return;
-
-                                const { stroke, fill, ...icon } = social.icon;
-
-                                return (
-                                    <>
-                                        <Button
-                                            variant={button as any}
-                                            size="icon"
-                                            key={`${index}-${social.title}`}
-                                            className={
-                                                index === 0
-                                                    ? "flex"
-                                                    : "hidden md:flex"
-                                            }
-                                            asChild
-                                        >
-                                            <Typography
-                                                as="a"
-                                                href={social.href}
-                                                aria-label={social.title}
-                                            >
-                                                <IconByName
-                                                    stroke={stroke ?? ""}
-                                                    fill={fill ?? "transparent"}
-                                                    {...(icon as IconByNameProps)}
-                                                />
-                                            </Typography>
-                                        </Button>
-                                    </>
-                                );
-                            })}
-                            <Dropdown
-                                defaultOption={
-                                    LangConfig.languages[0] as DropdownOption
-                                }
-                                options={LangConfig.languages}
-                                label={LangConfig.title}
-                                className="hidden md:flex"
-                                radioGroup
-                            />
-                            <Dropdown
-                                defaultOption={
-                                    SchedulesConfig
-                                        .schedules[0] as DropdownOption
-                                }
-                                options={SchedulesConfig.schedules}
-                                label={SchedulesConfig.title}
-                                className="hidden md:flex"
-                                icon={{
-                                    name: "Clock",
-                                    size: 24,
-                                    color:
-                                        variant === "transparent"
-                                            ? "white"
-                                            : "black",
-                                }}
-                            />
-                        </div>
-                        <Sheet>
-                            <SheetTrigger className="flex md:hidden" asChild>
-                                <Button
-                                    variant="transparent"
-                                    size="icon"
-                                    aria-label="Menu"
-                                    className="border-0"
-                                >
-                                    <Menu
-                                        className={cn(
-                                            "text-primary-foreground size-7",
-                                            variant === "transparent" &&
-                                                "stroke-white",
-                                        )}
-                                    />
-                                </Button>
-                            </SheetTrigger>
-                            <SheetContent className="text-black">
-                                <SheetHeader className="flex flex-row justify-center px-2">
-                                    <Link href="/" className="w-max">
-                                        <img
-                                            src={variants["default"].logo}
-                                            alt="Dental Place Logo"
-                                            loading="lazy"
-                                            className="w-auto max-h-8"
-                                        />
-                                    </Link>
-                                </SheetHeader>
-
-                                <NavigationMenu className="bg-white max-h-full items-start w-full justify-start flex-1">
-                                    <NavigationMenuListColumn>
-                                        {navItems.map((item) => (
-                                            <NavbarItem
-                                                key={item.title}
-                                                column
-                                                {...item}
-                                            />
-                                        ))}
-
-                                        <NavbarItem
-                                            column
-                                            {...SchedulesNavItems}
-                                        />
-                                    </NavigationMenuListColumn>
-                                </NavigationMenu>
-                                <SheetFooter>
-                                    <Dropdown
-                                        defaultOption={
-                                            LangConfig
-                                                .languages[0] as DropdownOption
-                                        }
-                                        options={LangConfig.languages}
-                                        label={LangConfig.title}
-                                        className="flex"
-                                        radioGroup
-                                    />
-                                </SheetFooter>
-                            </SheetContent>
-                        </Sheet>
-                    </div>
-                </main>
-            </header>
-        </>
     );
 }
 
