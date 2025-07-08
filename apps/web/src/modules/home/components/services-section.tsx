@@ -48,11 +48,11 @@ const ServiceSection = ({
                 >
                     <CarouselContent>
                         {items.map(({ className, ...item }, index) => {
-                            if (index > 2) return null;
+                            if (index > 3) return null;
                             return (
                                 <CarouselItem
                                     key={crypto.randomUUID()}
-                                    className="flex justify-center items-center basis-[38%] md:basis-1/3"
+                                    className="flex justify-center items-center basis-[38%] md:basis-1/3 lg:basis-1/4"
                                 >
                                     <ServiceCard
                                         {...item}
@@ -82,7 +82,6 @@ const ServiceSection = ({
                                 </Link>
                             </Button>
                         </CarouselItem>
-
                         <CarouselItem className="flex justify-center items-center md:hidden">
                             <div></div>
                         </CarouselItem>
