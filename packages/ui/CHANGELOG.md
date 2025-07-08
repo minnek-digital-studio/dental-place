@@ -1,5 +1,12 @@
 
 
+# [0.6.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.3.0...@minnek/ui-v0.6.0) (2025-07-08)
+
+
+### Features
+
+* DP-85 add video to hero background ([b1c3aeb](https://github.com/minnek-digital-studio/dental-place/commit/b1c3aeb7f2ddf155ffd6a7b08ad813f7c227dc66))
+
 # [0.5.0](https://github.com/minnek-digital-studio/dental-place/compare/@minnek/ui-v0.4.1...@minnek/ui-v0.5.0) (2024-09-17)
 
 
