@@ -3,6 +3,7 @@ query getCallToActionByID($id: ID = "") {
         title
         callToActionSettings {
             description
+            descriptionRich
             callUs {
                 phoneNumber
                 subTitle
@@ -24,6 +25,13 @@ query getCallToActionByID($id: ID = "") {
             }
             image {
                 img {
+                    node {
+                        altText
+                        sourceUrl
+                        title
+                    }
+                }
+                otherImage {
                     node {
                         altText
                         sourceUrl

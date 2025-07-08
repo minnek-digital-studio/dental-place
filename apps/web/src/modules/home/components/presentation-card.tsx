@@ -8,6 +8,8 @@ import { Typography } from "@minnek/ui/components/typography";
 import { cn } from "@minnek/ui/lib/utils";
 import { Card, CardContent } from "@minnek/ui/components/card";
 
+import Buttons from "@/modules/home/components/buttons";
+
 export interface PresentationCardProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -32,37 +34,7 @@ const PresentationCard = ({
                 <Typography as="p" className="font-bold md:w-1/2 max-md:hidden">
                     {title}
                 </Typography>
-                <div className="flex items-center justify-center flex-wrap md:flex-nowrap gap-4 max-md:w-full">
-                    {buttons.map(
-                        ({ icon, link, text, className, ...buttonProps }) => (
-                            <Button
-                                {...buttonProps}
-                                className={cn("", className)}
-                                key={crypto.randomUUID()}
-                                asChild
-                            >
-                                <Link
-                                    href={link}
-                                    aria-label={text}
-                                    className="font-bold flex-1 w-full max-w-40"
-                                >
-                                    {icon?.position === "left" && (
-                                        <IconByName {...icon} />
-                                    )}
-                                    <Typography
-                                        as="span"
-                                        className="text-inherit"
-                                    >
-                                        {text}
-                                    </Typography>
-                                    {icon?.position !== "left" && (
-                                        <IconByName {...icon} />
-                                    )}
-                                </Link>
-                            </Button>
-                        ),
-                    )}
-                </div>
+                <Buttons buttons={buttons} />
             </CardContent>
         </Card>
     );

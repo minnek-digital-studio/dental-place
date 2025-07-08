@@ -42,6 +42,7 @@ export type NavBarItem = {
     href: string;
     subItems?: NavbarSubItem[];
     column?: boolean;
+    variant?: NavbarVariants["variant"];
 };
 
 export type NavbarSubItem = {
@@ -79,7 +80,7 @@ const variants = {
         logo: "/images/logo/dental-logo.webp",
     },
     transparent: {
-        button: "light",
+        button: "transparent",
         logo: "/images/logo/dental-logo-white.webp",
     },
     "light-primary": {
@@ -93,6 +94,7 @@ export async function NavbarItem({
     href,
     subItems,
     column,
+    variant,
 }: NavBarItem) {
     return (
         <NavigationMenuItem direction={column ? "column" : "row"}>
@@ -102,6 +104,10 @@ export async function NavbarItem({
                         <>
                             <NavigationMenuTrigger
                                 direction={column ? "column" : "row"}
+                                className={cn(
+                                    variant === "transparent" &&
+                                        "md:data-[state=open]:border-white md:hover:border-white",
+                                )}
                             >
                                 {title}
                             </NavigationMenuTrigger>
@@ -164,9 +170,14 @@ export async function NavbarItem({
                 href && (
                     <Link href={href} legacyBehavior passHref>
                         <NavigationMenuLink
-                            className={navigationMenuTriggerStyle({
-                                direction: "row",
-                            })}
+                            className={cn(
+                                navigationMenuTriggerStyle({
+                                    direction: "row",
+                                }),
+                                variant === "transparent" &&
+                                    "hover:border-white",
+                                "max-md:w-full max-md:items-start max-md:justify-start",
+                            )}
                         >
                             {title}
                         </NavigationMenuLink>
@@ -232,6 +243,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                 {navItems.map((item, index) => (
                                     <NavbarItem
                                         key={`${item.title}-${index}`}
+                                        variant={variant}
                                         {...item}
                                     />
                                 ))}
@@ -243,7 +255,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                             <Button
                                 variant={button as any}
                                 size="icon"
-                                className="lg:h-9 lg:px-5"
+                                className=""
                                 asChild
                             >
                                 <Typography
@@ -251,8 +263,16 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                     href={PhoneConfig?.url as string}
                                     className="gap-2 flex items-center justify-center font-bold"
                                 >
-                                    <Phone size={15} fill="black" stroke="0" />
-                                    <span className="hidden lg:flex">
+                                    <Phone
+                                        size={15}
+                                        fill={
+                                            button === "transparent"
+                                                ? "white"
+                                                : "black"
+                                        }
+                                        stroke="0"
+                                    />
+                                    <span className="hidden">
                                         {PhoneConfig?.title}
                                     </span>
                                 </Typography>
@@ -278,7 +298,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                         >
                                             <Typography
                                                 as="a"
-                                                href="#"
+                                                href={social.href}
                                                 aria-label={social.title}
                                             >
                                                 <IconByName
@@ -324,6 +344,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                     variant="transparent"
                                     size="icon"
                                     aria-label="Menu"
+                                    className="border-0"
                                 >
                                     <Menu
                                         className={cn(
@@ -338,7 +359,7 @@ export async function NavBar({ className, variant, ...props }: NavbarProps) {
                                 <SheetHeader className="flex flex-row justify-center px-2">
                                     <Link href="/" className="w-max">
                                         <img
-                                            src={logo}
+                                            src={variants["default"].logo}
                                             alt="Dental Place Logo"
                                             loading="lazy"
                                             className="w-auto max-h-8"

@@ -25,13 +25,18 @@ const LetUsHelpSection = ({
         <section className="container mb-10">
             <div
                 className={cn(
-                    "flex flex-col rounded-[2rem] xmd:flex-row bg-primary/40 mt-6 relative",
+                    "flex flex-col rounded-[2rem] xmd:flex-row bg-dark mt-6 relative",
                     className,
                 )}
             >
                 <main className="flex flex-col gap-4 w-full mt-1 xmd:w-[45%] p-8 xmd:p-20 xmd:pr-10">
-                    <Typography as="h2">{title}</Typography>
-                    <Typography as="p" className="flex-1 leading-8 text-dark">
+                    <Typography as="h2" className="text-dark-foreground">
+                        {title}
+                    </Typography>
+                    <Typography
+                        as="p"
+                        className="flex-1 leading-8 text-dark-foreground"
+                    >
                         {description}
                     </Typography>
                     <Button
@@ -45,12 +50,7 @@ const LetUsHelpSection = ({
                             className="font-bold w-max"
                             aria-label={button.text}
                         >
-                            <Typography
-                                as="span"
-                                className="text-dark-foreground"
-                            >
-                                {button.text}
-                            </Typography>
+                            <Typography as="span">{button.text}</Typography>
                             <MoveRight size={25} />
                         </Link>
                     </Button>

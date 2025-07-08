@@ -36,9 +36,11 @@ export type Author = {
 export type CallToAction = {
     title: string;
     description?: string;
+    descriptionRich?: string;
     type?: ComponentType;
     button: ButtonType;
     img: ImageType;
+    otherImage?: ImageType;
     className?: string;
     items: Array<{
         title: string;
