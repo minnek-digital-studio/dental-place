@@ -26,6 +26,8 @@ const ServicesPage = async () => {
         <Layout
             navbarVariant={{
                 variant: "info",
+                align: "center",
+                text: "md",
             }}
         >
             <ServiceSection {...(servicesSectionInfo as ServiceSectionProps)} />

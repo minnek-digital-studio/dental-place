@@ -24,6 +24,8 @@ const TeamPage = async () => {
         <Layout
             navbarVariant={{
                 variant: "secondary",
+                text: "md",
+                align: "center",
             }}
         >
             <OurTeamSection {...(TeamInfo as OurTeamSectionProps)} />

@@ -57,6 +57,8 @@ const CaseStudiesPage: React.FC<Props> = async ({ params }) => {
         <Layout
             navbarVariant={{
                 variant: "light-primary",
+                align: "center",
+                text: "md",
             }}
         >
             <CaseStudiesDetailsSection

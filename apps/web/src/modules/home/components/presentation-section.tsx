@@ -37,7 +37,7 @@ const PresentationSection = ({
             >
                 <div className="container relative flex max-md:pt-4 flex-col gap-5 items-start">
                     <div className="flex flex-wrap justify-start items-center w-full max-md:gap-5">
-                        <div className="w-full md:w-[50%] flex flex-col gap-4 filter backdrop-blur-sm">
+                        <div className="w-full md:w-[50%] flex flex-col gap-4 filter">
                             <Typography
                                 as="h1"
                                 className="font-medium text-white xl:text-5xl lg:text-5xl"

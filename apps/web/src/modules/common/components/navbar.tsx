@@ -44,6 +44,7 @@ export type NavBarItem = {
     subItems?: NavbarSubItem[];
     column?: boolean;
     variant?: NavbarVariants["variant"];
+    text?: NavbarVariants["text"];
 };
 
 export type NavbarSubItem = {
@@ -71,6 +72,20 @@ const NavBarVariants = cva(
         },
     },
 );
+
+const TextVariants = cva("", {
+    variants: {
+        text: {
+            sm: "text-sm",
+            md: "text-md",
+            lg: "text-lg",
+            xl: "text-xl",
+        },
+    },
+    defaultVariants: {
+        text: "sm",
+    },
+});
 
 const variants = {
     default: {
@@ -108,7 +123,8 @@ const variants = {
     },
 };
 
-export type NavbarVariants = VariantProps<typeof NavBarVariants>;
+export type NavbarVariants = VariantProps<typeof NavBarVariants> &
+    VariantProps<typeof TextVariants>;
 
 interface NavbarProps
     extends React.HTMLAttributes<HTMLDivElement>,
@@ -120,6 +136,7 @@ export async function NavBar({
     className,
     variant,
     align = "left",
+    text,
     ...props
 }: NavbarProps) {
     const {
@@ -183,6 +200,7 @@ export async function NavBar({
                                         <NavbarItem
                                             key={`${item.title}-${index}`}
                                             variant={variant}
+                                            text={text}
                                             {...item}
                                         />
                                     ))}
@@ -198,6 +216,7 @@ export async function NavBar({
                                         <NavbarItem
                                             key={`${item.title}-${index}`}
                                             variant={variant}
+                                            text={text}
                                             {...item}
                                         />
                                     ))}
@@ -394,8 +413,8 @@ export async function NavbarItem({
     subItems,
     column,
     variant,
+    text,
 }: NavBarItem) {
-    const { text } = variants[variant || "default"];
     return (
         <NavigationMenuItem direction={column ? "column" : "row"}>
             {subItems ? (
@@ -405,7 +424,9 @@ export async function NavbarItem({
                             <NavigationMenuTrigger
                                 direction={column ? "column" : "row"}
                                 className={cn(
-                                    text,
+                                    TextVariants({
+                                        text,
+                                    }),
                                     (variant === "transparent" ||
                                         variant === "transparentLight") &&
                                         "md:data-[state=open]:border-white md:hover:border-white",
@@ -478,7 +499,9 @@ export async function NavbarItem({
                                 navigationMenuTriggerStyle({
                                     direction: "row",
                                 }),
-                                text,
+                                TextVariants({
+                                    text,
+                                }),
                                 (variant === "transparent" ||
                                     variant === "transparentLight") &&
                                     "hover:border-white",

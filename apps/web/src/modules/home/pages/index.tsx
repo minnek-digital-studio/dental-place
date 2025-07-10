@@ -49,7 +49,7 @@ export default async function HomePage() {
                         autoPlay
                         loop
                         muted
-                        className="absolute top-0 left-0 w-full h-full object-cover filter brightness-[0.3]"
+                        className="absolute top-0 left-0 w-full h-full object-cover filter brightness-[0.75]"
                     >
                         <source
                             src={"/videos/dental_video.mp4"}
@@ -57,9 +57,10 @@ export default async function HomePage() {
                         />
                     </video>
                     <NavBar
-                        className="relative backdrop-blur-sm"
+                        className="relative"
                         variant={"transparentLight"}
                         align="center"
+                        text={"md"}
                     />
                     <PresentationSection
                         {...(PresentationInfo as PresentationSectionProps)}
