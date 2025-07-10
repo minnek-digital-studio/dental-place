@@ -45,6 +45,8 @@ const ServicePage: React.FC<Props> = async ({ params }) => {
         <Layout
             navbarVariant={{
                 variant: "secondary",
+                align: "center",
+                text: "md",
             }}
         >
             <ServiceSection {...(serviceSection as ServiceSectionProps)} />

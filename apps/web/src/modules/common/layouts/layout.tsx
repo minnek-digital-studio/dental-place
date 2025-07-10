@@ -7,7 +7,9 @@ import {
 import { cn } from "@minnek/ui/lib/utils";
 
 interface LayoutProps extends React.HTMLAttributes<HTMLDivElement> {
-    navbarVariant?: NavbarVariants;
+    navbarVariant?: NavbarVariants & {
+        align?: "left" | "center";
+    };
 }
 
 const Layout = ({

@@ -30,6 +30,8 @@ const ExpressBracesPage = async () => {
         <Layout
             navbarVariant={{
                 variant: "light-primary",
+                align: "center",
+                text: "md",
             }}
         >
             <HeroSection {...(HeroInfo as HeroSectionProps)} />

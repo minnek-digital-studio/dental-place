@@ -14,17 +14,13 @@ export interface ButtonsProps extends React.HTMLAttributes<HTMLDivElement> {
 const Buttons = ({ buttons, className, ...props }: ButtonsProps) => {
     return (
         <div
-            className="flex items-start justify-start flex-wrap md:flex-nowrap gap-4 max-md:w-full"
+            className="flex flex-row-reverse items-start justify-start flex-wrap md:flex-nowrap gap-4 max-md:w-full"
             {...props}
         >
             {buttons.map(({ icon, link, text, className, ...buttonProps }) => (
                 <Button
                     {...buttonProps}
-                    className={cn(
-                        "",
-                        className,
-                        "bg-white text-black border border-white hover:text-black hover:bg-light ",
-                    )}
+                    className={cn("", className)}
                     key={crypto.randomUUID()}
                     asChild
                 >

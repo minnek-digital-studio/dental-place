@@ -30,7 +30,7 @@ const AboutSection = ({
     return (
         <section className=" container max-xl:pl-0 max-xl:pr-0">
             <div className={cn("flex flex-col md:flex-row h-full", className)}>
-                <header className="flex flex-col gap-6 w-full md:w-[50%] p-8 md:p-20 md:pr-10 justify-center ">
+                <header className="flex flex-col gap-6 w-full md:w-[50%] p-8 md:p-20 md:pr-10 justify-center">
                     <Typography as="h2" className="font-light">
                         {title}
                     </Typography>
@@ -42,7 +42,7 @@ const AboutSection = ({
                     ) : (
                         <div
                             dangerouslySetInnerHTML={descriptionRichHTML}
-                            className="text-base leading-8 text-dark font"
+                            className="text-base leading-8 text-dark font-noto-sans"
                         ></div>
                     )}
 
