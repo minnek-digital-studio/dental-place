@@ -40,10 +40,12 @@ const ReviewsSection = ({
                 <Typography as="h2" className="text-center">
                     {title}
                 </Typography>
-                <div
-                    dangerouslySetInnerHTML={descriptionHtml}
-                    className="text-dark-grey max-w-[25rem] text-center font-noto-sans text-base"
-                />
+                {description && (
+                    <div
+                        dangerouslySetInnerHTML={descriptionHtml}
+                        className="text-dark-grey max-w-[25rem] text-center font-noto-sans text-base"
+                    />
+                )}
                 {button?.text && (
                     <Button
                         variant={button.variant}
