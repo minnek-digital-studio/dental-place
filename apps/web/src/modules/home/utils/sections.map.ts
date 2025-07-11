@@ -37,6 +37,17 @@ export const mapReviewData = async (
     return {
         title: data?.homePageSettings?.reviewSection?.title || "",
         description: data?.homePageSettings?.reviewSection?.description || "",
+        button: {
+            text:
+                data?.homePageSettings?.reviewSection?.button?.link?.title ||
+                "",
+            link:
+                data?.homePageSettings?.reviewSection?.button?.link?.url || "",
+            variant: data?.homePageSettings?.reviewSection?.button
+                ?.variant?.[0] as ButtonVariants["variant"],
+            size: data?.homePageSettings?.reviewSection?.button
+                ?.size[0] as ButtonVariants["size"],
+        },
         items: await Promise.all(
             (data?.homePageSettings?.reviewSection?.reviews?.edges || []).map(
                 async ({ node: review }) => await getReview(review.id),
