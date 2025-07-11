@@ -1,24 +1,28 @@
+import StarRating from "@/modules/common/components/rating-stars";
 import { type Author } from "@/modules/common/types";
+import {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+} from "@minnek/ui/components/avatar";
 import {
     Card,
     CardContent,
     CardFooter,
     CardHeader,
 } from "@minnek/ui/components/card";
+import { Typography } from "@minnek/ui/components/typography";
 import { Comma } from "@minnek/ui/icons";
 import { cn } from "@minnek/ui/lib/utils";
-import { Typography } from "@minnek/ui/components/typography";
-import {
-    Avatar,
-    AvatarImage,
-    AvatarFallback,
-} from "@minnek/ui/components/avatar";
-import StarRating from "@/modules/common/components/rating-stars";
+import type { Icon } from "@/modules/common/types";
+import { IconByName } from "@minnek/ui/icons";
 
 export interface ReviewCardProps extends React.HTMLAttributes<HTMLDivElement> {
     comment: string;
     author: Author;
     rating: number;
+    icon?: Icon;
+    link?: string;
 }
 
 const ReviewCard = ({
@@ -26,17 +30,34 @@ const ReviewCard = ({
     author,
     rating,
     className,
+    icon,
+    link,
     ...props
 }: ReviewCardProps) => {
     return (
-        <Card className={cn("w-full bg-[#F9F7FF] py-1", className)}>
+        <Card className={cn("w-full bg-[#F9F7FF] py-1 relative", className)}>
             <CardHeader className="px-4 mb-2">
-                <StarRating rating={rating} />
+                <div className="flex items-center justify-between">
+                    <StarRating rating={rating} />
+                    {icon && <IconByName {...icon} />}
+                </div>
             </CardHeader>
             <CardContent className="px-4">
                 <Typography
-                    as="p"
-                    className="line-clamp-[8] text-sm text-black leading-6"
+                    as={link ? "a" : "p"}
+                    className={cn(
+                        "line-clamp-[8] text-sm text-black leading-6",
+                        link &&
+                            "after:content-[''] after:inset-0 after:absolute after:bottom-0 after:w-full",
+                    )}
+                    {...(link
+                        ? {
+                              href: link,
+                              target: "_blank",
+                              rel: "noopener noreferrer",
+                              "aria-label": "View review",
+                          }
+                        : {})}
                 >
                     {comment}
                 </Typography>

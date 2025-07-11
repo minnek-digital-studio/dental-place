@@ -8,6 +8,7 @@ import { SpainFlag } from "./spainFlag";
 import { UsaFlag } from "./usaFlag";
 import { WhatsApp } from "./whatsApp";
 import { Comma } from "./comma";
+import { Google } from "./google";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
@@ -17,6 +18,7 @@ export * from "./spainFlag";
 export * from "./usaFlag";
 export * from "./whatsApp";
 export * from "./comma";
+export * from "./google";
 
 const customIcons = {
     CleanTooth,
@@ -28,6 +30,7 @@ const customIcons = {
     UsaFlag,
     WhatsApp,
     Comma,
+    Google,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;

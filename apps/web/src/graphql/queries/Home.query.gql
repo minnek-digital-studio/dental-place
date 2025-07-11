@@ -44,6 +44,14 @@ query getHomePage($uri: ID = "/home/") {
             reviewSection {
                 title
                 description
+                button {
+                    link {
+                        title
+                        url
+                    }
+                    variant
+                    size
+                }
                 reviews {
                     edges {
                         node {

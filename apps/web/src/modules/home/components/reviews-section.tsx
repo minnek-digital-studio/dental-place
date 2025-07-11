@@ -1,23 +1,23 @@
-import React from "react";
-
-import { Button, type ButtonVariants } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
-import {
-    Carousel,
-    CarouselItem,
-    CarouselContent,
-    CarouselNext,
-    CarouselPrevious,
-} from "@minnek/ui/components/carousel";
 import ReviewCard, {
     type ReviewCardProps,
 } from "@/modules/home/components/review-card";
+import { type ButtonVariants } from "@minnek/ui/components/button";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@minnek/ui/components/carousel";
+import { Typography } from "@minnek/ui/components/typography";
 import { MoveLeft, MoveRight } from "@minnek/ui/icons";
+import { Button } from "@minnek/ui/components/button";
 
 export type ReviewsSectionProps = {
     title: string;
     description: string;
     items: ReviewCardProps[];
+    button?: buttonProps;
 };
 
 export type buttonProps = {
@@ -27,19 +27,40 @@ export type buttonProps = {
     size: ButtonVariants["size"];
 };
 
-const ReviewsSection = ({ title, description, items }: ReviewsSectionProps) => {
+const ReviewsSection = ({
+    title,
+    description,
+    items,
+    button,
+}: ReviewsSectionProps) => {
+    const descriptionHtml = { __html: description };
     return (
         <section className="flex flex-col gap-9 items-center py-6 container">
             <header className="flex flex-col gap-4 items-center">
                 <Typography as="h2" className="text-center">
                     {title}
                 </Typography>
-                <Typography
-                    as="p"
-                    className="text-dark-grey max-w-[25rem] text-center "
-                >
-                    {description}
-                </Typography>
+                <div
+                    dangerouslySetInnerHTML={descriptionHtml}
+                    className="text-dark-grey max-w-[25rem] text-center font-noto-sans text-base"
+                />
+                {button?.text && (
+                    <Button
+                        variant={button.variant}
+                        size={button.size}
+                        className="w-fit"
+                        asChild
+                    >
+                        <Typography
+                            as="a"
+                            href={button.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {button.text}
+                        </Typography>
+                    </Button>
+                )}
             </header>
             <Carousel
                 opts={{
