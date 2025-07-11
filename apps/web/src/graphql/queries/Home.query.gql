@@ -86,6 +86,16 @@ query getHomePage($uri: ID = "/home/") {
                         }
                     }
                 }
+                mediaType
+                video {
+                    video {
+                        node {
+                            altText
+                            mediaItemUrl
+                        }
+                    }
+                    className
+                }
                 card {
                     title
                     button {
