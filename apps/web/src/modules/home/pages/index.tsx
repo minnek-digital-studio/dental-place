@@ -43,19 +43,26 @@ export default async function HomePage() {
         <>
             <div className="flex flex-col w-full gap-10">
                 <div className="relative min-h-screen flex flex-col">
-                    <video
-                        preload="auto"
-                        aria-label="Dental Video"
-                        autoPlay
-                        loop
-                        muted
-                        className="absolute top-0 left-0 w-full h-full object-cover filter brightness-[0.75]"
-                    >
-                        <source
-                            src={"/videos/dental_video.mp4"}
-                            type="video/mp4"
-                        />
-                    </video>
+                    {PresentationInfo.mediaType === "video" && (
+                        <video
+                            preload="auto"
+                            aria-label={
+                                PresentationInfo.video?.alt || "Dental Video"
+                            }
+                            autoPlay
+                            loop
+                            muted
+                            className="absolute top-0 left-0 w-full h-full object-cover filter brightness-[0.75]"
+                        >
+                            <source
+                                src={
+                                    PresentationInfo.video?.src ||
+                                    "/videos/dental_video.mp4"
+                                }
+                                type="video/mp4"
+                            />
+                        </video>
+                    )}
                     <NavBar
                         className="relative"
                         variant={"transparentLight"}

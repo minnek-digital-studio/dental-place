@@ -1,14 +1,13 @@
 import { type GetHomePageQuery } from "@/graphql/generated/graphql";
-import { type HomePageInfo } from "../actions/home.action";
-import { type ServiceSectionProps } from "@/modules/home/components/services-section";
-import { Icon } from "@/modules/common/types";
-import { type IconsName } from "@minnek/ui/components/icons/index";
-import { type ButtonVariants } from "@minnek/ui/components/button";
 import { getCallToAction } from "@/modules/common/actions/callToActions.action";
 import { getReview } from "@/modules/common/actions/review.action";
+import type { Icon, MediaType } from "@/modules/common/types";
+import { type HomePageInfo } from "@/modules/home/actions/home.action";
+import { type ArsSectionProps } from "@/modules/home/components/ars-section";
 import InstagramInfo from "@/modules/home/data/instagram.json";
-import { ArsSectionProps } from "@/modules/home/components/ars-section";
 import { getServices } from "@/modules/services/actions/services.action";
+import { type ButtonVariants } from "@minnek/ui/components/button";
+import { type IconsName } from "@minnek/ui/components/icons/index";
 
 export const mapArsData = (data: GetHomePageQuery["page"]): ArsSectionProps => {
     const arsData = data?.homePageSettings?.arsSection;
@@ -79,6 +78,12 @@ export const mapPresentationData = (
             src: presentationData?.image?.img?.node.sourceUrl || "",
             alt: presentationData?.image?.img?.node.altText || "",
             className: presentationData?.image?.className || "",
+        },
+        mediaType: (presentationData?.mediaType as MediaType) || "image",
+        video: {
+            src: presentationData?.video?.video?.node?.mediaItemUrl || "",
+            alt: presentationData?.video?.video?.node?.altText || "",
+            className: presentationData?.video?.className || "",
         },
         card: {
             buttons:

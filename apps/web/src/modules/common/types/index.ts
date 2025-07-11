@@ -20,6 +20,10 @@ export type ImageType = {
     href?: string;
 };
 
+export type VideoType = ImageType;
+
+export type MediaType = "image" | "video";
+
 export type Icon = {
     name: IconsName;
     size: number;

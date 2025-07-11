@@ -1,4 +1,4 @@
-import type { ImageType } from "@/modules/common/types";
+import type { ImageType, MediaType, VideoType } from "@/modules/common/types";
 import PresentationCard, {
     type PresentationCardProps,
 } from "./presentation-card";
@@ -14,6 +14,8 @@ export interface PresentationSectionProps
     title: string;
     description: string;
     img: ImageType;
+    mediaType?: MediaType;
+    video?: VideoType;
     card: PresentationCardProps;
 }
 
@@ -21,6 +23,8 @@ const PresentationSection = ({
     title,
     description,
     img,
+    mediaType = "image",
+    video,
     card,
     className,
     ...props
@@ -51,9 +55,11 @@ const PresentationSection = ({
                                 <Buttons buttons={card.buttons} />
                             </div>
                         </div>
-                        <picture className="w-[60%] hidden">
-                            <Image {...img} />
-                        </picture>
+                        {mediaType === "image" && (
+                            <picture className="w-[60%]">
+                                <Image {...img} />
+                            </picture>
+                        )}
                     </div>
                 </div>
             </section>

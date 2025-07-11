@@ -602,6 +602,11 @@
           },
           {
             "kind": "OBJECT",
+            "name": "HomePageSettingsPresentationVideo",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "HomePageSettingsReviewSection",
             "ofType": null
           },
@@ -988,6 +993,11 @@
           {
             "kind": "OBJECT",
             "name": "HomePageSettingsPresentationImage",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "HomePageSettingsPresentationVideo",
             "ofType": null
           },
           {
@@ -32330,12 +32340,36 @@
             "deprecationReason": null
           },
           {
+            "name": "mediaType",
+            "description": "Field of the &quot;radio&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "title",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "video",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "HomePageSettingsPresentationVideo",
               "ofType": null
             },
             "isDeprecated": false,
@@ -33032,6 +33066,135 @@
         ]
       },
       {
+        "kind": "OBJECT",
+        "name": "HomePageSettingsPresentationVideo",
+        "description": "The &quot;HomePageSettingsPresentationVideo&quot; Field Group. Added to the Schema by &quot;WPGraphQL for ACF&quot;.",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationVideo&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "video",
+            "description": "Field of the &quot;file&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationVideo&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "HomePageSettingsPresentationVideo_Fields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "HomePageSettingsPresentationVideo_Fields",
+        "description": "Interface representing fields of the ACF &quot;HomePageSettingsPresentationVideo&quot; Field Group",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "className",
+            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationVideo&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fieldGroupName",
+            "description": "The name of the field group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use __typename instead"
+          },
+          {
+            "name": "video",
+            "description": "Field of the &quot;file&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentationVideo&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AcfMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroup",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "AcfFieldGroupFields",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "HomePageSettingsPresentationVideo",
+            "ofType": null
+          }
+        ]
+      },
+      {
         "kind": "INTERFACE",
         "name": "HomePageSettingsPresentation_Fields",
         "description": "Interface representing fields of the ACF &quot;HomePageSettingsPresentation&quot; Field Group",
@@ -33102,12 +33265,36 @@
             "deprecationReason": null
           },
           {
+            "name": "mediaType",
+            "description": "Field of the &quot;radio&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "title",
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "video",
+            "description": "Field of the &quot;group&quot; Field Type added to the schema as part of the &quot;HomePageSettingsPresentation&quot; Field Group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "HomePageSettingsPresentationVideo",
               "ofType": null
             },
             "isDeprecated": false,
