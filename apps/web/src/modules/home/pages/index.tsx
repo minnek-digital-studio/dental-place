@@ -1,6 +1,7 @@
 import CallToAction from "@/modules/common/components/CallToAction";
 import Footer from "@/modules/common/components/footer";
 import { NavBar } from "@/modules/common/components/navbar";
+import { getHomePageInfo } from "@/modules/home/actions/home.action";
 import ArsSection, {
     type ArsSectionProps,
 } from "@/modules/home/components/ars-section";
@@ -16,8 +17,8 @@ import ReviewsSection, {
 import ServiceSection, {
     ServiceSectionProps,
 } from "@/modules/home/components/services-section";
+import { VideoSection } from "@/modules/home/components/video-section";
 import { Metadata } from "next";
-import { getHomePageInfo } from "@/modules/home/actions/home.action";
 
 export const dynamic = "force-dynamic";
 
@@ -43,26 +44,7 @@ export default async function HomePage() {
         <>
             <div className="flex flex-col w-full gap-10">
                 <div className="relative min-h-screen flex flex-col">
-                    {PresentationInfo.mediaType === "video" && (
-                        <video
-                            preload="auto"
-                            aria-label={
-                                PresentationInfo.video?.alt || "Dental Video"
-                            }
-                            autoPlay
-                            loop
-                            muted
-                            className="absolute top-0 left-0 w-full h-full object-cover filter brightness-[0.75]"
-                        >
-                            <source
-                                src={
-                                    PresentationInfo.video?.src ||
-                                    "/videos/dental_video.mp4"
-                                }
-                                type="video/mp4"
-                            />
-                        </video>
-                    )}
+                    <VideoSection {...PresentationInfo} />
                     <NavBar
                         className="relative"
                         variant={"transparentLight"}
