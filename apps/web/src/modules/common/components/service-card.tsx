@@ -37,7 +37,7 @@ const serviceCard = ({
     className,
 }: ServiceCardProps) => {
     return (
-        <Card className={cn("max-w-[19rem] w-full ", className)}>
+        <Card className={cn("max-w-[19rem] w-full h-full", className)}>
             <CardHeader>
                 {icon && typeof icon === "string" && (
                     <Button variant="info" size="icon" className="p-4" asChild>
