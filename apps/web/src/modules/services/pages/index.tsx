@@ -1,15 +1,16 @@
-import React from "react";
+import CallToAction from "@/modules/common/components/CallToAction";
 import Layout from "@/modules/common/layouts/layout";
-import ServiceSection, {
-    type ServiceSectionProps,
-} from "@/modules/services/components/services-section";
+import { getServicesPage } from "@/modules/services/actions/services.action";
 import ClinicSection, {
     type ClinicSectionProps,
 } from "@/modules/services/components/clinic-section";
-import CallToAction from "@/modules/common/components/CallToAction";
-import { getServicesPage } from "../actions/services.action";
+import ServiceSection, {
+    type ServiceSectionProps,
+} from "@/modules/services/components/services-section";
 
 import type { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getServicesPage();
