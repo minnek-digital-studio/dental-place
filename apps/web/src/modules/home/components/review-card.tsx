@@ -35,7 +35,12 @@ const ReviewCard = ({
     ...props
 }: ReviewCardProps) => {
     return (
-        <Card className={cn("w-full bg-[#F9F7FF] py-1 relative", className)}>
+        <Card
+            className={cn(
+                "w-full bg-[#F9F7FF] py-1 relative h-full",
+                className,
+            )}
+        >
             <CardHeader className="px-4 mb-2">
                 <div className="flex items-center justify-between">
                     <StarRating rating={rating} />
