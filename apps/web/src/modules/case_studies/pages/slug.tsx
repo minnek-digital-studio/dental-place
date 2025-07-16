@@ -1,26 +1,22 @@
-import Layout from "@/modules/common/layouts/layout";
-import { cn } from "@minnek/ui/lib/utils";
-import { Typography } from "@minnek/ui/components/typography";
-import Footer from "@/modules/common/components/footer";
-import { Metadata, ResolvingMetadata } from "next";
-import LetUsHelpSection, {
-    LetUsHelpSectionProps,
-} from "@/modules/common/components/lethelp-section";
-import LetHelpInfo from "@/modules/case_studies/data/let-us-help.json";
-import ServiceDescriptionSection, {
-    ServiceDescriptionSectionProps,
-} from "../components/service-description";
-import ServiceDescriptionInfo from "@/modules/case_studies/data/services-description.json";
-import BeenDoneSection, { BeenDoneSectionProps } from "../components/been-done";
-import BeenDoneInfo from "@/modules/case_studies/data/been-done.json";
+import { config } from "@/config/constants";
+import BeenDoneSection, {
+    type BeenDoneSectionProps,
+} from "@/modules/case_studies/components/been-done";
 import CaseStudiesDetailsSection, {
-    CaseStudiesDetailsSectionProps,
-} from "../components/case-studies-details-section";
-import CaseStudiesDetailsInfo from "@/modules/case_studies/data/caseStudiesDetails.json";
-import { notFound } from "next/navigation";
+    type CaseStudiesDetailsSectionProps,
+} from "@/modules/case_studies/components/case-studies-details-section";
+import ServiceDescriptionSection, {
+    type ServiceDescriptionSectionProps,
+} from "@/modules/case_studies/components/service-description";
 import { getCaseStudyPage } from "@/modules/common/actions/case-studie.action";
 import CallToAction from "@/modules/common/components/CallToAction";
-import React from "react";
+import Layout from "@/modules/common/layouts/layout";
+import type { Metadata, ResolvingMetadata } from "next";
+import { notFound } from "next/navigation";
+
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 type Props = {
     params: { slug: string };

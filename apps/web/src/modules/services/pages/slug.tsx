@@ -1,25 +1,31 @@
-import React from "react";
-import { getServices, getServiceBySlug } from "../actions/services.action";
+import { config } from "@/config/constants";
+import CallToAction from "@/modules/common/components/CallToAction";
 import Layout from "@/modules/common/layouts/layout";
-import ServiceSection, {
-    type ServiceSectionProps,
-} from "../components/service-section";
+import {
+    getServiceBySlug,
+    getServices,
+} from "@/modules/services/actions/services.action";
 import CaseStudiesSection, {
     type CaseStudiesSectionProps,
-} from "../components/case-studies-section";
-import { notFound } from "next/navigation";
-import CallToAction from "@/modules/common/components/CallToAction";
-
+} from "@/modules/services/components/case-studies-section";
+import ServiceSection, {
+    type ServiceSectionProps,
+} from "@/modules/services/components/service-section";
 import type { Metadata, ResolvingMetadata } from "next";
+import { notFound } from "next/navigation";
+
 type Props = {
     params: { slug: string };
 };
+
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 export async function generateMetadata(
     { params }: Props,
     parent: ResolvingMetadata,
 ): Promise<Metadata> {
-    // read route params
     const { slug } = params;
 
     const response = await getServiceBySlug(slug);
