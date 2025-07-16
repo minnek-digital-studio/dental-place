@@ -1,3 +1,4 @@
+import { config } from "@/config/constants";
 import CallToAction from "@/modules/common/components/CallToAction";
 import Footer from "@/modules/common/components/footer";
 import { NavBar } from "@/modules/common/components/navbar";
@@ -18,9 +19,11 @@ import ServiceSection, {
     ServiceSectionProps,
 } from "@/modules/home/components/services-section";
 import { VideoSection } from "@/modules/home/components/video-section";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getHomePageInfo();

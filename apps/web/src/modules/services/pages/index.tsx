@@ -1,3 +1,4 @@
+import { config } from "@/config/constants";
 import CallToAction from "@/modules/common/components/CallToAction";
 import Layout from "@/modules/common/layouts/layout";
 import { getServicesPage } from "@/modules/services/actions/services.action";
@@ -7,10 +8,11 @@ import ClinicSection, {
 import ServiceSection, {
     type ServiceSectionProps,
 } from "@/modules/services/components/services-section";
-
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getServicesPage();

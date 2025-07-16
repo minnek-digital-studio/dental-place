@@ -1,19 +1,21 @@
-import React from "react";
-import Layout from "@/modules/common/layouts/layout";
-import HeroSection, {
-    type HeroSectionProps,
-} from "@/modules/braces/components/hero-section";
+import { config } from "@/config/constants";
+import { getBracesExpressPageInfo } from "@/modules/braces/actions/braces.actions";
 import BracesPhotosSection, {
     type BracesPhotosSectionProps,
 } from "@/modules/braces/components/braces-photos-section";
-import type { Metadata } from "next";
-import CallToAction from "@/modules/common/components/CallToAction";
-
-import { getBracesExpressPageInfo } from "@/modules/braces/actions/braces.actions";
 import HelpFormSection, {
     type HelpFormSectionProps,
-} from "../components/help-form-section";
-import HelpFormInfo from "../data/helpform.json";
+} from "@/modules/braces/components/help-form-section";
+import HeroSection, {
+    type HeroSectionProps,
+} from "@/modules/braces/components/hero-section";
+import CallToAction from "@/modules/common/components/CallToAction";
+import Layout from "@/modules/common/layouts/layout";
+import type { Metadata } from "next";
+
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getBracesExpressPageInfo();

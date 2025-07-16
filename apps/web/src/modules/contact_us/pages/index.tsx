@@ -1,11 +1,16 @@
-import { cn } from "@minnek/ui/lib/utils";
-import { Typography } from "@minnek/ui/components/typography";
+import { config } from "@/config/constants";
 import Footer from "@/modules/common/components/footer";
-import ContactCard from "../components/contact-card";
-import HeroSection from "../components/hero-section";
-import GoogleMaps from "../components/google-maps";
-import ContactForm from "../components/contact-form";
-import ContactUsData from "../data/contact-us.json";
+import ContactCard from "@/modules/contact_us/components/contact-card";
+import ContactForm from "@/modules/contact_us/components/contact-form";
+import GoogleMaps from "@/modules/contact_us/components/google-maps";
+import HeroSection from "@/modules/contact_us/components/hero-section";
+import ContactUsData from "@/modules/contact_us/data/contact-us.json";
+import { Typography } from "@minnek/ui/components/typography";
+import { cn } from "@minnek/ui/lib/utils";
+
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 const ContactPage = () => {
     return (

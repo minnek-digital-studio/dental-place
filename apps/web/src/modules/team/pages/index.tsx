@@ -1,14 +1,18 @@
+import { config } from "@/config/constants";
+import CallToAction from "@/modules/common/components/CallToAction";
 import Layout from "@/modules/common/layouts/layout";
+import { getTeamPageInfo } from "@/modules/team/actions/team.action";
 import AskSection, {
     type AskSectionProps,
 } from "@/modules/team/components/ask-section";
-import { Metadata } from "next";
 import OurTeamSection, {
     type OurTeamSectionProps,
 } from "@/modules/team/components/team-section";
-import { getTeamPageInfo } from "../actions/team.action";
+import type { Metadata } from "next";
 
-import CallToAction from "@/modules/common/components/CallToAction";
+export const dynamic = config.DYNAMIC_PAGE_GENERATION
+    ? "force-dynamic"
+    : "auto";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getTeamPageInfo();
