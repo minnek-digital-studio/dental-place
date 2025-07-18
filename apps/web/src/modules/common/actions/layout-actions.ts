@@ -1,11 +1,18 @@
+import { config } from "@/config/constants";
 import {
     GetFooterInfoDocument,
-    GetFooterInfoQuery,
+    type GetFooterInfoQuery,
+    GetGeneralMenuDocument,
+    type GetGeneralMenuQuery,
     GetNavbarInfoDocument,
-    GetNavbarInfoQuery,
+    type GetNavbarInfoQuery,
 } from "@/graphql/generated/graphql";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
-import { mapNavbarData, mapFooterData } from "../utils/layoutMapping";
+import {
+    mapFooterData,
+    mapMenuData,
+    mapNavbarData,
+} from "@/modules/common/utils/layoutMapping";
 
 export const getNavbarData = async () => {
     const { data, error } = await getClient().query<GetNavbarInfoQuery>({
@@ -15,6 +22,32 @@ export const getNavbarData = async () => {
     const navbarData = mapNavbarData(data.header);
     return {
         ...navbarData,
+        error,
+    };
+};
+
+export const getMenuData = async () => {
+    const [menuData, navbarData] = await Promise.all([
+        await getClient().query<GetGeneralMenuQuery>({
+            query: GetGeneralMenuDocument,
+            variables: {
+                slug: config.WORDPRESS_MENU_SLUG,
+            },
+        }),
+        await getClient().query<GetNavbarInfoQuery>({
+            query: GetNavbarInfoDocument,
+        }),
+    ]);
+
+    const mappedMenuData = mapMenuData({
+        menuData: menuData.data.menu,
+        navbarData: navbarData.data.header,
+    });
+
+    const error = menuData.error || navbarData.error;
+
+    return {
+        ...mappedMenuData,
         error,
     };
 };
