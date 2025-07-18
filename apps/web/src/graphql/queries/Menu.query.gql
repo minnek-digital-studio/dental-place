@@ -1,0 +1,21 @@
+query getGeneralMenu($slug: ID = "general-menu") {
+    menu(id: $slug, idType: SLUG) {
+        menuItems {
+            edges {
+                node {
+                    label
+                    url
+                    parentId
+                    childItems {
+                        edges {
+                            node {
+                                label
+                                url
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

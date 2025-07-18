@@ -1,3 +1,12 @@
+import { config } from "@/config/constants";
+import {
+    getMenuData,
+    getNavbarData,
+} from "@/modules/common/actions/layout-actions";
+import {
+    Dropdown,
+    type DropdownOption,
+} from "@/modules/common/components/dropdown";
 import {
     Accordion,
     AccordionContent,
@@ -15,6 +24,13 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@minnek/ui/components/navigation-menu";
+import {
+    Sheet,
+    SheetContent,
+    SheetFooter,
+    SheetHeader,
+    SheetTrigger,
+} from "@minnek/ui/components/sheet";
 import { Typography } from "@minnek/ui/components/typography";
 import {
     ChevronDown,
@@ -25,18 +41,7 @@ import {
 } from "@minnek/ui/icons";
 import { cn, cva, type VariantProps } from "@minnek/ui/lib/utils";
 import Link from "next/link";
-import * as React from "react";
-import { Dropdown, type DropdownOption } from "./dropdown";
-
-import {
-    Sheet,
-    SheetContent,
-    SheetHeader,
-    SheetTrigger,
-    SheetFooter,
-} from "@minnek/ui/components/sheet";
-
-import { getNavbarData } from "../actions/layout-actions";
+import React from "react";
 
 export type NavBarItem = {
     title: string;
@@ -146,7 +151,9 @@ export async function NavBar({
         SocialLinksConfig,
         navItems,
         error,
-    } = await getNavbarData();
+    } = config.WORDPRESS_MENU_ENABLED
+        ? await getMenuData()
+        : await getNavbarData();
 
     if (error) {
         console.error(error);
