@@ -9,6 +9,11 @@ import { UsaFlag } from "./usaFlag";
 import { WhatsApp } from "./whatsApp";
 import { Comma } from "./comma";
 import { Google } from "./google";
+import { ImplantTooth } from "./implantTooth";
+import { DentureTooth } from "./denture";
+import { BracketsTooth } from "./brackets";
+import { Implant2Tooth } from "./implant2Tooth";
+import { SmileTooth } from "./smileTooth";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
@@ -19,6 +24,11 @@ export * from "./usaFlag";
 export * from "./whatsApp";
 export * from "./comma";
 export * from "./google";
+export * from "./implantTooth";
+export * from "./denture";
+export * from "./brackets";
+export * from "./implant2Tooth";
+export * from "./smileTooth";
 
 const customIcons = {
     CleanTooth,
@@ -31,6 +41,11 @@ const customIcons = {
     WhatsApp,
     Comma,
     Google,
+    ImplantTooth,
+    DentureTooth,
+    BracketsTooth,
+    Implant2Tooth,
+    SmileTooth,
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
