@@ -1,6 +1,6 @@
 import { cn } from "@minnek/ui/lib/utils";
 import { ImageType } from "../types";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import { forwardRef } from "react";
 
 export interface ImageProps

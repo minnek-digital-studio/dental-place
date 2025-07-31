@@ -4,7 +4,7 @@ import { Button } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
 import type { ButtonType, ImageType } from "@/modules/common/types";
 import { MoveRight } from "@minnek/ui/icons";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 
 export type HeroSectionProps = {
     title: string;

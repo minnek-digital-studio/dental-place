@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 
 import {
     Breadcrumb,

@@ -1,12 +1,10 @@
-import FooterData from "../data/footer.json";
-import { Icon } from "../types";
+import Link from "@/modules/common/components/link";
 import { Button } from "@minnek/ui/components/button";
-import { IconByName } from "@minnek/ui/icons";
 import { Typography } from "@minnek/ui/components/typography";
-import Link from "next/link";
-import { LucideMapPin } from "@minnek/ui/icons";
+import { IconByName } from "@minnek/ui/icons";
 import { cn } from "@minnek/ui/lib/utils";
 import { getFooterData } from "../actions/layout-actions";
+import { Icon } from "../types";
 
 type FooterColumnType = {
     title: string;

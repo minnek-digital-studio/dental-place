@@ -10,7 +10,7 @@ import {
     CardFooter,
 } from "@minnek/ui/components/card";
 import { Button } from "@minnek/ui/components/button";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import { Typography } from "@minnek/ui/components/typography";
 import { cn } from "@minnek/ui/lib/utils";
 import { IconByName } from "@minnek/ui/icons";

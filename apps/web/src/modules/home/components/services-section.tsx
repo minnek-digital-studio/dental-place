@@ -4,7 +4,7 @@ import ServiceCard, {
 } from "@/modules/common/components/service-card";
 import { Button, type ButtonVariants } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import {
     Carousel,
     CarouselContent,
@@ -95,7 +95,7 @@ const ServiceSection = ({
                     size={button.size}
                     asChild
                 >
-                    <Link
+                    <a
                         href={button.link}
                         className="font-bold w-max"
                         aria-label={button.text}
@@ -103,7 +103,7 @@ const ServiceSection = ({
                         <Typography as="span" className="text-inherit">
                             {button.text}
                         </Typography>
-                    </Link>
+                    </a>
                 </Button>
             </footer>
         </section>

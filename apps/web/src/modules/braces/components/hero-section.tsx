@@ -3,7 +3,7 @@ import type { ButtonType, ImageType } from "@/modules/common/types";
 import { Image } from "@/modules/common/components/image";
 import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import { Button } from "@minnek/ui/components/button";
 import { IconByName } from "@minnek/ui/icons";
 

@@ -4,7 +4,7 @@ import ServiceCard, {
 } from "@/modules/common/components/service-card";
 import { Button, type ButtonVariants } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import { IconByName, type IconsName } from "@minnek/ui/icons";
 import { type ButtonType } from "@/modules/common/types";
 

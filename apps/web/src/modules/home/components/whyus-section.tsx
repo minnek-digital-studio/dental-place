@@ -4,7 +4,7 @@ import { Button } from "@minnek/ui/components/button";
 import { Typography } from "@minnek/ui/components/typography";
 import type { ButtonType, ImageType, Icon } from "@/modules/common/types";
 import { MoveRight, type IconsName, IconByName } from "@minnek/ui/icons";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 
 export type WhyUsSectionProps = {
     title: string;
