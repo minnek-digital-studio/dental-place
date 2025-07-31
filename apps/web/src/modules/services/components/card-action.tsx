@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@minnek/ui/components/button";
 import { IconByName } from "@minnek/ui/icons";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import { ButtonType } from "@/modules/common/types";
 
 export interface CardToActionProps {

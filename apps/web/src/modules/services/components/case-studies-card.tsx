@@ -8,7 +8,7 @@ import {
 } from "@minnek/ui/components/card";
 import type { ImageType, ButtonType } from "@/modules/common/types";
 import { Button } from "@minnek/ui/components/button";
-import Link from "next/link";
+import Link from "@/modules/common/components/link";
 import { cn } from "@minnek/ui/lib/utils";
 import { Typography } from "@minnek/ui/components/typography";
 
