@@ -4575,7 +4575,7 @@
           },
           {
             "name": "preview",
-            "description": "Connection between the CallToAction type and the callToAction type",
+            "description": "Connection between the callToAction type and the callToAction type",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -6436,7 +6436,7 @@
       {
         "kind": "OBJECT",
         "name": "CallToActionToCallToActionConnection",
-        "description": "Connection between the CallToAction type and the callToAction type",
+        "description": "Connection between the callToAction type and the callToAction type",
         "isOneOf": null,
         "fields": [
           {
@@ -6670,7 +6670,7 @@
       {
         "kind": "OBJECT",
         "name": "CallToActionToParentConnectionEdge",
-        "description": "Connection between the CallToAction type and the callToAction type",
+        "description": "Connection between the callToAction type and the callToAction type",
         "isOneOf": null,
         "fields": [
           {
@@ -6726,7 +6726,7 @@
       {
         "kind": "OBJECT",
         "name": "CallToActionToPreviewConnectionEdge",
-        "description": "Connection between the CallToAction type and the callToAction type",
+        "description": "Connection between the callToAction type and the callToAction type",
         "isOneOf": null,
         "fields": [
           {
@@ -7844,7 +7844,7 @@
           },
           {
             "name": "preview",
-            "description": "Connection between the CaseStudy type and the caseStudy type",
+            "description": "Connection between the caseStudy type and the caseStudy type",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -9829,7 +9829,7 @@
       {
         "kind": "OBJECT",
         "name": "CaseStudyToCaseStudyConnection",
-        "description": "Connection between the CaseStudy type and the caseStudy type",
+        "description": "Connection between the caseStudy type and the caseStudy type",
         "isOneOf": null,
         "fields": [
           {
@@ -10063,7 +10063,7 @@
       {
         "kind": "OBJECT",
         "name": "CaseStudyToParentConnectionEdge",
-        "description": "Connection between the CaseStudy type and the caseStudy type",
+        "description": "Connection between the caseStudy type and the caseStudy type",
         "isOneOf": null,
         "fields": [
           {
@@ -10119,7 +10119,7 @@
       {
         "kind": "OBJECT",
         "name": "CaseStudyToPreviewConnectionEdge",
-        "description": "Connection between the CaseStudy type and the caseStudy type",
+        "description": "Connection between the caseStudy type and the caseStudy type",
         "isOneOf": null,
         "fields": [
           {
@@ -38370,7 +38370,7 @@
       {
         "kind": "UNION",
         "name": "MenuItemObjectUnion",
-        "description": "Deprecated in favor of MenuItemLinkeable Interface",
+        "description": "Deprecated in favor of MenuItemLinkable Interface",
         "isOneOf": null,
         "fields": null,
         "inputFields": null,
@@ -42068,7 +42068,7 @@
           },
           {
             "name": "preview",
-            "description": "Connection between the Page type and the page type",
+            "description": "Connection between the page type and the page type",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -43996,7 +43996,7 @@
       {
         "kind": "OBJECT",
         "name": "PageToPreviewConnectionEdge",
-        "description": "Connection between the Page type and the page type",
+        "description": "Connection between the page type and the page type",
         "isOneOf": null,
         "fields": [
           {
@@ -47108,7 +47108,7 @@
           },
           {
             "name": "preview",
-            "description": "Connection between the Post type and the post type",
+            "description": "Connection between the post type and the post type",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -51784,7 +51784,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToParentConnectionEdge",
-        "description": "Connection between the Post type and the post type",
+        "description": "Connection between the post type and the post type",
         "isOneOf": null,
         "fields": [
           {
@@ -51840,7 +51840,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToPostConnection",
-        "description": "Connection between the Post type and the post type",
+        "description": "Connection between the post type and the post type",
         "isOneOf": null,
         "fields": [
           {
@@ -52600,7 +52600,7 @@
       {
         "kind": "OBJECT",
         "name": "PostToPreviewConnectionEdge",
-        "description": "Connection between the Post type and the post type",
+        "description": "Connection between the post type and the post type",
         "isOneOf": null,
         "fields": [
           {
@@ -56195,7 +56195,7 @@
           },
           {
             "name": "preview",
-            "description": "Connection between the Review type and the review type",
+            "description": "Connection between the review type and the review type",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -56705,7 +56705,7 @@
       {
         "kind": "OBJECT",
         "name": "ReviewToParentConnectionEdge",
-        "description": "Connection between the Review type and the review type",
+        "description": "Connection between the review type and the review type",
         "isOneOf": null,
         "fields": [
           {
@@ -56761,7 +56761,7 @@
       {
         "kind": "OBJECT",
         "name": "ReviewToPreviewConnectionEdge",
-        "description": "Connection between the Review type and the review type",
+        "description": "Connection between the review type and the review type",
         "isOneOf": null,
         "fields": [
           {
@@ -56817,7 +56817,7 @@
       {
         "kind": "OBJECT",
         "name": "ReviewToReviewConnection",
-        "description": "Connection between the Review type and the review type",
+        "description": "Connection between the review type and the review type",
         "isOneOf": null,
         "fields": [
           {
@@ -101657,6 +101657,15 @@
             "deprecationReason": null
           }
         ]
+      },
+      {
+        "name": "oneOf",
+        "description": "Indicates that an Input Object is a OneOf Input Object (and thus requires exactly one of its fields be provided).",
+        "isRepeatable": false,
+        "locations": [
+          "INPUT_OBJECT"
+        ],
+        "args": []
       },
       {
         "name": "skip",

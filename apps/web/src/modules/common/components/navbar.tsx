@@ -27,7 +27,7 @@ import {
 import {
     Sheet,
     SheetContent,
-    SheetFooter,
+
     SheetHeader,
     SheetTrigger,
 } from "@minnek/ui/components/sheet";
@@ -145,7 +145,7 @@ export async function NavBar({
     ...props
 }: NavbarProps) {
     const {
-        LangConfig,
+
         PhoneConfig,
         SchedulesConfig,
         SocialLinksConfig,
@@ -315,15 +315,7 @@ export async function NavBar({
                                     </>
                                 );
                             })}
-                            <Dropdown
-                                defaultOption={
-                                    LangConfig.languages[0] as DropdownOption
-                                }
-                                options={LangConfig.languages}
-                                label={LangConfig.title}
-                                className="hidden md:flex"
-                                radioGroup
-                            />
+
                             <Dropdown
                                 defaultOption={
                                     SchedulesConfig
@@ -393,18 +385,7 @@ export async function NavBar({
                                         />
                                     </NavigationMenuListColumn>
                                 </NavigationMenu>
-                                <SheetFooter>
-                                    <Dropdown
-                                        defaultOption={
-                                            LangConfig
-                                                .languages[0] as DropdownOption
-                                        }
-                                        options={LangConfig.languages}
-                                        label={LangConfig.title}
-                                        className="flex"
-                                        radioGroup
-                                    />
-                                </SheetFooter>
+
                             </SheetContent>
                         </Sheet>
                     </div>
