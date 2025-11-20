@@ -672,7 +672,7 @@ export type CallToAction = ContentNode & DatabaseIdentifier & MenuItemLinkable &
   parent?: Maybe<CallToActionToParentConnectionEdge>;
   /** The password for the call-to-actions object. */
   password?: Maybe<Scalars['String']['output']>;
-  /** Connection between the CallToAction type and the callToAction type */
+  /** Connection between the callToAction type and the callToAction type */
   preview?: Maybe<CallToActionToPreviewConnectionEdge>;
   /** The database id of the preview node */
   previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
@@ -1024,7 +1024,7 @@ export type CallToActionSettings_Fields = {
   type: Array<Maybe<Scalars['String']['output']>>;
 };
 
-/** Connection between the CallToAction type and the callToAction type */
+/** Connection between the callToAction type and the callToAction type */
 export type CallToActionToCallToActionConnection = CallToActionConnection & Connection & {
   __typename?: 'CallToActionToCallToActionConnection';
   /** Edges for the CallToActionToCallToActionConnection connection */
@@ -1065,7 +1065,7 @@ export type CallToActionToCallToActionConnectionPageInfo = CallToActionConnectio
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
-/** Connection between the CallToAction type and the callToAction type */
+/** Connection between the callToAction type and the callToAction type */
 export type CallToActionToParentConnectionEdge = CallToActionConnectionEdge & Edge & OneToOneConnection & {
   __typename?: 'CallToActionToParentConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -1077,7 +1077,7 @@ export type CallToActionToParentConnectionEdge = CallToActionConnectionEdge & Ed
   node: CallToAction;
 };
 
-/** Connection between the CallToAction type and the callToAction type */
+/** Connection between the callToAction type and the callToAction type */
 export type CallToActionToPreviewConnectionEdge = CallToActionConnectionEdge & Edge & OneToOneConnection & {
   __typename?: 'CallToActionToPreviewConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -1237,7 +1237,7 @@ export type CaseStudy = ContentNode & DatabaseIdentifier & MenuItemLinkable & No
   parent?: Maybe<CaseStudyToParentConnectionEdge>;
   /** The password for the dental-case-studies object. */
   password?: Maybe<Scalars['String']['output']>;
-  /** Connection between the CaseStudy type and the caseStudy type */
+  /** Connection between the caseStudy type and the caseStudy type */
   preview?: Maybe<CaseStudyToPreviewConnectionEdge>;
   /** The database id of the preview node */
   previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
@@ -1617,7 +1617,7 @@ export type CaseStudySettings_FieldsCallToActionsArgs = {
   last?: InputMaybe<Scalars['Int']['input']>;
 };
 
-/** Connection between the CaseStudy type and the caseStudy type */
+/** Connection between the caseStudy type and the caseStudy type */
 export type CaseStudyToCaseStudyConnection = CaseStudyConnection & Connection & {
   __typename?: 'CaseStudyToCaseStudyConnection';
   /** Edges for the CaseStudyToCaseStudyConnection connection */
@@ -1658,7 +1658,7 @@ export type CaseStudyToCaseStudyConnectionPageInfo = CaseStudyConnectionPageInfo
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
-/** Connection between the CaseStudy type and the caseStudy type */
+/** Connection between the caseStudy type and the caseStudy type */
 export type CaseStudyToParentConnectionEdge = CaseStudyConnectionEdge & Edge & OneToOneConnection & {
   __typename?: 'CaseStudyToParentConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -1670,7 +1670,7 @@ export type CaseStudyToParentConnectionEdge = CaseStudyConnectionEdge & Edge & O
   node: CaseStudy;
 };
 
-/** Connection between the CaseStudy type and the caseStudy type */
+/** Connection between the caseStudy type and the caseStudy type */
 export type CaseStudyToPreviewConnectionEdge = CaseStudyConnectionEdge & Edge & OneToOneConnection & {
   __typename?: 'CaseStudyToPreviewConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -6326,7 +6326,7 @@ export enum MenuItemNodeIdTypeEnum {
   Id = 'ID'
 }
 
-/** Deprecated in favor of MenuItemLinkeable Interface */
+/** Deprecated in favor of MenuItemLinkable Interface */
 export type MenuItemObjectUnion = CallToAction | CaseStudy | Category | Page | Post | Review | Service | Tag | Team | TypePage;
 
 /** Connection between the MenuItem type and the Menu type */
@@ -6918,7 +6918,7 @@ export type Page = ContentNode & DatabaseIdentifier & HierarchicalContentNode & 
   parentId?: Maybe<Scalars['ID']['output']>;
   /** The password for the page object. */
   password?: Maybe<Scalars['String']['output']>;
-  /** Connection between the Page type and the page type */
+  /** Connection between the page type and the page type */
   preview?: Maybe<PageToPreviewConnectionEdge>;
   /** The database id of the preview node */
   previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
@@ -7191,7 +7191,7 @@ export type PageToCommentConnectionWhereArgs = {
   userId?: InputMaybe<Scalars['ID']['input']>;
 };
 
-/** Connection between the Page type and the page type */
+/** Connection between the page type and the page type */
 export type PageToPreviewConnectionEdge = Edge & OneToOneConnection & PageConnectionEdge & {
   __typename?: 'PageToPreviewConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -7638,7 +7638,7 @@ export type Post = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & 
    * @deprecated Deprecated in favor of the databaseId field
    */
   postId: Scalars['Int']['output'];
-  /** Connection between the Post type and the post type */
+  /** Connection between the post type and the post type */
   preview?: Maybe<PostToPreviewConnectionEdge>;
   /** The database id of the preview node */
   previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
@@ -8462,7 +8462,7 @@ export type PostToCommentConnectionWhereArgs = {
   userId?: InputMaybe<Scalars['ID']['input']>;
 };
 
-/** Connection between the Post type and the post type */
+/** Connection between the post type and the post type */
 export type PostToParentConnectionEdge = Edge & OneToOneConnection & PostConnectionEdge & {
   __typename?: 'PostToParentConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -8474,7 +8474,7 @@ export type PostToParentConnectionEdge = Edge & OneToOneConnection & PostConnect
   node: Post;
 };
 
-/** Connection between the Post type and the post type */
+/** Connection between the post type and the post type */
 export type PostToPostConnection = Connection & PostConnection & {
   __typename?: 'PostToPostConnection';
   /** Edges for the PostToPostConnection connection */
@@ -8596,7 +8596,7 @@ export type PostToPostFormatConnectionWhereArgs = {
   updateTermMetaCache?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-/** Connection between the Post type and the post type */
+/** Connection between the post type and the post type */
 export type PostToPreviewConnectionEdge = Edge & OneToOneConnection & PostConnectionEdge & {
   __typename?: 'PostToPreviewConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -9141,7 +9141,7 @@ export type Review = ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
   parent?: Maybe<ReviewToParentConnectionEdge>;
   /** The password for the review object. */
   password?: Maybe<Scalars['String']['output']>;
-  /** Connection between the Review type and the review type */
+  /** Connection between the review type and the review type */
   preview?: Maybe<ReviewToPreviewConnectionEdge>;
   /** The database id of the preview node */
   previewRevisionDatabaseId?: Maybe<Scalars['Int']['output']>;
@@ -9251,7 +9251,7 @@ export enum ReviewIdType {
   Uri = 'URI'
 }
 
-/** Connection between the Review type and the review type */
+/** Connection between the review type and the review type */
 export type ReviewToParentConnectionEdge = Edge & OneToOneConnection & ReviewConnectionEdge & {
   __typename?: 'ReviewToParentConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -9263,7 +9263,7 @@ export type ReviewToParentConnectionEdge = Edge & OneToOneConnection & ReviewCon
   node: Review;
 };
 
-/** Connection between the Review type and the review type */
+/** Connection between the review type and the review type */
 export type ReviewToPreviewConnectionEdge = Edge & OneToOneConnection & ReviewConnectionEdge & {
   __typename?: 'ReviewToPreviewConnectionEdge';
   /** Opaque reference to the nodes position in the connection. Value can be used with pagination args. */
@@ -9272,7 +9272,7 @@ export type ReviewToPreviewConnectionEdge = Edge & OneToOneConnection & ReviewCo
   node: Review;
 };
 
-/** Connection between the Review type and the review type */
+/** Connection between the review type and the review type */
 export type ReviewToReviewConnection = Connection & ReviewConnection & {
   __typename?: 'ReviewToReviewConnection';
   /** Edges for the ReviewToReviewConnection connection */
