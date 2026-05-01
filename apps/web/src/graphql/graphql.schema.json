@@ -14293,7 +14293,7 @@
           },
           {
             "name": "email",
-            "description": "The email for the comment author",
+            "description": "The email for the comment author.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -15432,7 +15432,7 @@
           },
           {
             "name": "email",
-            "description": "The email address representing the author for this particular comment",
+            "description": "Email address representing the author for this particular comment",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -24532,6 +24532,11 @@
           },
           {
             "kind": "OBJECT",
+            "name": "GeneralSettingsToMediaItemConnectionEdge",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "HierarchicalContentNodeToContentNodeAncestorsConnectionEdge",
             "ofType": null
           },
@@ -27320,6 +27325,43 @@
             "deprecationReason": null
           },
           {
+            "name": "siteIcon",
+            "description": "The media item representing the site icon configured in site settings, used as the site&#039;s favicon and app icon.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "GeneralSettingsToMediaItemConnectionEdge",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "siteIconUrl",
+            "description": "Site icon URL configured in site settings, used as the site&#039;s favicon and app icon.",
+            "args": [
+              {
+                "name": "size",
+                "description": "Size of the site icon in pixels. Defaults to 512. Max 512.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "startOfWeek",
             "description": "El número de día en el que la semana debe comenzar.",
             "args": [],
@@ -27382,6 +27424,62 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "GeneralSettingsToMediaItemConnectionEdge",
+        "description": "Connection between the GeneralSettings type and the MediaItem type",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "cursor",
+            "description": "Opaque reference to the nodes position in the connection. Value can be used with pagination args.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "node",
+            "description": "The node of the connection, without the edges",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "MediaItem",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "Edge",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "MediaItemConnectionEdge",
+            "ofType": null
+          },
+          {
+            "kind": "INTERFACE",
+            "name": "OneToOneConnection",
+            "ofType": null
+          }
+        ],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -35813,6 +35911,11 @@
           },
           {
             "kind": "OBJECT",
+            "name": "GeneralSettingsToMediaItemConnectionEdge",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "NodeWithFeaturedImageToMediaItemConnectionEdge",
             "ofType": null
           },
@@ -41056,6 +41159,11 @@
           {
             "kind": "OBJECT",
             "name": "ContentNodeToEditLockConnectionEdge",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "GeneralSettingsToMediaItemConnectionEdge",
             "ofType": null
           },
           {
@@ -84514,16 +84622,12 @@
           },
           {
             "name": "description",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "description": "Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -84549,13 +84653,9 @@
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -85768,16 +85868,12 @@
           },
           {
             "name": "description",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
+            "description": "Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -85803,13 +85899,9 @@
             "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamMemberSettings&quot; Field Group",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -85978,7 +86070,7 @@
           },
           {
             "name": "description",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "description": "Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -86405,7 +86497,7 @@
           },
           {
             "name": "description",
-            "description": "Field of the &quot;text&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
+            "description": "Field of the &quot;wysiwyg&quot; Field Type added to the schema as part of the &quot;TeamPageSettings&quot; Field Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -94079,6 +94171,18 @@
         "isOneOf": null,
         "fields": [
           {
+            "name": "adminColor",
+            "description": "The admin color scheme preference for the user. Possible values include &quot;fresh&quot;, &quot;light&quot;, &quot;blue&quot;, &quot;coffee&quot;, &quot;ectoplasm&quot;, &quot;midnight&quot;, &quot;ocean&quot;, &quot;sunrise&quot;. Default is &quot;fresh&quot;.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "avatar",
             "description": "Avatar object for user. The avatar object can be retrieved in different sizes by specifying the size argument.",
             "args": [
@@ -94413,6 +94517,42 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hasCommentShortcutsEnabled",
+            "description": "Whether the user has enabled keyboard shortcuts for comment moderation. Defaults to false.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hasRichEditingEnabled",
+            "description": "Whether the user has enabled the visual editor. When enabled, the WYSIWYG editor is used for content editing. Defaults to true.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hasSyntaxHighlightingEnabled",
+            "description": "Whether the user has enabled syntax highlighting when editing code within the post editor. Defaults to true.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,

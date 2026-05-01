@@ -1,12 +1,12 @@
 query getGeneralMenu($slug: ID = "general-menu") {
     menu(id: $slug, idType: SLUG) {
-        menuItems {
+        menuItems(first: 100) {
             edges {
                 node {
                     label
                     url
                     parentId
-                    childItems {
+                    childItems(first: 100) {
                         edges {
                             node {
                                 label
