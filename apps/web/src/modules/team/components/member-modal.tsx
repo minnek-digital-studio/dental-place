@@ -88,9 +88,10 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
                 </DialogHeader>
                 <main className="mt-2">
                     {description && (
-                        <Typography as="p" className="text-lg">
-                            {description}
-                        </Typography>
+                        <div
+                            className="font-noto-sans text-black text-lg"
+                            dangerouslySetInnerHTML={{ __html: description }}
+                        />
                     )}
 
                     <div className="flex flex-col gap-3 md:gap-7 max-md:text-center ">

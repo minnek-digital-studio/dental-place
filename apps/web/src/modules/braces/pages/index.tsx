@@ -1,4 +1,3 @@
-import { config } from "@/config/constants";
 import { getBracesExpressPageInfo } from "@/modules/braces/actions/braces.actions";
 import BracesPhotosSection, {
     type BracesPhotosSectionProps,
@@ -13,9 +12,7 @@ import CallToAction from "@/modules/common/components/CallToAction";
 import Layout from "@/modules/common/layouts/layout";
 import type { Metadata } from "next";
 
-export const dynamic = config.DYNAMIC_PAGE_GENERATION
-    ? "force-dynamic"
-    : "auto";
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
     const { seo } = await getBracesExpressPageInfo();
