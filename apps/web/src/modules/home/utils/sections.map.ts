@@ -43,10 +43,10 @@ export const mapReviewData = async (
                 "",
             link:
                 data?.homePageSettings?.reviewSection?.button?.link?.url || "",
-            variant: data?.homePageSettings?.reviewSection?.button
-                ?.variant?.[0] as ButtonVariants["variant"],
-            size: data?.homePageSettings?.reviewSection?.button
-                ?.size[0] as ButtonVariants["size"],
+            variant: (data?.homePageSettings?.reviewSection?.button
+                ?.variant?.[0] || "default") as ButtonVariants["variant"],
+            size: (data?.homePageSettings?.reviewSection?.button?.size?.[0] ||
+                "default") as ButtonVariants["size"],
         },
         items: await Promise.all(
             (data?.homePageSettings?.reviewSection?.reviews?.edges || []).map(
@@ -69,9 +69,10 @@ export const mapServiceData = async (
         button: {
             text: serviceData?.button?.link?.title || "",
             link: serviceData?.button?.link?.url || "",
-            variant: serviceData?.button
-                ?.variant?.[0] as ButtonVariants["variant"],
-            size: serviceData?.button?.size?.[0] as ButtonVariants["size"],
+            variant: (serviceData?.button?.variant?.[0] ||
+                "default") as ButtonVariants["variant"],
+            size: (serviceData?.button?.size?.[0] ||
+                "default") as ButtonVariants["size"],
         },
         items: services,
     };
@@ -102,13 +103,16 @@ export const mapPresentationData = (
                     text: button?.link?.title || "",
                     link: button?.link?.url || "",
                     icon: {
-                        name: button?.icon?.name as IconsName,
-                        size: button?.icon?.size as number,
-                        position: button?.icon?.position[0] as Icon["position"],
+                        name: (button?.icon?.name || "Activity") as IconsName,
+                        size: button?.icon?.size || 24,
+                        position: (button?.icon?.position?.[0] ||
+                            "left") as Icon["position"],
                     },
-                    size: button?.size[0] as ButtonVariants["size"],
-                    variant: button?.variant[0] as ButtonVariants["variant"],
-                    className: button?.className as string,
+                    size: (button?.size?.[0] ||
+                        "default") as ButtonVariants["size"],
+                    variant: (button?.variant?.[0] ||
+                        "default") as ButtonVariants["variant"],
+                    className: button?.className || "",
                 })) || [],
             title: presentationData?.card?.title || "",
         },
@@ -127,15 +131,17 @@ export const mapInstagramData = (
     return {
         title: instagramData?.title || "",
         icon: {
-            name: instagramData?.icon?.name as IconsName,
-            size: instagramData?.icon?.size as number,
+            name: (instagramData?.icon?.name ||
+                "InstagramColored") as IconsName,
+            size: instagramData?.icon?.size || 25,
         },
         button: {
             text: instagramData?.button?.link?.title || "",
             link: instagramData?.button?.link?.url || "",
-            variant: instagramData?.button
-                ?.variant?.[0] as ButtonVariants["variant"],
-            size: instagramData?.button?.size[0] as ButtonVariants["size"],
+            variant: (instagramData?.button?.variant?.[0] ||
+                "link") as ButtonVariants["variant"],
+            size: (instagramData?.button?.size?.[0] ||
+                "link") as ButtonVariants["size"],
         },
         carouselPost: {
             images: InstagramInfo.carouselPost.images,

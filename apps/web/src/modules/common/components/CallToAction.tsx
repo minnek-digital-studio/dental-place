@@ -6,11 +6,11 @@ export interface CallToActionProps extends CallToAction {
     type?: ComponentType;
 }
 
-const callToAction = ({ type, ...props }: CallToActionProps) => {
+const CallToActionComponent = ({ type, ...props }: CallToActionProps) => {
     if (!type) return null;
     const Component = ComponentByType(type);
-
+    if (!Component) return null;
     return <Component {...props} />;
 };
 
-export default callToAction;
+export default CallToActionComponent;

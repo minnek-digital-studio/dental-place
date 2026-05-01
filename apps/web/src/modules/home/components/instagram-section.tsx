@@ -13,7 +13,7 @@ export interface InstagramSectionProps
     carouselPost: InstagramPostProps;
 }
 
-const instagramSection = ({
+const InstagramSection = ({
     title,
     button,
     icon,
@@ -52,4 +52,4 @@ const instagramSection = ({
     );
 };
 
-export default instagramSection;
+export default InstagramSection;

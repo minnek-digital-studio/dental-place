@@ -33,7 +33,7 @@ const WhyUsSection = ({
                 <main className="flex flex-col gap-6 w-full md:w-[60%] pt-10 px-6 md:px-10 md:py-14 md:pr-10">
                     <Typography as="h2">{title}</Typography>
                     <ul className="flex flex-col gap-6">
-                        {items.map((item, index) => (
+                        {items?.map((item, index) => (
                             <li key={index} className="flex gap-4">
                                 <div className="hidden md:flex">
                                     <IconByName {...item.icon} />
