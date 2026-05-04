@@ -1,23 +1,35 @@
 import { type PresentationSectionProps } from "@/modules/home/components/presentation-section";
 
 export const VideoSection = ({
+    img,
     video,
     mediaType,
 }: PresentationSectionProps) => {
     if (mediaType !== "video") return null;
     return (
-        <video
-            preload="auto"
-            aria-label={video?.alt || "Dental Video"}
-            autoPlay
-            loop
-            muted
-            className="absolute top-0 left-0 w-full h-full object-cover filter brightness-[0.75]"
+        <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={
+                img?.src
+                    ? { backgroundImage: `url('${img.src}')` }
+                    : undefined
+            }
         >
-            <source
-                src={video?.src || "/videos/dental_video.mp4"}
-                type="video/mp4"
-            />
-        </video>
+            <video
+                preload="auto"
+                aria-label={video?.alt || "Dental Video"}
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster={img?.src}
+                className="absolute inset-0 h-full w-full object-cover filter brightness-[0.75]"
+            >
+                <source
+                    src={video?.src || "/videos/dental_video.mp4"}
+                    type="video/mp4"
+                />
+            </video>
+        </div>
     );
 };

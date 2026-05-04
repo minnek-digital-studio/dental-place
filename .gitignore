@@ -22,3 +22,4 @@ Thumbs.db
 .turbo
 .vercel
 !/apps/cms/custom/data/dental_dev.sql
+.env*.local

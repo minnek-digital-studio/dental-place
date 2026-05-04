@@ -14,6 +14,7 @@ import { DentureTooth } from "./denture";
 import { BracketsTooth } from "./brackets";
 import { Implant2Tooth } from "./implant2Tooth";
 import { SmileTooth } from "./smileTooth";
+import { DentalPlaceTooth } from "./dentalPlaceTooth";
 
 export * from "./cleanTooth";
 export * from "./serviceTooth";
@@ -29,6 +30,7 @@ export * from "./denture";
 export * from "./brackets";
 export * from "./implant2Tooth";
 export * from "./smileTooth";
+export * from "./dentalPlaceTooth"
 
 const customIcons = {
     CleanTooth,
@@ -46,6 +48,7 @@ const customIcons = {
     BracketsTooth,
     Implant2Tooth,
     SmileTooth,
+    DentalPlaceTooth
 };
 
 export type IconsName = keyof typeof icons | keyof typeof customIcons;
