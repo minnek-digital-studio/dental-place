@@ -7,14 +7,8 @@ export const VideoSection = ({
 }: PresentationSectionProps) => {
     if (mediaType !== "video") return null;
     return (
-        <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={
-                img?.src
-                    ? { backgroundImage: `url('${img.src}')` }
-                    : undefined
-            }
-        >
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
+            <div className="absolute inset-0 bg-black/40" />
             <video
                 preload="auto"
                 aria-label={video?.alt || "Dental Video"}
