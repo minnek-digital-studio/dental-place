@@ -127,7 +127,7 @@ export const mapInstagramData = (
 
     const { __typename, ...carouselOptions } =
         instagramData?.carouselOptions || {};
-
+    console.log(carouselOptions);
     return {
         title: instagramData?.title || "",
         icon: {
