@@ -145,11 +145,16 @@ export const mapInstagramData = (
         },
         carouselPost: {
             images:
-                carouselOptions?.images?.map((item) => ({
-                    alt: item?.image?.node?.altText || "",
-                    src: item?.image?.node?.sourceUrl || "",
-                    isVisible: item?.isvisible ?? true,
-                })) || [],
+                carouselOptions?.images
+                    ?.filter(
+                        (item): item is NonNullable<typeof item> =>
+                            item !== null && item?.isvisible !== false,
+                    )
+                    .map(({ image, isvisible }) => ({
+                        alt: image?.node?.altText ?? "",
+                        src: image?.node?.sourceUrl ?? "",
+                        isVisible: isvisible ?? true,
+                    })) ?? [],
             autoScrollOptions: carouselOptions as any,
         },
     };
