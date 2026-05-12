@@ -18,6 +18,7 @@ export type ImageType = {
     alt?: string;
     className?: string;
     href?: string;
+    isVisible?: boolean;
 };
 
 export type VideoType = ImageType;

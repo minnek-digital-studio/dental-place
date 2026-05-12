@@ -1,5 +1,4 @@
 import { Button } from "@minnek/ui/components/button";
-import Link from "@/modules/common/components/link";
 import { Typography } from "@minnek/ui/components/typography";
 import { Icon, ButtonType } from "@/modules/common/types";
 import { cn } from "@minnek/ui/lib/utils";
