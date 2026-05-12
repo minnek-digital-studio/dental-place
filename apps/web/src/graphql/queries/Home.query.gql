@@ -37,6 +37,15 @@ query getHomePage($uri: ID = "/home/") {
                     size
                 }
                 carouselOptions {
+                    images {
+                        image {
+                            node {
+                                altText
+                                sourceUrl
+                            }
+                        }
+                        isvisible
+                    }
                     playOnInit
                     speed
                 }

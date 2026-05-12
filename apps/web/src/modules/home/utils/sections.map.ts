@@ -144,7 +144,12 @@ export const mapInstagramData = (
                 "link") as ButtonVariants["size"],
         },
         carouselPost: {
-            images: InstagramInfo.carouselPost.images,
+            images:
+                carouselOptions?.images?.map((item) => ({
+                    alt: item?.image?.node?.altText || "",
+                    src: item?.image?.node?.sourceUrl || "",
+                    isVisible: item?.isvisible ?? true,
+                })) || [],
             autoScrollOptions: carouselOptions as any,
         },
     };
