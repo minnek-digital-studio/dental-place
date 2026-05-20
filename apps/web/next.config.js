@@ -12,16 +12,13 @@ if (!URL.canParse(process.env.WORDPRESS_API_URL)) {
   /** @type {import('next').NextConfig} */
   module.exports = {
     images: {
-      domains: [process.env.WORDPRESS_DOMAIN, "secure.gravatar.com"],
+      remotePatterns: [
+        { protocol: protocol.slice(0, -1), hostname: hostname, port: port || "" },
+        { protocol: "https", hostname: "secure.gravatar.com" },
+      ],
     },
-    fontLoaders: [
-        { loader: "next/font/google", options: { subsets: ["latin"] } },
-    ],
     transpilePackages: ["@minnek/ui"],
     typescript: {
         ignoreBuildErrors: true,
-    },
-    eslint: {
-        ignoreDuringBuilds: true,
     },
   };

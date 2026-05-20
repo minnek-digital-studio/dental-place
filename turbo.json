@@ -1,7 +1,16 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env", "**/.env.local"],
-  "globalEnv": ["WORDPRESS_API_URL", "WORDPRESS_DOMAIN"],
+  "globalEnv": [
+    "WORDPRESS_API_URL",
+    "WORDPRESS_DOMAIN",
+    "ENABLE_EXPERIMENTAL_COREPACK",
+    "WORDPRESS_CONTACT_FORM_URL",
+    "WPCF7_TAG",
+    "DYNAMIC_PAGE_GENERATION",
+    "WORDPRESS_MENU_SLUG",
+    "WORDPRESS_MENU_ENABLED"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build", "^lint", "^test"],

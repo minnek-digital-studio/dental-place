@@ -3,8 +3,8 @@
   "version": "0.8.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently 'next' 'pnpm codegen:dev'",
-    "build": "next build --no-lint",
+    "dev": "concurrently 'next dev' 'pnpm codegen:dev'",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "release": "release-it",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.11.3",
-    "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "@apollo/experimental-nextjs-app-support": "^0.12.0",
     "@hookform/resolvers": "^3.9.0",
     "@minnek/typescript-config": "workspace:*",
     "@minnek/ui": "workspace:*",
@@ -29,12 +29,12 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "5.0.2",
-    "@graphql-codegen/client-preset": "4.3.3",
-    "@graphql-codegen/introspection": "4.0.3",
-    "@graphql-codegen/typescript": "^4.0.9",
-    "@graphql-codegen/typescript-operations": "^4.2.3",
-    "@graphql-codegen/typescript-react-apollo": "^4.3.0",
+    "@graphql-codegen/cli": "7.0.0",
+    "@graphql-codegen/client-preset": "6.0.0",
+    "@graphql-codegen/introspection": "6.0.0",
+    "@graphql-codegen/typescript": "^6.0.1",
+    "@graphql-codegen/typescript-operations": "^6.0.2",
+    "@graphql-codegen/typescript-react-apollo": "^4.4.2",
     "@graphql-typed-document-node/core": "^3.2.0",
     "@minnek/config-release-it": "workspace:*",
     "@parcel/watcher": "^2.4.1",
