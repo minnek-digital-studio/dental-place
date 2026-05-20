@@ -1,5 +1,5 @@
 {
-  "extends": "@minnek/typescript-config/nextjs.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -13,7 +13,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "plugins": [{ "name": "next" }],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "declarationMap": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@ui/*": ["./src/modules/common/components/ui/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
