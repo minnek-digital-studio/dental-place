@@ -17,7 +17,6 @@ if (!URL.canParse(process.env.WORDPRESS_API_URL)) {
         { protocol: "https", hostname: "secure.gravatar.com" },
       ],
     },
-    transpilePackages: ["@minnek/ui"],
     typescript: {
         ignoreBuildErrors: true,
     },
