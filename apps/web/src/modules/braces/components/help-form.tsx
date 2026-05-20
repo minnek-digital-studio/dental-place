@@ -3,8 +3,8 @@ import React from "react";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "@minnek/ui/components/form";
-import { Button } from "@minnek/ui/components/button";
+import { useForm } from "@ui/components/form";
+import { Button } from "@ui/components/button";
 import { type ButtonType } from "@/modules/common/types";
 
 import {
@@ -14,11 +14,11 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "@minnek/ui/components/form";
+} from "@ui/components/form";
 
-import { Input, type InputProps } from "@minnek/ui/components/input";
-import { Textarea, type TextareaProps } from "@minnek/ui/components/textarea";
-import { cn } from "@minnek/ui/lib/utils";
+import { Input, type InputProps } from "@ui/components/input";
+import { Textarea, type TextareaProps } from "@ui/components/textarea";
+import { cn } from "@ui/lib/utils";
 import { SendEmail } from "@/modules/common/actions/contact-form.action";
 
 const formSchema = z.object({

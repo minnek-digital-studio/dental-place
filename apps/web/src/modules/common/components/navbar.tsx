@@ -12,8 +12,8 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@minnek/ui/components/accordion";
-import { Button } from "@minnek/ui/components/button";
+} from "@ui/components/accordion";
+import { Button } from "@ui/components/button";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -23,23 +23,23 @@ import {
     NavigationMenuListColumn,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
-} from "@minnek/ui/components/navigation-menu";
+} from "@ui/components/navigation-menu";
 import {
     Sheet,
     SheetContent,
 
     SheetHeader,
     SheetTrigger,
-} from "@minnek/ui/components/sheet";
-import { Typography } from "@minnek/ui/components/typography";
+} from "@ui/components/sheet";
+import { Typography } from "@ui/components/typography";
 import {
     ChevronDown,
     IconByName,
     Menu,
     Phone,
     type IconByNameProps,
-} from "@minnek/ui/icons";
-import { cn, cva, type VariantProps } from "@minnek/ui/lib/utils";
+} from "@ui/components/icons";
+import { cn, cva, type VariantProps } from "@ui/lib/utils";
 import Link from "next/link";
 import React from "react";
 

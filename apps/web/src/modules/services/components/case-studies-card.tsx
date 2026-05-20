@@ -5,12 +5,12 @@ import {
     CardContent,
     CardHeader,
     CardFooter,
-} from "@minnek/ui/components/card";
+} from "@ui/components/card";
 import type { ImageType, ButtonType } from "@/modules/common/types";
-import { Button } from "@minnek/ui/components/button";
+import { Button } from "@ui/components/button";
 import Link from "@/modules/common/components/link";
-import { cn } from "@minnek/ui/lib/utils";
-import { Typography } from "@minnek/ui/components/typography";
+import { cn } from "@ui/lib/utils";
+import { Typography } from "@ui/components/typography";
 
 export interface CaseCardProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;

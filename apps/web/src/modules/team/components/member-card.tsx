@@ -8,12 +8,12 @@ import {
     CardTitle,
     CardHeader,
     CardFooter,
-} from "@minnek/ui/components/card";
-import { Button } from "@minnek/ui/components/button";
+} from "@ui/components/card";
+import { Button } from "@ui/components/button";
 import Link from "@/modules/common/components/link";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
-import { IconByName } from "@minnek/ui/icons";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
+import { IconByName } from "@ui/components/icons";
 import MemberCardButton from "./member-card-button";
 export interface TeamMemberCard extends React.HTMLAttributes<HTMLDivElement> {
     id: string;

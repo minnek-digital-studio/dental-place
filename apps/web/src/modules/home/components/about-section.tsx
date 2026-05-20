@@ -1,9 +1,9 @@
 import type { ButtonType, ImageType } from "@/modules/common/types";
 import ImageAnimate from "@/modules/home/components/image-animate";
-import { Button } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
-import { MoveRight } from "@minnek/ui/icons";
-import { cn } from "@minnek/ui/lib/utils";
+import { Button } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
+import { MoveRight } from "@ui/components/icons";
+import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
 
 export type AboutSectionProps = {

@@ -1,4 +1,4 @@
-import { Star } from "@minnek/ui/icons";
+import { Star } from "@ui/components/icons";
 
 const StarRating = ({ rating }: { rating: number }) => {
     return (

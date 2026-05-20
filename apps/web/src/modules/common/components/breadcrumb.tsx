@@ -7,7 +7,7 @@ import {
     BreadcrumbList,
     BreadcrumbPage,
     BreadcrumbSeparator,
-} from "@minnek/ui/components/breadcrumb";
+} from "@ui/components/breadcrumb";
 
 interface BreadCrumbProps {
     links: LinkType[];

@@ -3,9 +3,9 @@ import PresentationCard, {
     type PresentationCardProps,
 } from "./presentation-card";
 import React from "react";
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 
 import Buttons from "@/modules/home/components/buttons";
 

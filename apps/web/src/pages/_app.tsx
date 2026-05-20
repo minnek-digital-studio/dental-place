@@ -1,4 +1,4 @@
-import "@minnek/ui/global.css";
+import "@ui/global.css";
 import { AppProps } from "next/app";
 
 import { Noto_Sans } from "next/font/google";

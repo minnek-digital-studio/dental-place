@@ -1,15 +1,15 @@
 import React from "react";
 
-import { Button, type ButtonVariants } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
+import { Button, type ButtonVariants } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
 import {
     Carousel,
     CarouselItem,
     CarouselContent,
     CarouselNext,
     CarouselPrevious,
-} from "@minnek/ui/components/carousel";
-import { MoveLeft, MoveRight } from "@minnek/ui/icons";
+} from "@ui/components/carousel";
+import { MoveLeft, MoveRight } from "@ui/components/icons";
 import { ImageType, ButtonType } from "@/modules/common/types";
 import { Image } from "@/modules/common/components/image";
 

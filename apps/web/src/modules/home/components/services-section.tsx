@@ -2,15 +2,15 @@ import React from "react";
 import ServiceCard, {
     ServiceCardProps,
 } from "@/modules/common/components/service-card";
-import { Button, type ButtonVariants } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
+import { Button, type ButtonVariants } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
 import Link from "@/modules/common/components/link";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-} from "@minnek/ui/components/carousel";
-import { cn } from "@minnek/ui/lib/utils";
+} from "@ui/components/carousel";
+import { cn } from "@ui/lib/utils";
 
 export type ServiceSectionProps = {
     title: string;

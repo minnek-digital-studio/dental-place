@@ -1,9 +1,9 @@
 import { type GetBracesExpressPageInfoQuery } from "@/graphql/generated/graphql";
 
-import { ButtonVariants } from "@minnek/ui/components/button";
-import { IconsName } from "@minnek/ui/components/icons/index";
+import { ButtonVariants } from "@ui/components/button";
+import { IconsName } from "@ui/components/icons";
 import { getCallToAction } from "@/modules/common/actions/callToActions.action";
-import { InputVariants } from "@minnek/ui/components/input";
+import { InputVariants } from "@ui/components/input";
 import { FormTypeKeys } from "@/modules/braces/components/help-form";
 
 import { BracesExpressPageInfo } from "@/modules/braces/actions/braces.actions";

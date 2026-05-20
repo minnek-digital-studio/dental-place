@@ -6,14 +6,14 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-} from "@minnek/ui/components/dialog";
+} from "@ui/components/dialog";
 import { Image } from "@/modules/common/components/image";
-import { Button } from "@minnek/ui/components/button";
-import { cn } from "@minnek/ui/lib/utils";
+import { Button } from "@ui/components/button";
+import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
-import { IconByName } from "@minnek/ui/icons";
+import { IconByName } from "@ui/components/icons";
 import { de } from "date-fns/locale";
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 
 interface MemberModalProps extends React.HTMLAttributes<HTMLDivElement> {}
 

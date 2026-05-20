@@ -5,8 +5,8 @@ import ContactForm from "@/modules/contact_us/components/contact-form";
 import GoogleMaps from "@/modules/contact_us/components/google-maps";
 import HeroSection from "@/modules/contact_us/components/hero-section";
 import ContactUsData from "@/modules/contact_us/data/contact-us.json";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
 
 export const dynamic = config.DYNAMIC_PAGE_GENERATION
     ? "force-dynamic"

@@ -1,8 +1,8 @@
 import Link from "@/modules/common/components/link";
-import { Button } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
-import { IconByName } from "@minnek/ui/icons";
-import { cn } from "@minnek/ui/lib/utils";
+import { Button } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
+import { IconByName } from "@ui/components/icons";
+import { cn } from "@ui/lib/utils";
 import { getFooterData } from "../actions/layout-actions";
 import { Icon } from "../types";
 

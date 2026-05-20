@@ -1,7 +1,7 @@
-import { Label } from "@minnek/ui/components/label";
-import { Input } from "@minnek/ui/components/input";
-import { Textarea } from "@minnek/ui/components/textarea";
-import { Button } from "@minnek/ui/components/button";
+import { Label } from "@ui/components/label";
+import { Input } from "@ui/components/input";
+import { Textarea } from "@ui/components/textarea";
+import { Button } from "@ui/components/button";
 
 const ContactForm = () => {
     return (
