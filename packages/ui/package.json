@@ -1,6 +1,7 @@
 {
   "name": "@minnek/ui",
   "version": "0.6.0",
+  "type": "module",
   "private": true,
   "author": "Minnek Digital Agency",
   "license": "ISC",
