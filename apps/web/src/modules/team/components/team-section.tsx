@@ -1,7 +1,7 @@
 import React from "react";
 import MemberCard, { type TeamMemberCard } from "../components/member-card";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
 import MemberModal from "./member-modal";
 
 export interface OurTeamSectionProps

@@ -2,10 +2,10 @@ import React from "react";
 import ServiceCard, {
     ServiceCardProps,
 } from "@/modules/common/components/service-card";
-import { Button, type ButtonVariants } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
+import { Button, type ButtonVariants } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
 import Link from "@/modules/common/components/link";
-import { IconByName, type IconsName } from "@minnek/ui/icons";
+import { IconByName, type IconsName } from "@ui/components/icons";
 import { type ButtonType } from "@/modules/common/types";
 
 export type buttonProps = {

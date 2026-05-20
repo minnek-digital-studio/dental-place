@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "@minnek/ui/components/button";
-import { IconByName } from "@minnek/ui/icons";
+import { Button } from "@ui/components/button";
+import { IconByName } from "@ui/components/icons";
 import Link from "@/modules/common/components/link";
 import { ButtonType } from "@/modules/common/types";
 

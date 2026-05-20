@@ -1,8 +1,8 @@
 import React from "react";
 import HelpForm from "./help-form";
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 import { type HelpFormProps } from "./help-form";
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 export interface HelpFormSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {

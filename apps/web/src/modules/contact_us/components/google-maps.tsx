@@ -1,4 +1,4 @@
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 export interface GoogleMapsProps {
     className?: string;

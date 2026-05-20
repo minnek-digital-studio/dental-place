@@ -1,17 +1,17 @@
 import ReviewCard, {
     type ReviewCardProps,
 } from "@/modules/home/components/review-card";
-import { type ButtonVariants } from "@minnek/ui/components/button";
+import { type ButtonVariants } from "@ui/components/button";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@minnek/ui/components/carousel";
-import { Typography } from "@minnek/ui/components/typography";
-import { MoveLeft, MoveRight } from "@minnek/ui/icons";
-import { Button } from "@minnek/ui/components/button";
+} from "@ui/components/carousel";
+import { Typography } from "@ui/components/typography";
+import { MoveLeft, MoveRight } from "@ui/components/icons";
+import { Button } from "@ui/components/button";
 
 export type ReviewsSectionProps = {
     title: string;

@@ -1,7 +1,7 @@
 import { ImageType } from "@/modules/common/types";
 import { Image } from "@/modules/common/components/image";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
 
 export interface ArsSectionProps
     extends React.BaseHTMLAttributes<HTMLDivElement> {

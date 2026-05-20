@@ -1,5 +1,5 @@
-import { IconByName } from "@minnek/ui/icons";
-import { cn } from "@minnek/ui/lib/utils";
+import { IconByName } from "@ui/components/icons";
+import { cn } from "@ui/lib/utils";
 
 type WhatsAppFloatingButtonProps = {
     href?: string;

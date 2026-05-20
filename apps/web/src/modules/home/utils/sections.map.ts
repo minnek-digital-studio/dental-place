@@ -6,8 +6,8 @@ import { type HomePageInfo } from "@/modules/home/actions/home.action";
 import { type ArsSectionProps } from "@/modules/home/components/ars-section";
 import InstagramInfo from "@/modules/home/data/instagram.json";
 import { getServices } from "@/modules/services/actions/services.action";
-import { type ButtonVariants } from "@minnek/ui/components/button";
-import { type IconsName } from "@minnek/ui/components/icons/index";
+import { type ButtonVariants } from "@ui/components/button";
+import { type IconsName } from "@ui/components/icons";
 
 export const mapArsData = (data: GetHomePageQuery["page"]): ArsSectionProps => {
     const arsData = data?.homePageSettings?.arsSection;

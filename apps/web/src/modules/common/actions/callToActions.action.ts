@@ -5,9 +5,9 @@ import {
 
 import { Icon, CallToAction } from "../types";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
-import { ButtonProps } from "@minnek/ui/components/button";
+import { ButtonProps } from "@ui/components/button";
 import { ComponentType } from "../utils/CallToActions";
-import { IconsName } from "@minnek/ui/components/icons/index";
+import { IconsName } from "@ui/components/icons";
 
 export const getCallToAction = async (id: string): Promise<CallToAction> => {
     const { data } = await getClient().query<GetCallToActionByIdQuery>({

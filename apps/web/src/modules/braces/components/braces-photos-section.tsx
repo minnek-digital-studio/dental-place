@@ -1,14 +1,14 @@
 import React from "react";
 
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 import {
     Carousel,
     CarouselItem,
     CarouselContent,
     CarouselNext,
     CarouselPrevious,
-} from "@minnek/ui/components/carousel";
-import { MoveLeft, MoveRight } from "@minnek/ui/icons";
+} from "@ui/components/carousel";
+import { MoveLeft, MoveRight } from "@ui/components/icons";
 import { ImageType, ButtonType } from "@/modules/common/types";
 import { Image } from "@/modules/common/components/image";
 

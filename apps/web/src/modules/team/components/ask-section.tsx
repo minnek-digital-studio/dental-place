@@ -1,14 +1,14 @@
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import React from "react";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@minnek/ui/components/accordion";
-import { Typography } from "@minnek/ui/components/typography";
-import { Plus } from "@minnek/ui/icons";
-import { Button } from "@minnek/ui/components/button";
+} from "@ui/components/accordion";
+import { Typography } from "@ui/components/typography";
+import { Plus } from "@ui/components/icons";
+import { Button } from "@ui/components/button";
 
 export interface AskSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;

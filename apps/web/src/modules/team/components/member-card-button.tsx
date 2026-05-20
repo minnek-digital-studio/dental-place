@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@minnek/ui/components/button";
+import { Button } from "@ui/components/button";
 import type { TeamMemberCard } from "./member-card";
 import { useModalStore } from "../stores/useModalStore";
 

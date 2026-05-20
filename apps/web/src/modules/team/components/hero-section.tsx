@@ -1,9 +1,9 @@
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
-import { Button } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
+import { Button } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
 import type { ButtonType, ImageType } from "@/modules/common/types";
-import { MoveRight } from "@minnek/ui/icons";
+import { MoveRight } from "@ui/components/icons";
 import Link from "@/modules/common/components/link";
 
 export type HeroSectionProps = {

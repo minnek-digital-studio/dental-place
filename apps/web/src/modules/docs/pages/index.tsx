@@ -1,8 +1,8 @@
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 import ServiceCard from "@/modules/common/components/service-card";
-import { Input } from "@minnek/ui/components/input";
-import { Textarea } from "@minnek/ui/components/textarea";
-import { Label } from "@minnek/ui/components/label";
+import { Input } from "@ui/components/input";
+import { Textarea } from "@ui/components/textarea";
+import { Label } from "@ui/components/label";
 import {
     Select,
     SelectContent,
@@ -11,8 +11,8 @@ import {
     SelectLabel,
     SelectTrigger,
     SelectValue,
-} from "@minnek/ui/components/select";
-import { Button } from "@minnek/ui/components/button";
+} from "@ui/components/select";
+import { Button } from "@ui/components/button";
 import {
     CleanTooth,
     CarieTooth,
@@ -20,7 +20,7 @@ import {
     MoveRight,
     Check,
     IconByName,
-} from "@minnek/ui/icons";
+} from "@ui/components/icons";
 import { Metadata } from "next";
 import ClientQueryTest from "../components/clients-query-test";
 import FormTest from "@/modules/docs/components/form-test";

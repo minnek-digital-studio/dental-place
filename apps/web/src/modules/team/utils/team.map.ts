@@ -3,8 +3,8 @@ import {
     type GetTeamPageInfoQuery,
 } from "@/graphql/generated/graphql";
 
-import { ButtonVariants } from "@minnek/ui/components/button";
-import { IconsName } from "@minnek/ui/components/icons/index";
+import { ButtonVariants } from "@ui/components/button";
+import { IconsName } from "@ui/components/icons";
 import { TeamPageInfo } from "../actions/team.action";
 import { getCallToAction } from "@/modules/common/actions/callToActions.action";
 import { getTeam } from "../actions/team.action";

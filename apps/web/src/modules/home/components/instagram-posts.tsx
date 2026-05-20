@@ -7,7 +7,7 @@ import {
     CarouselItem,
     AutoScroll,
     type AutoScrollOptionsType,
-} from "@minnek/ui/components/carousel";
+} from "@ui/components/carousel";
 import { useRef } from "react";
 
 export interface InstagramPostProps {

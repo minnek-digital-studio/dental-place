@@ -4,18 +4,18 @@ import {
     Avatar,
     AvatarFallback,
     AvatarImage,
-} from "@minnek/ui/components/avatar";
+} from "@ui/components/avatar";
 import {
     Card,
     CardContent,
     CardFooter,
     CardHeader,
-} from "@minnek/ui/components/card";
-import { Typography } from "@minnek/ui/components/typography";
-import { Comma } from "@minnek/ui/icons";
-import { cn } from "@minnek/ui/lib/utils";
+} from "@ui/components/card";
+import { Typography } from "@ui/components/typography";
+import { Comma } from "@ui/components/icons";
+import { cn } from "@ui/lib/utils";
 import type { Icon } from "@/modules/common/types";
-import { IconByName } from "@minnek/ui/icons";
+import { IconByName } from "@ui/components/icons";
 
 export interface ReviewCardProps extends React.HTMLAttributes<HTMLDivElement> {
     comment: string;

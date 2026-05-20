@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader } from "@minnek/ui/components/card";
-import { IconByName, IconsName } from "@minnek/ui/components/icons/index";
-import { Typography } from "@minnek/ui/components/typography";
+import { Card, CardContent, CardHeader } from "@ui/components/card";
+import { IconByName, IconsName } from "@ui/components/icons";
+import { Typography } from "@ui/components/typography";
 
 export interface ContactCardProps {
     title: string;

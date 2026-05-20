@@ -1,5 +1,5 @@
-import { type ButtonVariants } from "@minnek/ui/components/button";
-import { type IconsName } from "@minnek/ui/icons";
+import { type ButtonVariants } from "@ui/components/button";
+import { type IconsName } from "@ui/components/icons";
 import { ComponentType } from "../utils/CallToActions";
 import { Metadata } from "next";
 

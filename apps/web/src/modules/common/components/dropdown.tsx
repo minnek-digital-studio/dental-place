@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Button } from "@minnek/ui/components/button";
+import { Button } from "@ui/components/button";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -12,11 +12,11 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
     DropdownMenuItem,
-} from "@minnek/ui/components/dropdown-menu";
+} from "@ui/components/dropdown-menu";
 
-import { IconByName, type IconByNameProps } from "@minnek/ui/icons";
+import { IconByName, type IconByNameProps } from "@ui/components/icons";
 
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 export type DropdownOption = {
     value: string;

@@ -1,9 +1,9 @@
 import React from "react";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { Icon, ImageType } from "@/modules/common/types";
-import { IconByName } from "@minnek/ui/components/icons/index";
+import { IconByName } from "@ui/components/icons";
 export interface BeenDoneSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;

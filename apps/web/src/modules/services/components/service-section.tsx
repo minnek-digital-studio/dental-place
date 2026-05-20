@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 import { Image } from "@/modules/common/components/image";
 import { ImageType, CallToAction } from "@/modules/common/types";
 import { BreadCrumb } from "@/modules/common/components/breadcrumb";

@@ -1,10 +1,10 @@
 import React from "react";
 
 import type { ButtonType } from "@/modules/common/types";
-import { Button } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
-import { IconByName } from "@minnek/ui/icons";
-import { cn } from "@minnek/ui/lib/utils";
+import { Button } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
+import { IconByName } from "@ui/components/icons";
+import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
 
 export interface ButtonsProps extends React.HTMLAttributes<HTMLDivElement> {

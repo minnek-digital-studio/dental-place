@@ -4,7 +4,7 @@ import {
     NavBar,
     type NavbarVariants,
 } from "@/modules/common/components/navbar";
-import { cn } from "@minnek/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 interface LayoutProps extends React.HTMLAttributes<HTMLDivElement> {
     navbarVariant?: NavbarVariants & {

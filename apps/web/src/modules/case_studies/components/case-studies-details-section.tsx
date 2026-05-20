@@ -1,6 +1,6 @@
 import React from "react";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { ImageType } from "@/modules/common/types";
 export interface CaseStudiesDetailsSectionProps

@@ -1,15 +1,15 @@
 import React from "react";
-import { Typography } from "@minnek/ui/components/typography";
+import { Typography } from "@ui/components/typography";
 import {
     Card,
     CardHeader,
     CardContent,
     CardFooter,
     CardTitle,
-} from "@minnek/ui/components/card";
-import { IconByName, type IconsName, ArrowRight } from "@minnek/ui/icons";
-import { cn } from "@minnek/ui/lib/utils";
-import { Button, type ButtonVariants } from "@minnek/ui/components/button";
+} from "@ui/components/card";
+import { IconByName, type IconsName, ArrowRight } from "@ui/components/icons";
+import { cn } from "@ui/lib/utils";
+import { Button, type ButtonVariants } from "@ui/components/button";
 
 export type ServiceCardProps = {
     title: string;

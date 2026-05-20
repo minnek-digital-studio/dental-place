@@ -1,8 +1,8 @@
-import { Button } from "@minnek/ui/components/button";
-import { Typography } from "@minnek/ui/components/typography";
+import { Button } from "@ui/components/button";
+import { Typography } from "@ui/components/typography";
 import { Icon, ButtonType } from "@/modules/common/types";
-import { cn } from "@minnek/ui/lib/utils";
-import { IconByName } from "@minnek/ui/icons";
+import { cn } from "@ui/lib/utils";
+import { IconByName } from "@ui/components/icons";
 import InstagramPosts, { type InstagramPostProps } from "./instagram-posts";
 export interface InstagramSectionProps
     extends React.HTMLAttributes<HTMLElement> {

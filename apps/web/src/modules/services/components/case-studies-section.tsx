@@ -1,8 +1,8 @@
 import React from "react";
 
 import CaseCard, { type CaseCardProps } from "./case-studies-card";
-import { Typography } from "@minnek/ui/components/typography";
-import { cn } from "@minnek/ui/lib/utils";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
 
 export interface CaseStudiesSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
