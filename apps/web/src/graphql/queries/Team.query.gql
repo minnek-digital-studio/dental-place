@@ -1,5 +1,5 @@
 query getTeamMembers {
-    teams {
+    teams(first: 100) {
         edges {
             node {
                 id
