@@ -10,7 +10,7 @@
     "release": "release-it",
     "codegen": "graphql-codegen --config",
     "codegen:prod": "pnpm run codegen -- codegen.prod.ts",
-    "codegen:dev": "npm run codegen -- codegen.dev.ts --watch"
+    "codegen:dev": "pnpm run codegen -- codegen.dev.ts --watch"
   },
   "dependencies": {
     "@apollo/client": "^3.11.3",
