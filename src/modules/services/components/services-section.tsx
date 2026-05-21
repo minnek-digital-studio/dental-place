@@ -5,7 +5,7 @@ import ServiceCard, {
 import { Button, type ButtonVariants } from "@ui/components/button";
 import { Typography } from "@ui/components/typography";
 import Link from "@/modules/common/components/link";
-import { IconByName, type IconsName } from "@ui/components/icons";
+import { IconByName } from "@ui/components/icons";
 import { type ButtonType } from "@/modules/common/types";
 
 export type buttonProps = {

@@ -5,7 +5,6 @@ import {
     CardHeader,
     CardContent,
     CardFooter,
-    CardTitle,
 } from "@ui/components/card";
 import { IconByName, type IconsName, ArrowRight } from "@ui/components/icons";
 import { cn } from "@ui/lib/utils";

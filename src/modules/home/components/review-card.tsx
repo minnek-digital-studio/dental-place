@@ -32,7 +32,7 @@ const ReviewCard = ({
     className,
     icon,
     link,
-    ...props
+    ..._props
 }: ReviewCardProps) => {
     return (
         <Card

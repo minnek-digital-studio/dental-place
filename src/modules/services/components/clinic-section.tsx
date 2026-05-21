@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Button, type ButtonVariants } from "@ui/components/button";
 import { Typography } from "@ui/components/typography";
 import {
     Carousel,
@@ -10,7 +9,7 @@ import {
     CarouselPrevious,
 } from "@ui/components/carousel";
 import { MoveLeft, MoveRight } from "@ui/components/icons";
-import { ImageType, ButtonType } from "@/modules/common/types";
+import { ImageType } from "@/modules/common/types";
 import { Image } from "@/modules/common/components/image";
 
 export type ClinicSectionProps = {

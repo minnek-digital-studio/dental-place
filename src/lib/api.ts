@@ -2,7 +2,7 @@ const API_URL = process.env.WORDPRESS_API_URL || "";
 
 export async function fetchAPI(
     query = "",
-    { variables }: Record<string, any> = {},
+    { variables }: Record<string, unknown> = {},
 ) {
     const headers = { "Content-Type": "application/json" };
 
@@ -29,7 +29,7 @@ export async function fetchAPI(
     return json.data;
 }
 
-export async function getPreviewPost(id, idType = "DATABASE_ID") {
+export async function getPreviewPost(id: unknown, idType: unknown = "DATABASE_ID") {
     const data = await fetchAPI(
         `
     query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -61,7 +61,7 @@ export async function getAllPostsWithSlug() {
     return data?.posts;
 }
 
-export async function getAllPostsForHome(preview) {
+export async function getAllPostsForHome(preview: unknown) {
     const data = await fetchAPI(
         `
     query AllPosts {
@@ -103,7 +103,7 @@ export async function getAllPostsForHome(preview) {
     return data?.posts;
 }
 
-export async function getPostAndMorePosts(slug, preview, previewData) {
+export async function getPostAndMorePosts(slug: unknown, preview: unknown, previewData: unknown) {
     const postPreview = preview && previewData?.post;
     // The slug may be the id of an unpublished post
     const isId = Number.isInteger(Number(slug));

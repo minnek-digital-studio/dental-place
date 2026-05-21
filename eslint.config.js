@@ -16,9 +16,9 @@ export default [
             "cypress.config.js",
         ],
     },
-    // Config files - CommonJS (just for next.config.js which uses module.exports)
+    // Config files
     {
-        files: ["next.config.js"],
+        files: ["next.config.ts"],
         languageOptions: {
             globals: {
                 module: "writable",

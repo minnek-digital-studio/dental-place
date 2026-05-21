@@ -9,7 +9,7 @@ import {
     CarouselPrevious,
 } from "@ui/components/carousel";
 import { MoveLeft, MoveRight } from "@ui/components/icons";
-import { ImageType, ButtonType } from "@/modules/common/types";
+import { ImageType } from "@/modules/common/types";
 import { Image } from "@/modules/common/components/image";
 
 export type BracesPhotosSectionProps = {

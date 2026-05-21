@@ -1,4 +1,4 @@
-import type { ElementType, ComponentProps, ForwardedRef } from "react";
+import type { ElementType, ComponentProps } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@ui/lib/utils";
 
@@ -13,7 +13,7 @@ export type PolymorphicProps<
         | (Omit<ComponentProps<DefaultElement>, "as"> & { as?: never })
     );
 
-const tagVariants: any = {
+const tagVariants: Record<string, string> = {
     h1: "text-3xl md:text-4xl xl:text-6xl font-bold",
     h2: "text-3xl lg:text-4xl font-bold tracking-tight",
     h3: "text-lg font-extrabold tracking-tight",
@@ -36,7 +36,7 @@ export const colorVariants = {
 
 const defaultElement = "p";
 
-type OwnProps = {};
+type OwnProps = Record<string, never>;
 
 type TypographyProps<As extends ElementType = typeof defaultElement> =
     PolymorphicProps<OwnProps, As, typeof defaultElement> & {

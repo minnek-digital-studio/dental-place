@@ -140,7 +140,7 @@ export async function NavBar({
     variant,
     align = "left",
     text,
-    ...props
+    ..._props
 }: NavbarProps) {
     const { PhoneConfig, SchedulesConfig, SocialLinksConfig, navItems, error } =
         config.WORDPRESS_MENU_ENABLED
@@ -226,7 +226,7 @@ export async function NavBar({
                     <div className="flex gap-2 lg:gap-4 items-center">
                         <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
                             <Button
-                                variant={button as any}
+                                variant={button as string}
                                 size="icon"
                                 className={cn(
                                     variant === "transparentLight" &&
@@ -269,7 +269,7 @@ export async function NavBar({
                                 return (
                                     <>
                                         <Button
-                                            variant={button as any}
+                                            variant={button as string}
                                             size="icon"
                                             key={`${index}-${social.title}`}
                                             className={cn(
@@ -503,7 +503,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 }
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
-    ({ className, title, column, children, ...props }, ref) => {
+    ({ className, title, _column, children, ...props }, ref) => {
         return (
             <li>
                 <NavigationMenuLink asChild>

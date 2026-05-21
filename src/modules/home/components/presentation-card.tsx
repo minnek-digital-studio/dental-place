@@ -1,9 +1,5 @@
 import React from "react";
 import type { ButtonType } from "@/modules/common/types";
-import { Button } from "@ui/components/button";
-import { IconByName } from "@ui/components/icons";
-
-import Link from "@/modules/common/components/link";
 import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import { Card, CardContent } from "@ui/components/card";

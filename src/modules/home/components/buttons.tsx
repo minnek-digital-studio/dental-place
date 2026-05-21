@@ -11,7 +11,7 @@ export interface ButtonsProps extends React.HTMLAttributes<HTMLDivElement> {
     buttons: ButtonType[];
 }
 
-const Buttons = ({ buttons, className, ...props }: ButtonsProps) => {
+const Buttons = ({ buttons, _className, ...props }: ButtonsProps) => {
     return (
         <div
             className="flex flex-row-reverse items-start justify-start flex-wrap md:flex-nowrap gap-4 max-md:w-full"

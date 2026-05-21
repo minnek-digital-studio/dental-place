@@ -3,7 +3,7 @@ import { Image } from "@/modules/common/components/image";
 import { Button } from "@ui/components/button";
 import { Typography } from "@ui/components/typography";
 import type { ButtonType, ImageType, Icon } from "@/modules/common/types";
-import { MoveRight, type IconsName, IconByName } from "@ui/components/icons";
+import { MoveRight } from "@ui/components/icons";
 import Link from "@/modules/common/components/link";
 
 export type AboutBracesSectionProps = {
@@ -23,7 +23,7 @@ export type AboutBracesItem = {
 
 const AboutBracesSection = ({
     title,
-    items,
+    _items,
     img,
     description,
     button,

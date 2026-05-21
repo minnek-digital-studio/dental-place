@@ -20,7 +20,7 @@ const FormTest = () => {
             className="flex flex-col gap-4 w-full"
         >
             <label htmlFor="your-name" className="flex flex-col gap-2">
-                Somebody's name
+                Somebody&apos;s name
                 <input
                     id="your-name"
                     type="text"
@@ -31,7 +31,7 @@ const FormTest = () => {
             </label>
 
             <label htmlFor="your-email" className="flex flex-col gap-2">
-                Somebody's Email
+                Somebody&apos;s Email
                 <input
                     id="your-email"
                     type="text"
@@ -42,7 +42,7 @@ const FormTest = () => {
             </label>
 
             <label htmlFor="your-subject" className="flex flex-col gap-2">
-                Somebody's subject
+                Somebody&apos;s subject
                 <input
                     id="your-subject"
                     type="text"
@@ -53,7 +53,7 @@ const FormTest = () => {
             </label>
 
             <label htmlFor="your-message" className="flex flex-col gap-2">
-                Somebody's message
+                Somebody&apos;s message
                 <input
                     id="your-message"
                     type="text"

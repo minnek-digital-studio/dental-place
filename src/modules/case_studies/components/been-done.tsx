@@ -1,8 +1,7 @@
 import React from "react";
 import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
-import { Image } from "@/modules/common/components/image";
-import { Icon, ImageType } from "@/modules/common/types";
+import { Icon } from "@/modules/common/types";
 import { IconByName } from "@ui/components/icons";
 export interface BeenDoneSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {

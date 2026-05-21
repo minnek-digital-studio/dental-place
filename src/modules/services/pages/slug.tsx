@@ -24,7 +24,7 @@ export const dynamic = config.DYNAMIC_PAGE_GENERATION
 
 export async function generateMetadata(
     { params }: Props,
-    parent: ResolvingMetadata,
+    _parent: ResolvingMetadata,
 ): Promise<Metadata> {
     const { slug } = params;
 

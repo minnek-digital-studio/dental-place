@@ -8,7 +8,7 @@ import {
 } from "@/graphql/generated/graphql";
 
 const ClientQueryTest = () => {
-    const { data, error } = useSuspenseQuery<GetServicesInfoQuery>(
+    const { data } = useSuspenseQuery<GetServicesInfoQuery>(
         GetServicePageInfoDocument,
     );
 
