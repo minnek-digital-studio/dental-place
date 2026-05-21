@@ -124,9 +124,7 @@ export const mapInstagramData = (
     data: GetHomePageQuery["page"],
 ): HomePageInfo["InstagramInfo"] => {
     const instagramData = data?.homePageSettings?.instagram;
-
-    const { __typename, ...carouselOptions } =
-        instagramData?.carouselOptions || {};
+    const carouselOptions = instagramData?.carouselOptions;
 
     return {
         title: instagramData?.title || "",

@@ -30,9 +30,7 @@ query getServiceBySlug($slug: ID = "") {
         title
         slug
         seo {
-            title
-            metaDesc
-            metaKeywords
+            ...PostTypeSEOFragment
         }
         serviceSettings {
             description
@@ -97,9 +95,7 @@ query getServicePageInfo($uri: ID = "/services/") {
     page(id: $uri, idType: URI) {
         id
         seo {
-            title
-            metaDesc
-            metaKeywords
+            ...PostTypeSEOFragment
         }
         servicePageSettings {
             servicesSection {

@@ -4,9 +4,7 @@ query getHomePage($uri: ID = "/home/") {
         uri
         title
         seo {
-            title
-            metaDesc
-            metaKeywords
+            ...PostTypeSEOFragment
         }
         homePageSettings {
             arsSection {

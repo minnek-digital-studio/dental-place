@@ -1,3 +1,5 @@
+"use server";
+
 import { config } from "@/config/constants";
 import {
     GetFooterInfoDocument,

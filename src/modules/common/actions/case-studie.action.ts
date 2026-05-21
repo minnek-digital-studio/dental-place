@@ -1,6 +1,7 @@
 import {
     GetCaseStudieBySlugQuery,
     GetCaseStudieBySlugDocument,
+    type PostTypeSeoFragmentFragment,
 } from "@/graphql/generated/graphql";
 
 import { Icon } from "../types";
@@ -43,7 +44,7 @@ export const getCaseStudyPage = async (
 ): Promise<CaseStudies> => {
     const caseStudy = await getCaseStudy(slug);
     return {
-        seo: mapSeo(caseStudy.seo),
+        seo: mapSeo(caseStudy.seo as PostTypeSeoFragmentFragment),
         servicesDescription: await mapServiceDescription(caseStudy),
         callToActions: await mapCalltoActions(caseStudy),
         caseStudies: await mapCaseStudiesData(caseStudy),
