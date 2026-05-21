@@ -12,6 +12,7 @@ import {
 import { Typography } from "@ui/components/typography";
 import { MoveLeft, MoveRight } from "@ui/components/icons";
 import { Button } from "@ui/components/button";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 
 export type ReviewsSectionProps = {
     title: string;
@@ -33,7 +34,6 @@ const ReviewsSection = ({
     items,
     button,
 }: ReviewsSectionProps) => {
-    const descriptionHtml = { __html: description };
     return (
         <section className="flex flex-col gap-9 items-center py-6 container">
             <header className="flex flex-col gap-4 items-center">
@@ -41,10 +41,9 @@ const ReviewsSection = ({
                     {title}
                 </Typography>
                 {description && (
-                    <div
-                        dangerouslySetInnerHTML={descriptionHtml}
-                        className="text-dark-grey max-w-[25rem] text-center font-noto-sans text-base"
-                    />
+                    <div className="text-dark-grey max-w-[25rem] text-center font-noto-sans text-base">
+                        {renderHTML(description)}
+                    </div>
                 )}
                 {button?.text && (
                     <Button
@@ -71,10 +70,10 @@ const ReviewsSection = ({
                 className="flex flex-col gap-12 w-full items-center max-w-[30rem] md:max-w-[46rem] lg:max-w-full"
             >
                 <CarouselContent>
-                    {items.map((item, index) => (
+                    {items.map((item) => (
                         <CarouselItem
                             className="flex justify-center items-center md:basis-1/3 lg:basis-1/4"
-                            key={`${item.author.name}-${index}`}
+                            key={item.author.name}
                         >
                             <ReviewCard {...item} />
                         </CarouselItem>

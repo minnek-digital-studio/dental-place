@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "@/modules/common/components/link";
 
 import {
@@ -24,8 +25,8 @@ export const BreadCrumb = ({ links }: BreadCrumbProps) => {
         <Breadcrumb>
             <BreadcrumbList className="items-center justify-center">
                 {links.map((link, index) => (
-                    <>
-                        <BreadcrumbItem key={`${index}-${link.text}`}>
+                    <React.Fragment key={link.href}>
+                        <BreadcrumbItem>
                             {link.active ? (
                                 <BreadcrumbPage>{link.text}</BreadcrumbPage>
                             ) : (
@@ -36,7 +37,7 @@ export const BreadCrumb = ({ links }: BreadCrumbProps) => {
                         </BreadcrumbItem>
 
                         {index < links.length - 1 && <BreadcrumbSeparator />}
-                    </>
+                    </React.Fragment>
                 ))}
             </BreadcrumbList>
         </Breadcrumb>

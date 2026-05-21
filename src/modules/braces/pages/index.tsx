@@ -37,8 +37,8 @@ const ExpressBracesPage = async () => {
             }}
         >
             <HeroSection {...(HeroInfo as HeroSectionProps)} />
-            {callToActions.map((cta, index) => (
-                <CallToAction {...cta} key={`${cta.title}-${index}`} />
+            {callToActions.map((cta) => (
+                <CallToAction {...cta} key={cta.title} />
             ))}
             <BracesPhotosSection
                 {...(BracesPhotosInfo as BracesPhotosSectionProps)}

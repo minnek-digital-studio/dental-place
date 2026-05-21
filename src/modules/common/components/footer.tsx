@@ -36,7 +36,8 @@ export default async function Footer() {
             </section>
             <section className="text-center md:text-left">
                 <Typography as="span" className="text-sm">
-                    © {new Date().getFullYear()}
+                    {/* suppressHydrationWarning: year is static per build and safe to differ between SSR and hydration */}
+                    <span suppressHydrationWarning>© {new Date().getFullYear()}</span>
                     {" " + copyRight}
                 </Typography>
             </section>

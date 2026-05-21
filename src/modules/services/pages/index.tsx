@@ -35,8 +35,8 @@ const ServicesPage = async () => {
         >
             <ServiceSection {...(servicesSectionInfo as ServiceSectionProps)} />
             <ClinicSection {...(clinicSectionInfo as ClinicSectionProps)} />
-            {callToActions?.map((cta, index) => (
-                <CallToAction key={index} {...cta} />
+            {callToActions?.map((cta) => (
+                <CallToAction key={cta.title} {...cta} />
             ))}
         </Layout>
     );

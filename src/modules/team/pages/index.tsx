@@ -33,8 +33,8 @@ const TeamPage = async () => {
             }}
         >
             <OurTeamSection {...(TeamInfo as OurTeamSectionProps)} />
-            {callToActions.map((cta, index) => (
-                <CallToAction key={`${index}-${cta.title}`} {...cta} />
+            {callToActions.map((cta) => (
+                <CallToAction key={cta.title} {...cta} />
             ))}
             <AskSection {...(FAQInfo as AskSectionProps)} />
         </Layout>

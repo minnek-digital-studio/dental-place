@@ -29,8 +29,8 @@ const CaseStudiesSection = ({
                     {title}
                 </Typography>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    {items.map((item, index) => (
-                        <CaseCard key={`${index}-${item.title}`} {...item} />
+                    {items.map((item) => (
+                        <CaseCard key={item.title} {...item} />
                     ))}
                 </div>
             </div>

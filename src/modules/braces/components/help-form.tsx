@@ -86,11 +86,11 @@ const HelpForm = ({
                 )}
                 {...props}
             >
-                {formFields.map((fieldForm, index) => (
+                {formFields.map((fieldForm) => (
                     <FormField
                         control={form.control}
                         name={fieldForm.name as FormTypeKeys}
-                        key={`form-field-${index}`}
+                        key={fieldForm.name}
                         render={({ field }) => (
                             <FormItem
                                 className={cn(

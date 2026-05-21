@@ -12,6 +12,7 @@ import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
 import { IconByName } from "@ui/components/icons";
 import { Typography } from "@ui/components/typography";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 
 const MemberModal = ({ className: _className, children: _children, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
     const { member, isOpen, closeModal } = useModalStore((state) => state);
@@ -83,10 +84,9 @@ const MemberModal = ({ className: _className, children: _children, ...props }: R
                 </DialogHeader>
                 <main className="mt-2">
                     {description && (
-                        <div
-                            className="font-noto-sans text-black text-lg"
-                            dangerouslySetInnerHTML={{ __html: description }}
-                        />
+                        <div className="font-noto-sans text-black text-lg">
+                            {renderHTML(description)}
+                        </div>
                     )}
 
                     <div className="flex flex-col gap-3 md:gap-7 max-md:text-center ">

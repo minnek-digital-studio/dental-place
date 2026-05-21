@@ -6,6 +6,7 @@ import { Typography } from "@ui/components/typography";
 import Link from "@/modules/common/components/link";
 import { Button } from "@ui/components/button";
 import { IconByName } from "@ui/components/icons";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 
 export interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -22,19 +23,16 @@ const HeroSection = ({
     className,
     ...props
 }: HeroSectionProps) => {
-    const titleHTML = {
-        __html: title,
-    };
-
     return (
         <section className={cn("pt-14 md:py-14", className)} {...props}>
             <div className="container grid grid-cols-1 md:grid-cols-2 sm:px-14 gap-10">
                 <main className="flex flex-col gap-6 md:mb-16 mb-10">
                     <Typography
                         as="h1"
-                        dangerouslySetInnerHTML={titleHTML}
                         className="flex flex-col md:gap-4 tracking-tight text-[2.4rem] xl:text-5xl"
-                    />
+                    >
+                        {renderHTML(title)}
+                    </Typography>
                     <Typography as="p" className="text-lg">
                         {description}
                     </Typography>
@@ -50,9 +48,9 @@ const HeroSection = ({
                     aria-hidden
                 >
                     <picture className="relative mt-5 flex w-full max-w-[28rem] h-full">
-                        {images.map(({ className, ...image }, index) => (
+                        {images.map(({ className, ...image }) => (
                             <Image
-                                key={index}
+                                key={image.src ?? image.alt}
                                 {...image}
                                 className={cn(
                                     "absolute w-[67%] h-[82%] rounded-2xl shadow-[0px_50px_100px_0px_#00000026]",

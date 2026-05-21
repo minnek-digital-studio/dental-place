@@ -195,9 +195,9 @@ export async function NavBar({
                         {align === "left" && (
                             <NavigationMenu className="hidden md:flex">
                                 <NavigationMenuList>
-                                    {navItems.map((item, index) => (
+                                    {navItems.map((item) => (
                                         <NavbarItem
-                                            key={`${item.title}-${index}`}
+                                            key={item.title}
                                             variant={variant}
                                             text={text}
                                             {...item}
@@ -211,9 +211,9 @@ export async function NavBar({
                         <div className="flex items-center gap-4 lg:gap-6">
                             <NavigationMenu className="hidden md:flex">
                                 <NavigationMenuList>
-                                    {navItems.map((item, index) => (
+                                    {navItems.map((item) => (
                                         <NavbarItem
-                                            key={`${item.title}-${index}`}
+                                            key={item.title}
                                             variant={variant}
                                             text={text}
                                             {...item}
@@ -267,44 +267,42 @@ export async function NavBar({
                                 const { stroke, fill, ...icon } = social.icon;
 
                                 return (
-                                    <>
-                                        <Button
-                                            variant={button as any}
-                                            size="icon"
-                                            key={`${index}-${social.title}`}
-                                            className={cn(
-                                                index === 0
-                                                    ? "flex"
-                                                    : "hidden md:flex",
-                                                variant ===
-                                                    "transparentLight" &&
-                                                    "md:group-hover:border-black",
-                                            )}
-                                            asChild
+                                    <Button
+                                        key={social.title}
+                                        variant={button as any}
+                                        size="icon"
+                                        className={cn(
+                                            index === 0
+                                                ? "flex"
+                                                : "hidden md:flex",
+                                            variant ===
+                                                "transparentLight" &&
+                                                "md:group-hover:border-black",
+                                        )}
+                                        asChild
+                                    >
+                                        <Typography
+                                            as="a"
+                                            href={social.href}
+                                            aria-label={social.title}
                                         >
-                                            <Typography
-                                                as="a"
-                                                href={social.href}
-                                                aria-label={social.title}
-                                            >
-                                                <IconByName
-                                                    stroke={stroke ?? ""}
-                                                    className={cn(
+                                            <IconByName
+                                                stroke={stroke ?? ""}
+                                                className={cn(
+                                                    variant !==
+                                                        "transparent" &&
                                                         variant !==
-                                                            "transparent" &&
-                                                            variant !==
-                                                                "transparentLight" &&
-                                                            "fill-black",
-                                                        variant ===
                                                             "transparentLight" &&
-                                                            "md:group-hover:fill-black",
-                                                    )}
-                                                    fill={fill ?? "transparent"}
-                                                    {...(icon as IconByNameProps)}
-                                                />
-                                            </Typography>
-                                        </Button>
-                                    </>
+                                                        "fill-black",
+                                                    variant ===
+                                                        "transparentLight" &&
+                                                        "md:group-hover:fill-black",
+                                                )}
+                                                fill={fill ?? "transparent"}
+                                                {...(icon as IconByNameProps)}
+                                            />
+                                        </Typography>
+                                    </Button>
                                 );
                             })}
 
@@ -444,10 +442,10 @@ export async function NavbarItem({
                                 <AccordionContent>
                                     <ul className="grid px-4 py-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                         {subItems.map(
-                                            ({ title, href }, index) => (
+                                            ({ title, href }) => (
                                                 <Link
                                                     href={href}
-                                                    key={`${title}-${index}`}
+                                                    key={title}
                                                     legacyBehavior
                                                     passHref
                                                 >

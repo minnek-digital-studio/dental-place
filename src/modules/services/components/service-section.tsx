@@ -4,6 +4,7 @@ import { Image } from "@/modules/common/components/image";
 import { ImageType, CallToAction } from "@/modules/common/types";
 import { BreadCrumb } from "@/modules/common/components/breadcrumb";
 import CallToActionComp from "@/modules/common/components/CallToAction";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 
 export interface ServiceSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
@@ -75,9 +76,9 @@ const ServiceSection = ({
                                 columnsClass[gallery.length]
                             } w-full items-center justify-center gap-6 overflow-hidden`}
                         >
-                            {gallery.map((img, index) => (
+                            {gallery.map((img) => (
                                 <picture
-                                    key={`${img.src}-${index}`}
+                                    key={img.src ?? img.alt}
                                     className="rounded-lg overflow-hidden w-full h-full flex-1"
                                 >
                                     <Image {...img} />
@@ -86,12 +87,9 @@ const ServiceSection = ({
                         </div>
                     )}
                     {editor && (
-                        <div
-                            className="flex gap-6 max-md:flex-col"
-                            dangerouslySetInnerHTML={{
-                                __html: editor,
-                            }}
-                        ></div>
+                        <div className="flex gap-6 max-md:flex-col">
+                            {renderHTML(editor)}
+                        </div>
                     )}
 
                     {img?.src && (
@@ -105,12 +103,9 @@ const ServiceSection = ({
                             <h2 className="font-noto-sans text-black text-3xl lg:text-4xl font-bold tracking-tight">
                                 {subTitle ? subTitle : "Service Description"}
                             </h2>
-                            <div
-                                className="flex flex-col gap-6 font-noto-sans text-black text-base"
-                                dangerouslySetInnerHTML={{
-                                    __html: description,
-                                }}
-                            ></div>
+                            <div className="flex flex-col gap-6 font-noto-sans text-black text-base">
+                                {renderHTML(description)}
+                            </div>
                         </div>
                         {callUsAction && <CallToActionComp {...callUsAction} />}
                     </div>

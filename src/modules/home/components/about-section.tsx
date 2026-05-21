@@ -5,6 +5,7 @@ import { Typography } from "@ui/components/typography";
 import { MoveRight } from "@ui/components/icons";
 import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 
 export type AboutSectionProps = {
     title: string;
@@ -25,7 +26,7 @@ const AboutSection = ({
     button,
     className,
 }: AboutSectionProps) => {
-    const descriptionRichHTML = { __html: descriptionRich || "" };
+    const hasRichDescription = Boolean(descriptionRich);
 
     return (
         <section className=" container max-xl:pl-0 max-xl:pr-0">
@@ -35,15 +36,14 @@ const AboutSection = ({
                         {title}
                     </Typography>
 
-                    {descriptionRichHTML.__html === "" ? (
+                    {!hasRichDescription ? (
                         <Typography as="p" className="leading-8 text-dark">
                             {description}
                         </Typography>
                     ) : (
-                        <div
-                            dangerouslySetInnerHTML={descriptionRichHTML}
-                            className="text-base leading-8 text-dark font-noto-sans"
-                        ></div>
+                        <div className="text-base leading-8 text-dark font-noto-sans">
+                            {renderHTML(descriptionRich)}
+                        </div>
                     )}
 
                     <Button

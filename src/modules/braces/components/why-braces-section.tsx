@@ -46,8 +46,8 @@ const WhyBracesSection = ({
                         </Typography>
                     )}
                     <ul className="flex flex-col gap-6">
-                        {items.map((item, index) => (
-                            <li key={index} className="flex gap-4 items-center">
+                        {items.map((item) => (
+                            <li key={item.title} className="flex gap-4 items-center">
                                 <div className="bg-[#28AF77] rounded-full size-7 md:size-8 flex items-center justify-center">
                                     <IconByName {...item.icon} />
                                 </div>
