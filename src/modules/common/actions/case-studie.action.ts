@@ -4,16 +4,12 @@ import {
     type PostTypeSeoFragmentFragment,
 } from "@/graphql/generated/graphql";
 
-import { Icon } from "../types";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
-import { ButtonProps } from "@ui/components/button";
 import { BeenDoneSectionProps } from "@/modules/case_studies/components/been-done";
 import { ServiceDescriptionSectionProps } from "@/modules/case_studies/components/service-description";
 import { CaseStudiesDetailsSectionProps } from "@/modules/case_studies/components/case-studies-details-section";
-import { CallToAction } from "../types";
+import { CallToAction, Seo } from "../types";
 import { getCallToAction } from "./callToActions.action";
-import { Seo } from "../types";
-import { IconsName } from "@ui/components/icons";
 import { mapSeo } from "../utils/seo.map";
 
 export type CaseStudies = {

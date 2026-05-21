@@ -138,10 +138,6 @@ const NavigationMenuContent = React.forwardRef<
 ));
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 
-interface NavigationMenuLinkProps
-    extends React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Link>,
-        VariantProps<typeof navigationMenuTriggerStyle> {}
-
 const NavigationMenuLink = NavigationMenuPrimitive.Link;
 
 const NavigationMenuViewport = React.forwardRef<

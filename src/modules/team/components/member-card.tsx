@@ -4,8 +4,6 @@ import { Image } from "@/modules/common/components/image";
 import {
     Card,
     CardContent,
-    CardDescription,
-    CardTitle,
     CardHeader,
     CardFooter,
 } from "@ui/components/card";
@@ -39,7 +37,6 @@ const MemberCard = (member: TeamMemberCard) => {
         name,
         specialty,
         img,
-        button,
         socialLinks,
         className,
         ...props

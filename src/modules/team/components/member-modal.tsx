@@ -3,7 +3,6 @@ import { useModalStore } from "../stores/useModalStore";
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
 } from "@ui/components/dialog";
@@ -12,12 +11,9 @@ import { Button } from "@ui/components/button";
 import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
 import { IconByName } from "@ui/components/icons";
-import { de } from "date-fns/locale";
 import { Typography } from "@ui/components/typography";
 
-interface MemberModalProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
+const MemberModal = ({ className: _className, children: _children, ..._props }: React.HTMLAttributes<HTMLDivElement>) => {
     const { member, isOpen, closeModal } = useModalStore((state) => state);
 
     if (!member) {
@@ -26,7 +22,6 @@ const MemberModal = ({ className, children, ...props }: MemberModalProps) => {
 
     const {
         name,
-        button,
         education,
         educationtitle,
         id,

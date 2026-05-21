@@ -1,6 +1,4 @@
-interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
-
-const Link = ({ children, ...props }: LinkProps) => {
+const Link = ({ children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
     return <a {...props}>{children}</a>;
 };
 

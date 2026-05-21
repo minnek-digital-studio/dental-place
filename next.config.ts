@@ -10,7 +10,7 @@ const { protocol, hostname, port } = new URL(
 );
 
 /** @type {import('next').NextConfig} */
-module.exports = {
+export default {
     images: {
         remotePatterns: [
             {
