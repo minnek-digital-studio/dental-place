@@ -13,7 +13,7 @@ import Link from "@/modules/common/components/link";
 import { IconByName } from "@ui/components/icons";
 import { Typography } from "@ui/components/typography";
 
-const MemberModal = ({ className: _className, children: _children, ..._props }: React.HTMLAttributes<HTMLDivElement>) => {
+const MemberModal = ({ className: _className, children: _children, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
     const { member, isOpen, closeModal } = useModalStore((state) => state);
 
     if (!member) {

@@ -36,7 +36,7 @@ const ServiceSection = ({
     description,
     callUsAction,
     slug,
-    _content,
+    content: _content,
     ...props
 }: ServiceSectionProps) => {
     const links = [

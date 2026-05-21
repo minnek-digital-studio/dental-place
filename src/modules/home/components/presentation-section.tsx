@@ -3,10 +3,8 @@ import React from "react";
 import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { Typography } from "@ui/components/typography";
-import PresentationCard, {
-    type PresentationCardProps,
-} from "./presentation-card";
 import Buttons from "@/modules/home/components/buttons";
+import type { PresentationCardProps } from "./presentation-card";
 
 export interface PresentationSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
