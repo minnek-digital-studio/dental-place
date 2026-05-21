@@ -23,7 +23,7 @@ export type AboutBracesItem = {
 
 const AboutBracesSection = ({
     title,
-    _items,
+    items: _items,
     img,
     description,
     button,

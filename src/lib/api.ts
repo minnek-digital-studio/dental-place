@@ -29,7 +29,7 @@ export async function fetchAPI(
     return json.data;
 }
 
-export async function getPreviewPost(id: unknown, idType: unknown = "DATABASE_ID") {
+export async function getPreviewPost(id: string | number, idType: string = "DATABASE_ID") {
     const data = await fetchAPI(
         `
     query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -61,7 +61,7 @@ export async function getAllPostsWithSlug() {
     return data?.posts;
 }
 
-export async function getAllPostsForHome(preview: unknown) {
+export async function getAllPostsForHome(preview: boolean) {
     const data = await fetchAPI(
         `
     query AllPosts {
@@ -103,13 +103,13 @@ export async function getAllPostsForHome(preview: unknown) {
     return data?.posts;
 }
 
-export async function getPostAndMorePosts(slug: unknown, preview: unknown, previewData: unknown) {
-    const postPreview = preview && previewData?.post;
+export async function getPostAndMorePosts(slug: string | number, preview: boolean, previewData: Record<string, unknown>) {
+    const postPreview = (preview && previewData?.post) as any;
     // The slug may be the id of an unpublished post
     const isId = Number.isInteger(Number(slug));
     const isSamePost = isId
-        ? Number(slug) === postPreview.id
-        : slug === postPreview.slug;
+        ? Number(slug) === postPreview?.id
+        : slug === postPreview?.slug;
     const isDraft = isSamePost && postPreview?.status === "draft";
     const isRevision = isSamePost && postPreview?.status === "publish";
     const data = await fetchAPI(

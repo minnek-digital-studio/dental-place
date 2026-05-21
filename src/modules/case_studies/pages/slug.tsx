@@ -19,7 +19,7 @@ export const dynamic = config.DYNAMIC_PAGE_GENERATION
     : "auto";
 
 type Props = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata(
@@ -27,7 +27,7 @@ export async function generateMetadata(
     _parent: ResolvingMetadata,
 ): Promise<Metadata> {
     // read route params
-    const { slug } = params;
+    const { slug } = await params;
 
     const response = await getCaseStudyPage(slug);
 
@@ -39,7 +39,7 @@ export async function generateMetadata(
     };
 }
 const CaseStudiesPage: React.FC<Props> = async ({ params }) => {
-    const { slug } = params;
+    const { slug } = await params;
 
     const caseStudiesData = await getCaseStudyPage(slug);
 
