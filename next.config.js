@@ -5,7 +5,7 @@ if (!URL.canParse(process.env.WORDPRESS_API_URL)) {
     `);
 }
 
-const { protocol, hostname, port, pathname } = new URL(
+const { protocol, hostname, port } = new URL(
     process.env.WORDPRESS_API_URL,
 );
 

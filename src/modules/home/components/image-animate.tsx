@@ -28,7 +28,6 @@ const ImageAnimate = ({
 
             const parentVisible =
                 topParent + heightParent > 0 && topParent < window.innerHeight;
-            heightParent;
             if (!parentVisible) return;
 
             const { top, height } = imageRef.current.getBoundingClientRect();
