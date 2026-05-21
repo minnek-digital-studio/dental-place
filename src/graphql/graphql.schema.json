@@ -16828,6 +16828,30 @@
         ]
       },
       {
+        "kind": "OBJECT",
+        "name": "ConnectorsSettings",
+        "description": "The connectors setting type",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "connectorsAiAiStudioSitegroundApiKey",
+            "description": "API key for the SiteGround AI connector.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INTERFACE",
         "name": "ContentNode",
         "description": "Base interface for content objects like posts, pages, and media items. Provides common fields available across these content types.",
@@ -59943,6 +59967,18 @@
             "deprecationReason": null
           },
           {
+            "name": "connectorsSettings",
+            "description": "Fields of the &#039;ConnectorsSettings&#039; settings group",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ConnectorsSettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "contentNode",
             "description": "A node used to manage content",
             "args": [
@@ -79811,6 +79847,18 @@
         "isOneOf": null,
         "fields": [
           {
+            "name": "connectorsSettingsConnectorsAiAiStudioSitegroundApiKey",
+            "description": "Settings of the the string Settings Group",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "discussionSettingsDefaultCommentStatus",
             "description": "Settings of the the string Settings Group",
             "args": [],
@@ -93359,6 +93407,18 @@
             "deprecationReason": null
           },
           {
+            "name": "connectorsSettingsConnectorsAiAiStudioSitegroundApiKey",
+            "description": "API key for the SiteGround AI connector.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "discussionSettingsDefaultCommentStatus",
             "description": "Permitir a la gente enviar comentarios en las nuevas entradas.",
             "type": {
@@ -93604,6 +93664,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "connectorsSettings",
+            "description": "Update the ConnectorsSettings setting.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ConnectorsSettings",
               "ofType": null
             },
             "isDeprecated": false,

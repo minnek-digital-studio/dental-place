@@ -1,6 +1,7 @@
 import {
     type GetHomePageQuery,
     GetHomePageDocument,
+    type PostTypeSeoFragmentFragment,
 } from "@/graphql/generated/graphql";
 
 import { type InstagramSectionProps } from "../components/instagram-section";
@@ -37,7 +38,7 @@ export const getHomePageInfo = async (): Promise<HomePageInfo> => {
     });
 
     return {
-        seo: mapSeo(data?.page?.seo),
+        seo: mapSeo(data?.page?.seo as PostTypeSeoFragmentFragment),
         PresentationInfo: mapPresentationData(data?.page),
         ServicesInfo: await mapServiceData(data?.page),
         callToActions: await mapCalltoActions(data?.page),

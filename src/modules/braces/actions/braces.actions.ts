@@ -1,6 +1,7 @@
 import {
     type GetBracesExpressPageInfoQuery,
     GetBracesExpressPageInfoDocument,
+    type PostTypeSeoFragmentFragment,
 } from "@/graphql/generated/graphql";
 
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
@@ -33,7 +34,7 @@ export const getBracesExpressPageInfo =
         });
 
         return {
-            seo: mapSeo(data?.page?.seo),
+            seo: mapSeo(data?.page?.seo as PostTypeSeoFragmentFragment),
             HeroInfo: mapHeroData(data?.page),
             callToActions: await mapCalltoActions(data?.page),
             BracesPhotosInfo: mapBracesPhotosData(data?.page),

@@ -27,7 +27,6 @@ import {
 import {
     Sheet,
     SheetContent,
-
     SheetHeader,
     SheetTrigger,
 } from "@ui/components/sheet";
@@ -132,8 +131,7 @@ export type NavbarVariants = VariantProps<typeof NavBarVariants> &
     VariantProps<typeof TextVariants>;
 
 interface NavbarProps
-    extends React.HTMLAttributes<HTMLDivElement>,
-        NavbarVariants {
+    extends React.HTMLAttributes<HTMLDivElement>, NavbarVariants {
     align?: "left" | "center";
 }
 
@@ -144,16 +142,10 @@ export async function NavBar({
     text,
     ...props
 }: NavbarProps) {
-    const {
-
-        PhoneConfig,
-        SchedulesConfig,
-        SocialLinksConfig,
-        navItems,
-        error,
-    } = config.WORDPRESS_MENU_ENABLED
-        ? await getMenuData()
-        : await getNavbarData();
+    const { PhoneConfig, SchedulesConfig, SocialLinksConfig, navItems, error } =
+        config.WORDPRESS_MENU_ENABLED
+            ? await getMenuData()
+            : await getNavbarData();
 
     if (error) {
         console.error(error);
@@ -385,7 +377,6 @@ export async function NavBar({
                                         />
                                     </NavigationMenuListColumn>
                                 </NavigationMenu>
-
                             </SheetContent>
                         </Sheet>
                     </div>

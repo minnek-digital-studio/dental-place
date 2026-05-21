@@ -7,6 +7,7 @@ import {
     GetServiceBySlugDocument,
     GetServicePageInfoDocument,
     GetServicesInfoDocument,
+    type PostTypeSeoFragmentFragment,
 } from "@/graphql/generated/graphql";
 
 import {
@@ -77,7 +78,7 @@ export const getServiceBySlug = async (
     );
 
     const servicePage: ServicePage = {
-        seo: mapSeo(data?.service?.seo),
+        seo: mapSeo(data?.service?.seo as PostTypeSeoFragmentFragment),
         serviceSection: {
             ...mapServiceData(data?.service),
             callUsAction: (await mapCallusActionsService(data?.service))[0],
@@ -115,7 +116,7 @@ export const getServicesPage = async (): Promise<ServicePageInfo> => {
     });
 
     const servicePage: ServicePageInfo = {
-        seo: mapSeo(data?.page?.seo),
+        seo: mapSeo(data?.page?.seo as PostTypeSeoFragmentFragment),
         servicesSectionInfo: await mapServicePageData(data?.page),
         clinicSectionInfo: await mapClinicSectionData(data?.page),
         callToActions: await mapCalltoActionsServices(data?.page),

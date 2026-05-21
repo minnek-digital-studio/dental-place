@@ -3,9 +3,7 @@ query getBracesExpressPageInfo($uri: ID = "/braces/") {
         title
         id
         seo {
-            title
-            metaDesc
-            metaKeywords
+            ...PostTypeSEOFragment
         }
         bracesExpressPageSettings {
             helpFormSection {

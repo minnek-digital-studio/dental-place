@@ -5,6 +5,7 @@ import {
     GetTeamMembersDocument,
     type GetTeamPageInfoQuery,
     GetTeamPageInfoDocument,
+    type PostTypeSeoFragmentFragment,
 } from "@/graphql/generated/graphql";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
 
@@ -34,7 +35,7 @@ export const getTeamPageInfo = async (): Promise<TeamPageInfo> => {
     });
 
     const teamPageInfo: TeamPageInfo = {
-        seo: mapSeo(data?.page?.seo),
+        seo: mapSeo(data?.page?.seo as PostTypeSeoFragmentFragment),
         TeamInfo: await mapTeamInfo(data?.page),
         callToActions: await mapCalltoActions(data?.page),
         FAQInfo: await mapFAQInfo(data?.page),

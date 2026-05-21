@@ -67,9 +67,7 @@ query getCaseStudieBySlug($slug: ID = "") {
         title
         slug
         seo {
-            title
-            metaDesc
-            metaKeywords
+            ...PostTypeSEOFragment
         }
         featuredImage {
             node {

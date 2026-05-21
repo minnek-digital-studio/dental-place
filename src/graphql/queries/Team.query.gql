@@ -68,9 +68,7 @@ query getTeamPageInfo($uri: ID = "/team/") {
         title
         id
         seo {
-            title
-            metaDesc
-            metaKeywords
+            ...PostTypeSEOFragment
         }
         teamPageSettings {
             title
