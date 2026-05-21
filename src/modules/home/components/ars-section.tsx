@@ -30,8 +30,9 @@ const ArsSection = ({
                 {title}
             </Typography>
             <div className="flex gap-4 items-start justify-center flex-wrap md:flex-nowrap">
-                {images.map(({ className, ...image }) => (
+                {images.map(({ className, ...image }, idx) => (
                     <picture
+                        key={image.src}
                         className={cn(
                             "h-20 max-w-40 md:h-28 md:max-w-52",
                             className,

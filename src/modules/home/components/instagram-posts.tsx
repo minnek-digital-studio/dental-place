@@ -26,9 +26,9 @@ const InstagramPosts = ({ images, autoScrollOptions }: InstagramPostProps) => {
             className="container max-xl:pl-0 max-xl:pr-0"
         >
             <CarouselContent>
-                {images.map((image, index) => (
+                {images.map((image) => (
                     <CarouselItem
-                        key={index}
+                        key={image.src}
                         className="h-52 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
                     >
                         <Image {...image} />
