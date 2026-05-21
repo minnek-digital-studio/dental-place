@@ -8,12 +8,13 @@ export interface ImageProps
         ImageType {}
 
 export const Image = forwardRef<HTMLImageElement, ImageProps>(
-    ({ className, href, ...props }, ref) => {
+    ({ className, href, alt = "", ...props }, ref) => {
         if (href) {
             return (
                 <Link className={cn("w-full h-full", className)} href={href}>
                     <img
                         ref={ref}
+                        alt={alt}
                         className={cn("w-full h-full object-cover", className)}
                         loading="lazy"
                         {...props}
@@ -25,6 +26,7 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
         return (
             <img
                 ref={ref}
+                alt={alt}
                 loading="lazy"
                 className={cn("w-full h-full object-cover", className)}
                 {...props}

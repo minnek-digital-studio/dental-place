@@ -74,7 +74,7 @@ const ReviewsSection = ({
                     {items.map((item, index) => (
                         <CarouselItem
                             className="flex justify-center items-center md:basis-1/3 lg:basis-1/4"
-                            key={index}
+                            key={`${item.author.name}-${index}`}
                         >
                             <ReviewCard {...item} />
                         </CarouselItem>

@@ -176,9 +176,9 @@ export async function NavBar({
                     <div className="flex items-center gap-4 lg:gap-6">
                         <Link href="/">
                             {logo instanceof Array ? (
-                                logo.map((src, index) => (
+                                logo.map((src) => (
                                     <img
-                                        key={index}
+                                        key={src}
                                         src={src}
                                         alt="Dental Place Logo"
                                         className={`w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12 ${index === 0 ? "flex md:group-hover:hidden" : "hidden md:group-hover:flex"}`}
