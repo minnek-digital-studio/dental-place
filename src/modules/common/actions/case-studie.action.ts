@@ -11,6 +11,7 @@ import { CaseStudiesDetailsSectionProps } from "@/modules/case_studies/component
 import { CallToAction, Seo } from "../types";
 import { getCallToAction } from "./callToActions.action";
 import { mapSeo } from "../utils/seo.map";
+import { type IconsName } from "@ui/components/icons";
 
 export type CaseStudies = {
     seo: Seo;

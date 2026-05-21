@@ -47,7 +47,7 @@ export const mapHelpFormInfo = (
                     (helpFormData?.form?.button
                         ?.size?.[0] as ButtonVariants["size"]) || "lg",
                 className: helpFormData?.form?.button?.className || "",
-                type: (helpFormData?.form?.button?.type as string) || "submit",
+                type: (helpFormData?.form?.button?.type as "submit" | "button" | "reset" | undefined) || "submit",
             },
         },
     };

@@ -2,8 +2,8 @@ import type { LucideProps } from "lucide-react";
 
 export const Google = ({
     size = "24",
-    _color = "currentColor",
-    _fill,
+    color: _color = "currentColor",
+    fill: _fill,
     stroke = "1",
     ...props
 }: LucideProps) => {

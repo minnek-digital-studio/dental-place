@@ -15,7 +15,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
 type Props = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
 
 export const dynamic = config.DYNAMIC_PAGE_GENERATION
@@ -26,7 +26,7 @@ export async function generateMetadata(
     { params }: Props,
     _parent: ResolvingMetadata,
 ): Promise<Metadata> {
-    const { slug } = params;
+    const { slug } = await params;
 
     const response = await getServiceBySlug(slug);
 
@@ -39,7 +39,7 @@ export async function generateMetadata(
 }
 
 const ServicePage: React.FC<Props> = async ({ params }) => {
-    const { slug } = params;
+    const { slug } = await params;
     const response = await getServiceBySlug(slug);
 
     if (!response) {

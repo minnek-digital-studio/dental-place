@@ -226,7 +226,7 @@ export async function NavBar({
                     <div className="flex gap-2 lg:gap-4 items-center">
                         <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
                             <Button
-                                variant={button as string}
+                                variant={button as any}
                                 size="icon"
                                 className={cn(
                                     variant === "transparentLight" &&
@@ -269,7 +269,7 @@ export async function NavBar({
                                 return (
                                     <>
                                         <Button
-                                            variant={button as string}
+                                            variant={button as any}
                                             size="icon"
                                             key={`${index}-${social.title}`}
                                             className={cn(
@@ -503,7 +503,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 }
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
-    ({ className, title, _column, children, ...props }, ref) => {
+    ({ className, title, column: _column, children, ...props }, ref) => {
         return (
             <li>
                 <NavigationMenuLink asChild>

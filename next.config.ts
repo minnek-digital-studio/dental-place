@@ -1,22 +1,23 @@
-if (!URL.canParse(process.env.WORDPRESS_API_URL)) {
+import type { NextConfig } from "next";
+
+const wpApiUrl = process.env.WORDPRESS_API_URL;
+
+if (!wpApiUrl || !URL.canParse(wpApiUrl)) {
     throw new Error(`
-      Please provide a valid WordPress instance URL.
-      Add to your environment variables WORDPRESS_API_URL.
-    `);
+            Please provide a valid WordPress instance URL.
+            Add to your environment variables WORDPRESS_API_URL.
+        `);
 }
 
-const { protocol, hostname, port } = new URL(
-    process.env.WORDPRESS_API_URL,
-);
+const { protocol, hostname, port } = new URL(wpApiUrl);
 
-/** @type {import('next').NextConfig} */
-export default {
+const nextConfig: NextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: protocol.slice(0, -1),
+                protocol: protocol.slice(0, -1) as "http" | "https",
                 hostname: hostname,
-                port: port || "",
+                ...(port ? { port } : {}),
             },
             { protocol: "https", hostname: "secure.gravatar.com" },
         ],
@@ -25,3 +26,5 @@ export default {
         ignoreBuildErrors: false,
     },
 };
+
+export default nextConfig;

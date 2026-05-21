@@ -1,8 +1,12 @@
-import type { ImageType, MediaType } from "@/modules/common/types";
+import type { ImageType, MediaType, VideoType } from "@/modules/common/types";
 import React from "react";
 import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { Typography } from "@ui/components/typography";
+import PresentationCard, {
+    type PresentationCardProps,
+} from "./presentation-card";
+import Buttons from "@/modules/home/components/buttons";
 
 export interface PresentationSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
@@ -19,7 +23,7 @@ const PresentationSection = ({
     description,
     img,
     mediaType = "image",
-    _video,
+    video: _video,
     card,
     className,
     ...props

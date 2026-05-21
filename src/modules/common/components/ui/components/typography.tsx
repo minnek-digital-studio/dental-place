@@ -36,7 +36,7 @@ export const colorVariants = {
 
 const defaultElement = "p";
 
-type OwnProps = Record<string, never>;
+type OwnProps = object;
 
 type TypographyProps<As extends ElementType = typeof defaultElement> =
     PolymorphicProps<OwnProps, As, typeof defaultElement> & {
@@ -52,14 +52,15 @@ export const Typography = <As extends ElementType = typeof defaultElement>({
     asChild,
     ...props
 }: TypographyProps<As>) => {
+    const elementType = (as || defaultElement) as string;
     const classes = cn(
         "font-noto-sans",
         colorVariants[color || "black"],
-        tagVariants[as],
+        tagVariants[elementType],
         className,
     );
 
-    const Component = asChild ? Slot : as || defaultElement;
+    const Component = asChild ? Slot : elementType;
 
     return (
         <Component className={classes} {...props}>
