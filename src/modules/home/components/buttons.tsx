@@ -17,11 +17,11 @@ const Buttons = ({ buttons, className: _className, ...props }: ButtonsProps) => 
             className="flex flex-row-reverse items-start justify-start flex-wrap md:flex-nowrap gap-4 max-md:w-full"
             {...props}
         >
-            {buttons.map(({ icon, link, text, className, ...buttonProps }) => (
+            {buttons.map(({ icon, link, text, className, ...buttonProps }, idx) => (
                 <Button
                     {...buttonProps}
                     className={cn("", className)}
-                    key={crypto.randomUUID()}
+                    key={text ?? idx}
                     asChild
                 >
                     <Link

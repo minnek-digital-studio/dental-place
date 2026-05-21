@@ -40,8 +40,8 @@ const ServiceSection = ({
                     </Typography>
                 </header>
                 <main className="justify-center items-center gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-fr">
-                    {items.map((item) => (
-                        <ServiceCard key={crypto.randomUUID()} {...item} />
+                    {items.map((item, idx) => (
+                        <ServiceCard key={item.title ?? idx} {...item} />
                     ))}
                 </main>
                 {button && (

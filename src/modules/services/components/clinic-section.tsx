@@ -42,10 +42,10 @@ const ClinicSection = ({ title, description, items }: ClinicSectionProps) => {
                 className="flex flex-col gap-14 w-full items-center container max-lg:pl-0 max-lg:pr-0 "
             >
                 <CarouselContent>
-                    {items.map((item, index) => (
+                    {items.map((item) => (
                         <CarouselItem
                             className="flex justify-center items-center basis-1/2 md:basis-1/4 lg:basis-1/5"
-                            key={index}
+                            key={item.src ?? item.alt}
                         >
                             <picture className="size-full rounded-xl overflow-hidden">
                                 <Image {...item} />

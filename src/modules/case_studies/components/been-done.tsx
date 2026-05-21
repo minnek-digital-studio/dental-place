@@ -3,6 +3,7 @@ import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import { Icon } from "@/modules/common/types";
 import { IconByName } from "@ui/components/icons";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 export interface BeenDoneSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -23,9 +24,6 @@ const BeenDoneSection = ({
     className,
     ...props
 }: BeenDoneSectionProps) => {
-    let descriptionHTML = { __html: "" };
-    if (description) descriptionHTML = { __html: description };
-
     return (
         <section className={cn("bg-white md:mb-16", className)} {...props}>
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
@@ -39,12 +37,13 @@ const BeenDoneSection = ({
                     <Typography
                         as="p"
                         className="text-dark-grey text-start leading-[1.6rem]"
-                        dangerouslySetInnerHTML={descriptionHTML}
-                    />
+                    >
+                        {renderHTML(description)}
+                    </Typography>
                 )}
                 <ul className="max-md:flex flex-col gap-4 md:gap-6 grid md:grid-cols-2 mt-3">
-                    {itemsIcons.map((item, index) => (
-                        <li key={index} className="flex gap-4 items-center">
+                    {itemsIcons.map((item) => (
+                        <li key={item.title} className="flex gap-4 items-center">
                             <div className="bg-[#28AF77] rounded-full size-5 md:size-6 flex items-center justify-center">
                                 <IconByName {...item.icon} />
                             </div>

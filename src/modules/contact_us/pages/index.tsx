@@ -7,6 +7,13 @@ import HeroSection from "@/modules/contact_us/components/hero-section";
 import ContactUsData from "@/modules/contact_us/data/contact-us.json";
 import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact Us | Dental Place",
+    description:
+        "Get in touch with Dental Place. Visit us in Santiago de los Caballeros or reach us by phone and email to schedule your appointment.",
+};
 
 export const dynamic = config.DYNAMIC_PAGE_GENERATION
     ? "force-dynamic"

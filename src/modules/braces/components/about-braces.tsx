@@ -5,6 +5,7 @@ import { Typography } from "@ui/components/typography";
 import type { ButtonType, ImageType, Icon } from "@/modules/common/types";
 import { MoveRight } from "@ui/components/icons";
 import Link from "@/modules/common/components/link";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 
 export type AboutBracesSectionProps = {
     title: string;
@@ -29,9 +30,6 @@ const AboutBracesSection = ({
     button,
     className,
 }: AboutBracesSectionProps) => {
-    let descriptionHTML = { __html: "" };
-    if (description) descriptionHTML = { __html: description };
-
     return (
         <section className={cn("md:py-14", className)}>
             <div
@@ -47,11 +45,9 @@ const AboutBracesSection = ({
                         {title}
                     </Typography>
                     {description && (
-                        <Typography
-                            as="p"
-                            className="leading-6 text-xl"
-                            dangerouslySetInnerHTML={descriptionHTML}
-                        />
+                        <Typography as="p" className="leading-6 text-xl">
+                            {renderHTML(description)}
+                        </Typography>
                     )}
                     {button?.text && (
                         <Button

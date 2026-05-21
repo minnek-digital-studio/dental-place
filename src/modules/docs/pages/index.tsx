@@ -26,7 +26,8 @@ import ClientQueryTest from "../components/clients-query-test";
 import FormTest from "@/modules/docs/components/form-test";
 
 export const metadata: Metadata = {
-    title: "Docs",
+    title: "Docs | Dental Place",
+    description: "Internal component library and design system documentation for Dental Place.",
 };
 
 export default async function Docs() {

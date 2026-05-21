@@ -3,6 +3,7 @@ import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { ImageType } from "@/modules/common/types";
+import { renderHTML } from "@/modules/common/utils/sanitize-html";
 export interface ServiceDescriptionSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -26,11 +27,6 @@ const ServiceDescriptionSection = ({
     className,
     ...props
 }: ServiceDescriptionSectionProps) => {
-    let descriptionHTML = { __html: "" };
-    let subDescriptionHTML = { __html: "" };
-    if (description) descriptionHTML = { __html: description };
-    if (subDescription) subDescriptionHTML = { __html: subDescription };
-
     return (
         <section className={cn("bg-white", className)} {...props}>
             <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
@@ -44,8 +40,9 @@ const ServiceDescriptionSection = ({
                     <Typography
                         as="p"
                         className="text-dark-grey text-start leading-[1.6rem]"
-                        dangerouslySetInnerHTML={descriptionHTML}
-                    />
+                    >
+                        {renderHTML(description)}
+                    </Typography>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[5rem]">
                     <figure className="max-w-2xl max-h-56 md:max-w-3xl">
@@ -80,8 +77,9 @@ const ServiceDescriptionSection = ({
                 <Typography
                     as="p"
                     className="text-dark-grey text-start leading-[1.6rem]"
-                    dangerouslySetInnerHTML={subDescriptionHTML}
-                />
+                >
+                    {renderHTML(subDescription)}
+                </Typography>
             </main>
         </section>
     );

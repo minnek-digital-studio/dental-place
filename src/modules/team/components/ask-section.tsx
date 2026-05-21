@@ -42,8 +42,8 @@ const AskSection = ({
             </Typography>
             {description && <Typography as="p">{description}</Typography>}
             <Accordion type="single" collapsible className="w-full max-w-xl">
-                {questions.map(({ question, answer, id }, index) => (
-                    <AccordionItem key={index} value={id} className="border-b">
+                {questions.map(({ question, answer, id }) => (
+                    <AccordionItem key={id} value={id} className="border-b">
                         <AccordionTrigger className="[&[data-state=open]>div>svg]:rotate-45 [&[data-state=open]>div]:opacity-100">
                             <Typography as="h3">{question}</Typography>
                             <Button

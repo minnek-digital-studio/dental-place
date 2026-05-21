@@ -64,8 +64,8 @@ const CaseStudiesPage: React.FC<Props> = async ({ params }) => {
                 {...(servicesDescription as ServiceDescriptionSectionProps)}
             />
             <BeenDoneSection {...(beenDone as BeenDoneSectionProps)} />
-            {callToActions.map((cta, index) => (
-                <CallToAction key={`${index}-${cta.title}`} {...cta} />
+            {callToActions.map((cta) => (
+                <CallToAction key={cta.title} {...cta} />
             ))}
         </Layout>
     );

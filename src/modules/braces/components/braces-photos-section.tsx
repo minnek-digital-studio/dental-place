@@ -46,10 +46,10 @@ const BracesPhotosSection = ({
                 className="flex flex-col gap-14 w-full items-center container max-2xl:pl-0 max-2xl:pr-0 "
             >
                 <CarouselContent>
-                    {items.map((item, index) => (
+                    {items.map((item) => (
                         <CarouselItem
                             className="flex justify-center items-center basis-1/2 md:basis-1/4"
-                            key={index}
+                            key={item.src ?? item.alt}
                         >
                             <picture className="size-full rounded-xl overflow-hidden">
                                 <Image {...item} />

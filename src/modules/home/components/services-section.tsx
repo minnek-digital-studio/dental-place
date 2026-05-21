@@ -51,7 +51,7 @@ const ServiceSection = ({
                             if (index > 3) return null;
                             return (
                                 <CarouselItem
-                                    key={crypto.randomUUID()}
+                                    key={item.title ?? index}
                                     className="flex justify-center items-center basis-[31%] md:basis-1/3 lg:basis-1/4"
                                 >
                                     <ServiceCard

@@ -39,7 +39,7 @@ const ArsSection = ({
                         )}
                     >
                         <Image
-                            key={crypto.randomUUID()}
+                            key={`${image.src}-${idx}`}
                             {...image}
                             className="object-contain"
                         />
