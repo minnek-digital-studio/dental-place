@@ -100,7 +100,7 @@ const ServiceSection = ({
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:auto-rows-fr">
                         <div className="flex flex-col gap-6">
-                            <h2 className="font-noto-sans text-black text-3xl lg:text-4xl font-bold tracking-tight">
+                            <h2 className="font-noto-sans text-black text-3xl lg:text-4xl font-semibold tracking-tight">
                                 {subTitle ? subTitle : "Service Description"}
                             </h2>
                             <div className="flex flex-col gap-6 font-noto-sans text-black text-base">

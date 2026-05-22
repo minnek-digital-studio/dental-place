@@ -40,6 +40,7 @@ import {
 } from "@ui/components/icons";
 import { cn, cva, type VariantProps } from "@ui/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 export type NavBarItem = {
@@ -179,17 +180,21 @@ export async function NavBar({
                         <Link href="/">
                             {logo instanceof Array ? (
                                 logo.map((src, index) => (
-                                    <img
+                                    <Image
                                         key={src}
                                         src={src}
                                         alt="Dental Place Logo"
+                                        width={160}
+                                        height={48}
                                         className={`w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12 ${index === 0 ? "flex md:group-hover:hidden" : "hidden md:group-hover:flex"}`}
                                     />
                                 ))
                             ) : (
-                                <img
+                                <Image
                                     src={logo}
                                     alt="Dental Place Logo"
+                                    width={160}
+                                    height={48}
                                     className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
                                 />
                             )}
@@ -350,10 +355,11 @@ export async function NavBar({
                             <SheetContent className="text-black">
                                 <SheetHeader className="flex flex-row justify-center px-2">
                                     <Link href="/" className="w-max">
-                                        <img
+                                        <Image
                                             src={variants["default"].logo}
                                             alt="Dental Place Logo"
-                                            loading="lazy"
+                                            width={160}
+                                            height={32}
                                             className="w-auto max-h-8"
                                         />
                                     </Link>
@@ -435,7 +441,7 @@ export async function NavbarItem({
                                 value={title}
                                 className="border-b-transparent"
                             >
-                                <AccordionTrigger className="inline-flex h-10 w-max px-2 py-2 text-sm font-normal border-b-2 border-transparent transition-colors hover:border-primary-foreground hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:border-primary-foreground">
+                                <AccordionTrigger className="inline-flex h-10 w-max p-2 text-sm font-normal border-b-2 border-transparent transition-colors hover:border-primary-foreground hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:border-primary-foreground">
                                     {title}
                                     <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
                                 </AccordionTrigger>
