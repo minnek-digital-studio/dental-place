@@ -7,6 +7,7 @@ import { type ArsSectionProps } from "@/modules/home/components/ars-section";
 import { getServices } from "@/modules/services/actions/services.action";
 import { type ButtonVariants } from "@ui/components/button";
 import { type IconsName } from "@ui/components/icons";
+import { type AutoScrollOptionsType } from "@ui/components/carousel";
 
 export const mapArsData = (data: GetHomePageQuery["page"]): ArsSectionProps => {
     const arsData = data?.homePageSettings?.arsSection;
@@ -152,7 +153,9 @@ export const mapInstagramData = (
                         src: image?.node?.sourceUrl ?? "",
                         isVisible: isvisible ?? true,
                     })) ?? [],
-            autoScrollOptions: carouselOptions as any,
+            autoScrollOptions: carouselOptions as
+                | AutoScrollOptionsType
+                | undefined,
         },
     };
 };

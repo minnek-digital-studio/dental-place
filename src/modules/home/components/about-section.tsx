@@ -5,7 +5,7 @@ import { Typography } from "@ui/components/typography";
 import { MoveRight } from "@ui/components/icons";
 import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export type AboutSectionProps = {
     title: string;
@@ -42,7 +42,7 @@ const AboutSection = ({
                         </Typography>
                     ) : (
                         <div className="text-base leading-8 text-dark font-noto-sans">
-                            {renderHTML(descriptionRich)}
+                            <RichText html={descriptionRich} />
                         </div>
                     )}
 

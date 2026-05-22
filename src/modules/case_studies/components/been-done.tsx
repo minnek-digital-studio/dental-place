@@ -3,7 +3,7 @@ import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import { Icon } from "@/modules/common/types";
 import { IconByName } from "@ui/components/icons";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 export interface BeenDoneSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -38,7 +38,7 @@ const BeenDoneSection = ({
                         as="p"
                         className="text-dark-grey text-start leading-[1.6rem]"
                     >
-                        {renderHTML(description)}
+                        <RichText html={description} />
                     </Typography>
                 )}
                 <ul className="max-md:flex flex-col gap-4 md:gap-6 grid md:grid-cols-2 mt-3">

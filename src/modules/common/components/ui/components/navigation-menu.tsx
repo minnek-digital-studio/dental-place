@@ -1,9 +1,10 @@
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps } from "class-variance-authority";
 import { ChevronDown } from "lucide-react";
 
 import { cn } from "@ui/lib/utils";
+import { navigationMenuTriggerStyle } from "./navigation-menu.types";
 
 const NavigationMenu = React.forwardRef<
     React.ElementRef<typeof NavigationMenuPrimitive.Root>,
@@ -77,21 +78,6 @@ const NavigationMenuItem = React.forwardRef<
         {...props}
     />
 ));
-
-const navigationMenuTriggerStyle = cva(
-    "group inline-flex h-10 w-max items-center justify-center px-2 py-2 text-sm font-normal border-b-2 border-transparent transition-colors hover:border-primary-foreground hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:border-primary-foreground",
-    {
-        variants: {
-            direction: {
-                row: "",
-                column: "w-full justify-start",
-            },
-        },
-        defaultVariants: {
-            direction: "row",
-        },
-    },
-);
 
 interface NavigationMenuTriggerProps
     extends React.ComponentPropsWithoutRef<
@@ -177,7 +163,6 @@ NavigationMenuIndicator.displayName =
     NavigationMenuPrimitive.Indicator.displayName;
 
 export {
-    navigationMenuTriggerStyle,
     NavigationMenu,
     NavigationMenuList,
     NavigationMenuItem,

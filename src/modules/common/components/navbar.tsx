@@ -22,8 +22,8 @@ import {
     NavigationMenuList,
     NavigationMenuListColumn,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@ui/components/navigation-menu";
+import { navigationMenuTriggerStyle } from "@ui/components/navigation-menu.types";
 import {
     Sheet,
     SheetContent,
@@ -56,6 +56,8 @@ export type NavbarSubItem = {
     description?: string;
     href: string;
 };
+
+type ButtonVariantType = "secondary" | "light" | "transparent";
 
 const NavBarVariants = cva(
     "w-full py-6 flex justify-center items-center transition-all duration-300 z-50",
@@ -176,7 +178,7 @@ export async function NavBar({
                     <div className="flex items-center gap-4 lg:gap-6">
                         <Link href="/">
                             {logo instanceof Array ? (
-                                logo.map((src) => (
+                                logo.map((src, index) => (
                                     <img
                                         key={src}
                                         src={src}
@@ -226,7 +228,7 @@ export async function NavBar({
                     <div className="flex gap-2 lg:gap-4 items-center">
                         <div className="flex gap-2 lg:gap-4 items-center max-md:flex-row-reverse">
                             <Button
-                                variant={button as any}
+                                variant={button as ButtonVariantType}
                                 size="icon"
                                 className={cn(
                                     variant === "transparentLight" &&
@@ -269,14 +271,13 @@ export async function NavBar({
                                 return (
                                     <Button
                                         key={social.title}
-                                        variant={button as any}
+                                        variant={button as ButtonVariantType}
                                         size="icon"
                                         className={cn(
                                             index === 0
                                                 ? "flex"
                                                 : "hidden md:flex",
-                                            variant ===
-                                                "transparentLight" &&
+                                            variant === "transparentLight" &&
                                                 "md:group-hover:border-black",
                                         )}
                                         asChild
@@ -289,8 +290,7 @@ export async function NavBar({
                                             <IconByName
                                                 stroke={stroke ?? ""}
                                                 className={cn(
-                                                    variant !==
-                                                        "transparent" &&
+                                                    variant !== "transparent" &&
                                                         variant !==
                                                             "transparentLight" &&
                                                         "fill-black",
@@ -441,27 +441,24 @@ export async function NavbarItem({
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="grid px-4 py-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                        {subItems.map(
-                                            ({ title, href }) => (
-                                                <Link
-                                                    href={href}
-                                                    key={title}
-                                                    legacyBehavior
-                                                    passHref
+                                        {subItems.map(({ title, href }) => (
+                                            <Link
+                                                href={href}
+                                                key={title}
+                                                legacyBehavior
+                                                passHref
+                                            >
+                                                <NavigationMenuLink
+                                                    className={navigationMenuTriggerStyle(
+                                                        {
+                                                            direction: "column",
+                                                        },
+                                                    )}
                                                 >
-                                                    <NavigationMenuLink
-                                                        className={navigationMenuTriggerStyle(
-                                                            {
-                                                                direction:
-                                                                    "column",
-                                                            },
-                                                        )}
-                                                    >
-                                                        {title}
-                                                    </NavigationMenuLink>
-                                                </Link>
-                                            ),
-                                        )}
+                                                    {title}
+                                                </NavigationMenuLink>
+                                            </Link>
+                                        ))}
                                     </ul>
                                 </AccordionContent>
                             </AccordionItem>

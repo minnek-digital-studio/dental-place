@@ -19,9 +19,9 @@ const Buttons = ({ buttons, className: _className, ...props }: ButtonsProps) => 
         >
             {buttons.map(({ icon, link, text, className, ...buttonProps }, idx) => (
                 <Button
+                    key={text ?? idx}
                     {...buttonProps}
                     className={cn("", className)}
-                    key={text ?? idx}
                     asChild
                 >
                     <Link

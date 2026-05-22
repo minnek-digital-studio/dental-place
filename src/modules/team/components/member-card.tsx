@@ -65,9 +65,9 @@ const MemberCard = (member: TeamMemberCard) => {
                     {socialLinks.map(
                         ({ link, icon, text, className, ...props }) => (
                             <Button
+                                key={id}
                                 asChild
                                 {...props}
-                                key={id}
                                 aria-label={text}
                                 className={cn("size-[2.8rem]", className)}
                             >

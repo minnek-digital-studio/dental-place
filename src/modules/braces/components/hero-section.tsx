@@ -6,7 +6,7 @@ import { Typography } from "@ui/components/typography";
 import Link from "@/modules/common/components/link";
 import { Button } from "@ui/components/button";
 import { IconByName } from "@ui/components/icons";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -31,7 +31,7 @@ const HeroSection = ({
                         as="h1"
                         className="flex flex-col md:gap-4 tracking-tight text-[2.4rem] xl:text-5xl"
                     >
-                        {renderHTML(title)}
+                        <RichText html={title} />
                     </Typography>
                     <Typography as="p" className="text-lg">
                         {description}

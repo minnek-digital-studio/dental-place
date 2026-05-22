@@ -3,7 +3,7 @@ import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import { Image } from "@/modules/common/components/image";
 import { ImageType } from "@/modules/common/types";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 export interface ServiceDescriptionSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
@@ -41,7 +41,7 @@ const ServiceDescriptionSection = ({
                         as="p"
                         className="text-dark-grey text-start leading-[1.6rem]"
                     >
-                        {renderHTML(description)}
+                        <RichText html={description} />
                     </Typography>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[5rem]">
@@ -78,7 +78,7 @@ const ServiceDescriptionSection = ({
                     as="p"
                     className="text-dark-grey text-start leading-[1.6rem]"
                 >
-                    {renderHTML(subDescription)}
+                    <RichText html={subDescription} />
                 </Typography>
             </main>
         </section>
