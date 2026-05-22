@@ -2,7 +2,7 @@ import type { ElementType, ComponentProps } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@ui/lib/utils";
 
-export type PolymorphicProps<
+type PolymorphicProps<
     OwnProps,
     As extends ElementType,
     DefaultElement extends ElementType,
@@ -22,7 +22,7 @@ const tagVariants: Record<string, string> = {
     p: "text-base",
 };
 
-export const colorVariants = {
+const colorVariants = {
     primary: "text-primary",
     "dark-primary": "text-dark-primary",
     dark: "text-dark",

@@ -14,6 +14,7 @@ import Layout from "@/modules/common/layouts/layout";
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
+// oxlint-disable-next-line react-doctor/only-export-components
 export const dynamic = config.DYNAMIC_PAGE_GENERATION
     ? "force-dynamic"
     : "auto";
@@ -22,6 +23,7 @@ type Props = {
     params: Promise<{ slug: string }>;
 };
 
+// oxlint-disable-next-line react-doctor/only-export-components
 export async function generateMetadata(
     { params }: Props,
     _parent: ResolvingMetadata,

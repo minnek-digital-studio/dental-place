@@ -4,7 +4,7 @@ import { Image } from "@/modules/common/components/image";
 import { ImageType, CallToAction } from "@/modules/common/types";
 import { BreadCrumb } from "@/modules/common/components/breadcrumb";
 import CallToActionComp from "@/modules/common/components/CallToAction";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export interface ServiceSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
@@ -88,7 +88,7 @@ const ServiceSection = ({
                     )}
                     {editor && (
                         <div className="flex gap-6 max-md:flex-col">
-                            {renderHTML(editor)}
+                            <RichText html={editor} />
                         </div>
                     )}
 
@@ -104,7 +104,7 @@ const ServiceSection = ({
                                 {subTitle ? subTitle : "Service Description"}
                             </h2>
                             <div className="flex flex-col gap-6 font-noto-sans text-black text-base">
-                                {renderHTML(description)}
+                                <RichText html={description} />
                             </div>
                         </div>
                         {callUsAction && <CallToActionComp {...callUsAction} />}

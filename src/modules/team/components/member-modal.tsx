@@ -12,7 +12,7 @@ import { cn } from "@ui/lib/utils";
 import Link from "@/modules/common/components/link";
 import { IconByName } from "@ui/components/icons";
 import { Typography } from "@ui/components/typography";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 const MemberModal = ({ className: _className, children: _children, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
     const { member, isOpen, closeModal } = useModalStore((state) => state);
@@ -64,9 +64,9 @@ const MemberModal = ({ className: _className, children: _children, ...props }: R
                             {socialLinks.map(
                                 ({ link, icon, text, className, ...props }) => (
                                     <Button
+                                        key={`${id}-${text}`}
                                         asChild
                                         {...props}
-                                        key={`${id}-${text}`}
                                         aria-label={text}
                                         className={cn(
                                             "size-[2.8rem]",
@@ -85,7 +85,7 @@ const MemberModal = ({ className: _className, children: _children, ...props }: R
                 <main className="mt-2">
                     {description && (
                         <div className="font-noto-sans text-black text-lg">
-                            {renderHTML(description)}
+                            <RichText html={description} />
                         </div>
                     )}
 

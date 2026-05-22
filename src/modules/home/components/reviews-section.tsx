@@ -12,7 +12,7 @@ import {
 import { Typography } from "@ui/components/typography";
 import { MoveLeft, MoveRight } from "@ui/components/icons";
 import { Button } from "@ui/components/button";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export type ReviewsSectionProps = {
     title: string;
@@ -42,7 +42,7 @@ const ReviewsSection = ({
                 </Typography>
                 {description && (
                     <div className="text-dark-grey max-w-[25rem] text-center font-noto-sans text-base">
-                        {renderHTML(description)}
+                        <RichText html={description} />
                     </div>
                 )}
                 {button?.text && (

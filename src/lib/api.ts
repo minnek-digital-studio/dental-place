@@ -29,7 +29,10 @@ export async function fetchAPI(
     return json.data;
 }
 
-export async function getPreviewPost(id: string | number, idType: string = "DATABASE_ID") {
+export async function getPreviewPost(
+    id: string | number,
+    idType: string = "DATABASE_ID",
+) {
     const data = await fetchAPI(
         `
     query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -103,8 +106,16 @@ export async function getAllPostsForHome(preview: boolean) {
     return data?.posts;
 }
 
-export async function getPostAndMorePosts(slug: string | number, preview: boolean, previewData: Record<string, unknown>) {
-    const postPreview = (preview && previewData?.post) as any;
+export async function getPostAndMorePosts(
+    slug: string | number,
+    preview: boolean,
+    previewData: Record<string, unknown>,
+) {
+    const postPreview = (preview && previewData?.post) as unknown as {
+        id: number;
+        slug: string;
+        status: string;
+    };
     // The slug may be the id of an unpublished post
     const isId = Number.isInteger(Number(slug));
     const isSamePost = isId

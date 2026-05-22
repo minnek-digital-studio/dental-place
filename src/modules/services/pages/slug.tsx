@@ -18,10 +18,12 @@ type Props = {
     params: Promise<{ slug: string }>;
 };
 
+// oxlint-disable-next-line react-doctor/only-export-components
 export const dynamic = config.DYNAMIC_PAGE_GENERATION
     ? "force-dynamic"
     : "auto";
 
+// oxlint-disable-next-line react-doctor/only-export-components
 export async function generateMetadata(
     { params }: Props,
     _parent: ResolvingMetadata,
@@ -66,6 +68,7 @@ const ServicePage: React.FC<Props> = async ({ params }) => {
     );
 };
 
+// oxlint-disable-next-line react-doctor/only-export-components
 export async function generateStaticParams() {
     const services = await getServices();
 

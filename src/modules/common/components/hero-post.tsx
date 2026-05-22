@@ -2,7 +2,7 @@ import Avatar from "./avatar";
 import Date from "./date";
 import CoverImage from "./cover-image";
 import Link from "@/modules/common/components/link";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export default function HeroPost({
     title,
@@ -27,7 +27,7 @@ export default function HeroPost({
                 <div>
                     <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
                         <Link href={`/posts/${slug}`} className="hover:underline">
-                            {renderHTML(title)}
+                            <RichText html={title} />
                         </Link>
                     </h3>
                     <div className="mb-4 md:mb-0 text-lg">
@@ -36,7 +36,7 @@ export default function HeroPost({
                 </div>
                 <div>
                     <div className="text-lg leading-relaxed mb-4">
-                        {renderHTML(excerpt)}
+                        <RichText html={excerpt} />
                     </div>
                     <Avatar author={author} />
                 </div>

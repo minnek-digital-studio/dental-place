@@ -1,10 +1,10 @@
 import styles from "./post-body.module.css";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export default function PostBody({ content }) {
   return (
     <div className="max-w-2xl mx-auto">
-      <div className={styles.content}>{renderHTML(content)}</div>
+      <div className={styles.content}><RichText html={content} /></div>
     </div>
   );
 }

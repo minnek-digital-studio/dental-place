@@ -15,8 +15,6 @@ import {
 import { cn } from "@ui/lib/utils";
 import { Label } from "@ui/components/label";
 
-export * from "react-hook-form";
-
 const Form = FormProvider;
 
 type FormFieldContextValue<
@@ -170,7 +168,6 @@ const FormMessage = React.forwardRef<
 FormMessage.displayName = "FormMessage";
 
 export {
-    useFormField,
     Form,
     FormItem,
     FormLabel,

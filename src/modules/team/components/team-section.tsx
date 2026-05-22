@@ -3,7 +3,7 @@ import MemberCard, { type TeamMemberCard } from "../components/member-card";
 import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import MemberModal from "./member-modal";
-import { renderHTML } from "@/modules/common/utils/sanitize-html";
+import { RichText } from "@/modules/common/components/rich-text";
 
 export interface OurTeamSectionProps
     extends React.HTMLAttributes<HTMLDivElement> {
@@ -30,7 +30,7 @@ const OurTeamSection = ({
             <header className="max-w-[55rem] flex flex-col gap-5 text-center container">
                 <Typography as="h2">{title}</Typography>
                 <div className="font-noto-sans text-base text-dark-grey">
-                    {renderHTML(description)}
+                    <RichText html={description} />
                 </div>
             </header>
             <main className="container flex flex-col items-center">
