@@ -5,8 +5,7 @@ import { cn } from "@ui/lib/utils";
 import MemberModal from "./member-modal";
 import { RichText } from "@/modules/common/components/rich-text";
 
-export interface OurTeamSectionProps
-    extends React.HTMLAttributes<HTMLDivElement> {
+export interface OurTeamSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     description?: string;
     items: TeamMemberCard[];
@@ -30,7 +29,7 @@ const OurTeamSection = ({
             <header className="max-w-[55rem] flex flex-col gap-5 text-center container">
                 <Typography as="h2">{title}</Typography>
                 <div className="font-noto-sans text-base text-dark-grey">
-                    <RichText html={description} />
+                    <RichText html={description || ""} />
                 </div>
             </header>
             <main className="container flex flex-col items-center">
