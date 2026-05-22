@@ -42,7 +42,7 @@ const AboutSection = ({
                         </Typography>
                     ) : (
                         <div className="text-base leading-8 text-dark font-noto-sans">
-                            <RichText html={descriptionRich} />
+                            <RichText html={descriptionRich ?? ""} />
                         </div>
                     )}
 
