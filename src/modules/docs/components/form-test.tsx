@@ -23,6 +23,7 @@ const FormTest = () => {
                 Somebody&apos;s name
                 <input
                     id="your-name"
+                    aria-label="Name"
                     type="text"
                     className="rounded border px-3"
                     defaultValue={"Joan corona CCC"}
@@ -34,6 +35,7 @@ const FormTest = () => {
                 Somebody&apos;s Email
                 <input
                     id="your-email"
+                    aria-label="Email"
                     type="text"
                     defaultValue={"joan@minnekdigital.com"}
                     name="your-email"
@@ -45,6 +47,7 @@ const FormTest = () => {
                 Somebody&apos;s subject
                 <input
                     id="your-subject"
+                    aria-label="Subject"
                     type="text"
                     defaultValue={"This is a test BEGENER"}
                     name="your-subject"
@@ -56,6 +59,7 @@ const FormTest = () => {
                 Somebody&apos;s message
                 <input
                     id="your-message"
+                    aria-label="Message"
                     type="text"
                     defaultValue={"joan@minnekdigital.com"}
                     name="your-message"

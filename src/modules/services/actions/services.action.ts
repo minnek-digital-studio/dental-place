@@ -48,6 +48,7 @@ export type ServicePage = {
     callToActions: CallToAction[];
 };
 
+// Public action — fetches services list from CMS; no auth required.
 export const getServices = async () => {
     const { data } = await getClient().query<GetServicesInfoQuery>({
         query: GetServicesInfoDocument,
@@ -58,6 +59,7 @@ export const getServices = async () => {
     return services;
 };
 
+// Public action — fetches a single service by slug from CMS; no auth required.
 export const getServiceBySlug = async (
     slug: string,
 ): Promise<ServicePage | null> => {
@@ -110,6 +112,7 @@ export const getServiceBySlug = async (
     return servicePage;
 };
 
+// Public action — fetches services page data from CMS; no auth required.
 export const getServicesPage = async (): Promise<ServicePageInfo> => {
     const { data } = await getClient().query<GetServicePageInfoQuery>({
         query: GetServicePageInfoDocument,

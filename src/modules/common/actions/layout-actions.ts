@@ -16,6 +16,7 @@ import {
     mapNavbarData,
 } from "@/modules/common/utils/layoutMapping";
 
+// Public action — fetches layout data from CMS; no auth required.
 export const getNavbarData = async () => {
     const { data, error } = await getClient().query<GetNavbarInfoQuery>({
         query: GetNavbarInfoDocument,
@@ -28,6 +29,7 @@ export const getNavbarData = async () => {
     };
 };
 
+// Public action — fetches menu data from CMS; no auth required.
 export const getMenuData = async () => {
     const [menuData, navbarData] = await Promise.all([
         await getClient().query<GetGeneralMenuQuery>({
@@ -54,6 +56,7 @@ export const getMenuData = async () => {
     };
 };
 
+// Public action — fetches footer data from CMS; no auth required.
 export const getFooterData = async () => {
     const { data, error } = await getClient().query<GetFooterInfoQuery>({
         query: GetFooterInfoDocument,

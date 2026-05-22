@@ -35,7 +35,7 @@ const CaseCard = ({
                 className,
             )}
         >
-            <CardHeader className="px-0 py-0">
+            <CardHeader className="p-0">
                 <picture className="rounded-2xl overflow-hidden">
                     <Image {...image} />
                 </picture>
@@ -46,7 +46,7 @@ const CaseCard = ({
                 </Typography>
                 <Typography as="p">{description}</Typography>
             </CardContent>
-            <CardFooter className="px-0 py-0">
+            <CardFooter className="p-0">
                 <Button {...button} asChild>
                     <Link href={button.link} aria-label={button.text}>
                         {button.text}

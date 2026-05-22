@@ -48,7 +48,7 @@ export default async function Docs() {
                             title="Odontología General"
                             summary="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             button={{
-                                text: "Learn More",
+                                text: "Learn more about Odontología General",
                                 link: "#",
                                 variant: "info",
                                 size: "default",
@@ -61,7 +61,7 @@ export default async function Docs() {
                             title="Endodoncia"
                             summary="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             button={{
-                                text: "Learn More",
+                                text: "Learn more about Endodoncia",
                                 link: "#",
                                 variant: "info",
                                 size: "default",
@@ -74,7 +74,7 @@ export default async function Docs() {
                             title="Odontología Estética"
                             summary="Lörem ipsum ogooglebar paratenat antiprepal.  Soderat saling supranedusaska, prede. Lörem ipsum ogooglebar paratenat antiprepal."
                             button={{
-                                text: "Learn More",
+                                text: "Learn more about Odontología Estética",
                                 link: "#",
                                 variant: "info",
                                 size: "default",
@@ -145,7 +145,7 @@ export default async function Docs() {
                         <Button variant="light-info">View More</Button>
                         <Button size="icon">📞</Button>
                         <Button variant="link" size="link" asChild>
-                            <a href="#">Learn More</a>
+                            <a href="#" aria-label="Learn more about our services">Learn More</a>
                         </Button>
                         <Button disabled variant="dark">
                             Agendar

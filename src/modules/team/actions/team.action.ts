@@ -29,6 +29,7 @@ export type TeamPageInfo = {
     FAQInfo: AskSectionProps;
 };
 
+// Public action — fetches team page info from CMS; no auth required.
 export const getTeamPageInfo = async (): Promise<TeamPageInfo> => {
     const { data } = await getClient().query<GetTeamPageInfoQuery>({
         query: GetTeamPageInfoDocument,
@@ -44,6 +45,7 @@ export const getTeamPageInfo = async (): Promise<TeamPageInfo> => {
     return teamPageInfo;
 };
 
+// Public action — fetches team members list from CMS; no auth required.
 export const getTeam = async (): Promise<OurTeamSectionProps["items"]> => {
     const { data } = await getClient().query<GetTeamMembersQuery>({
         query: GetTeamMembersDocument,

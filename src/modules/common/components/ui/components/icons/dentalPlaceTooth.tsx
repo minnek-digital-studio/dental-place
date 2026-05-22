@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export const DentalPlaceTooth = () => {
     return (
-        <img
+        <Image
             width={32}
             height={32}
             src="/images/dental-icon.webp"
