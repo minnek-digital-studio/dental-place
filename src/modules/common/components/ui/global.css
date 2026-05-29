@@ -5,7 +5,7 @@
 
 @layer base {
     :root {
-        --background: #FFFFFF;
+        --background: #ffffff;
         --foreground: #000000;
 
         --card: 0 0% 100%;
@@ -17,36 +17,36 @@
         --primary: 257 59% 85%;
         --primary-foreground: #000000;
 
-        --dark-primary: #4D27AF;
+        --dark-primary: #4d27af;
 
         --secondary: 142 88% 83%;
         --secondary-foreground: #000000;
 
-        --dark: #332B3B;
-        --dark-foreground: #FFFFFF;
+        --dark: #332b3b;
+        --dark-foreground: #ffffff;
 
-        --light: #D9D9D9;
+        --light: #d9d9d9;
         --light-foreground: #000000;
 
-        --info: #EEF6FF;
+        --info: #eef6ff;
         --info-foreground: #000000;
 
-        --dark-info: #AAC7E8;
+        --dark-info: #aac7e8;
         --dark-info-foreground: #000000;
 
-        --light-info: #82CDF5;
+        --light-info: #82cdf5;
         --light-info-foreground: #000000;
 
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 210 40% 98%;
 
-        --muted: #F5F5F5;
-        --muted-foreground: #7A7A89;
+        --muted: #f5f5f5;
+        --muted-foreground: #7a7a89;
 
         --border: 214.3 31.8% 91.4%;
-        --input: #EFEFEF;
+        --input: #efefef;
         --ring: 222.2 84% 4.9%;
-        --link: #2986B8;
+        --link: #2986b8;
         --radius: 0.5rem;
         --dark-grey: 0 1% 18%;
     }
@@ -139,10 +139,10 @@
     @apply table ml-0 mr-0;
 }
 
-.wp-block-image .alignleft>figcaption,
-.wp-block-image .alignright>figcaption,
-.wp-block-image .aligncenter>figcaption,
-.wp-block-image.is-resized>figcaption {
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image.is-resized > figcaption {
     @apply table-caption;
 
     caption-side: bottom;
@@ -210,4 +210,8 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+.text-justify {
+    text-align: justify;
 }
