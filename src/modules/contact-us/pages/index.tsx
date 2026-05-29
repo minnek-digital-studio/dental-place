@@ -1,10 +1,10 @@
 import { config } from "@/config/constants";
 import Footer from "@/modules/common/components/footer";
-import ContactCard from "@/modules/contact_us/components/contact-card";
-import ContactForm from "@/modules/contact_us/components/contact-form";
-import GoogleMaps from "@/modules/contact_us/components/google-maps";
-import HeroSection from "@/modules/contact_us/components/hero-section";
-import ContactUsData from "@/modules/contact_us/data/contact-us.json";
+import ContactCard from "@/modules/contact-us/components/contact-card";
+import ContactForm from "@/modules/contact-us/components/contact-form";
+import GoogleMaps from "@/modules/contact-us/components/google-maps";
+import HeroSection from "@/modules/contact-us/components/hero-section";
+import ContactUsData from "@/modules/contact-us/data/contact-us.json";
 import { Typography } from "@ui/components/typography";
 import { cn } from "@ui/lib/utils";
 import type { Metadata } from "next";

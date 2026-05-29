@@ -41,7 +41,7 @@ export default function NotFoundContent() {
                         className="font-bold w-max"
                         asChild
                     >
-                        <Link href="/contact_us">Contáctanos</Link>
+                        <Link href="/contact-us">Contáctanos</Link>
                     </Button>
                 </div>
             </div>
