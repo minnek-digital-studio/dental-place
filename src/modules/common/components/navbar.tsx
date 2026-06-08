@@ -184,7 +184,7 @@ export async function NavBar({
                                         key={src}
                                         src={src}
                                         alt="Dental Place Logo"
-                                        width={160}
+                                        width={298}
                                         height={48}
                                         className={`w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12 ${index === 0 ? "flex md:group-hover:hidden" : "hidden md:group-hover:flex"}`}
                                     />
@@ -193,7 +193,7 @@ export async function NavBar({
                                 <Image
                                     src={logo}
                                     alt="Dental Place Logo"
-                                    width={160}
+                                    width={298}
                                     height={48}
                                     className="w-auto max-sm:max-h-7 max-h-8 md:w-auto xl:max-h-12"
                                 />
