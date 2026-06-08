@@ -1,0 +1,127 @@
+query getCaseStudies {
+    caseStudies {
+        edges {
+            node {
+                title
+                featuredImage {
+                    node {
+                        title
+                        sourceUrl
+                        altText
+                    }
+                }
+                caseStudySettings {
+                    summary
+                    description
+                    button {
+                        variant
+                        link {
+                            title
+                            url
+                            target
+                        }
+                        size
+                    }
+                    callToActions {
+                        edges {
+                            node {
+                                id
+                            }
+                        }
+                    }
+                    serviceDescriptionSection {
+                        title
+                        description
+                        subDescription
+                        images {
+                            edges {
+                                node {
+                                    title
+                                    altText
+                                    sourceUrl
+                                }
+                            }
+                        }
+                    }
+                    beenDoneSection {
+                        title
+                        description
+                        itemsIcons {
+                            title
+                            icon {
+                                name
+                                size
+                                strokeWidth
+                                className
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+query getCaseStudieBySlug($slug: ID = "") {
+    caseStudy(id: $slug, idType: SLUG) {
+        title
+        slug
+        seo {
+            ...PostTypeSEOFragment
+        }
+        featuredImage {
+            node {
+                title
+                sourceUrl
+                altText
+            }
+        }
+        caseStudySettings {
+            summary
+            description
+            button {
+                variant
+                link {
+                    title
+                    url
+                    target
+                }
+                size
+            }
+            callToActions {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+            serviceDescriptionSection {
+                title
+                description
+                subDescription
+                images {
+                    edges {
+                        node {
+                            title
+                            altText
+                            sourceUrl
+                        }
+                    }
+                }
+            }
+            beenDoneSection {
+                title
+                description
+                itemsIcons {
+                    title
+                    icon {
+                        name
+                        size
+                        strokeWidth
+                        className
+                    }
+                }
+            }
+        }
+    }
+}

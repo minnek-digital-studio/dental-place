@@ -1,0 +1,135 @@
+query getHomePage($uri: ID = "/home/") {
+    page(id: $uri, idType: URI) {
+        id
+        uri
+        title
+        seo {
+            ...PostTypeSEOFragment
+        }
+        homePageSettings {
+            arsSection {
+                title
+                arsImages {
+                    edges {
+                        node {
+                            altText
+                            sourceUrl
+                        }
+                    }
+                }
+            }
+            instagram {
+                title
+                button {
+                    link {
+                        url
+                        title
+                        target
+                    }
+                    size
+                    variant
+                }
+                icon {
+                    name
+                    position
+                    size
+                }
+                carouselOptions {
+                    images {
+                        image {
+                            node {
+                                altText
+                                sourceUrl
+                            }
+                        }
+                        isvisible
+                    }
+                    playOnInit
+                    speed
+                }
+            }
+            reviewSection {
+                title
+                description
+                button {
+                    link {
+                        title
+                        url
+                    }
+                    variant
+                    size
+                }
+                reviews {
+                    edges {
+                        node {
+                            id
+                            slug
+                        }
+                    }
+                }
+            }
+            callToActions {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+            serviceSection {
+                title
+                description
+                button {
+                    link {
+                        url
+                        title
+                        target
+                    }
+                    size
+                    variant
+                }
+            }
+            presentation {
+                title
+                description
+                className
+                image {
+                    className
+                    img {
+                        node {
+                            sourceUrl
+                            altText
+                        }
+                    }
+                }
+                mediaType
+                video {
+                    video {
+                        node {
+                            altText
+                            mediaItemUrl
+                        }
+                    }
+                    className
+                }
+                card {
+                    title
+                    button {
+                        link {
+                            title
+                            url
+                            target
+                        }
+                        variant
+                        size
+                        className
+                        icon {
+                            name
+                            position
+                            size
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+query getContactPage($uri: ID = "/contact-us/") {
+    page(id: $uri, idType: URI) {
+        id
+        uri
+        title
+        contactPageSettings {
+            maps {
+                googleMapsIframeUrl
+            }
+            contactCards {
+                location {
+                    title
+                    url
+                    target
+                }
+                email {
+                    title
+                    url
+                    target
+                }
+                phoneNumber {
+                    title
+                    url
+                    target
+                }
+            }
+        }
+    }
+}

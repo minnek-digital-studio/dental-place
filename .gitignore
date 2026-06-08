@@ -1,24 +1,42 @@
-wp-data/
-db-data/
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# testing
+/coverage
 /cypress/screenshots/
 /cypress/downloads/
 /cypress/videos/
-yarn.lock
-package-json.lock
-composer.lock
+
+# env
 .env
+.env*.local
+
+# debug
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
 *.css.map
 *.js.map
 ~*
-*.sql
-*.sqlite
-*.7z
-*.gz
-*.zip
-node_modules/
 ehthumbs.db
 Thumbs.db
+
+# tools
 .turbo
 .vercel
-!/apps/cms/custom/data/dental_dev.sql
+.atl

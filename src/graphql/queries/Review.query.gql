@@ -1,0 +1,30 @@
+query getReviewByID($id: ID = "") {
+    review(id: $id, idType: ID) {
+        reviewsSettings {
+            rating
+            comment
+            link {
+                target
+                title
+                url
+            }
+            icon {
+                color
+                fill
+                name
+                position
+                size
+                stroke
+            }
+            author {
+                avatar {
+                    node {
+                        altText
+                        sourceUrl
+                    }
+                }
+                name
+            }
+        }
+    }
+}

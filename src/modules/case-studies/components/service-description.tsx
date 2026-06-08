@@ -1,0 +1,88 @@
+import React from "react";
+import { Typography } from "@ui/components/typography";
+import { cn } from "@ui/lib/utils";
+import { Image } from "@/modules/common/components/image";
+import { ImageType } from "@/modules/common/types";
+import { RichText } from "@/modules/common/components/rich-text";
+export interface ServiceDescriptionSectionProps
+    extends React.HTMLAttributes<HTMLDivElement> {
+    title: string;
+    description?: string;
+    subDescription: string;
+    beforeImg: ImageTitle;
+    afterImg: ImageTitle;
+}
+
+export type ImageTitle = {
+    title: string;
+    img: ImageType;
+};
+
+const ServiceDescriptionSection = ({
+    title,
+    description,
+    beforeImg,
+    afterImg,
+    subDescription,
+    className,
+    ...props
+}: ServiceDescriptionSectionProps) => {
+    return (
+        <section className={cn("bg-white", className)} {...props}>
+            <main className="max-w-[47rem] md:max-w-[55rem] flex flex-col gap-3 text-center container">
+                <Typography
+                    as="h2"
+                    className="text-left text-2xl leading-[3.8rem] lg:text-[1.7rem]"
+                >
+                    {title}
+                </Typography>
+                {description && (
+                    <Typography
+                        as="p"
+                        className="text-dark-grey text-start leading-[1.6rem]"
+                    >
+                        <RichText html={description} />
+                    </Typography>
+                )}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-[5rem]">
+                    <figure className="max-w-2xl max-h-56 md:max-w-3xl">
+                        <picture>
+                            <Image
+                                {...beforeImg.img}
+                                className="rounded-2xl mb-2 md:mb-5"
+                            />
+                        </picture>
+                        <Typography
+                            as="figcaption"
+                            className="text-dark-grey text-center font-bold"
+                        >
+                            {beforeImg.title}
+                        </Typography>
+                    </figure>
+                    <figure className="max-w-2xl max-h-56 md:max-w-3xl">
+                        <picture>
+                            <Image
+                                {...afterImg.img}
+                                className="rounded-2xl mb-2 md:mb-5"
+                            />
+                        </picture>
+                        <Typography
+                            as="figcaption"
+                            className="text-dark-grey text-center font-bold"
+                        >
+                            {afterImg.title}
+                        </Typography>
+                    </figure>
+                </div>
+                <Typography
+                    as="p"
+                    className="text-dark-grey text-start leading-[1.6rem]"
+                >
+                    <RichText html={subDescription} />
+                </Typography>
+            </main>
+        </section>
+    );
+};
+
+export default ServiceDescriptionSection;
