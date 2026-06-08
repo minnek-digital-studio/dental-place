@@ -5,9 +5,9 @@ import {
 } from "@/graphql/generated/graphql";
 
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
-import { BeenDoneSectionProps } from "@/modules/case_studies/components/been-done";
-import { ServiceDescriptionSectionProps } from "@/modules/case_studies/components/service-description";
-import { CaseStudiesDetailsSectionProps } from "@/modules/case_studies/components/case-studies-details-section";
+import { BeenDoneSectionProps } from "@/modules/case-studies/components/been-done";
+import { ServiceDescriptionSectionProps } from "@/modules/case-studies/components/service-description";
+import { CaseStudiesDetailsSectionProps } from "@/modules/case-studies/components/case-studies-details-section";
 import { CallToAction, Seo } from "../types";
 import { getCallToAction } from "./callToActions.action";
 import { mapSeo } from "../utils/seo.map";

@@ -1,13 +1,13 @@
 import { config } from "@/config/constants";
 import BeenDoneSection, {
     type BeenDoneSectionProps,
-} from "@/modules/case_studies/components/been-done";
+} from "@/modules/case-studies/components/been-done";
 import CaseStudiesDetailsSection, {
     type CaseStudiesDetailsSectionProps,
-} from "@/modules/case_studies/components/case-studies-details-section";
+} from "@/modules/case-studies/components/case-studies-details-section";
 import ServiceDescriptionSection, {
     type ServiceDescriptionSectionProps,
-} from "@/modules/case_studies/components/service-description";
+} from "@/modules/case-studies/components/service-description";
 import { getCaseStudyPage } from "@/modules/common/actions/case-studie.action";
 import CallToAction from "@/modules/common/components/CallToAction";
 import Layout from "@/modules/common/layouts/layout";
