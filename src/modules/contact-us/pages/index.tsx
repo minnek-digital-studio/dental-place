@@ -44,7 +44,7 @@ export default async function ContactPage() {
                 </section>
                 <section className="container max-w-[1060px] mb-20 max-md:hidden flex justify-center">
                     <div className="flex gap-7 justify-between w-full max-w-[900px]">
-                        <ContactCard title="Headquarters" iconName="MapPin">
+                        <ContactCard title="Ubicación" iconName="MapPin">
                             <Typography
                                 as="p"
                                 className="line-clamp-5 leading-[1.8rem]"
@@ -63,7 +63,7 @@ export default async function ContactPage() {
                                 {email?.title}
                             </Typography>
                         </ContactCard>
-                        <ContactCard title="Phone Number" iconName="Phone">
+                        <ContactCard title="Teléfono" iconName="Phone">
                             <Typography as="p" className="line-clamp-5">
                                 {phoneNumber?.title}
                             </Typography>
