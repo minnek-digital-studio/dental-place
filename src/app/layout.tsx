@@ -1,5 +1,6 @@
 import { ApolloWrapper } from "@/modules/common/lib/apollo/apollo-wrapper";
 import WhatsAppFloatingButton from "@/modules/common/components/whatsapp-floating-button";
+import GoogleAnalytics from "@/modules/common/components/google-analytics";
 import "@ui/global.css";
 import { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
@@ -26,6 +27,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <head>
+                <GoogleAnalytics />
+            </head>
             <body className={notoSans.variable}>
                 <ApolloWrapper>
                     {children}
