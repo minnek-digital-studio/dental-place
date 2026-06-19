@@ -6,7 +6,8 @@ type WhatsAppFloatingButtonProps = {
     className?: string;
 };
 
-const defaultHref = "https://wa.me/18095818686?text=Hola%2C%20quiero%20agendar%20una%20cita";
+const defaultHref =
+    "https://wa.me/18095818686?text=Hola%2C%20quiero%20agendar%20una%20cita";
 
 const WhatsAppFloatingButton = ({
     href = defaultHref,
@@ -27,7 +28,7 @@ const WhatsAppFloatingButton = ({
         >
             <IconByName name="WhatsApp" size={24} />
             <span className="hidden text-sm font-semibold md:inline">
-                WhatsApp
+                Agenda tu cita
             </span>
         </a>
     );

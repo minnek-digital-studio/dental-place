@@ -64,7 +64,10 @@ export default async function ContactPage() {
                             </Typography>
                         </ContactCard>
                         <ContactCard title="Teléfono" iconName="Phone">
-                            <Typography as="p" className="line-clamp-5">
+                            <Typography
+                                as="p"
+                                className="line-clamp-5 whitespace-nowrap"
+                            >
                                 {phoneNumber?.title}
                             </Typography>
                         </ContactCard>
