@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getClient } from "@/modules/common/lib/apollo/apollo-client";
 import { gql } from "@apollo/client";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.minnek.dental";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.dentalplacerd.com";
 
 const GET_CASE_STUDIES = gql`
 	query getCaseStudies {
@@ -73,22 +73,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			priority: 1,
 		},
 		{
-			url: `${baseUrl}/braces`,
-			lastModified: new Date().toISOString().split("T")[0],
-			changeFrequency: "monthly",
-			priority: 0.8,
-		},
-		{
 			url: `${baseUrl}/contact-us`,
 			lastModified: new Date().toISOString().split("T")[0],
 			changeFrequency: "monthly",
 			priority: 0.7,
-		},
-		{
-			url: `${baseUrl}/docs`,
-			lastModified: new Date().toISOString().split("T")[0],
-			changeFrequency: "monthly",
-			priority: 0.6,
 		},
 		{
 			url: `${baseUrl}/services`,
